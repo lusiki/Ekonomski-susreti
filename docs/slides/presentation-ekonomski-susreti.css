@@ -1,0 +1,159 @@
+:root {
+  --navy: #16324f;
+  --blue: #2c7fb8;
+  --teal: #2a9d8f;
+  --coral: #d95f59;
+  --gold: #e9a23b;
+  --grey: #5f6b73;
+  --light: #eaf0f4;
+}
+
+.reveal {
+  color: var(--navy);
+  font-size: 36px;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  color: var(--navy);
+  letter-spacing: -0.02em;
+  text-transform: none;
+}
+
+.reveal h2 {
+  border-bottom: 4px solid var(--blue);
+  padding-bottom: 0.16em;
+  margin-bottom: 0.6em;
+}
+
+.reveal blockquote {
+  width: 92%;
+  margin: 0.2em 0 0.8em 0;
+  padding: 0.65em 0.8em;
+  border-left: 10px solid var(--coral);
+  background: #f7f9fa;
+  color: var(--navy);
+  font-size: 1.08em;
+  box-shadow: none;
+}
+
+.reveal table {
+  font-size: 0.67em;
+}
+
+.reveal table th {
+  color: white;
+  background: var(--navy);
+}
+
+.reveal table td,
+.reveal table th {
+  padding: 0.45em 0.6em;
+}
+
+.reveal li {
+  margin-bottom: 0.28em;
+}
+
+.reveal .metric,
+.reveal .result {
+  margin: 0.35em 0;
+  padding: 0.52em 0.65em;
+  border-radius: 12px;
+  background: var(--light);
+  color: var(--navy);
+  line-height: 1.15;
+}
+
+.reveal .metric span,
+.reveal .result span,
+.reveal .metric strong,
+.reveal .result strong {
+  color: var(--blue);
+  font-size: 1.55em;
+  font-weight: 750;
+}
+
+.reveal .metric.accent span,
+.reveal .result.accent span,
+.reveal .metric.accent strong,
+.reveal .result.accent strong {
+  color: var(--coral);
+}
+
+.reveal .result.compact {
+  font-size: 0.84em;
+}
+
+.reveal .result.neutral span,
+.reveal .result.neutral strong {
+  color: var(--teal);
+  font-size: 1.05em;
+}
+
+.reveal .takeaway {
+  margin-top: 0.65em;
+  padding: 0.55em 0.7em;
+  border-left: 8px solid var(--teal);
+  background: #eef8f6;
+  font-weight: 650;
+  font-size: 0.86em;
+}
+
+.reveal .small {
+  color: var(--grey);
+  font-size: 0.67em;
+  line-height: 1.3;
+  margin-top: 0.6em;
+}
+
+.reveal .flow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.25em;
+  margin: 1.1em 0 0.8em 0;
+}
+
+.reveal .flow span {
+  flex: 1;
+  padding: 0.7em 0.35em;
+  border-radius: 12px;
+  background: var(--light);
+  text-align: center;
+  font-size: 0.78em;
+  font-weight: 700;
+}
+
+.reveal .flow b {
+  color: var(--coral);
+  font-size: 1.25em;
+}
+
+.reveal .closing {
+  margin: 0.8em auto;
+  padding: 0.8em 0.9em;
+  max-width: 92%;
+  border-radius: 16px;
+  background: var(--navy);
+  color: white;
+  font-size: 1.22em;
+  font-weight: 720;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.reveal .slide-footer {
+  color: var(--grey);
+}
+
+.reveal .quarto-title-block .title {
+  color: var(--navy);
+  font-size: 2.1em;
+}
+
+.reveal .quarto-title-block .subtitle {
+  color: var(--coral);
+  font-size: 1.05em;
+}

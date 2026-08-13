@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "Ako koristite ili navodite ove materijale, citirajte ih na sljedeći način."
+title: "Pasivno zamijenjena: cijena inflacije koju ne mjeri indeks potrošačkih cijena"
+type: report
+authors:
+  - family-names: "Palić"
+    given-names: "Petra"
+    orcid: "https://orcid.org/0000-0001-5181-6657"
+  - family-names: "Sikić"
+    given-names: "Luka"
+    orcid: "https://orcid.org/0009-0006-3519-0272"
+repository-code: "https://github.com/lusiki/Ekonomski-susreti"
+url: "https://lusiki.github.io/Ekonomski-susreti/"
+abstract: >-
+  Istraživanje analizira institucionalni jaz u pažnji Hrvatske narodne banke
+  u hrvatskom digitalnom medijskom ekosustavu tijekom inflacijskog vala i
+  prijelaza na euro te njegovu povezanost s inflacijskim očekivanjima kućanstava.
+keywords:
+  - "institucionalni jaz u pažnji"
+  - "komunikacija središnje banke"
+  - "inflacijska očekivanja"
+  - "digitalni mediji"
+  - "Hrvatska"
+version: "1.0"
+date-released: "2026-08-13"
