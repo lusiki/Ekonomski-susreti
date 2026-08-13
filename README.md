@@ -13,10 +13,12 @@ Javni repozitorij istraživanja **„Pasivno zamijenjena: cijena inflacije koju 
 | Konferencijska prezentacija | [Otvori slajdove u pregledniku](https://lusiki.github.io/Ekonomski-susreti/slides/) | [PDF](https://lusiki.github.io/Ekonomski-susreti/downloads/Ekonomski-susreti.pdf) · [PowerPoint](https://lusiki.github.io/Ekonomski-susreti/downloads/Ekonomski-susreti.pptx) |
 | Radni tekst rada | [Čitaj online](https://lusiki.github.io/Ekonomski-susreti/paper/) | [PDF](https://lusiki.github.io/Ekonomski-susreti/downloads/Pasivno-zamijenjena.pdf) · [Word](https://lusiki.github.io/Ekonomski-susreti/downloads/Pasivno-zamijenjena.docx) |
 | Konferencijski sažetak | [Naslov, sažetak i format izlaganja](materials/conference-brief.md) | — |
+| Radionica | [Otvoreno, reproducibilno i AI-podržano istraživanje](https://lusiki.github.io/Ekonomski-susreti/workshop/) | [slajdovi](https://lusiki.github.io/Ekonomski-susreti/workshop/slides/) · [jedna stranica](https://lusiki.github.io/Ekonomski-susreti/workshop/handout.html) |
 
 ## Sadržaj
 
 - [Istraživački problem](#istraživački-problem)
+- [Radionica](#radionica)
 - [Glavni nalazi](#glavni-nalazi)
 - [Podatci i metode](#podatci-i-metode)
 - [Zašto je rezultat važan](#zašto-je-rezultat-važan)
@@ -32,6 +34,14 @@ Projekt zato postavlja dva povezana pitanja:
 
 1. Širi li viša inflacija **institucionalni jaz u pažnji** — razliku između početne i stvarne vidljivosti HNB-a u medijskom diskursu o cijenama?
 2. Predviđa li manja učestalost članaka o HNB-u pesimističnija inflacijska očekivanja kućanstava?
+
+## Radionica
+
+Uz izlaganje se drži šezdesetominutna radionica **[Otvoreno, reproducibilno i AI-podržano istraživanje](workshop/)**. Izlaganje iznosi tvrdnju; radionica otvara lanac po kojem se ta tvrdnja može provjeriti.
+
+Cijeli sat drži jedno pitanje — **tko ovo može provjeriti i po kojoj cijeni?** — na koje otvorenost, reproducibilnost i AI daju tri različita odgovora. Sudionici dobivaju ljestvicu s četiri prečke, petlju rada s agentom i cjevovod koji se gradi jednom naredbom te uživo uhvati tri podmetnute greške: curenje ograničenih podataka, koeficijent upisan rukom i pravilo pretrage koje izgubi hrvatsku dijakritiku.
+
+Materijali su u mapi [`workshop/`](workshop/): [slajdovi](workshop/slides/slides.qmd), [scenarij izlaganja](workshop/SCRIPT.md), [rukovanje demonstracijom](workshop/RUNBOOK.md), [jedna stranica za tisak](workshop/handout.html), [pojmovnik](workshop/GLOSSARY.md), [literatura](workshop/READING.md) i [cjevovod](workshop/pipeline/).
 
 ## Glavni nalazi
 

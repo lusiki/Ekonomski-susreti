@@ -1,0 +1,66 @@
+---
+title: "Institucionalni jaz u pažnji — demonstracijski nalaz"
+subtitle: "Radionica: otvoreno, reproducibilno i AI-podržano istraživanje"
+lang: hr
+format:
+  html:
+    embed-resources: true
+    toc: false
+    theme: cosmo
+execute:
+  echo: false
+  warning: false
+---
+
+```{r setup}
+source("../R/config.R")
+source("../R/provenijencija.R")
+p <- ucitaj_procjene("../results/procjene.json")
+```
+
+::: {.callout-important}
+## Status podataka
+
+Ovaj dokument gradi se iz **kalibriranih** demonstracijskih podataka, ne iz
+izvornog medijskog korpusa. Izvorni korpus je licenciran i ne redistribuira se.
+Brojke su reda veličine objavljenih, ali nisu rezultati rada.
+:::
+
+## Podaci
+
+Tjedni panel obuhvaća `r p$n_tjedana` tjedana, od `r p$uzorak_od` do
+`r p$uzorak_do`. Institucionalni jaz u pažnji (IAG) definiran je kao razlika
+između bazne i stvarne vidljivosti HNB-a u inflacijskom diskursu, gdje je bazna
+razina prosjek prvih `r BAZNI_TJEDNI` tjedana uzorka.
+
+![](../results/slike/slika1-jaz.png)
+
+## Rezultati
+
+Porast inflacije za jedan postotni bod širi institucionalni jaz u pažnji za
+`r hr(p$beta_pi, 5)` jedinica (Newey–West standardna pogreška
+`r hr(p$se_pi, 5)`). Procjena je statistički značajna.
+
+Dekompozicija pokazuje da istiskivanje djeluje kroz **ekstenzivnu marginu** —
+broj objava, a ne doseg pojedine objave. Koeficijent na ekstenzivnoj margini
+iznosi `r hr(p$beta_ext, 5)`, što je `r hr(100 * p$udio_ext, 1)` posto ukupnog
+učinka. Za intenzivnu marginu učinak nije značajan
+(p = `r hr(p$p_int, 3)`).
+
+Lokalne projekcije pokazuju da ekstenzivna margina predviđa očekivanja
+kućanstava na horizontima od `r p$lp_od` do `r p$lp_do` tjedana, nakon
+Bonferroni korekcije za `r length(LP_HORIZONTI)` testova. Značajnih horizonata
+ima `r p$lp_n_znacajnih`. Odnos tumačimo prediktivno, ne kauzalno.
+
+![](../results/slike/slika2-projekcije.png)
+
+## Ograničenja
+
+Podaci su kalibrirani, pa se nalazi ne smiju citirati kao rezultati istraživanja.
+Svrha dokumenta je pokazati lanac: sirovi naslovi → pravilo pretrage → agregat →
+procjena → tekst, u kojem svaki broj u ovom odjeljku dolazi iz
+`results/procjene.json`.
+
+---
+
+*Sjeme: `r p$sjeme`. Sve brojke generirane su skriptom `analysis/run.R`.*

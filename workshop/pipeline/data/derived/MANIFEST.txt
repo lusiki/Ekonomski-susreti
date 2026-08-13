@@ -1,0 +1,6 @@
+Izvedeni skup za radionicu — KALIBRIRANI, nije izvorni korpus.
+sjeme: 20260813
+tjedana: 157
+raspon: 2021-01-04 - 2024-01-01
+naslova u uzorku: 8005
+generirano skriptom: data/make_data.R

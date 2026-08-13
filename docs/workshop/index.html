@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Radionica o otvorenom, reproducibilnom i AI-podržanom ekonomskom istraživanju uz izlaganje rada o institucionalnom jazu u pažnji.">
+  <title>Radionica — otvoreno, reproducibilno i AI-podržano istraživanje</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .ladder { margin: 22px 0 8px; }
+    .ladder div {
+      padding: 10px 14px;
+      margin-bottom: 6px;
+      border-left: 9px solid var(--line);
+      border-radius: 0 8px 8px 0;
+      background: white;
+    }
+    .ladder div.tu { border-left-color: var(--coral); background: #fdf4f3; }
+    .ladder div.cilj { border-left-color: var(--teal); background: #f1f9f7; }
+    .ladder b { color: var(--navy); }
+    table.plain { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: .97rem; }
+    table.plain th { background: var(--navy); color: white; text-align: left; }
+    table.plain th, table.plain td { padding: 9px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    table.plain td.k { white-space: nowrap; font-weight: 700; color: var(--navy); }
+    .back { display: inline-block; margin-bottom: 18px; color: var(--blue); font-weight: 600; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="../">← natrag na projekt</a>
+    <p class="eyebrow">Ekonomski susreti · radionica</p>
+    <h1>Otvoreno, reproducibilno i AI-podržano istraživanje</h1>
+    <p class="lead">Šezdeset minuta uz izlaganje rada</p>
+    <p class="summary">Izlaganje iznosi tvrdnju. Radionica otvara lanac po kojem se ta tvrdnja može provjeriti — i pokazuje ga na cjevovodu koji se gradi jednom naredbom i sam sebe provjerava.</p>
+
+    <nav class="actions" aria-label="Materijali radionice">
+      <a class="primary" href="slides/">Otvori slajdove</a>
+      <a href="handout.html">Jedna stranica (za tisak)</a>
+      <a href="nalaz.html">Nalaz koji cjevovod gradi</a>
+      <a href="https://github.com/lusiki/Ekonomski-susreti/tree/main/workshop">Materijali na GitHubu</a>
+    </nav>
+
+    <section>
+      <h2>Ideja</h2>
+      <blockquote>Tko ovo može provjeriti i po kojoj cijeni?</blockquote>
+      <p>Otvorenost, reproducibilnost i AI nisu tri teme nego tri odgovora na isto pitanje. Otvorenost znači da vas mogu provjeriti drugi. Reproducibilnost znači da vas može provjeriti stroj — i vi sami za godinu dana. AI čini proizvodnju tvrdnji gotovo besplatnom i time lanac provjere pretvara u usko grlo.</p>
+      <p><strong>Agent generira, vi jamčite.</strong></p>
+    </section>
+
+    <section>
+      <h2>Ljestvica reproducibilnosti</h2>
+      <div class="ladder">
+        <div><b>0</b> · Objavljen je samo PDF.</div>
+        <div class="tu"><b>1</b> · Stranica projekta, citat i metapodaci. <em>← ovaj projekt danas</em></div>
+        <div><b>2</b> · Kod javan, podaci dokumentirani (manifest i kodna knjiga).</div>
+        <div class="cilj"><b>3</b> · Jedna naredba gradi sve, okruženje zaključano, CI to provjerava.</div>
+      </div>
+      <p>Nije da/ne, nego prečka po prečka. Naš izvorni medijski korpus je licenciran i ne redistribuira se — ali kod, pravila pretrage, izvedeni agregati, manifest i sjeme smiju van. <strong>Ograničeni podaci nisu izlika za prečku 0.</strong></p>
+    </section>
+
+    <section>
+      <h2>Demonstracija: tri greške, tri stupa</h2>
+      <table class="plain">
+        <tr><th>Greška</th><th>Stup</th><th>Hvata je</th></tr>
+        <tr><td class="k">Curenje</td><td>otvoreno</td><td>ograničen sadržaj u bilo kojem izlazu</td></tr>
+        <tr><td class="k">Odstupanje</td><td>reproducibilno</td><td>koeficijent upisan rukom u tekst</td></tr>
+        <tr><td class="k">Pokrivenost</td><td>mjerenje, AI</td><td>pravilo pretrage koje izgubi dijakritiku</td></tr>
+      </table>
+      <p>Treća je hrvatska specijalnost: portali pišu i <em>središnja</em> i <em>sredisnja</em>. Ispadne li normalizacija, tiho nestane pola korpusa i koeficijent se prepolovi — a <strong>ništa ne pukne</strong>.</p>
+    </section>
+
+    <section>
+      <h2>Materijali</h2>
+      <table class="plain">
+        <tr><th>Što</th><th>Gdje</th></tr>
+        <tr><td class="k">Slajdovi</td><td><a href="slides/">HTML prezentacija</a> (24 slajda, reveal.js)</td></tr>
+        <tr><td class="k">Jedna stranica</td><td><a href="handout.html">handout za tisak</a> (A4, obostrano)</td></tr>
+        <tr><td class="k">Scenarij</td><td><a href="https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/SCRIPT.md">SCRIPT.md</a> — minutu po minutu</td></tr>
+        <tr><td class="k">Demonstracija</td><td><a href="https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/RUNBOOK.md">RUNBOOK.md</a> — podmetnute greške i sigurnosna mreža</td></tr>
+        <tr><td class="k">Cjevovod</td><td><a href="https://github.com/lusiki/Ekonomski-susreti/tree/main/workshop/pipeline">workshop/pipeline/</a> — klonirajte i pokrenite</td></tr>
+        <tr><td class="k">Pojmovnik</td><td><a href="https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/GLOSSARY.md">GLOSSARY.md</a> — hrvatsko i englesko nazivlje</td></tr>
+        <tr><td class="k">Literatura</td><td><a href="https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/READING.md">READING.md</a> — dvanaest naslova</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Napomena o podacima</h2>
+      <p>Demonstracijski podaci su <strong>kalibrirani</strong>, ne izvorni. Brojke su reda veličine objavljenih, ali nisu rezultati istraživanja i ne smiju se tako citirati.</p>
+    </section>
+
+    <footer>Petra Palić i Luka Sikić · Hrvatsko katoličko sveučilište · kod MIT, tekst CC BY 4.0</footer>
+  </main>
+</body>
+</html>

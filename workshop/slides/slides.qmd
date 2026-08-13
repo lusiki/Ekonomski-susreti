@@ -1,0 +1,369 @@
+---
+title: "Otvoreno, reproducibilno i AI-podržano istraživanje"
+subtitle: "Radionica · Ekonomski susreti"
+author: "Petra Palić i Luka Sikić · Hrvatsko katoličko sveučilište"
+lang: hr
+format:
+  revealjs:
+    theme: [default, theme.scss]
+    embed-resources: true
+    slide-number: true
+    progress: true
+    history: false
+    transition: none
+    width: 1280
+    height: 760
+    footer: "Otvoreno, reproducibilno i AI-podržano istraživanje · Ekonomski susreti"
+---
+
+## Sat vremena, tri stvari koje odnosite
+
+::: {.kartice}
+::: {}
+**Jedan okvir**
+Zašto su otvorenost, reproducibilnost i AI odgovori na isto pitanje.
+:::
+::: {}
+**Jedna ljestvica**
+Gdje je vaš projekt danas i koja je sljedeća prečka.
+:::
+::: {}
+**Jedan repozitorij**
+Cjevovod koji možete klonirati i pokrenuti jednom naredbom.
+:::
+:::
+
+. . .
+
+Jedna riječ vodi cijeli sat: **najmanje moguće**. Ne petnaest alata — najmanji
+skup dijelova koji istraživanje čini provjerljivim.
+
+
+::: {.divider background-color="#16324f"}
+## 0 · Uvod
+
+Upravo ste čuli tvrdnju. Sada je otvaramo.
+:::
+
+## Jedan broj s prethodnog izlaganja
+
+> Porast inflacije za jedan postotni bod širi institucionalni jaz u pažnji za
+> **0,00201** jedinica.
+
+. . .
+
+::: {.krupno}
+Možete li taj broj provjeriti?
+:::
+
+::: {.tiho}
+Ne "vjerujete li mu" — nego: koliko bi vas vremena stajalo da ga provjerite.
+:::
+
+## Cijena je asimetrična
+
+::: {.kartice}
+::: {}
+**Proizvesti tvrdnju**
+jeftino, i sve jeftinije
+:::
+::: {}
+**Provjeriti tvrdnju**
+skupo, i ne postaje jeftinije samo od sebe
+:::
+:::
+
+. . .
+
+Ta asimetrija je cijeli problem. Otvorenost, reproducibilnost i AI tri su
+odgovora na **isto pitanje**:
+
+::: {.krupno}
+Tko ovo može provjeriti i po kojoj cijeni?
+:::
+
+
+::: {.divider background-color="#16324f"}
+## 1 · Okvir
+
+Tri stupa, jedna ljestvica.
+:::
+
+## Tri stupa, jedno pitanje
+
+| Stup | Tko provjerava | Što konkretno znači |
+|---|---|---|
+| **Otvoreno** | drugi ljudi | kod, podaci i metapodaci su dostupni |
+| **Reproducibilno** | vi za godinu dana i stroj | jedna naredba ponovno gradi sve |
+| **AI-podržano** | vi, brže — ali samo ako provjeravate | agent generira, vi jamčite |
+
+. . .
+
+::: {.krupno}
+Agent generira. Vi jamčite.
+:::
+
+::: {.tiho}
+AI ne mijenja standard dokaza. Mijenja cijenu proizvodnje tvrdnji — pa dokazni
+lanac postaje uže grlo.
+:::
+
+## Ljestvica reproducibilnosti
+
+::: {.ljestvica}
+::: {}
+**0** · Objavljen je samo PDF.
+:::
+::: {.tu}
+**1** · Stranica projekta, citat i metapodaci. *← ovaj projekt danas*
+:::
+::: {}
+**2** · Kod je javan, podaci dokumentirani (manifest i kodna knjiga).
+:::
+::: {.cilj}
+**3** · Jedna naredba gradi sve, okruženje zaključano, CI to provjerava.
+:::
+:::
+
+. . .
+
+Nije da/ne, nego **prečka po prečka**. Pitanje na kraju sata nije "jeste li
+otvoreni" nego **koju prečku uzimate ove godine**.
+
+## Kada podaci ne smiju van
+
+Naš izvorni korpus je licenciran. To je normalno stanje, ne iznimka.
+
+::: {.kartice}
+::: {}
+**Ne izlazi**
+sirovi tekst objava, sadržaj trećih strana
+:::
+::: {}
+**Izlazi**
+kod, pravila pretrage, izvedeni agregati, manifest, kodna knjiga, sjeme
+:::
+:::
+
+. . .
+
+Ograničeni podaci **nisu izlika za prečku 0**. Prečka 2 je dostižna gotovo
+uvijek — a razlika između 1 i 2 je ono što recenzent zapravo može provjeriti.
+
+
+::: {.divider background-color="#16324f"}
+## 2 · Anatomija
+
+Kako izgleda projekt koji se sam provjerava.
+:::
+
+## Lanac je kratak i vidljiv
+
+```
+data/raw/naslovi.csv         sirovi naslovi
+    ↓  R/korpus.R             pravilo pretrage   ← mjerni sloj
+    ↓  R/podaci.R             udjeli i IAG
+data/derived/panel.csv       tjedni agregati
+    ↓  R/modeli.R             OLS + Newey-West, lokalne projekcije
+    ↓  R/slike.R              slike
+results/procjene.json        svi brojevi na jednom mjestu
+    ↓  paper/nalaz.qmd        tekst koji samo čita procjene.json
+```
+
+::: {.tiho}
+Bez okvira za orkestraciju, bez okvira za testiranje. Jedna skripta koja se
+čita naglas.
+:::
+
+## Tri pravila koja sve drže
+
+::: {.kartice}
+::: {}
+**Konstante**
+Ako se broj pojavljuje na dva mjesta, jedno je greška. Sve u `R/config.R`.
+:::
+::: {}
+**Izlošci**
+Svaka slika i tablica ima funkciju koja je proizvodi. Nijedna ne nastaje u sesiji.
+:::
+::: {}
+**Brojevi**
+Nijedan broj u tekstu nije upisan rukom. Svi dolaze iz `procjene.json`.
+:::
+:::
+
+. . .
+
+Treće pravilo je najjače: tekst **ne može** tiho odstupiti od tablice, jer se
+gradnja ruši na svaki decimalni broj upisan rukom.
+
+## Petlja s agentom
+
+::: {.krupno}
+opiši → plan → **odobrim** → izvrši → **provjeri** → commitam
+:::
+
+| Komponenta | Sprječava |
+|---|---|
+| **Kontekst** — `CLAUDE.md` | povratak na generičke pretpostavke |
+| **Plan** — prije svake izmjene | da brzo riješi krivi problem |
+| **Ograde** — `settings.json` | da autonomni proces dira što god želi |
+| **Provjera** — `run.R` | da uvjerljiva besmislica uđe u tekst |
+| **Git** — mali commitovi | da se greška ponovi i da se ne možemo vratiti |
+
+## Ograde su datoteka, ne obećanje
+
+```json
+"allow": ["Bash(Rscript:*)", "Bash(quarto render:*)", "Bash(git diff:*)"],
+"ask":   ["Bash(git commit:*)"],
+"deny":  ["Read(./data/restricted/**)", "Bash(git push:*)", "Bash(rm -rf:*)"]
+```
+
+. . .
+
+Agent orkestrira analizu čije osjetljive ulaze **nikada ne vidi**.
+
+::: {.tiho}
+Za institucionalni rad provjerite uvjete korištenja i verziju alata prije nego
+ga stavite u zajednički projekt.
+:::
+
+
+::: {.divider background-color="#16324f"}
+## 3 · Demonstracija
+
+Tri greške, po jedna za svaki stup.
+:::
+
+## Što gledati u sljedećih petnaest minuta
+
+| Greška | Stup | Uhvatit će je |
+|---|---|---|
+| **Curenje** — ograničen sadržaj u rukopisu | otvoreno | ograda |
+| **Odstupanje** — koeficijent upisan rukom | reproducibilno | provenijencija |
+| **Pokrivenost** — pravilo pretrage izgubi dijakritiku | mjerenje, AI | pokrivenost |
+
+. . .
+
+Treća je hrvatska specijalnost: portali pišu i *središnja* i *sredisnja*.
+Ispadne li normalizacija, tiho nestane pola korpusa — i koeficijent se
+prepolovi, a **ništa ne pukne**.
+
+## Demonstracija {background-color="#16324f"}
+
+::: {.krupno style="color:white"}
+Terminal
+:::
+
+::: {style="color:rgba(255,255,255,0.8)"}
+`Rscript demo/podmetni.R` → `Rscript analysis/run.R`
+:::
+
+## Što smo upravo vidjeli
+
+::: {.kartice}
+::: {}
+**Plan prije rada**
+Odobrenje plana je trenutak delegiranja.
+:::
+::: {}
+**Ograda drži**
+Zabrana je u datoteci, ne u dobroj namjeri.
+:::
+::: {}
+**Provjera hvata**
+Tri greške u jednom prolazu, prije nego išta ode van.
+:::
+:::
+
+. . .
+
+::: {.krupno}
+Ovo je ono što promakne umornom čovjeku pred rok.
+:::
+
+
+::: {.divider background-color="#16324f"}
+## 4 · Granice
+
+Trošak, mjerenje, i što ne delegirati.
+:::
+
+## Kada AI proizvodi vašu varijablu
+
+Naša zavisna varijabla je **strojno konstruirana** — pravilo pretrage nad
+milijunima objava.
+
+::: {.kartice}
+::: {}
+**Pravilo**
+Nijedna strojno označena varijabla ne ulazi u regresiju bez **ljudski
+označenog validacijskog poduzorka**.
+:::
+::: {}
+**U tekstu**
+Prijavite kako je varijabla nastala, koliko je validirano i s kojom
+pouzdanošću.
+:::
+:::
+
+::: {.tiho}
+Greška u mjerenju ne ruši ništa. Ona samo tiho pomiče koeficijent.
+:::
+
+## Što ne delegirati
+
+::: {.kartice}
+::: {}
+**Delegirajte**
+refaktoriranje, dokumentaciju, testove, ponovne procjene, formatiranje,
+robusnost, pretrage
+:::
+::: {}
+**Ne delegirajte**
+istraživačko pitanje, izbor identifikacije, tumačenje nalaza, snagu tvrdnje,
+odluku o objavi
+:::
+:::
+
+. . .
+
+Alat **podiže pod, ne strop**. Zato iskusna prosudba postaje rjeđi, a ne
+suvišniji ulaz.
+
+
+::: {.divider background-color="#16324f"}
+## 5 · Zaključak
+:::
+
+## Pet redaka za ponijeti
+
+| | |
+|---|---|
+| **Jedno pitanje** | Tko ovo može provjeriti i po kojoj cijeni? |
+| **Tri stupa** | otvoreno · reproducibilno · AI-podržano |
+| **Jedna ljestvica** | četiri prečke — popnite se za jednu |
+| **Jedna petlja** | opiši → plan → odobri → izvrši → **provjeri** → commit |
+| **Tri greške** | curenje · odstupanje · pokrivenost |
+
+## Jedna prečka
+
+::: {.krupno}
+Odaberite jedan projekt. Odredite na kojoj je prečki. Popnite se za jednu — ovaj tjedan.
+:::
+
+. . .
+
+Za većinu je to prečka 2: **javni kod i dokumentirani podaci**, bez ijednog
+retka novog istraživanja.
+
+## Materijali
+
+- **Radionica i slajdovi** — `lusiki.github.io/Ekonomski-susreti/workshop/`
+- **Cjevovod za kloniranje** — `workshop/pipeline/` u repozitoriju
+- **Rukovanje** — `RUNBOOK.md` · **pojmovnik** — `GLOSSARY.md` · **literatura** — `READING.md`
+
+::: {.tiho}
+Kod MIT, tekst CC BY 4.0. Demonstracijski podaci su kalibrirani i ne smiju se
+citirati kao rezultati istraživanja.
+:::
