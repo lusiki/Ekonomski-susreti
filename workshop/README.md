@@ -1,7 +1,7 @@
-# Radionica — otvoreno, reproducibilno i AI-podržano istraživanje
+# Radionica o otvorenom, reproducibilnom i AI-podržanom istraživanju
 
-Šezdesetominutna radionica uz izlaganje rada *Pasivno zamijenjena*. Izlaganje iznosi tvrdnju;
-radionica otvara lanac po kojem se ta tvrdnja može provjeriti.
+Šezdesetominutna radionica Luke Sikića uz izlaganje rada *Pasivno zamijenjena*. Izlaganje iznosi
+tvrdnju, a radionica pokazuje kako se ta tvrdnja može provjeriti i koliko takva provjera stoji.
 
 [**Slajdovi**](https://lusiki.github.io/Ekonomski-susreti/workshop/slides/) ·
 [scenarij](SCRIPT.md) · [rukovanje demonstracijom](RUNBOOK.md) ·
@@ -9,44 +9,49 @@ radionica otvara lanac po kojem se ta tvrdnja može provjeriti.
 
 ## Ideja
 
-Otvorenost, reproducibilnost i AI nisu tri teme nego tri odgovora na isto pitanje:
+Otvorenost, reproducibilnost i AI često se obrađuju kao tri odvojene teme. Ovdje su tri odgovora na
+isto pitanje.
 
-> **Tko ovo može provjeriti i po kojoj cijeni?**
+> **Tko ovo može provjeriti i uz koliki trošak?**
 
-Otvorenost znači da vas mogu provjeriti drugi. Reproducibilnost znači da vas može provjeriti stroj i
-vi sami za godinu dana. AI čini proizvodnju tvrdnji gotovo besplatnom — i time lanac provjere
-pretvara u usko grlo. Otud rečenica koja nosi cijeli sat: **agent generira, vi jamčite.**
+Otvorenost znači da vas mogu provjeriti drugi istraživači. Reproducibilnost znači da vas može
+provjeriti računalo, pa i vi sami nakon duljeg vremena. AI bitno snižava trošak proizvodnje
+rezultata, pa provjera postaje najsporiji dio posla. Otud rečenica koja nosi cijeli sat, a ona
+glasi **alat predlaže, vi odgovarate**.
 
 ## Pet redaka koje publika nosi kući
 
 | | |
 |---|---|
-| **Jedno pitanje** | Tko ovo može provjeriti i po kojoj cijeni? |
+| **Jedno pitanje** | Tko ovo može provjeriti i uz koliki trošak? |
 | **Tri stupa** | otvoreno · reproducibilno · AI-podržano |
-| **Jedna ljestvica** | četiri prečke — popnite se za jednu |
-| **Jedna petlja** | opiši → plan → odobri → izvrši → **provjeri** → commit |
-| **Tri greške** | curenje · odstupanje · pokrivenost |
+| **Jedna ljestvica** | četiri prečke, popnite se za jednu |
+| **Jedna petlja** | opiši, isplaniraj, odobri, izvrši, **provjeri**, zapiši |
+| **Tri pogreške** | curenje · odstupanje · pokrivenost |
 
 ## Ljestvica reproducibilnosti
 
+Reproducibilnost nije stanje koje se ima ili nema, nego niz prečki po kojima se penje.
+
 | Prečka | Što znači |
 |---|---|
-| **0** | objavljen je samo PDF |
-| **1** | stranica projekta, citat i metapodaci — **ovaj projekt danas** |
-| **2** | kod javan, podaci dokumentirani (manifest i kodna knjiga) |
-| **3** | jedna naredba gradi sve, okruženje zaključano, CI to provjerava |
+| **0** | objavljen je samo članak u PDF obliku |
+| **1** | postoji stranica projekta, upute za citiranje i metapodaci, **ovaj projekt danas** |
+| **2** | kod je javan, a podaci dokumentirani popisom izvora i kodnom knjigom |
+| **3** | jedna naredba gradi sve, okruženje je zaključano i sustav to redovito provjerava |
 
-Ograničeni podaci nisu izlika za prečku 0. Naš izvorni korpus je licenciran i ne redistribuira se,
-ali kod, pravila pretrage, izvedeni agregati, manifest i sjeme — sve to smije van.
+Ograničeni podaci nisu razlog za ostanak na nultoj prečki. Naš izvorni korpus je licenciran i ne
+smije se dijeliti dalje, ali kod, pravila pretrage, izvedeni agregati, popis izvora i sjeme
+slučajnih brojeva smiju izaći u javnost.
 
 ## Sadržaj
 
 | Datoteka | Što je |
 |---|---|
-| [`slides/slides.qmd`](slides/slides.qmd) | deck (Quarto reveal.js, hrvatski), 24 slajda |
-| [`SCRIPT.md`](SCRIPT.md) | scenarij izlaganja minutu po minutu — što pokazati, napraviti i reći |
-| [`RUNBOOK.md`](RUNBOOK.md) | rukovanje demonstracijom, tri podmetnute greške, pravilo 60 sekundi |
-| [`handout.html`](handout.html) | jedna stranica za tisak (A4, obostrano) |
+| [`slides/slides.qmd`](slides/slides.qmd) | prezentacija od 24 slajda, Quarto i reveal.js, na hrvatskom |
+| [`SCRIPT.md`](SCRIPT.md) | tijek radionice minutu po minutu, što pokazati, napraviti i reći |
+| [`RUNBOOK.md`](RUNBOOK.md) | rukovanje demonstracijom, tri podmetnute pogreške, pravilo 60 sekundi |
+| [`handout.html`](handout.html) | jedna stranica za tisak, A4 obostrano |
 | [`GLOSSARY.md`](GLOSSARY.md) | hrvatsko i englesko nazivlje |
 | [`READING.md`](READING.md) | dvanaest naslova u tri skupine |
 | [`pipeline/`](pipeline/) | cjevovod koji se gradi jednom naredbom i sam se provjerava |
@@ -58,28 +63,27 @@ quarto render slides/slides.qmd      # -> slides/slides.html (samostalan)
 cd pipeline && Rscript analysis/run.R  # -> paper/nalaz.html + results/
 ```
 
-Traži: Quarto ≥ 1.4, R ≥ 4.2. Bez GPU-a.
+Traži Quarto verzije 1.4 ili novije i R verzije 4.2 ili novije. Bez GPU-a.
 
 ## Demonstracija u tri poteza
 
 ```bash
 cd pipeline
-Rscript demo/podmetni.R    # podmetni tri greške
+Rscript demo/podmetni.R    # podmetni tri pogreške
 Rscript analysis/run.R     # sve tri se prijave u jednom ispisu, rukopis se ne gradi
-Rscript demo/vrati.R       # čisto stanje
+Rscript demo/vrati.R       # vrati čisto stanje
 ```
 
-## Odnos prema cjevovodu
+## Ako želite vlastitu kopiju cjevovoda
 
-`pipeline/` je zamišljen kao **zaseban repozitorij** koji sudionici kloniraju. Ovdje živi zato što
-je nastao uz radionicu; kad se otvori vlastiti repozitorij, mapa se kopira u cijelosti i radi bez
-izmjena.
+Mapa [`pipeline/`](pipeline/) je samostalna. Kopirajte je u cijelosti u novi repozitorij i radi bez
+ijedne izmjene jer ništa u njoj ne ovisi o ostatku ovog projekta.
 
 ## Napomena o podacima
 
-Demonstracijski podaci su **kalibrirani**, ne izvorni. Brojke su reda veličine objavljenih, ali nisu
-rezultati istraživanja i ne smiju se tako citirati. Zamjena stvarnim izvozom opisana je u
-[`pipeline/data/make_data.R`](pipeline/data/make_data.R).
+Podaci koji se koriste u demonstraciji su **izmišljeni i kalibrirani**, dakle nisu izvorni. Brojke
+su reda veličine objavljenih, ali nisu rezultati istraživanja i ne smiju se tako citirati. Zamjena
+stvarnim izvozom opisana je u [`pipeline/data/make_data.R`](pipeline/data/make_data.R).
 
 ## Licencija
 

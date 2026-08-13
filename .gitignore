@@ -3,3 +3,16 @@ Thumbs.db
 ~$*.pptx
 ~$*.docx
 *.tmp
+
+# Tekst rada — ostaje lokalno, ne objavljuje se
+docs/paper/
+docs/downloads/Pasivno-zamijenjena.*
+
+# Radni dokumenti — ne objavljuju se
+materials/internal-brief.md
+materials/conference-brief.md
+materials/conference-submission.md
+
+# Izlaz kratkog pregleda (objavljena kopija je u docs/downloads/)
+materials/brief/pregled.pdf
+materials/brief/pregled.typ

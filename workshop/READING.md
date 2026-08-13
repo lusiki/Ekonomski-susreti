@@ -3,9 +3,8 @@
 Kratak popis — dvanaest naslova u tri skupine, po jedan za svaki stup i nekoliko praktičnih
 priručnika. Cilj nije pokriti polje nego dati po jedno sidro na koje se možete osloniti.
 
-> **Provjerite navode prije tiskanja.** Popis je sastavljen kao putokaz, a ne kao bibliografija
-> rada. Prije nego što bilo koji naslov uđe u vaš rukopis ili u tiskani materijal radionice,
-> provjerite godinu, volumen i stranice u izvoru.
+> **Provjerite navode prije citiranja.** Ovo je putokaz za čitanje, a ne bibliografija. Prije nego
+> što neki naslov uđe u vaš rukopis, provjerite godinu, volumen i stranice u izvoru.
 
 ## Otvorenost i reproducibilnost
 

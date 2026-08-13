@@ -56,28 +56,28 @@
 <section class="list">
   <p class="eyebrow">Ekonomski susreti · radionica</p>
   <h1>Otvoreno, reproducibilno i AI-podržano istraživanje</h1>
-  <p class="lead">Petra Palić i Luka Sikić · Hrvatsko katoličko sveučilište</p>
+  <p class="lead">Luka Sikić · Hrvatsko katoličko sveučilište</p>
 
-  <div class="quote">Tko ovo može provjeriti i po kojoj cijeni?</div>
+  <div class="quote">Tko ovo može provjeriti i uz koliki trošak?</div>
 
   <p>Otvorenost, reproducibilnost i AI nisu tri teme nego <strong>tri odgovora na isto
-  pitanje</strong>. Proizvesti tvrdnju je jeftino i sve jeftinije; provjeriti je skupo i ne postaje
-  jeftinije samo od sebe. Ta asimetrija je cijeli problem.</p>
+  pitanje</strong>. Proizvesti tvrdnju danas je jeftino i postaje sve jeftinije. Provjeriti je
+  ostaje skupo i ne pojeftinjuje samo od sebe. U toj nejednakosti je cijeli problem.</p>
 
   <h2>Tri stupa</h2>
   <table>
     <tr><th style="width:26%">Stup</th><th style="width:30%">Tko provjerava</th><th>Što konkretno znači</th></tr>
     <tr><td class="k">Otvoreno</td><td>drugi ljudi</td><td>kod, podaci i metapodaci su dostupni</td></tr>
-    <tr><td class="k">Reproducibilno</td><td>stroj i vi za godinu dana</td><td>jedna naredba ponovno gradi sve</td></tr>
-    <tr><td class="k">AI-podržano</td><td>vi, brže — ako provjeravate</td><td>agent generira, vi jamčite</td></tr>
+    <tr><td class="k">Reproducibilno</td><td>računalo i vi za godinu dana</td><td>jedna naredba ponovno gradi sve</td></tr>
+    <tr><td class="k">AI-podržano</td><td>vi sami, brže, ako provjeravate</td><td>alat predlaže, vi odgovarate</td></tr>
   </table>
 
-  <h2>Ljestvica — popnite se za jednu prečku</h2>
+  <h2>Ljestvica, popnite se za jednu prečku</h2>
   <div class="ladder">
-    <div><strong>0</strong> · Objavljen je samo PDF.</div>
-    <div class="tu"><strong>1</strong> · Stranica projekta, citat i metapodaci. <em>← ovaj projekt danas</em></div>
-    <div><strong>2</strong> · Kod javan, podaci dokumentirani (manifest i kodna knjiga).</div>
-    <div class="cilj"><strong>3</strong> · Jedna naredba gradi sve, okruženje zaključano, CI to provjerava.</div>
+    <div><strong>0</strong> · Objavljen je samo članak u PDF obliku.</div>
+    <div class="tu"><strong>1</strong> · Postoji stranica projekta, upute za citiranje i metapodaci. <em>← ovaj projekt danas</em></div>
+    <div><strong>2</strong> · Kod je javan, a podaci dokumentirani popisom izvora i kodnom knjigom.</div>
+    <div class="cilj"><strong>3</strong> · Jedna naredba gradi sve, okruženje je zaključano i sustav to redovito provjerava.</div>
   </div>
 
   <h2>Kada podaci ne smiju van</h2>
@@ -95,13 +95,14 @@
       <ul>
         <li>kod i pravila pretrage</li>
         <li>izvedeni agregati</li>
-        <li>manifest izvora i kodna knjiga</li>
-        <li>sjeme slučajnog generatora</li>
+        <li>popis izvora i kodna knjiga</li>
+        <li>sjeme slučajnih brojeva</li>
       </ul>
     </div>
   </div>
-  <p class="muted">Ograničeni podaci nisu izlika za prečku 0. Prečka 2 dostižna je gotovo uvijek — a
-  razlika između 1 i 2 je upravo ono što recenzent zapravo može provjeriti.</p>
+  <p class="muted">Ograničeni podaci nisu razlog za ostanak na nultoj prečki. Druga prečka dostižna
+  je gotovo uvijek, a razlika između prve i druge upravo je ono što recenzent stvarno može
+  provjeriti.</p>
 
   <footer>Kod MIT, tekst CC BY 4.0 · lusiki.github.io/Ekonomski-susreti/workshop/</footer>
 </section>
@@ -111,33 +112,34 @@
   <h1>Kako to izgleda u projektu</h1>
 
   <h2>Petlja</h2>
-  <div class="quote" style="font-size:10.5pt">opiši → plan → <em>odobrim</em> → izvrši → provjeri → <em>commitam</em></div>
+  <div class="quote" style="font-size:10.5pt">opiši → isplaniraj → <em>odobrim</em> → izvrši → provjeri → <em>zapišem</em></div>
 
   <table>
     <tr><th style="width:32%">Komponenta</th><th>Sprječava</th></tr>
-    <tr><td class="k">Kontekst — <code>CLAUDE.md</code></td><td>povratak na generičke pretpostavke</td></tr>
-    <tr><td class="k">Plan — prije izmjene</td><td>da brzo riješi krivi problem</td></tr>
-    <tr><td class="k">Ograde — <code>settings.json</code></td><td>da autonomni proces dira što god želi</td></tr>
-    <tr><td class="k">Provjera — <code>run.R</code></td><td>da uvjerljiva besmislica uđe u tekst</td></tr>
-    <tr><td class="k">Git — mali commitovi</td><td>da se greška ponovi i da nema povratka</td></tr>
+    <tr><td class="k">Kontekst u <code>CLAUDE.md</code></td><td>povratak na generičke pretpostavke</td></tr>
+    <tr><td class="k">Plan prije izmjene</td><td>da se brzo riješi krivi problem</td></tr>
+    <tr><td class="k">Ograde u <code>settings.json</code></td><td>da samostalan proces dira što god želi</td></tr>
+    <tr><td class="k">Provjera u <code>run.R</code></td><td>da uvjerljiva besmislica uđe u tekst</td></tr>
+    <tr><td class="k">Git i mali zapisi promjena</td><td>da se pogreška ponovi i da nema povratka</td></tr>
   </table>
 
   <h2>Tri pravila koja drže lanac</h2>
   <ul>
-    <li><strong>Konstante.</strong> Ako se broj pojavljuje na dva mjesta, jedno je greška.</li>
+    <li><strong>Konstante.</strong> Ako se isti broj pojavljuje na dva mjesta, jedno je pogreška.</li>
     <li><strong>Izlošci.</strong> Svaka slika i tablica ima funkciju koja je proizvodi.</li>
-    <li><strong>Brojevi.</strong> Nijedan broj u tekstu nije upisan rukom — svi dolaze iz <code>procjene.json</code>.</li>
+    <li><strong>Brojevi.</strong> Nijedan broj u tekstu nije upisan rukom, nego svi dolaze iz <code>procjene.json</code>.</li>
   </ul>
 
-  <h2>Tri provjere, tri greške</h2>
+  <h2>Tri provjere, tri pogreške</h2>
   <table>
     <tr><th style="width:26%">Provjera</th><th style="width:24%">Stup</th><th>Hvata</th></tr>
-    <tr><td class="k">ograda</td><td>otvoreno</td><td>ograničen sadržaj u bilo kojem izlazu</td></tr>
-    <tr><td class="k">provenijencija</td><td>reproducibilno</td><td>koeficijent upisan rukom u tekst</td></tr>
-    <tr><td class="k">pokrivenost</td><td>mjerenje, AI</td><td>pravilo pretrage koje izgubi dijakritiku</td></tr>
+    <tr><td class="k">ograda</td><td>otvoreno</td><td>ograničen podatak u bilo kojem izlazu</td></tr>
+    <tr><td class="k">podrijetlo</td><td>reproducibilno</td><td>koeficijent upisan rukom u tekst</td></tr>
+    <tr><td class="k">pokrivenost</td><td>mjerenje i AI</td><td>pravilo pretrage koje ne prepozna dijakritiku</td></tr>
   </table>
-  <p class="muted">Treća je tiha: koeficijent padne na pola, a <strong>ništa ne pukne</strong>. Kod
-  se izvrši, slike se nacrtaju, tekst se sastavi. Samo je rezultat kriv.</p>
+  <p class="muted">Treća je tiha. Koeficijent padne na pola, a <strong>program radi bez ijedne
+  poruke o pogrešci</strong>. Kod se izvrši, slike se nacrtaju, tekst se sastavi. Samo je rezultat
+  kriv.</p>
 
   <h2>Početni prompt</h2>
   <pre><code>Radim na [PROJEKT] u ovom repozitoriju. [Dvije rečenice o radu,
@@ -152,11 +154,12 @@ promijenilo.</code></pre>
   <h2>Kada AI proizvodi vašu varijablu</h2>
   <p>Nijedna strojno označena varijabla ne ulazi u regresiju bez <strong>ljudski označenog
   validacijskog poduzorka</strong>. U tekstu prijavite kako je varijabla nastala, koliko je
-  validirano i s kojom pouzdanošću. Greška u mjerenju ne ruši ništa — samo tiho pomiče koeficijent.</p>
+  provjereno i s kojom pouzdanošću. Pogreška u mjerenju ne ruši ništa, nego samo tiho pomiče
+  koeficijent.</p>
 
   <h2>Prvi korak, ovaj tjedan</h2>
   <p>Odaberite jedan projekt. Odredite na kojoj je prečki. Popnite se za jednu. Za većinu je to
-  prečka 2 — javni kod i dokumentirani podaci, bez ijednog retka novog istraživanja.</p>
+  druga prečka, dakle javni kod i dokumentirani podaci, bez ijednog retka novog istraživanja.</p>
 
   <footer>Demonstracijski podaci su kalibrirani i ne smiju se citirati kao rezultati istraživanja.</footer>
 </section>

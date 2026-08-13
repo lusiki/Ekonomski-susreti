@@ -1,7 +1,7 @@
 ---
 title: "Otvoreno, reproducibilno i AI-podržano istraživanje"
 subtitle: "Radionica · Ekonomski susreti"
-author: "Petra Palić i Luka Sikić · Hrvatsko katoličko sveučilište"
+author: "Luka Sikić · Hrvatsko katoličko sveučilište"
 lang: hr
 format:
   revealjs:
