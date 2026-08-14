@@ -35,11 +35,11 @@ Cjevovod koji možete klonirati i pokrenuti jednom naredbom.
 
 . . .
 
-Jedna riječ vodi cijeli sat: **najmanje moguće**. Ne petnaest alata — najmanji
+Jedna riječ vodi cijeli sat, a ta riječ je **najmanje moguće**. Ne petnaest alata, nego najmanji
 skup dijelova koji istraživanje čini provjerljivim.
 
 
-::: {.divider background-color="#16324f"}
+::: {.divider background-color="#000000"}
 ## 0 · Uvod
 
 Upravo ste čuli tvrdnju. Sada je otvaramo.
@@ -57,7 +57,7 @@ Možete li taj broj provjeriti?
 :::
 
 ::: {.tiho}
-Ne "vjerujete li mu" — nego: koliko bi vas vremena stajalo da ga provjerite.
+Pitanje nije vjerujete li mu, nego koliko bi vas vremena stajalo da ga provjerite.
 :::
 
 ## Cijena je asimetrična
@@ -76,14 +76,14 @@ skupo, i ne postaje jeftinije samo od sebe
 . . .
 
 Ta asimetrija je cijeli problem. Otvorenost, reproducibilnost i AI tri su
-odgovora na **isto pitanje**:
+odgovora na **isto pitanje**.
 
 ::: {.krupno}
 Tko ovo može provjeriti i po kojoj cijeni?
 :::
 
 
-::: {.divider background-color="#16324f"}
+::: {.divider background-color="#000000"}
 ## 1 · Okvir
 
 Tri stupa, jedna ljestvica.
@@ -95,7 +95,7 @@ Tri stupa, jedna ljestvica.
 |---|---|---|
 | **Otvoreno** | drugi ljudi | kod, podaci i metapodaci su dostupni |
 | **Reproducibilno** | vi za godinu dana i stroj | jedna naredba ponovno gradi sve |
-| **AI-podržano** | vi, brže — ali samo ako provjeravate | agent generira, vi jamčite |
+| **AI-podržano** | vi sami, brže, ako provjeravate | alat predlaže, vi odgovarate |
 
 . . .
 
@@ -104,7 +104,7 @@ Agent generira. Vi jamčite.
 :::
 
 ::: {.tiho}
-AI ne mijenja standard dokaza. Mijenja cijenu proizvodnje tvrdnji — pa dokazni
+AI ne mijenja standard dokaza. Mijenja cijenu proizvodnje tvrdnji, pa dokazni
 lanac postaje uže grlo.
 :::
 
@@ -148,10 +148,10 @@ kod, pravila pretrage, izvedeni agregati, manifest, kodna knjiga, sjeme
 . . .
 
 Ograničeni podaci **nisu izlika za prečku 0**. Prečka 2 je dostižna gotovo
-uvijek — a razlika između 1 i 2 je ono što recenzent zapravo može provjeriti.
+uvijek, a razlika između prve i druge prečke je ono što recenzent stvarno može provjeriti.
 
 
-::: {.divider background-color="#16324f"}
+::: {.divider background-color="#000000"}
 ## 2 · Anatomija
 
 Kako izgleda projekt koji se sam provjerava.
@@ -194,7 +194,7 @@ Nijedan broj u tekstu nije upisan rukom. Svi dolaze iz `procjene.json`.
 
 . . .
 
-Treće pravilo je najjače: tekst **ne može** tiho odstupiti od tablice, jer se
+Treće je pravilo najjače jer tekst **ne može** tiho odstupiti od tablice, budući da se
 gradnja ruši na svaki decimalni broj upisan rukom.
 
 ## Petlja s agentom
@@ -205,11 +205,11 @@ opiši → plan → **odobrim** → izvrši → **provjeri** → commitam
 
 | Komponenta | Sprječava |
 |---|---|
-| **Kontekst** — `CLAUDE.md` | povratak na generičke pretpostavke |
-| **Plan** — prije svake izmjene | da brzo riješi krivi problem |
-| **Ograde** — `settings.json` | da autonomni proces dira što god želi |
-| **Provjera** — `run.R` | da uvjerljiva besmislica uđe u tekst |
-| **Git** — mali commitovi | da se greška ponovi i da se ne možemo vratiti |
+| **Kontekst** u `CLAUDE.md` | povratak na generičke pretpostavke |
+| **Plan** prije svake izmjene | da se brzo riješi krivi problem |
+| **Ograde** u `settings.json` | da samostalan proces dira što god želi |
+| **Provjera** u `run.R` | da uvjerljiva besmislica uđe u tekst |
+| **Git** i mali zapisi promjena | da se pogreška ponovi i da nema povratka |
 
 ## Ograde su datoteka, ne obećanje
 
@@ -229,7 +229,7 @@ ga stavite u zajednički projekt.
 :::
 
 
-::: {.divider background-color="#16324f"}
+::: {.divider background-color="#000000"}
 ## 3 · Demonstracija
 
 Tri greške, po jedna za svaki stup.
@@ -239,17 +239,17 @@ Tri greške, po jedna za svaki stup.
 
 | Greška | Stup | Uhvatit će je |
 |---|---|---|
-| **Curenje** — ograničen sadržaj u rukopisu | otvoreno | ograda |
-| **Odstupanje** — koeficijent upisan rukom | reproducibilno | provenijencija |
-| **Pokrivenost** — pravilo pretrage izgubi dijakritiku | mjerenje, AI | pokrivenost |
+| **Curenje** ograničenog sadržaja u rukopis | otvoreno | ograda |
+| **Odstupanje** koeficijenta upisanog rukom | reproducibilno | podrijetlo |
+| **Pokrivenost** kada pretraga izgubi dijakritiku | mjerenje i AI | pokrivenost |
 
 . . .
 
-Treća je hrvatska specijalnost: portali pišu i *središnja* i *sredisnja*.
-Ispadne li normalizacija, tiho nestane pola korpusa — i koeficijent se
+Treća je domaća specijalnost jer portali pišu i *središnja* i *sredisnja*.
+Ispadne li normalizacija, tiho nestane pola korpusa i koeficijent se
 prepolovi, a **ništa ne pukne**.
 
-## Demonstracija {background-color="#16324f"}
+## Demonstracija {background-color="#000000"}
 
 ::: {.krupno style="color:white"}
 Terminal
@@ -283,7 +283,7 @@ Ovo je ono što promakne umornom čovjeku pred rok.
 :::
 
 
-::: {.divider background-color="#16324f"}
+::: {.divider background-color="#000000"}
 ## 4 · Granice
 
 Trošak, mjerenje, i što ne delegirati.
@@ -291,7 +291,7 @@ Trošak, mjerenje, i što ne delegirati.
 
 ## Kada AI proizvodi vašu varijablu
 
-Naša zavisna varijabla je **strojno konstruirana** — pravilo pretrage nad
+Naša zavisna varijabla je **strojno konstruirana**, dakle pravilo pretrage nad
 milijunima objava.
 
 ::: {.kartice}
@@ -332,7 +332,7 @@ Alat **podiže pod, ne strop**. Zato iskusna prosudba postaje rjeđi, a ne
 suvišniji ulaz.
 
 
-::: {.divider background-color="#16324f"}
+::: {.divider background-color="#000000"}
 ## 5 · Zaključak
 :::
 
@@ -342,26 +342,26 @@ suvišniji ulaz.
 |---|---|
 | **Jedno pitanje** | Tko ovo može provjeriti i po kojoj cijeni? |
 | **Tri stupa** | otvoreno · reproducibilno · AI-podržano |
-| **Jedna ljestvica** | četiri prečke — popnite se za jednu |
+| **Jedna ljestvica** | četiri prečke, popnite se za jednu |
 | **Jedna petlja** | opiši → plan → odobri → izvrši → **provjeri** → commit |
 | **Tri greške** | curenje · odstupanje · pokrivenost |
 
 ## Jedna prečka
 
 ::: {.krupno}
-Odaberite jedan projekt. Odredite na kojoj je prečki. Popnite se za jednu — ovaj tjedan.
+Odaberite jedan projekt. Odredite na kojoj je prečki. Popnite se za jednu, i to ovaj tjedan.
 :::
 
 . . .
 
-Za većinu je to prečka 2: **javni kod i dokumentirani podaci**, bez ijednog
+Za većinu je to druga prečka, dakle **javni kod i dokumentirani podaci**, bez ijednog
 retka novog istraživanja.
 
 ## Materijali
 
-- **Radionica i slajdovi** — `lusiki.github.io/Ekonomski-susreti/workshop/`
-- **Cjevovod za kloniranje** — `workshop/pipeline/` u repozitoriju
-- **Rukovanje** — `RUNBOOK.md` · **pojmovnik** — `GLOSSARY.md` · **literatura** — `READING.md`
+- **Radionica i slajdovi** na `lusiki.github.io/Ekonomski-susreti/workshop/`
+- **Cjevovod za kloniranje** u `workshop/pipeline/`
+- **Rukovanje** u `RUNBOOK.md` · **pojmovnik** u `GLOSSARY.md` · **literatura** u `READING.md`
 
 ::: {.tiho}
 Kod MIT, tekst CC BY 4.0. Demonstracijski podaci su kalibrirani i ne smiju se

@@ -7,17 +7,38 @@
   <title>Sažetci izlaganja i radionice</title>
   <link rel="stylesheet" href="../style.css">
   <style>
-    .back { display: inline-block; margin-bottom: 18px; color: var(--blue); font-weight: 600; text-decoration: none; }
-    article.abstract { margin: 40px 0 0; padding-top: 30px; border-top: 1px solid var(--line); }
-    article.abstract:first-of-type { border-top: 0; padding-top: 0; }
-    article.abstract h2 { font-size: 1.9rem; line-height: 1.15; margin-bottom: 6px; }
-    article.abstract .sub { margin: 0 0 4px; color: var(--coral); font-weight: 700; font-size: 1.05rem; }
-    article.abstract .who { margin: 0 0 20px; color: var(--muted); font-size: .95rem; }
-    article.abstract h3 { margin: 26px 0 8px; font-size: 1.05rem; color: var(--navy); }
-    .keys { color: var(--muted); font-size: .95rem; }
-    .meta { margin-top: 22px; padding: 14px 16px; border-left: 5px solid var(--blue); background: white; border-radius: 0 8px 8px 0; font-size: .96rem; }
-    ol { padding-left: 20px; }
-    ol li { margin-bottom: 4px; }
+    article.abstract { margin: 86px 0 0; padding-top: 34px; border-top: 2px solid var(--line); }
+    article.abstract:first-of-type { margin-top: 64px; }
+    article.abstract h2 {
+      max-width: 22ch;
+      margin: 0 0 14px;
+      font-size: clamp(1.9rem, 4.6vw, 3.2rem);
+      font-weight: 300;
+      line-height: 1.02;
+      letter-spacing: -.028em;
+      text-transform: none;
+    }
+    article.abstract .sub { max-width: 46ch; margin: 0 0 20px; font-size: 1.02rem; font-weight: 400; }
+    article.abstract .who {
+      margin: 0 0 40px; color: var(--muted);
+      font-size: .72rem; font-weight: 500; letter-spacing: .18em; text-transform: uppercase;
+    }
+    article.abstract p { max-width: 68ch; }
+    .keys { max-width: 68ch; color: var(--muted); font-size: .86rem; letter-spacing: .04em; }
+    .meta {
+      max-width: 68ch; margin-top: 34px; padding-top: 14px;
+      border-top: 1px solid var(--line);
+      font-size: .82rem; letter-spacing: .04em;
+    }
+    ol { max-width: 68ch; margin: 0; padding: 0; list-style: none; counter-reset: t; }
+    ol li {
+      position: relative; margin-bottom: 10px; padding-left: 46px; counter-increment: t;
+    }
+    ol li::before {
+      content: counter(t, decimal-leading-zero);
+      position: absolute; left: 0; top: .12em;
+      font-size: .78rem; font-weight: 700; letter-spacing: .1em;
+    }
   </style>
 </head>
 <body>

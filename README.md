@@ -2,9 +2,9 @@
 
 Javni repozitorij istraživanja **„Pasivno zamijenjena. Cijena inflacije koju ne mjeri indeks potrošačkih cijena”** Petre Palić i Luke Sikića. Projekt proučava gubi li Hrvatska narodna banka relativnu medijsku vidljivost upravo kada inflacija raste te je li učestalost prisutnosti institucionalnog glasa u vijestima povezana s inflacijskim očekivanjima kućanstava.
 
-[![Prezentacija](https://img.shields.io/badge/prezentacija-otvori-2C7FB8)](https://lusiki.github.io/Ekonomski-susreti/slides/)
-[![Sažetci](https://img.shields.io/badge/sažetci-pročitaj-16324F)](https://lusiki.github.io/Ekonomski-susreti/abstracts/)
-[![Pregled](https://img.shields.io/badge/pregled_istraživanja-PDF-C0503E)](https://lusiki.github.io/Ekonomski-susreti/downloads/Pregled-istrazivanja.pdf)
+[![Prezentacija](https://img.shields.io/badge/prezentacija-otvori-000000?style=flat-square&labelColor=000000)](https://lusiki.github.io/Ekonomski-susreti/slides/)
+[![Sažetci](https://img.shields.io/badge/sažetci-pročitaj-000000?style=flat-square&labelColor=000000)](https://lusiki.github.io/Ekonomski-susreti/abstracts/)
+[![Pregled](https://img.shields.io/badge/pregled_istraživanja-PDF-000000?style=flat-square&labelColor=000000)](https://lusiki.github.io/Ekonomski-susreti/downloads/Pregled-istrazivanja.pdf)
 [![GitHub Pages](https://github.com/lusiki/Ekonomski-susreti/actions/workflows/pages.yml/badge.svg)](https://lusiki.github.io/Ekonomski-susreti/)
 
 ## Materijali
@@ -26,6 +26,7 @@ Javni repozitorij istraživanja **„Pasivno zamijenjena. Cijena inflacije koju 
 - [Zašto je rezultat važan](#zašto-je-rezultat-važan)
 - [Sadržaj prezentacije](#sadržaj-prezentacije)
 - [Reproduktivnost i podatci](#reproduktivnost-i-podatci)
+- [Oblikovanje](#oblikovanje)
 - [Autori i citiranje](#autori-i-citiranje)
 
 ## Istraživački problem
@@ -91,6 +92,10 @@ Konferencijsko izlaganje organizirano je kao dvadesetominutna priča u deset kor
 Ovaj repozitorij služi kao **javna prezentacijska i diseminacijska stranica** projekta. Objavljeni su sažetci izlaganja i radionice, sažeti prikaz istraživanja na pet stranica, konferencijska prezentacija i svi materijali radionice.
 
 Puni tekst rada nije objavljen jer je u radnoj verziji, a dostupan je na upit autorima. Izvorna baza medijskog monitoringa i izvedeni podatci na razini pojedine objave nisu redistribuirani jer podliježu uvjetima pristupa izvornom sustavu i mogu sadržavati sadržaj trećih strana. Repozitorij stoga nije potpuni replikacijski paket. Rezultati u prezentaciji generirani su iz analitičkog projekta autora, a status kauzalnih i prediktivnih tvrdnji izričito je označen u radu i slajdovima.
+
+## Oblikovanje
+
+Svi materijali dijele jedan vizualni sustav. Predložak je bauhausovski, dakle crno-bijeli i prozračan, bez boje, sjena i zaobljenih rubova. Hijerarhiju nosi isključivo tipografija, pa razliku između naslova, međunaslova i teksta pravi veličina i debljina slova. Pismo je Roboto, priloženo u mapi [`fonts/`](fonts/) za gradnju PDF-a i u [`docs/fonts/`](docs/fonts/) za stranicu, uz Apache licenciju. Grafikoni su sivi i serije se razlikuju debljinom i vrstom linije, a ne bojom.
 
 ## Autori i citiranje
 

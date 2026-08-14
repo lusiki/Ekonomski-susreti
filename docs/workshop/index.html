@@ -7,22 +7,32 @@
   <title>Radionica o otvorenom, reproducibilnom i AI-podržanom istraživanju</title>
   <link rel="stylesheet" href="../style.css">
   <style>
-    .ladder { margin: 22px 0 8px; }
+    section p, section li { max-width: 68ch; }
+    .ladder { margin: 30px 0 26px; border-top: 1px solid var(--line); }
     .ladder div {
-      padding: 10px 14px;
-      margin-bottom: 6px;
-      border-left: 9px solid var(--line);
-      border-radius: 0 8px 8px 0;
-      background: white;
+      display: flex; gap: 22px; align-items: baseline;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--line);
+      background: none;
     }
-    .ladder div.tu { border-left-color: var(--coral); background: #fdf4f3; }
-    .ladder div.cilj { border-left-color: var(--teal); background: #f1f9f7; }
-    .ladder b { color: var(--navy); }
-    table.plain { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: .97rem; }
-    table.plain th { background: var(--navy); color: white; text-align: left; }
-    table.plain th, table.plain td { padding: 9px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
-    table.plain td.k { white-space: nowrap; font-weight: 700; color: var(--navy); }
-    .back { display: inline-block; margin-bottom: 18px; color: var(--blue); font-weight: 600; text-decoration: none; }
+    .ladder b {
+      flex: 0 0 auto; width: 2.4ch;
+      font-size: 1.5rem; font-weight: 300; line-height: 1;
+    }
+    .ladder div.tu { font-weight: 500; }
+    .ladder div.tu em, .ladder div.cilj em {
+      font-style: normal; font-size: .68rem; font-weight: 700;
+      letter-spacing: .18em; text-transform: uppercase;
+    }
+    table.plain { width: 100%; border-collapse: collapse; margin: 30px 0; font-size: .94rem; }
+    table.plain th {
+      border-bottom: 2px solid var(--line); background: none; color: var(--ink);
+      text-align: left; font-size: .68rem; font-weight: 700;
+      letter-spacing: .2em; text-transform: uppercase;
+    }
+    table.plain th, table.plain td { padding: 13px 18px 13px 0; vertical-align: top; }
+    table.plain td { border-bottom: 1px solid var(--hair); }
+    table.plain td.k { white-space: nowrap; font-weight: 700; }
   </style>
 </head>
 <body>
@@ -51,10 +61,10 @@
       <h2>Ljestvica reproducibilnosti</h2>
       <p>Reproducibilnost nije stanje koje se ima ili nema, nego niz prečki po kojima se penje. Radionica pomaže odrediti gdje je vaš projekt danas i što je sljedeći korak.</p>
       <div class="ladder">
-        <div><b>0</b> · Objavljen je samo članak u PDF obliku.</div>
-        <div class="tu"><b>1</b> · Postoji stranica projekta, upute za citiranje i osnovni metapodaci. <em>← ovaj projekt danas</em></div>
-        <div><b>2</b> · Kod je javan, a podaci su dokumentirani popisom izvora i kodnom knjigom.</div>
-        <div class="cilj"><b>3</b> · Jedna naredba gradi sve, okruženje je zaključano i sustav to redovito provjerava.</div>
+        <div><b>0</b> Objavljen je samo članak u PDF obliku.</div>
+        <div class="tu"><b>1</b> Postoji stranica projekta, upute za citiranje i osnovni metapodaci. <em>← ovaj projekt danas</em></div>
+        <div><b>2</b> Kod je javan, a podaci su dokumentirani popisom izvora i kodnom knjigom.</div>
+        <div class="cilj"><b>3</b> Jedna naredba gradi sve, okruženje je zaključano i sustav to redovito provjerava.</div>
       </div>
       <p>Naš izvorni medijski korpus je licenciran i ne smije se dijeliti dalje. Kod, pravila pretrage, izvedeni agregati, popis izvora i sjeme slučajnih brojeva ipak smiju izaći u javnost. <strong>Ograničeni podaci nisu razlog za ostanak na nultoj prečki.</strong></p>
     </section>

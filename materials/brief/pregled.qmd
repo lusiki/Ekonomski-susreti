@@ -1,19 +1,58 @@
 ---
-title: "Kada inflacija istisne glas središnje banke"
-subtitle: "Sažeti prikaz istraživanja o institucionalnom jazu u pažnji"
-author: "Petra Palić i Luka Sikić, Hrvatsko katoličko sveučilište"
 lang: hr
 format:
   typst:
     papersize: a4
-    fontsize: 10.5pt
-    mainfont: "Cambria"
+    fontsize: 10pt
+    mainfont: "Roboto"
+    font-paths: ["../../fonts"]
     margin:
-      x: 2.3cm
+      x: 2.5cm
       y: 2.2cm
     section-numbering: ""
     toc: false
 ---
+
+```{=typst}
+// Bauhaus, crno-bijelo, prozračno. Hijerarhiju nosi samo tipografija.
+
+#set text(font: "Roboto", size: 10pt, weight: "regular", fill: black)
+#set par(justify: true, leading: 0.74em, first-line-indent: 0pt)
+#show par: set block(spacing: 1.15em)
+
+#show heading: it => block(width: 100%, above: 1.55em, below: 0.8em)[
+  #line(length: 100%, stroke: 0.5pt + black)
+  #v(0.5em, weak: true)
+  #text(size: 7.6pt, weight: 700, tracking: 0.2em)[#upper(it.body)]
+]
+
+#show figure: set block(above: 1.5em, below: 1.5em)
+#show figure.caption: it => align(left)[
+  #v(0.2em)
+  #text(size: 7.6pt, weight: "regular", fill: luma(110))[#it.body]
+]
+
+#block(width: 100%, below: 2.4em)[
+  #text(size: 7.4pt, weight: 700, tracking: 0.32em)[EKONOMSKI SUSRETI]
+  #v(0.6em)
+  #line(length: 100%, stroke: 1.4pt + black)
+  #v(1.5em)
+  #block(width: 100%)[
+    #set par(leading: 0.36em)
+    #text(size: 31pt, weight: 300, tracking: -0.9pt)[
+      Kada inflacija istisne#linebreak()glas središnje banke
+    ]
+  ]
+  #v(1em)
+  #text(size: 11pt, weight: "regular")[
+    Sažeti prikaz istraživanja o institucionalnom jazu u pažnji
+  ]
+  #v(1.5em)
+  #text(size: 7.4pt, weight: 500, tracking: 0.18em, fill: luma(110))[
+    PETRA PALIĆ I LUKA SIKIĆ #h(1em) HRVATSKO KATOLIČKO SVEUČILIŠTE
+  ]
+]
+```
 
 ## Pitanje
 

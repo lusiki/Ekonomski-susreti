@@ -1,159 +1,256 @@
+/*
+  Bauhaus, crno-bijelo, prozračno.
+  Hijerarhiju nosi samo tipografija, dakle veličina i debljina slova.
+*/
+
+@import url("../fonts/roboto.css");
+
 :root {
-  --navy: #16324f;
-  --blue: #2c7fb8;
-  --teal: #2a9d8f;
-  --coral: #d95f59;
-  --gold: #e9a23b;
-  --grey: #5f6b73;
-  --light: #eaf0f4;
+  --ink: #000;
+  --paper: #fff;
+  --muted: #6e6e6e;
+  --hair: #ccc;
+
+  --r-background-color: #fff;
+  --r-main-color: #000;
+  --r-heading-color: #000;
+  --r-link-color: #000;
+  --r-link-color-dark: #000;
+  --r-link-color-hover: #000;
+  --r-selection-background-color: #000;
+  --r-selection-color: #fff;
+  --r-main-font: Roboto, "Helvetica Neue", Arial, sans-serif;
+  --r-heading-font: Roboto, "Helvetica Neue", Arial, sans-serif;
+  --r-heading-font-weight: 300;
+  --r-heading-text-transform: none;
+  --r-code-font: "Roboto Mono", Consolas, monospace;
 }
 
 .reveal {
-  color: var(--navy);
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
   font-size: 36px;
+  letter-spacing: 0.004em;
 }
+
+.reveal-viewport { background: var(--paper); }
 
 .reveal h1,
 .reveal h2,
 .reveal h3 {
-  color: var(--navy);
-  letter-spacing: -0.02em;
+  color: var(--ink);
+  font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: -0.028em;
+  line-height: 1.04;
   text-transform: none;
+  text-shadow: none;
 }
 
 .reveal h2 {
-  border-bottom: 4px solid var(--blue);
-  padding-bottom: 0.16em;
-  margin-bottom: 0.6em;
+  padding-bottom: 0.18em;
+  margin-bottom: 0.72em;
+  border-bottom: 2px solid var(--ink);
+  font-size: 1.5em;
 }
+
+.reveal a { color: var(--ink); text-decoration: underline; text-underline-offset: 0.18em; }
+.reveal strong { font-weight: 700; }
+.reveal em { font-style: italic; }
+
+/* ---------- popisi ---------- */
+
+.reveal ul { list-style: none; margin-left: 0; padding-left: 0; }
+.reveal ol { margin-left: 1.1em; padding-left: 0; }
+.reveal li { position: relative; margin-bottom: 0.4em; padding-left: 1.15em; }
+.reveal ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 0.42em;
+  height: 2px;
+  background: var(--ink);
+}
+.reveal ol li { padding-left: 0.2em; }
+.reveal ol li::before { content: none; }
+
+/* ---------- citat ---------- */
 
 .reveal blockquote {
   width: 92%;
-  margin: 0.2em 0 0.8em 0;
-  padding: 0.65em 0.8em;
-  border-left: 10px solid var(--coral);
-  background: #f7f9fa;
-  color: var(--navy);
-  font-size: 1.08em;
+  margin: 0.3em 0 0.9em 0;
+  padding: 0 0 0 0.6em;
+  border-left: 3px solid var(--ink);
+  background: none;
+  color: var(--ink);
+  font-size: 1.15em;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.16;
+  letter-spacing: -0.02em;
   box-shadow: none;
 }
 
-.reveal table {
-  font-size: 0.67em;
-}
+/* ---------- tablice ---------- */
 
+.reveal table { font-size: 0.66em; border-collapse: collapse; }
 .reveal table th {
-  color: white;
-  background: var(--navy);
+  color: var(--ink);
+  background: none;
+  border-bottom: 2px solid var(--ink);
+  text-align: left;
+  font-size: 0.84em;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
+.reveal table td { border-bottom: 1px solid var(--hair); background: none; }
+.reveal table tr.odd, .reveal table tr.even { background: none; }
+.reveal table td, .reveal table th { padding: 0.5em 0.9em 0.5em 0; }
 
-.reveal table td,
-.reveal table th {
-  padding: 0.45em 0.6em;
-}
-
-.reveal li {
-  margin-bottom: 0.28em;
-}
+/* ---------- brojevi i nalazi ---------- */
 
 .reveal .metric,
 .reveal .result {
-  margin: 0.35em 0;
-  padding: 0.52em 0.65em;
-  border-radius: 12px;
-  background: var(--light);
-  color: var(--navy);
-  line-height: 1.15;
+  margin: 0.5em 0;
+  padding: 0 0 0 0.7em;
+  border: 0;
+  border-left: 3px solid var(--ink);
+  border-radius: 0;
+  background: none;
+  color: var(--ink);
+  line-height: 1.2;
 }
 
 .reveal .metric span,
 .reveal .result span,
 .reveal .metric strong,
 .reveal .result strong {
-  color: var(--blue);
-  font-size: 1.55em;
-  font-weight: 750;
+  display: block;
+  color: var(--ink);
+  font-size: 1.6em;
+  font-weight: 300;
+  letter-spacing: -0.03em;
 }
 
 .reveal .metric.accent span,
 .reveal .result.accent span,
 .reveal .metric.accent strong,
-.reveal .result.accent strong {
-  color: var(--coral);
-}
+.reveal .result.accent strong { color: var(--ink); font-weight: 500; }
 
-.reveal .result.compact {
-  font-size: 0.84em;
-}
+.reveal .result.compact { font-size: 0.84em; }
 
 .reveal .result.neutral span,
-.reveal .result.neutral strong {
-  color: var(--teal);
-  font-size: 1.05em;
-}
+.reveal .result.neutral strong { color: var(--ink); font-size: 1.1em; font-weight: 400; }
 
 .reveal .takeaway {
-  margin-top: 0.65em;
-  padding: 0.55em 0.7em;
-  border-left: 8px solid var(--teal);
-  background: #eef8f6;
-  font-weight: 650;
-  font-size: 0.86em;
+  margin-top: 0.8em;
+  padding: 0.5em 0 0;
+  border: 0;
+  border-top: 2px solid var(--ink);
+  background: none;
+  font-size: 0.76em;
+  font-weight: 500;
+  line-height: 1.35;
 }
 
 .reveal .small {
-  color: var(--grey);
-  font-size: 0.67em;
-  line-height: 1.3;
-  margin-top: 0.6em;
+  margin-top: 0.7em;
+  color: var(--muted);
+  font-size: 0.66em;
+  line-height: 1.35;
 }
+
+/* ---------- tijek ---------- */
 
 .reveal .flow {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
-  gap: 0.25em;
-  margin: 1.1em 0 0.8em 0;
+  gap: 0;
+  margin: 1.1em 0 0.9em 0;
+  border-left: 1px solid var(--ink);
 }
 
 .reveal .flow span {
   flex: 1;
-  padding: 0.7em 0.35em;
-  border-radius: 12px;
-  background: var(--light);
-  text-align: center;
-  font-size: 0.78em;
-  font-weight: 700;
+  padding: 0.8em 0.5em;
+  border: 0;
+  border-right: 1px solid var(--ink);
+  border-radius: 0;
+  background: none;
+  text-align: left;
+  font-size: 0.72em;
+  font-weight: 400;
 }
 
-.reveal .flow b {
-  color: var(--coral);
-  font-size: 1.25em;
-}
+.reveal .flow b { display: block; color: var(--ink); font-size: 1.1em; font-weight: 700; }
+
+/* ---------- zaključak ---------- */
 
 .reveal .closing {
-  margin: 0.8em auto;
-  padding: 0.8em 0.9em;
-  max-width: 92%;
-  border-radius: 16px;
-  background: var(--navy);
-  color: white;
-  font-size: 1.22em;
-  font-weight: 720;
-  line-height: 1.25;
-  text-align: center;
+  max-width: 100%;
+  margin: 0.9em 0;
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  color: var(--ink);
+  font-size: 1.5em;
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  text-align: left;
 }
 
-.reveal .slide-footer {
-  color: var(--grey);
-}
+/* ---------- naslovnica i podnožje ---------- */
 
+.reveal .quarto-title-block,
+.reveal .quarto-title-block.center,
+.reveal .quarto-title-block.center .quarto-title-authors { text-align: left; }
+.reveal .quarto-title-block .date { display: none; }
 .reveal .quarto-title-block .title {
-  color: var(--navy);
-  font-size: 2.1em;
+  color: var(--ink);
+  font-size: 2.3em;
+  font-weight: 300;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+}
+.reveal .quarto-title-block .subtitle {
+  margin-top: 0.5em;
+  color: var(--ink);
+  font-size: 0.9em;
+  font-weight: 400;
+}
+.reveal .quarto-title-authors { justify-content: flex-start; }
+.reveal .quarto-title-author-name,
+.reveal .quarto-title-affiliation {
+  color: var(--muted);
+  font-size: 0.6em;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
-.reveal .quarto-title-block .subtitle {
-  color: var(--coral);
-  font-size: 1.05em;
+.reveal .slide-footer,
+.reveal .footer {
+  color: var(--muted);
+  font-size: 0.52em;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.reveal .slide-number { background: none; color: var(--muted); font-size: 0.5em; font-weight: 500; }
+.reveal .progress { color: var(--ink); height: 2px; }
+
+.reveal pre { box-shadow: none; }
+.reveal pre code {
+  padding: 0.7em 0.9em;
+  border-left: 3px solid var(--ink);
+  background: none;
+  font-size: 0.76em;
+  line-height: 1.38;
 }

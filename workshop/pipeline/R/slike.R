@@ -3,18 +3,24 @@
 
 suppressPackageStartupMessages(library(ggplot2))
 
+# Crno-bijelo. Serije se razlikuju debljinom i vrstom linije, ne bojom.
+# Obitelj pisma ostaje "sans" da cjevovod radi na svakom racunalu bez
+# instalacije fonta; na stranici projekta sve ostalo koristi Roboto.
 tema_radionica <- function() {
   theme_minimal(base_size = 12) +
     theme(
       panel.grid.minor = element_blank(),
-      plot.title = element_text(face = "bold", size = 13),
+      panel.grid.major = element_line(colour = "grey88", linewidth = 0.3),
+      plot.title = element_text(face = "bold", size = 13, colour = "black"),
       plot.subtitle = element_text(colour = "grey35", size = 10),
-      plot.caption = element_text(colour = "grey45", size = 8, hjust = 0)
+      plot.caption = element_text(colour = "grey50", size = 8, hjust = 0),
+      axis.text = element_text(colour = "grey30"),
+      axis.title = element_text(colour = "black")
     )
 }
 
-BOJA_IAG <- "#16324F"
-BOJA_PI  <- "#C2451E"
+CRNA <- "black"
+SIVA <- "grey55"
 
 # Slika 1: inflacija i institucionalni jaz u paznji kroz vrijeme.
 slika_jaz <- function(d, put) {
@@ -22,10 +28,11 @@ slika_jaz <- function(d, put) {
   d$iag_gl <- stats::filter(d$iag, rep(1 / 8, 8), sides = 2)
   p <- ggplot(d, aes(x = tjedan)) +
     geom_hline(yintercept = 0, colour = "grey70", linewidth = 0.3) +
-    geom_line(aes(y = iag * faktor), colour = BOJA_IAG, linewidth = 0.3,
-              alpha = 0.28) +
-    geom_line(aes(y = pi), colour = BOJA_PI, linewidth = 0.6) +
-    geom_line(aes(y = iag_gl * faktor), colour = BOJA_IAG, linewidth = 1,
+    geom_line(aes(y = iag * faktor), colour = SIVA, linewidth = 0.3,
+              alpha = 0.5) +
+    geom_line(aes(y = pi), colour = CRNA, linewidth = 0.5,
+              linetype = "dashed") +
+    geom_line(aes(y = iag_gl * faktor), colour = CRNA, linewidth = 1,
               na.rm = TRUE) +
     geom_vline(xintercept = EURO_OD, linetype = "dashed",
                colour = "grey45") +
@@ -36,7 +43,8 @@ slika_jaz <- function(d, put) {
     labs(
       x = NULL,
       title = "Inflacija i institucionalni jaz u pažnji",
-      subtitle = "crveno: HICP · tamnoplavo: IAG (tanko: tjedno, debelo: 8-tjedni prosjek) · isprekidano: uvođenje eura",
+      subtitle = paste("Isprekidana linija je HICP, puna linija je IAG kao",
+                        "osmotjedni prosjek. Okomita crta je uvođenje eura."),
       caption = "Kalibrirani demonstracijski podaci. Slika: R/slike.R::slika_jaz"
     ) +
     tema_radionica()
@@ -44,14 +52,15 @@ slika_jaz <- function(d, put) {
   put
 }
 
-# Slika 2: lokalne projekcije s Bonferroni korigiranim intervalima.
+# Slika 2: lokalne projekcije s korigiranim intervalima pouzdanosti.
 slika_projekcije <- function(lp, put) {
   lp$oznaka <- ifelse(lp$znacajno, "značajno", "nije značajno")
   p <- ggplot(lp, aes(x = h, y = beta)) +
     geom_hline(yintercept = 0, colour = "grey60", linewidth = 0.4) +
-    geom_ribbon(aes(ymin = lo, ymax = hi), fill = BOJA_IAG, alpha = 0.12) +
-    geom_line(colour = BOJA_IAG, linewidth = 0.6) +
-    geom_point(aes(shape = oznaka), colour = BOJA_IAG, size = 2.2) +
+    geom_ribbon(aes(ymin = lo, ymax = hi), fill = "grey85") +
+    geom_line(colour = CRNA, linewidth = 0.6) +
+    geom_point(aes(shape = oznaka), colour = CRNA, fill = "white",
+               size = 2.2) +
     scale_shape_manual(values = c("značajno" = 16, "nije značajno" = 1),
                        name = NULL) +
     scale_x_continuous(breaks = lp$h) +
@@ -59,7 +68,8 @@ slika_projekcije <- function(lp, put) {
       x = "horizont h (tjedni)",
       y = "koeficijent na IAG (ekstenzivna margina)",
       title = "Predviđaju li objave o HNB-u očekivanja kućanstava?",
-      subtitle = "Lokalne projekcije, Newey-West, Bonferroni korekcija za 13 testova",
+      subtitle = paste0("Lokalne projekcije uz korekciju za višestruko ",
+                        "testiranje na ", length(LP_HORIZONTI), " horizonata"),
       caption = "Kalibrirani demonstracijski podaci. Slika: R/slike.R::slika_projekcije"
     ) +
     tema_radionica() +
