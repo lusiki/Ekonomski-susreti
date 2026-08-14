@@ -1,66 +1,107 @@
-# Radionica o otvorenom, reproducibilnom i AI podržanom istraživanju
+# AI u ekonomskim istraživanjima
 
-Šezdesetominutna radionica Luke Sikića uz izlaganje rada *Pasivno zamijenjena*. Izlaganje iznosi
-tvrdnju, a radionica pokazuje kako se ta tvrdnja može provjeriti i koliko takva provjera stoji.
+Šezdesetominutna radionica Luke Sikića. Kako AI ugraditi u istraživački
+repozitorij, a ne u prozor preglednika.
 
 [**Slajdovi**](https://lusiki.github.io/Ekonomski-susreti/workshop/slides/) ·
 [scenarij](SCRIPT.md) · [rukovanje demonstracijom](RUNBOOK.md) ·
-[cjevovod](pipeline/) · [pojmovnik](GLOSSARY.md) · [literatura](READING.md)
+[presađivanje na vaš projekt](PRESADI.md) · [repozitorij](projekt/) ·
+[pojmovnik](GLOSSARY.md) · [literatura](READING.md)
 
 ## Ideja
 
-Otvorenost, reproducibilnost i AI često se obrađuju kao tri odvojene teme. Ovdje su tri odgovora na
-isto pitanje.
+Većina istraživača danas koristi AI u prozoru preglednika, dakle izvan
+projekta. Kod se kopira van, odgovor se kopira natrag. Agent pritom ne zna
+ništa o projektu, ne može ništa pokrenuti i ne može biti provjeren.
 
-> **Tko ovo može provjeriti i uz koliki trošak?**
+Radionica pokazuje što se dogodi kada ga preselite unutra. To nije stvar
+udobnosti nego jedini način da se plati ono što je AI zapravo stvorio, a
+to je dug provjere.
 
-Otvorenost znači da vas mogu provjeriti drugi istraživači. Reproducibilnost znači da vas može
-provjeriti računalo, pa i vi sami nakon duljeg vremena. AI bitno snižava trošak proizvodnje
-rezultata, pa provjera postaje najsporiji dio posla. Otud rečenica koja nosi cijeli sat, a ona
-glasi **alat predlaže, vi odgovarate**.
+> **Izvršavanje je pojeftinilo. Provjera nije.**
+
+Dok ste kod pisali sami, provjeravali ste usput, po deset redaka. Agent vam
+vrati dvjesto redaka odjednom, pa se provjera odgađa i gomila. Ta razlika
+između koda koji radi i koda za koji znate zašto radi je dug provjere, a
+kamate se plaćaju na recenziji i kod koautora.
+
+Odgovor nije veća disciplina nego četiri datoteke u repozitoriju koje taj
+dug naplaćuju pri svakom pokretanju.
 
 ## Pet redaka koje publika nosi kući
 
 | | |
 |---|---|
-| **Jedno pitanje** | Tko ovo može provjeriti i uz koliki trošak? |
-| **Tri stupa** | otvoreno · reproducibilno · AI podržano |
-| **Jedna ljestvica** | četiri prečke, popnite se za jednu |
+| **Jedan pojam** | dug provjere, i raste dok ga ne pogledate |
+| **Dvije ručke** | kontekst i ograda, ništa treće ne postoji |
+| **Četiri datoteke** | ustav, ograde, pravilo, provjere |
 | **Jedna petlja** | opiši, isplaniraj, odobri, izvrši, **provjeri**, zapiši |
-| **Tri pogreške** | curenje · odstupanje · pokrivenost |
+| **Jedno pitanje** | biste li primijetili da je ovo krivo? |
 
-## Ljestvica reproducibilnosti
+## AI sloj, četiri datoteke
 
-Reproducibilnost nije stanje koje se ima ili nema, nego niz prečki po kojima se penje.
+Cijela je poanta da ih ima malo i da stanu na jedan ekran.
 
-| Prečka | Što znači |
-|---|---|
-| **0** | objavljen je samo članak u PDF obliku |
-| **1** | postoji stranica projekta, upute za citiranje i metapodaci, **ovaj projekt danas** |
-| **2** | kod je javan, a podaci dokumentirani popisom izvora i kodnom knjigom |
-| **3** | jedna naredba gradi sve, okruženje je zaključano i sustav to redovito provjerava |
+| Datoteka | Što je | Sprječava |
+|---|---|---|
+| `CLAUDE.md` | kontekst koji agent čita svaku sesiju | povratak na opće pretpostavke |
+| `.claude/settings.json` | ograde, popis dopuštenog i zabranjenog | da samostalan proces dira što god želi |
+| `.claude/rules/provjera.md` | pravilo koje se učitava uz izmjenu koda | da se posao proglasi gotovim bez gradnje |
+| `tests/checks.R` | provjere koje ruše gradnju | da uvjerljiva besmislica uđe u tekst |
 
-Ograničeni podaci nisu razlog za ostanak na nultoj prečki. Naš izvorni korpus je licenciran i ne
-smije se dijeliti dalje, ali kod, pravila pretrage, izvedeni agregati, popis izvora i sjeme
-slučajnih brojeva smiju izaći u javnost.
+Peta je git, ali git već imate.
+
+## Gdje agenta pustiti, a gdje ne
+
+Podjela nije po tome koliko je zadatak težak nego po tome biste li
+primijetili da je odgovor kriv.
+
+|  | lako izvršiti | teško izvršiti |
+|---|---|---|
+| **lako provjeriti** | delegirajte bez razmišljanja | ovdje je najveći dobitak |
+| **teško provjeriti** | oprez, sjednite pokraj | ovdje se rade tihe štete |
+
+Na primjeru iz radionice, spajanje dviju Eurostatovih tablica provjerite
+pogledom na broj redaka i mirno ga delegirate. Odabir oznaka zemalja ne
+vidite jer panel izgleda uredno u oba slučaja, pa taj korak dobiva provjeru
+u kodu. Izbor između fiksnih učinaka zemlje i fiksnih učinaka zemlje i
+godine mijenja pitanje na koje odgovarate, pa se ne delegira uopće.
+
+## Primjer
+
+Phillipsova krivulja u dvadeset zemalja europodručja od 2014. do 2024.
+godine. Podaci su dvije javne Eurostatove tablice, jedna za harmonizirani
+indeks potrošačkih cijena i jedna za stopu nezaposlenosti.
+
+Primjer je namjerno običan. Svatko u dvorani zna što je Phillipsova
+krivulja, podaci su javni i preuzimaju se jednom skriptom, a cijeli lanac
+od podatka do rečenice pročita se naglas u dvije minute. Radionica nije o
+nalazu nego o tome kako je nalaz nastao.
 
 ## Sadržaj
 
 | Datoteka | Što je |
 |---|---|
-| [`slides/slides.qmd`](slides/slides.qmd) | prezentacija od 24 slajda, Quarto i reveal.js, na hrvatskom |
-| [`SCRIPT.md`](SCRIPT.md) | tijek radionice minutu po minutu, što pokazati, napraviti i reći |
-| [`RUNBOOK.md`](RUNBOOK.md) | rukovanje demonstracijom, tri podmetnute pogreške, pravilo 60 sekundi |
+| [`slides/slides.qmd`](slides/slides.qmd) | prezentacija, Quarto i reveal.js, na hrvatskom |
+| [`SCRIPT.md`](SCRIPT.md) | tijek radionice minutu po minutu |
+| [`RUNBOOK.md`](RUNBOOK.md) | rukovanje demonstracijom, tri podmetnute greške |
+| [`PRESADI.md`](PRESADI.md) | kako AI sloj staviti na vlastiti projekt |
 | [`handout.html`](handout.html) | jedna stranica za tisak, A4 obostrano |
 | [`GLOSSARY.md`](GLOSSARY.md) | hrvatsko i englesko nazivlje |
 | [`READING.md`](READING.md) | dvanaest naslova u tri skupine |
-| [`pipeline/`](pipeline/) | cjevovod koji se gradi jednom naredbom i sam se provjerava |
+| [`projekt/`](projekt/) | repozitorij koji se klonira i pokreće jednom naredbom |
 
 ## Gradnja materijala
 
 ```bash
-quarto render slides/slides.qmd      # -> slides/slides.html (samostalan)
-cd pipeline && Rscript analysis/run.R  # -> paper/nalaz.html + results/
+Rscript workshop/build.R    # slajdovi, projekt i objava na stranicu
+```
+
+Ili odvojeno.
+
+```bash
+quarto render slides/slides.qmd        # -> slides/slides.html
+cd projekt && Rscript analysis/run.R   # -> paper/nalaz.html + results/
 ```
 
 Traži Quarto verzije 1.4 ili novije i R verzije 4.2 ili novije. Bez GPU-a.
@@ -68,22 +109,24 @@ Traži Quarto verzije 1.4 ili novije i R verzije 4.2 ili novije. Bez GPU-a.
 ## Demonstracija u tri poteza
 
 ```bash
-cd pipeline
-Rscript demo/podmetni.R    # podmetni tri pogreške
-Rscript analysis/run.R     # sve tri se prijave u jednom ispisu, rukopis se ne gradi
+cd projekt
+Rscript demo/podmetni.R    # podmetni tri greške
+Rscript analysis/run.R     # sve tri se prijave u jednom ispisu, nalaz se ne gradi
 Rscript demo/vrati.R       # vrati čisto stanje
 ```
 
-## Ako želite vlastitu kopiju cjevovoda
+## Ako želite vlastitu kopiju
 
-Mapa [`pipeline/`](pipeline/) je samostalna. Kopirajte je u cijelosti u novi repozitorij i radi bez
-ijedne izmjene jer ništa u njoj ne ovisi o ostatku ovog projekta.
+Mapa [`projekt/`](projekt/) je samostalna. Kopirajte je u cijelosti u novi
+repozitorij i radi bez ijedne izmjene jer ništa u njoj ne ovisi o ostatku
+ovog projekta. Kada je vidite kako radi, prijeđite na [`PRESADI.md`](PRESADI.md)
+i stavite isti sloj na projekt koji već imate.
 
 ## Napomena o podacima
 
-Podaci koji se koriste u demonstraciji su **izmišljeni i kalibrirani**, dakle nisu izvorni. Brojke
-su reda veličine objavljenih, ali nisu rezultati istraživanja i ne smiju se tako citirati. Zamjena
-stvarnim izvozom opisana je u [`pipeline/data/make_data.R`](pipeline/data/make_data.R).
+Podaci su stvarni i javni. Izvor su Eurostatove tablice `prc_hicp_aind` i
+`une_rt_a`. Mapa `projekt/data/restricted/` sadrži izmišljenu datoteku koja
+stoji na mjestu mikropodataka koji u stvarnom projektu ne bi smjeli izaći.
 
 ## Licencija
 

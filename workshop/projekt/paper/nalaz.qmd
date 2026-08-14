@@ -1,0 +1,79 @@
+---
+title: "Phillipsova krivulja u europodručju"
+subtitle: "Kratki nalaz u kojem nijedan broj nije upisan rukom"
+lang: hr
+format:
+  html:
+    theme: [default, nalaz.scss]
+    embed-resources: true
+    toc: false
+execute:
+  echo: false
+  warning: false
+---
+
+```{r}
+#| include: false
+setwd("..")
+for (f in list.files("R", pattern = "[.]R$", full.names = TRUE)) source(f)
+p <- ucitaj_procjene()
+```
+
+## Pitanje
+
+Phillipsova krivulja tvrdi da su niža nezaposlenost i viša inflacija dvije strane
+istog stanja gospodarstva. Ovdje se ta tvrdnja gleda na `r p$n_zemalja` zemalja
+europodručja u razdoblju od `r p$god_od` do `r p$god_do` godine, dakle na
+`r p$n_opazanja` opažanja, i pita se vrijedi li jednako prije i poslije
+inflacijskog vala.
+
+Podaci su dvije javne Eurostatove tablice. Prva je harmonizirani indeks
+potrošačkih cijena, a druga je stopa nezaposlenosti. Obje se preuzimaju
+skriptom `data/preuzmi.R` i nijedan broj u ovom tekstu nije upisan rukom.
+
+## Rezultati
+
+U specifikaciji s fiksnim učincima zemlje veza je negativna i jasna. Rast
+stope nezaposlenosti za jedan postotni bod prati pad inflacije za
+`r hr(abs(p$beta), 2)` postotna boda uz standardnu pogrešku `r hr(p$se, 2)`.
+Krivulja dakle postoji i u ovom uzorku.
+
+Kada se dodaju i fiksni učinci godine, koeficijent pada na
+`r hr(abs(p$beta_oba), 2)` i prestaje biti razlučiv od nule uz p vrijednost
+`r hr(p$p_oba, 2)`. To nije proturječje nego odgovor na drugo pitanje. Godišnji
+učinci uklanjaju sve što je u nekoj godini zajedničko svim zemljama, a upravo
+je takav bio energetski šok. Ono što je ostalo je usporedba zemalja unutar iste
+godine, i tu veze gotovo nema.
+
+Podjela uzorka pokazuje odakle to dolazi. U razdoblju do `r p$prije_do`. godine
+jedan postotni bod nezaposlenosti prati pad inflacije od
+`r hr(abs(p$beta_prije), 2)` postotna boda, na `r p$n_prije` opažanja. Od
+`r p$poslije_od`. godine nadalje isti pad iznosi `r hr(abs(p$beta_posl), 2)`
+postotna boda, na `r p$n_posl` opažanja, dakle nekoliko puta strmije.
+Prosječna inflacija u europodručju dosegla je vrhunac od
+`r hr(p$infl_vrh, 1)` posto u `r p$infl_vrh_god`. godini, dok je prosječna
+nezaposlenost u istom razdoblju pala s `r hr(p$nezap_pocetak, 1)` na
+`r hr(p$nezap_kraj, 1)` posto.
+
+```{r}
+#| fig-cap: "Inflacija i nezaposlenost u europodručju"
+knitr::include_graphics("../results/slike/slika1-vrijeme.png")
+```
+
+```{r}
+#| fig-cap: "Phillipsova krivulja u dva razdoblja"
+knitr::include_graphics("../results/slike/slika2-phillips.png")
+```
+
+## Ograničenja
+
+Ovo je opisni nalaz, a ne procjena uzročnog učinka. Nezaposlenost nije
+slučajno dodijeljena i obje se veličine kreću zajedno s trećim stvarima, od
+cijena energije do tečaja. Strmiji nagib poslije `r p$poslije_od`. godine ne
+znači da je Phillipsova veza ojačala nego da su u tom razdoblju zemlje s
+različitim tržištima rada različito primile isti vanjski šok.
+
+Uzorak je namjerno malen i uravnotežen. Svrha ovog nalaza nije doprinos
+literaturi nego pokazni primjer za radionicu. Svaki broj u odjeljku Rezultati
+dolazi iz `results/procjene.json`, a taj se zapis gradi iz koda pri svakom
+pokretanju.

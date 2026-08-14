@@ -442,7 +442,7 @@
   <meta name="generator" content="quarto-1.6.43">
 
   <meta name="author" content="Luka Sikić · Hrvatsko katoličko sveučilište">
-  <title>Otvoreno, reproducibilno i AI-podržano istraživanje</title>
+  <title>AI u ekonomskim istraživanjima</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -1051,7 +1051,7 @@ margin-right: 0; }
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Otvoreno, reproducibilno i AI-podržano istraživanje</h1>
+  <h1 class="title">AI u ekonomskim istraživanjima</h1>
   <p class="subtitle">Radionica · Ekonomski susreti</p>
 
 <div class="quarto-title-authors">
@@ -1063,64 +1063,79 @@ Luka Sikić · Hrvatsko katoličko sveučilište
 </div>
 
 </section>
+<section id="tri-pitanja-dignite-ruku" class="slide level2">
+<h2>Tri pitanja, dignite ruku</h2>
+<div class="kartice">
+<div>
+<p><strong>Koristite li AI u istraživanju?</strong> nikad · povremeno · svaki dan</p>
+</div>
+<div>
+<p><strong>Gdje ga pokrećete?</strong> u pregledniku · u uređivaču koda · u terminalu</p>
+</div>
+<div>
+<p><strong>Što vas najviše koči?</strong> povjerenje · povjerljivost podataka · ne znam odakle početi</p>
+</div>
+</div>
+<div class="fragment">
+<div class="tiho">
+<p>Ako ste podigli ruku na preglednik, ovaj je sat za vas. Idemo ga preseliti odande u sam projekt.</p>
+</div>
+</div>
+</section>
 <section id="sat-vremena-tri-stvari-koje-odnosite" class="slide level2">
 <h2>Sat vremena, tri stvari koje odnosite</h2>
 <div class="kartice">
 <div>
-<p><strong>Jedan okvir</strong> Zašto su otvorenost, reproducibilnost i AI odgovori na isto pitanje.</p>
+<p><strong>Jedan pojam</strong> Dug provjere. Zašto raste i tko ga plaća.</p>
 </div>
 <div>
-<p><strong>Jedna ljestvica</strong> Gdje je vaš projekt danas i koja je sljedeća prečka.</p>
+<p><strong>Jedan sloj</strong> Četiri datoteke koje AI ugrađuju u repozitorij.</p>
 </div>
 <div>
-<p><strong>Jedan repozitorij</strong> Cjevovod koji možete klonirati i pokrenuti jednom naredbom.</p>
+<p><strong>Jedan repozitorij</strong> Klonirate ga danas i presadite na svoj projekt.</p>
 </div>
 </div>
 <div class="fragment">
 <p>Jedna riječ vodi cijeli sat, a ta riječ je <strong>najmanje moguće</strong>. Ne petnaest alata, nego najmanji skup dijelova koji istraživanje čini provjerljivim.</p>
 </div>
 </section>
-<section id="uvod" class="slide level2 divider" data-background-color="#000000">
-<h2>0 · Uvod</h2>
-<p>Upravo ste čuli tvrdnju. Sada je otvaramo.</p>
+<section id="dug-provjere" class="slide level2 divider" data-background-color="#000000">
+<h2>1 · Dug provjere</h2>
+<p>Što se stvarno promijenilo.</p>
 </section>
-<section id="jedan-broj-s-prethodnog-izlaganja" class="slide level2">
-<h2>Jedan broj s prethodnog izlaganja</h2>
-<blockquote>
-<p>Porast inflacije za jedan postotni bod širi institucionalni jaz u pažnji za <strong>0,00201</strong> jedinica.</p>
-</blockquote>
-<div class="fragment">
-<div class="krupno">
-<p>Možete li taj broj provjeriti?</p>
-</div>
-<div class="tiho">
-<p>Pitanje nije vjerujete li mu, nego koliko bi vas vremena stajalo da ga provjerite.</p>
-</div>
-</div>
-</section>
-<section id="cijena-je-asimetrična" class="slide level2">
-<h2>Cijena je asimetrična</h2>
+<section id="cijena-je-pala-samo-s-jedne-strane" class="slide level2">
+<h2>Cijena je pala samo s jedne strane</h2>
 <div class="kartice">
 <div>
-<p><strong>Proizvesti tvrdnju</strong> jeftino, i sve jeftinije</p>
+<p><strong>Izvršiti</strong> očistiti podatke, napisati kod, nacrtati sliku, procijeniti model</p>
+<p><em>jeftino, i sve jeftinije</em></p>
 </div>
 <div>
-<p><strong>Provjeriti tvrdnju</strong> skupo, i ne postaje jeftinije samo od sebe</p>
+<p><strong>Provjeriti</strong> je li to točno, je li uzorak onaj koji mislite, znači li koeficijent to što mislite</p>
+<p><em>skupo, i ne postaje jeftinije samo od sebe</em></p>
 </div>
 </div>
 <div class="fragment">
-<p>Ta asimetrija je cijeli problem. Otvorenost, reproducibilnost i AI tri su odgovora na <strong>isto pitanje</strong>.</p>
 <div class="krupno">
-<p>Tko ovo može provjeriti i po kojoj cijeni?</p>
+<p>Ta asimetrija je cijeli problem.</p>
 </div>
 </div>
 </section>
-<section id="okvir" class="slide level2 divider" data-background-color="#000000">
-<h2>1 · Okvir</h2>
-<p>Tri stupa, jedna ljestvica.</p>
+<section id="ali-nije-problem-samo-u-cijeni" class="slide level2">
+<h2>Ali nije problem samo u cijeni</h2>
+<p>Dok ste kod pisali sami, provjeravali ste <strong>usput</strong>. Deset redaka, pogled, dalje.</p>
+<div class="fragment">
+<p>Agent vam vrati dvjesto redaka odjednom. Provjera se odgađa, pa se <strong>gomila</strong>.</p>
+<div class="krupno">
+<p>Dug provjere</p>
+</div>
+<div class="tiho">
+<p>Razlika između koda koji radi i koda za koji znate zašto radi. Kamate se plaćaju na recenziji, kod koautora i kod vas samih za godinu dana.</p>
+</div>
+</div>
 </section>
-<section id="tri-stupa-jedno-pitanje" class="slide level2">
-<h2>Tri stupa, jedno pitanje</h2>
+<section id="gdje-agenta-pustiti-a-gdje-ne" class="slide level2">
+<h2>Gdje agenta pustiti, a gdje ne</h2>
 <table class="caption-top">
 <colgroup>
 <col style="width: 33%">
@@ -1129,113 +1144,176 @@ Luka Sikić · Hrvatsko katoličko sveučilište
 </colgroup>
 <thead>
 <tr class="header">
-<th>Stup</th>
-<th>Tko provjerava</th>
-<th>Što konkretno znači</th>
+<th></th>
+<th><strong>lako izvršiti</strong></th>
+<th><strong>teško izvršiti</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Otvoreno</strong></td>
-<td>drugi ljudi</td>
-<td>kod, podaci i metapodaci su dostupni</td>
+<td><strong>lako provjeriti</strong></td>
+<td>delegirajte bez razmišljanja</td>
+<td><strong>ovdje je najveći dobitak</strong></td>
 </tr>
 <tr class="even">
-<td><strong>Reproducibilno</strong></td>
-<td>vi za godinu dana i stroj</td>
-<td>jedna naredba ponovno gradi sve</td>
+<td><strong>teško provjeriti</strong></td>
+<td>oprez, sjednite pokraj</td>
+<td>ovdje se rade tihe štete</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<div class="tiho">
+<p>Nije pitanje je li zadatak težak, nego biste li primijetili da je odgovor kriv.</p>
+</div>
+</div>
+</section>
+<section id="ista-podjela-na-našem-primjeru" class="slide level2">
+<h2>Ista podjela na našem primjeru</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Zadatak</th>
+<th>Provjera</th>
+<th>Odluka</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>spojiti dvije Eurostatove tablice</td>
+<td>pogledam broj redaka</td>
+<td>delegiram</td>
+</tr>
+<tr class="even">
+<td>nacrtati sliku po zadanom predlošku</td>
+<td>vidim je</td>
+<td>delegiram</td>
 </tr>
 <tr class="odd">
-<td><strong>AI-podržano</strong></td>
-<td>vi sami, brže, ako provjeravate</td>
-<td>alat predlaže, vi odgovarate</td>
+<td><strong>odabrati koje su oznake zemlje</strong></td>
+<td>ne vidim, panel izgleda uredno</td>
+<td><strong>provjera u kodu</strong></td>
+</tr>
+<tr class="even">
+<td><strong>fiksni učinci zemlje ili i godine</strong></td>
+<td>mijenja pitanje, ne odgovor</td>
+<td><strong>ne delegiram</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p>Treći redak je razlog zbog kojeg ova radionica postoji, a četvrti je razlog zbog kojeg ćete i dalje biti potrebni.</p>
+</div>
+</section>
+<section id="ispod-haube" class="slide level2 divider" data-background-color="#000000">
+<h2>2 · Ispod haube</h2>
+<p>Model, alati, ograda, kontekst.</p>
+</section>
+<section id="četiri-riječi-i-gotovi-ste" class="slide level2">
+<h2>Četiri riječi i gotovi ste</h2>
+<div class="kartice">
+<div>
+<p><strong>Model</strong> Predviđa sljedeću riječ. Ništa ne zna i ništa ne može učiniti.</p>
+</div>
+<div>
+<p><strong>Alati</strong> Čitaj datoteku, pokreni naredbu, pretraži web. Time model postaje agent.</p>
+</div>
+<div>
+<p><strong>Ograda</strong> Program koji odlučuje koji se alat smije pozvati. Tu ste vi.</p>
+</div>
+</div>
+<div class="fragment">
+<div class="krupno">
+<p>Kontekst je sve što model u tom trenutku vidi.</p>
+</div>
+<div class="tiho">
+<p>Sustavska uputa, vaša poruka, sadržaj datoteka, ispis naredbi. Ništa više. Ako nešto nije u kontekstu, za model ne postoji.</p>
+</div>
+</div>
+</section>
+<section id="iz-toga-slijedi-cijela-radionica" class="slide level2">
+<h2>Iz toga slijedi cijela radionica</h2>
+<p>Ako je sve što agent zna <strong>kontekst</strong>, a sve što smije <strong>ograda</strong>, onda postoje točno dvije ručke.</p>
+<div class="kartice">
+<div>
+<p><strong>Napišite kontekst sami</strong> Umjesto da ga svaki put ponavljate u razgovoru, zapišite ga u datoteku koju projekt nosi sa sobom.</p>
+</div>
+<div>
+<p><strong>Napišite ogradu sami</strong> Umjesto da se pouzdate u dobru namjeru, popišite što smije, što pita i što je zabranjeno.</p>
+</div>
+</div>
+<div class="fragment">
+<p>To su prve dvije od četiri datoteke. Nisu konvencija koju je netko izmislio, nego jedine dvije ručke koje uopće postoje.</p>
+</div>
+</section>
+<section id="ne-birajte-alat-birajte-način" class="slide level2">
+<h2>Ne birajte alat, birajte način</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Način</th>
+<th>Vidite</th>
+<th>Kada</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>preglednik</strong></td>
+<td>samo odgovor</td>
+<td>pitanja, ideje, tekst</td>
+</tr>
+<tr class="even">
+<td><strong>uređivač koda</strong></td>
+<td>svaku promjenu dok nastaje</td>
+<td>teško provjerljiv zadatak</td>
+</tr>
+<tr class="odd">
+<td><strong>terminal</strong></td>
+<td>sažetak na kraju</td>
+<td>jasan zadatak s provjerom u kodu</td>
 </tr>
 </tbody>
 </table>
 <div class="fragment">
 <div class="krupno">
-<p>Agent generira. Vi jamčite.</p>
+<p>Način biramo prema tome koliko je skupa provjera.</p>
 </div>
 <div class="tiho">
-<p>AI ne mijenja standard dokaza. Mijenja cijenu proizvodnje tvrdnji, pa dokazni lanac postaje uže grlo.</p>
+<p>Nije važno je li Claude ili nešto drugo. Kao iPhone 17 ili 18. Važno je sjedite li pokraj ili ne, i po čemu ćete znati.</p>
 </div>
 </div>
 </section>
-<section id="ljestvica-reproducibilnosti" class="slide level2">
-<h2>Ljestvica reproducibilnosti</h2>
-<div class="ljestvica">
-<div>
-<p><strong>0</strong> · Objavljen je samo PDF.</p>
-</div>
-<div class="tu">
-<p><strong>1</strong> · Stranica projekta, citat i metapodaci. <em>← ovaj projekt danas</em></p>
-</div>
-<div>
-<p><strong>2</strong> · Kod je javan, podaci dokumentirani (manifest i kodna knjiga).</p>
-</div>
-<div class="cilj">
-<p><strong>3</strong> · Jedna naredba gradi sve, okruženje zaključano, CI to provjerava.</p>
-</div>
-</div>
-<div class="fragment">
-<p>Nije da/ne, nego <strong>prečka po prečka</strong>. Pitanje na kraju sata nije “jeste li otvoreni” nego <strong>koju prečku uzimate ove godine</strong>.</p>
-</div>
+<section id="ai-sloj" class="slide level2 divider" data-background-color="#000000">
+<h2>3 · AI sloj</h2>
+<p>Četiri datoteke u vašem repozitoriju.</p>
 </section>
-<section id="kada-podaci-ne-smiju-van" class="slide level2">
-<h2>Kada podaci ne smiju van</h2>
-<p>Naš izvorni korpus je licenciran. To je normalno stanje, ne iznimka.</p>
-<div class="kartice">
-<div>
-<p><strong>Ne izlazi</strong> sirovi tekst objava, sadržaj trećih strana</p>
-</div>
-<div>
-<p><strong>Izlazi</strong> kod, pravila pretrage, izvedeni agregati, manifest, kodna knjiga, sjeme</p>
-</div>
-</div>
-<div class="fragment">
-<p>Ograničeni podaci <strong>nisu izlika za prečku 0</strong>. Prečka 2 je dostižna gotovo uvijek, a razlika između prve i druge prečke je ono što recenzent stvarno može provjeriti.</p>
-</div>
-</section>
-<section id="anatomija" class="slide level2 divider" data-background-color="#000000">
-<h2>2 · Anatomija</h2>
-<p>Kako izgleda projekt koji se sam provjerava.</p>
-</section>
-<section id="lanac-je-kratak-i-vidljiv" class="slide level2">
-<h2>Lanac je kratak i vidljiv</h2>
-<pre><code>data/raw/naslovi.csv         sirovi naslovi
-    ↓  R/korpus.R             pravilo pretrage   ← mjerni sloj
-    ↓  R/podaci.R             udjeli i IAG
-data/derived/panel.csv       tjedni agregati
-    ↓  R/modeli.R             OLS + Newey-West, lokalne projekcije
-    ↓  R/slike.R              slike
-results/procjene.json        svi brojevi na jednom mjestu
-    ↓  paper/nalaz.qmd        tekst koji samo čita procjene.json</code></pre>
+<section id="projekt-koji-ćemo-gledati" class="slide level2">
+<h2>Projekt koji ćemo gledati</h2>
+<pre><code>data/raw/hicp.csv              Eurostat, 45 oznaka
+data/raw/nezaposlenost.csv     Eurostat, 38 oznaka
+    ↓  R/zemlje.R               odabir zemalja   ← mjerni sloj
+    ↓  R/podaci.R               spajanje u panel
+data/derived/panel.csv         220 opažanja, 20 zemalja
+    ↓  R/modeli.R               četiri regresije
+    ↓  R/slike.R                dvije slike
+results/procjene.json          svi brojevi na jednom mjestu
+    ↓  paper/nalaz.qmd          tekst koji samo čita procjene.json</code></pre>
 <div class="tiho">
-<p>Bez okvira za orkestraciju, bez okvira za testiranje. Jedna skripta koja se čita naglas.</p>
+<p>Phillipsova krivulja u europodručju, 2014. do 2024. Dvije javne tablice, jedna naredba, nijedan broj upisan rukom.</p>
 </div>
 </section>
-<section id="tri-pravila-koja-sve-drže" class="slide level2">
-<h2>Tri pravila koja sve drže</h2>
-<div class="kartice">
-<div>
-<p><strong>Konstante</strong> Ako se broj pojavljuje na dva mjesta, jedno je greška. Sve u <code>R/config.R</code>.</p>
-</div>
-<div>
-<p><strong>Izlošci</strong> Svaka slika i tablica ima funkciju koja je proizvodi. Nijedna ne nastaje u sesiji.</p>
-</div>
-<div>
-<p><strong>Brojevi</strong> Nijedan broj u tekstu nije upisan rukom. Svi dolaze iz <code>procjene.json</code>.</p>
-</div>
-</div>
-<div class="fragment">
-<p>Treće je pravilo najjače jer tekst <strong>ne može</strong> tiho odstupiti od tablice, budući da se gradnja ruši na svaki decimalni broj upisan rukom.</p>
-</div>
-</section>
-<section id="petlja-s-agentom" class="slide level2">
-<h2>Petlja s agentom</h2>
-<div class="krupno">
-<p>opiši → plan → <strong>odobrim</strong> → izvrši → <strong>provjeri</strong> → commitam</p>
-</div>
+<section id="četiri-datoteke-i-kvar-koji-svaka-sprječava" class="slide level2">
+<h2>Četiri datoteke i kvar koji svaka sprječava</h2>
 <table class="caption-top">
 <colgroup>
 <col style="width: 50%">
@@ -1243,85 +1321,118 @@ results/procjene.json        svi brojevi na jednom mjestu
 </colgroup>
 <thead>
 <tr class="header">
-<th>Komponenta</th>
+<th>Datoteka</th>
 <th>Sprječava</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Kontekst</strong> u <code>CLAUDE.md</code></td>
-<td>povratak na generičke pretpostavke</td>
+<td><code>CLAUDE.md</code></td>
+<td>povratak na opće pretpostavke</td>
 </tr>
 <tr class="even">
-<td><strong>Plan</strong> prije svake izmjene</td>
-<td>da se brzo riješi krivi problem</td>
-</tr>
-<tr class="odd">
-<td><strong>Ograde</strong> u <code>settings.json</code></td>
+<td><code>.claude/settings.json</code></td>
 <td>da samostalan proces dira što god želi</td>
 </tr>
-<tr class="even">
-<td><strong>Provjera</strong> u <code>run.R</code></td>
-<td>da uvjerljiva besmislica uđe u tekst</td>
-</tr>
 <tr class="odd">
-<td><strong>Git</strong> i mali zapisi promjena</td>
-<td>da se pogreška ponovi i da nema povratka</td>
+<td><code>.claude/rules/provjera.md</code></td>
+<td>da se posao proglasi gotovim bez gradnje</td>
+</tr>
+<tr class="even">
+<td><code>tests/checks.R</code></td>
+<td>da uvjerljiva besmislica uđe u tekst</td>
 </tr>
 </tbody>
 </table>
+<div class="fragment">
+<p>Peta je git, ali git već imate.</p>
+<div class="krupno">
+<p>opiši → plan → <strong>odobrim</strong> → izvrši → <strong>provjeri</strong> → commitam</p>
+</div>
+</div>
 </section>
 <section id="ograde-su-datoteka-ne-obećanje" class="slide level2">
 <h2>Ograde su datoteka, ne obećanje</h2>
 <div class="sourceCode" id="cb2"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href></a><span class="er">&quot;allow&quot;:</span> <span class="ot">[</span><span class="st">&quot;Bash(Rscript:*)&quot;</span><span class="ot">,</span> <span class="st">&quot;Bash(quarto render:*)&quot;</span><span class="ot">,</span> <span class="st">&quot;Bash(git diff:*)&quot;</span><span class="ot">]</span><span class="er">,</span></span>
-<span id="cb2-2"><a href></a><span class="er">&quot;ask&quot;:</span>   <span class="ot">[</span><span class="st">&quot;Bash(git commit:*)&quot;</span><span class="ot">]</span><span class="er">,</span></span>
-<span id="cb2-3"><a href></a><span class="er">&quot;deny&quot;:</span>  <span class="ot">[</span><span class="st">&quot;Read(./data/restricted/**)&quot;</span><span class="ot">,</span> <span class="st">&quot;Bash(git push:*)&quot;</span><span class="ot">,</span> <span class="st">&quot;Bash(rm -rf:*)&quot;</span><span class="ot">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-2"><a href></a><span class="er">&quot;ask&quot;:</span>   <span class="ot">[</span><span class="st">&quot;Bash(git commit:*)&quot;</span><span class="ot">,</span> <span class="st">&quot;Write(./R/zemlje.R)&quot;</span><span class="ot">]</span><span class="er">,</span></span>
+<span id="cb2-3"><a href></a><span class="er">&quot;deny&quot;:</span>  <span class="ot">[</span><span class="st">&quot;Read(./data/restricted/**)&quot;</span><span class="ot">,</span> <span class="st">&quot;Bash(git push:*)&quot;</span><span class="ot">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
 <p>Agent orkestrira analizu čije osjetljive ulaze <strong>nikada ne vidi</strong>.</p>
 <div class="tiho">
-<p>Za institucionalni rad provjerite uvjete korištenja i verziju alata prije nego ga stavite u zajednički projekt.</p>
+<p>Primijetite drugi redak. Mjerni sloj je u <code>ask</code>, ne u <code>allow</code>. Nije zabranjen, ali me mora pitati.</p>
+</div>
+</div>
+</section>
+<section id="provjera-je-mjesto-gdje-se-dug-plaća" class="slide level2">
+<h2>Provjera je mjesto gdje se dug plaća</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Provjera</th>
+<th>Hvata</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>ograda</strong></td>
+<td>ograničen sadržaj u bilo kojem izlazu</td>
+</tr>
+<tr class="even">
+<td><strong>pokrivenost</strong></td>
+<td>mjerni sloj koji je promijenio uzorak</td>
+</tr>
+<tr class="odd">
+<td><strong>provenijencija</strong></td>
+<td>broj upisan rukom u odjeljku Rezultati</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<div class="krupno">
+<p>Ne provjeravam ja svaki put. Provjerava repozitorij, svaki put.</p>
+</div>
+<div class="tiho">
+<p>Tu se dug provjere prestaje gomilati. Ne zato što ste disciplinirani, nego zato što gradnja pukne ako niste.</p>
 </div>
 </div>
 </section>
 <section id="demonstracija" class="slide level2 divider" data-background-color="#000000">
-<h2>3 · Demonstracija</h2>
-<p>Tri greške, po jedna za svaki stup.</p>
+<h2>4 · Demonstracija</h2>
+<p>Prvo korist, pa onda šteta.</p>
 </section>
-<section id="što-gledati-u-sljedećih-petnaest-minuta" class="slide level2">
-<h2>Što gledati u sljedećih petnaest minuta</h2>
+<section id="što-gledati-u-sljedećih-sedamnaest-minuta" class="slide level2">
+<h2>Što gledati u sljedećih sedamnaest minuta</h2>
+<div class="kartice">
+<div>
+<p><strong>Prvi dio</strong> Agent dobiva stvaran zadatak i radi ga dobro, od plana do gotove slike i osvježenog teksta.</p>
+</div>
+<div>
+<p><strong>Drugi dio</strong> U projektu su tri tihe greške. Nijedna ne ruši program i sve tri bi prošle recenziju.</p>
+</div>
+</div>
+<div class="fragment">
 <table class="caption-top">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Greška</th>
-<th>Stup</th>
 <th>Uhvatit će je</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Curenje</strong> ograničenog sadržaja u rukopis</td>
-<td>otvoreno</td>
+<td><strong>Curenje</strong> ograničenog sadržaja u tekst</td>
 <td>ograda</td>
 </tr>
 <tr class="even">
 <td><strong>Odstupanje</strong> koeficijenta upisanog rukom</td>
-<td>reproducibilno</td>
-<td>podrijetlo</td>
+<td>provenijencija</td>
 </tr>
 <tr class="odd">
-<td><strong>Pokrivenost</strong> kada pretraga izgubi dijakritiku</td>
-<td>mjerenje i AI</td>
+<td><strong>Pokrivenost</strong> kada Grčka postane <code>GR</code> umjesto <code>EL</code></td>
 <td>pokrivenost</td>
 </tr>
 </tbody>
 </table>
-<div class="fragment">
-<p>Treća je domaća specijalnost jer portali pišu i <em>središnja</em> i <em>sredisnja</em>. Ispadne li normalizacija, tiho nestane pola korpusa i koeficijent se prepolovi, a <strong>ništa ne pukne</strong>.</p>
 </div>
 </section>
 <section id="demonstracija-1" class="slide level2" data-background-color="#000000">
@@ -1331,6 +1442,23 @@ results/procjene.json        svi brojevi na jednom mjestu
 </div>
 <div style="color:rgba(255,255,255,0.8)">
 <p><code>Rscript demo/podmetni.R</code> → <code>Rscript analysis/run.R</code></p>
+</div>
+</section>
+<section id="treća-greška-pobliže" class="slide level2">
+<h2>Treća greška, pobliže</h2>
+<p>Eurostat Grčku označava kao <code>EL</code>. Cijeli ostatak svijeta piše <code>GR</code>.</p>
+<div class="kartice">
+<div>
+<p><strong>Što se dogodi</strong> Panel padne s 220 na 209 opažanja. Nagib se pomakne s 0,61 na 0,69.</p>
+</div>
+<div>
+<p><strong>Što ne pukne</strong> Ništa. Kod se izvrši, slike se nacrtaju, tekst se sastavi, gradnja prođe.</p>
+</div>
+</div>
+<div class="fragment">
+<div class="krupno">
+<p>Jedna zemlja tiho nestane i nitko ne dobije poruku o grešci.</p>
+</div>
 </div>
 </section>
 <section id="što-smo-upravo-vidjeli" class="slide level2">
@@ -1353,40 +1481,47 @@ results/procjene.json        svi brojevi na jednom mjestu
 </div>
 </section>
 <section id="granice" class="slide level2 divider" data-background-color="#000000">
-<h2>4 · Granice</h2>
-<p>Trošak, mjerenje, i što ne delegirati.</p>
+<h2>5 · Granice</h2>
+<p>Povjerljivost, mjerenje, podjela rada.</p>
 </section>
-<section id="kada-ai-proizvodi-vašu-varijablu" class="slide level2">
-<h2>Kada AI proizvodi vašu varijablu</h2>
-<p>Naša zavisna varijabla je <strong>strojno konstruirana</strong>, dakle pravilo pretrage nad milijunima objava.</p>
+<section id="ako-podaci-ne-smiju-izaći" class="slide level2">
+<h2>Ako podaci ne smiju izaći</h2>
 <div class="kartice">
 <div>
-<p><strong>Pravilo</strong> Nijedna strojno označena varijabla ne ulazi u regresiju bez <strong>ljudski označenog validacijskog poduzorka</strong>.</p>
+<p><strong>Ograda</strong> Agent orkestrira analizu čije ulaze ne čita. Zabrana je u datoteci i provjera je dokazuje.</p>
 </div>
 <div>
-<p><strong>U tekstu</strong> Prijavite kako je varijabla nastala, koliko je validirano i s kojom pouzdanošću.</p>
+<p><strong>Uvjeti</strong> Pretplata i plaćanje po upotrebi nemaju iste uvjete o korištenju vaših podataka. Pročitajte ih prije institucionalne primjene.</p>
+</div>
+<div>
+<p><strong>Lokalno</strong> Za podatke koji ne smiju napustiti zgradu postoje modeli s otvorenim težinama koji rade na vašem računalu.</p>
 </div>
 </div>
+<div class="fragment">
 <div class="tiho">
-<p>Greška u mjerenju ne ruši ništa. Ona samo tiho pomiče koeficijent.</p>
+<p>Ovo je nabava, a ne alat. Riješite to prije projekta, ne usred njega.</p>
+</div>
 </div>
 </section>
 <section id="što-ne-delegirati" class="slide level2">
 <h2>Što ne delegirati</h2>
 <div class="kartice">
 <div>
-<p><strong>Delegirajte</strong> refaktoriranje, dokumentaciju, testove, ponovne procjene, formatiranje, robusnost, pretrage</p>
+<p><strong>Delegirajte</strong> čišćenje podataka, spajanje tablica, slike po predlošku, refaktoriranje, dokumentaciju, testove, ponovne procjene, robusnost</p>
 </div>
 <div>
-<p><strong>Ne delegirajte</strong> istraživačko pitanje, izbor identifikacije, tumačenje nalaza, snagu tvrdnje, odluku o objavi</p>
+<p><strong>Ne delegirajte</strong> istraživačko pitanje, izbor specifikacije, tumačenje nalaza, snagu tvrdnje, odluku o objavi</p>
 </div>
 </div>
 <div class="fragment">
-<p>Alat <strong>podiže pod, ne strop</strong>. Zato iskusna prosudba postaje rjeđi, a ne suvišniji ulaz.</p>
+<p>Desni stupac nije stvar ukusa. To su <strong>redci iz gornje polovice tablice</strong>, oni koje ne biste primijetili da su krivi.</p>
+<div class="tiho">
+<p>Alat podiže pod, ne strop. Zato iskusna prosudba postaje rjeđi, a ne suvišniji ulaz.</p>
+</div>
 </div>
 </section>
 <section id="zaključak" class="slide level2 divider" data-background-color="#000000">
-<h2>5 · Zaključak</h2>
+<h2>6 · Zaključak</h2>
 </section>
 <section id="pet-redaka-za-ponijeti" class="slide level2">
 <h2>Pet redaka za ponijeti</h2>
@@ -1397,53 +1532,57 @@ results/procjene.json        svi brojevi na jednom mjestu
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><strong>Jedno pitanje</strong></td>
-<td>Tko ovo može provjeriti i po kojoj cijeni?</td>
+<td><strong>Jedan pojam</strong></td>
+<td>dug provjere, i raste dok ne pogledate</td>
 </tr>
 <tr class="even">
-<td><strong>Tri stupa</strong></td>
-<td>otvoreno · reproducibilno · AI-podržano</td>
+<td><strong>Dvije ručke</strong></td>
+<td>kontekst i ograda, ništa treće ne postoji</td>
 </tr>
 <tr class="odd">
-<td><strong>Jedna ljestvica</strong></td>
-<td>četiri prečke, popnite se za jednu</td>
+<td><strong>Četiri datoteke</strong></td>
+<td>ustav, ograde, pravilo, provjere</td>
 </tr>
 <tr class="even">
 <td><strong>Jedna petlja</strong></td>
 <td>opiši → plan → odobri → izvrši → <strong>provjeri</strong> → commit</td>
 </tr>
 <tr class="odd">
-<td><strong>Tri greške</strong></td>
-<td>curenje · odstupanje · pokrivenost</td>
+<td><strong>Jedno pitanje</strong></td>
+<td>biste li primijetili da je ovo krivo?</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="jedna-prečka" class="slide level2">
-<h2>Jedna prečka</h2>
+<section id="jedan-zadatak-ovaj-tjedan" class="slide level2">
+<h2>Jedan zadatak, ovaj tjedan</h2>
 <div class="krupno">
-<p>Odaberite jedan projekt. Odredite na kojoj je prečki. Popnite se za jednu, i to ovaj tjedan.</p>
+<p>Klonirajte repozitorij, uzmite jedan svoj projekt i napišite mu <code>CLAUDE.md</code>.</p>
 </div>
 <div class="fragment">
-<p>Za većinu je to druga prečka, dakle <strong>javni kod i dokumentirani podaci</strong>, bez ijednog retka novog istraživanja.</p>
+<p>Dvadeset redaka. Što je projekt, gdje što stoji, što se nikad ne dira. Bez ijednog retka novog istraživanja.</p>
+<div class="tiho">
+<p>Sljedeći tjedan dodajte jednu provjeru. Onu koja hvata grešku koja vam se već jednom dogodila.</p>
+</div>
 </div>
 </section>
 <section id="materijali" class="slide level2">
 <h2>Materijali</h2>
 <ul>
 <li><strong>Radionica i slajdovi</strong> na <code>lusiki.github.io/Ekonomski-susreti/workshop/</code></li>
-<li><strong>Cjevovod za kloniranje</strong> u <code>workshop/pipeline/</code></li>
+<li><strong>Repozitorij za kloniranje</strong> u <code>workshop/projekt/</code></li>
+<li><strong>Presađivanje na vaš projekt</strong> u <code>PRESADI.md</code></li>
 <li><strong>Rukovanje</strong> u <code>RUNBOOK.md</code> · <strong>pojmovnik</strong> u <code>GLOSSARY.md</code> · <strong>literatura</strong> u <code>READING.md</code></li>
 </ul>
 <div class="tiho">
-<p>Kod MIT, tekst CC BY 4.0. Demonstracijski podaci su kalibrirani i ne smiju se citirati kao rezultati istraživanja.</p>
+<p>Kod MIT, tekst CC BY 4.0. Podaci su stvarni i javni, iz Eurostatovih tablica <code>prc_hicp_aind</code> i <code>une_rt_a</code>.</p>
 </div>
 
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>Otvoreno, reproducibilno i AI-podržano istraživanje · Ekonomski susreti</p>
+<p>AI u ekonomskim istraživanjima · Ekonomski susreti</p>
 </div>
 </div></div>
 

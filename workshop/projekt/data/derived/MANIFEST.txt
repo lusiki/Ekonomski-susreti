@@ -1,0 +1,13 @@
+PANEL — sto je u ovoj mapi
+
+izvor           Eurostat, tablice prc_hicp_aind i une_rt_a
+preuzeto         skriptom data/preuzmi.R
+jedinica         zemlja x godina
+zemlje           20
+godine           2014 do 2024
+redaka           220
+
+inflacija      HICP, godisnja prosjecna stopa promjene, posto
+nezaposlenost  stopa nezaposlenosti, dob 15 do 74, posto radne snage
+
+Generirano iz analysis/run.R. Ne uredivati rucno.

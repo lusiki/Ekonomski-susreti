@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Radionica o otvorenom, reproducibilnom i AI podržanom ekonomskom istraživanju uz izlaganje rada o institucionalnom jazu u pažnji.">
-  <title>Radionica o otvorenom, reproducibilnom i AI podržanom istraživanju</title>
+  <meta name="description" content="Radionica o umjetnoj inteligenciji u ekonomskim istraživanjima. Kako AI ugraditi u istraživački repozitorij, a ne u prozor preglednika.">
+  <title>AI u ekonomskim istraživanjima</title>
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -22,28 +22,36 @@
   <main>
     <section class="wrap hero">
       <p class="label">Radionica · 60 minuta · bez pripreme i instalacije</p>
-      <h1>Otvoreno, reproducibilno i AI podržano istraživanje</h1>
-      <p class="subtitle">Kako izgleda istraživanje koje se može provjeriti</p>
-      <p class="intro">Ako je proizvodnja tvrdnji postala gotovo besplatna, ono što razlikuje istraživanje od teksta jest lanac po kojem se može provjeriti.</p>
+      <h1>AI u ekonomskim istraživanjima</h1>
+      <p class="subtitle">Kako AI ugraditi u istraživački repozitorij, a ne u prozor preglednika</p>
+      <p class="intro">Izvršavanje je pojeftinilo, a provjera nije. Ta se razlika nakuplja kao dug, a četiri datoteke u repozitoriju taj dug naplaćuju pri svakom pokretanju.</p>
       <p class="byline">Luka Sikić · Hrvatsko katoličko sveučilište</p>
     </section>
 
     <section class="band">
       <div class="wrap">
-        <p class="label">Jedno pitanje nosi cijeli sat</p>
-        <p class="statement mt">Tko ovu tvrdnju može provjeriti i uz koliki trošak?</p>
+        <p class="label">Jedan pojam nosi cijeli sat</p>
+        <p class="statement mt">Dug provjere</p>
+        <p class="intro narrow mt">Dok ste kod pisali sami, provjeravali ste usput, po deset redaka, a da to niste ni zvali provjerom. Agent vam vrati dvjesto redaka odjednom, pogledate prvih dvadeset i idete dalje. Ono što ste preskočili nije nestalo nego se nakupilo. To je razlika između koda koji radi i koda za koji znate zašto radi, a kamate se plaćaju na recenziji, kod koautora i kod vas samih za godinu dana.</p>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <p class="label">Gdje agenta pustiti, a gdje ne</p>
+        <p class="intro narrow">Pitanje nije koliko je zadatak težak. Pitanje je biste li primijetili da je odgovor kriv. Umjetna inteligencija pojeftinila je izvršavanje, ali nije pojeftinila provjeru.</p>
         <div class="cols mt-lg">
           <div class="pillar">
-            <h2 class="sm">Otvoreno</h2>
-            <p class="body-sm">Provjeriti vas mogu drugi istraživači.</p>
+            <h2 class="sm">Lako provjeriti</h2>
+            <p class="body-sm">Spajanje tablica, čišćenje podataka, slika po predlošku. Vidite ishod pogledom, pa delegirajte bez razmišljanja. Kada je takav zadatak još i težak za izvršiti, dobitak je najveći.</p>
           </div>
           <div class="pillar">
-            <h2 class="sm">Reproducibilno</h2>
-            <p class="body-sm">Provjeriti vas može stroj, i vi sami nakon godine dana.</p>
+            <h2 class="sm">Teško provjeriti</h2>
+            <p class="body-sm">Odabir oznaka zemalja, definicija uzorka, mjerni sloj. Rezultat izgleda jednako uredno i kada je točan i kada nije, pa provjera ide u kod, a ne na vaš pogled.</p>
           </div>
           <div class="pillar">
-            <h2 class="sm">AI podržano</h2>
-            <p class="body-sm">Rezultati nastaju brže, pa provjera postaje najuže grlo. Alat predlaže, a istraživač odgovara.</p>
+            <h2 class="sm">Ne delegira se</h2>
+            <p class="body-sm">Istraživačko pitanje, izbor specifikacije, tumačenje nalaza i snaga tvrdnje. To su odluke koje mijenjaju pitanje na koje odgovarate, a ne odgovor.</p>
           </div>
         </div>
       </div>
@@ -51,38 +59,32 @@
 
     <section class="band">
       <div class="wrap">
-        <p class="label">Ljestvica reproducibilnosti</p>
-        <p class="intro narrow">Umjesto ideala, četiri prečke i jedno pitanje za vlastiti projekt. Gdje sam danas i koja je sljedeća prečka.</p>
-        <div class="rows ladder mt-lg">
-          <div>
-            <p class="n">0</p>
-            <p>Objavljen je samo članak u PDF obliku.</p>
-            <p class="here"></p>
-          </div>
-          <div>
-            <p class="n">1</p>
-            <p>Postoji stranica projekta uz citat i osnovne metapodatke.</p>
-            <p class="here">naša pozicija danas</p>
-          </div>
-          <div>
-            <p class="n">2</p>
-            <p>Kod je javan, a podaci su dokumentirani popisom izvora i kodnom knjigom.</p>
-            <p class="here"></p>
-          </div>
-          <div>
-            <p class="n">3</p>
-            <p>Jedna naredba gradi sve, okruženje je zaključano i stroj to redovito provjerava.</p>
-            <p class="here"></p>
-          </div>
+        <p class="label">AI sloj · četiri datoteke</p>
+        <p class="intro narrow">Ispod haube postoje samo dvije ručke. Kontekst je sve što model u tom trenutku vidi, a ograda odlučuje što smije učiniti. Iz toga slijedi da kontekst zapišete u datoteku umjesto da ga ponavljate u razgovoru, a dopuštenja popišete sami umjesto da se pouzdate u dobru namjeru.</p>
+        <div class="rows prose mt-lg">
+          <div><p class="n">1</p><p><strong>CLAUDE.md</strong> je kontekst koji agent čita svaku sesiju. Sprječava povratak na opće pretpostavke o tome kako se radi ekonomija.</p></div>
+          <div><p class="n">2</p><p><strong>.claude/settings.json</strong> su ograde, dakle popis onoga što smije, što vas mora pitati i što je zabranjeno. Sprječava da samostalan proces dira što god želi.</p></div>
+          <div><p class="n">3</p><p><strong>.claude/rules/</strong> je pravilo koje se učitava uz svaku izmjenu koda. Sprječava da se posao proglasi gotovim bez gradnje.</p></div>
+          <div><p class="n">4</p><p><strong>tests/checks.R</strong> su provjere koje ruše gradnju kada padnu. Sprječavaju da uvjerljiva besmislica uđe u tekst.</p></div>
         </div>
-        <p class="note mt">Poseban naglasak je na istraživanju s licenciranim ili povjerljivim podacima. Naš izvorni medijski korpus je licenciran i ne smije se dijeliti dalje, pa puna replikacija nije moguća. Kod, pravila pretrage, izvedeni agregati, popis izvora i sjeme slučajnih brojeva ipak smiju izaći u javnost. Ograničeni podaci nisu razlog za ostanak na nultoj prečki.</p>
+        <p class="note mt">Peta je git, ali git već imate. Petlja koja ih povezuje glasi ovako. Opišem što treba, agent napravi plan, ja odobrim, agent izvrši, sustav provjeri, ja zapišem promjenu.</p>
       </div>
     </section>
 
     <section class="band">
       <div class="wrap">
-        <p class="label">Demonstracija uživo · tri podmetnute pogreške</p>
-        <p class="intro narrow">U središnjem dijelu sata uživo se gradi mali istraživački cjevovod. Vodi od sirovog teksta preko mjerenja i procjene do rukopisa u kojem nijedan broj nije upisan rukom. U njega su unaprijed podmetnute tri pogreške koje on sam otkriva.</p>
+        <p class="label">Pokazni primjer</p>
+        <p class="intro narrow">Phillipsova krivulja u dvadeset zemalja europodručja od 2014. do 2024. godine, na dvije javne Eurostatove tablice. Primjer je namjerno običan i svakome poznat, jer radionica nije o nalazu nego o tome kako je nalaz nastao. Cijeli lanac od podatka do rečenice pročita se naglas u dvije minute, a nijedan broj u tekstu nije upisan rukom.</p>
+        <div class="mt-lg">
+          <img src="slike/slika2-phillips.png" alt="Phillipsova krivulja u dva razdoblja, prije i poslije inflacijskog vala" style="width:100%;height:auto">
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <p class="label">Demonstracija uživo · prvo korist, pa onda šteta</p>
+        <p class="intro narrow">U prvom dijelu agent dobiva stvaran zadatak i radi ga dobro, od plana preko izvršenja do osvježenog teksta. U drugom su u projekt podmetnute tri greške koje on sam otkriva.</p>
         <div class="cols mt-lg">
           <div class="pillar">
             <p class="n">1</p>
@@ -92,15 +94,15 @@
           <div class="pillar">
             <p class="n">2</p>
             <p class="head">Koeficijent upisan rukom</p>
-            <p class="body-sm">Broj u tekstu više ne odgovara tablici iz koje je nastao. Tekst ne smije moći odstupiti od tablice.</p>
+            <p class="body-sm">Broj u tekstu više ne odgovara procjeni iz koje je nastao. Tekst ne smije moći odstupiti od tablice.</p>
           </div>
           <div class="pillar">
             <p class="n">3</p>
-            <p class="head">Izgubljena dijakritika</p>
-            <p class="body-sm">Pravilo pretrage ne prepoznaje hrvatske znakove pa tiho izgubi velik dio korpusa. Ništa ne pukne, a rezultat se prepolovi.</p>
+            <p class="head">Grčka koja tiho nestane</p>
+            <p class="body-sm">Eurostat Grčku označava kao EL, a ostatak svijeta piše GR. Filtar izgubi cijelu zemlju, panel padne s 220 na 209 opažanja, nagib se pomakne, a ništa ne pukne.</p>
           </div>
         </div>
-        <p class="subtitle mt-lg">Nijedna od tri pogreške ne ruši program i sve tri mogle bi proći recenziju.</p>
+        <p class="subtitle mt-lg">Nijedna od tri greške ne ruši program i sve tri bi prošle recenziju.</p>
       </div>
     </section>
 
@@ -108,13 +110,14 @@
       <div class="wrap">
         <p class="label">Sadržaj sata</p>
         <div class="rows prose mt">
-          <div><p class="n">1</p><p>Trošak provjere i razlozi zbog kojih je taj trošak nejednako raspoređen.</p></div>
-          <div><p class="n">2</p><p>Otvorenost, reproducibilnost i umjetna inteligencija kao odgovori na isto pitanje.</p></div>
-          <div><p class="n">3</p><p>Ljestvica reproducibilnosti i objava rezultata kada podaci ne smiju izaći.</p></div>
-          <div><p class="n">4</p><p>Građa istraživačkog cjevovoda i način na koji su brojevi vezani uz kod.</p></div>
-          <div><p class="n">5</p><p>Rad s AI agentom kroz plan, ograde, provjeru i male zapise promjena.</p></div>
-          <div><p class="n">6</p><p>Demonstracija uživo s tri pogreške i tri provjere.</p></div>
-          <div><p class="n">7</p><p>Strojno mjerenje, validacijski poduzorak i poslovi koje se ne delegira.</p></div>
+          <div><p class="n">1</p><p>Dug provjere i razlog zbog kojeg raste brže nego prije.</p></div>
+          <div><p class="n">2</p><p>Podjela zadataka prema tome koliko je skupo provjeriti ishod.</p></div>
+          <div><p class="n">3</p><p>Model, alati, ograda i kontekst, dakle što se zapravo događa ispod haube.</p></div>
+          <div><p class="n">4</p><p>Dvije ručke koje iz toga slijede i četiri datoteke koje ih zapisuju.</p></div>
+          <div><p class="n">5</p><p>Izbor načina rada prema potrebnoj razini nadzora.</p></div>
+          <div><p class="n">6</p><p>Demonstracija uživo, prvo korist pa onda tri tihe greške.</p></div>
+          <div><p class="n">7</p><p>Povjerljivi podaci, uvjeti korištenja i lokalni modeli.</p></div>
+          <div><p class="n">8</p><p>Podjela rada i odluke koje se ne delegiraju.</p></div>
         </div>
       </div>
     </section>
@@ -123,12 +126,13 @@
       <div class="wrap">
         <p class="label">Materijali</p>
         <div class="links">
-          <a href="slides/"><span class="what">Slajdovi radionice</span><span class="how">HTML, 24 slajda</span></a>
-          <a href="handout.html"><span class="what">Sažetak na jednoj stranici</span><span class="how">za tisak, A4</span></a>
-          <a href="nalaz.html"><span class="what">Nalaz koji cjevovod sam gradi</span><span class="how">primjer rukopisa</span></a>
+          <a href="slides/"><span class="what">Slajdovi radionice</span><span class="how">HTML, otvara se u pregledniku</span></a>
+          <a href="handout.html"><span class="what">Sažetak na jednoj stranici</span><span class="how">za tisak, A4 obostrano</span></a>
+          <a href="nalaz.html"><span class="what">Nalaz koji projekt sam gradi</span><span class="how">primjer rukopisa bez ijednog broja upisanog rukom</span></a>
+          <a href="https://github.com/lusiki/Ekonomski-susreti/tree/main/workshop/projekt"><span class="what">Repozitorij za kloniranje i pokretanje</span><span class="how">workshop/projekt</span></a>
+          <a href="https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/PRESADI.md"><span class="what">Presađivanje AI sloja na vlastiti projekt</span><span class="how">PRESADI.md</span></a>
           <a href="https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/SCRIPT.md"><span class="what">Scenarij radionice minutu po minutu</span><span class="how">SCRIPT.md</span></a>
-          <a href="https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/RUNBOOK.md"><span class="what">Podmetnute pogreške i sigurnosna mreža</span><span class="how">RUNBOOK.md</span></a>
-          <a href="https://github.com/lusiki/Ekonomski-susreti/tree/main/workshop/pipeline"><span class="what">Cjevovod za kloniranje i pokretanje</span><span class="how">workshop/pipeline</span></a>
+          <a href="https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/RUNBOOK.md"><span class="what">Podmetnute greške i sigurnosna mreža</span><span class="how">RUNBOOK.md</span></a>
           <a href="https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/GLOSSARY.md"><span class="what">Pojmovnik hrvatskog i engleskog nazivlja</span><span class="how">GLOSSARY.md</span></a>
           <a href="https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/READING.md"><span class="what">Literatura, dvanaest naslova</span><span class="how">READING.md</span></a>
         </div>
@@ -140,7 +144,7 @@
         <div class="cols">
           <div>
             <p class="label ruled">Što odnosite</p>
-            <p class="body-sm">Ljestvicu reproducibilnosti s odredištem za vlastiti projekt, kratak skup pravila za rad s AI agentom, javno dostupan cjevovod koji se kloniranjem i jednom naredbom pokreće na svakom prijenosnom računalu te sažetak na jednoj stranici.</p>
+            <p class="body-sm">Repozitorij koji se klonira i pokreće jednom naredbom na svakom prijenosnom računalu, upute za presađivanje istog sloja na vlastiti projekt u tri koraka, kratko mjerilo za odluku o tome što se delegira, te sažetak na jednoj stranici.</p>
           </div>
           <div>
             <p class="label ruled">Kome je namijenjena</p>
@@ -157,8 +161,8 @@
     <section class="band">
       <div class="wrap">
         <p class="label ruled">Napomena o podacima</p>
-        <p class="note">Podaci koji se koriste u demonstraciji su izmišljeni i kalibrirani, dakle nisu izvorni. Brojke su reda veličine objavljenih, ali nisu rezultati istraživanja i ne smiju se tako citirati.</p>
-        <p class="note mt">Radionica se nadovezuje na izlaganje <a href="../abstracts/#izlaganje">Kada inflacija istisne glas središnje banke</a> i u prvoj se minuti poziva na rezultat koji je publika upravo čula, a stoji i samostalno.</p>
+        <p class="note">Podaci u pokaznom projektu su stvarni i javni. Izvor su Eurostatove tablice prc_hicp_aind za harmonizirani indeks potrošačkih cijena i une_rt_a za stopu nezaposlenosti, a preuzimaju se priloženom skriptom. Rezultat je opisni nalaz, a ne procjena uzročnog učinka, i nije doprinos literaturi nego pokazni objekt radionice.</p>
+        <p class="note mt">Radionica stoji samostalno i ne pretpostavlja da je publika slušala ijedno drugo izlaganje.</p>
       </div>
     </section>
   </main>

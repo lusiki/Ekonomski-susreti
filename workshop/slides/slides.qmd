@@ -1,5 +1,5 @@
 ---
-title: "Otvoreno, reproducibilno i AI podržano istraživanje"
+title: "AI u ekonomskim istraživanjima"
 subtitle: "Radionica · Ekonomski susreti"
 author: "Luka Sikić · Hrvatsko katoličko sveučilište"
 lang: hr
@@ -13,210 +13,259 @@ format:
     transition: none
     width: 1280
     height: 760
-    footer: "Otvoreno, reproducibilno i AI podržano istraživanje · Ekonomski susreti"
+    footer: "AI u ekonomskim istraživanjima · Ekonomski susreti"
 ---
+
+## Tri pitanja, dignite ruku
+
+::: {.kartice}
+::: {}
+**Koristite li AI u istraživanju?**
+nikad · povremeno · svaki dan
+:::
+::: {}
+**Gdje ga pokrećete?**
+u pregledniku · u uređivaču koda · u terminalu
+:::
+::: {}
+**Što vas najviše koči?**
+povjerenje · povjerljivost podataka · ne znam odakle početi
+:::
+:::
+
+. . .
+
+::: {.tiho}
+Ako ste podigli ruku na preglednik, ovaj je sat za vas. Idemo ga preseliti
+odande u sam projekt.
+:::
 
 ## Sat vremena, tri stvari koje odnosite
 
 ::: {.kartice}
 ::: {}
-**Jedan okvir**
-Zašto su otvorenost, reproducibilnost i AI odgovori na isto pitanje.
+**Jedan pojam**
+Dug provjere. Zašto raste i tko ga plaća.
 :::
 ::: {}
-**Jedna ljestvica**
-Gdje je vaš projekt danas i koja je sljedeća prečka.
+**Jedan sloj**
+Četiri datoteke koje AI ugrađuju u repozitorij.
 :::
 ::: {}
 **Jedan repozitorij**
-Cjevovod koji možete klonirati i pokrenuti jednom naredbom.
+Klonirate ga danas i presadite na svoj projekt.
 :::
 :::
 
 . . .
 
-Jedna riječ vodi cijeli sat, a ta riječ je **najmanje moguće**. Ne petnaest alata, nego najmanji
-skup dijelova koji istraživanje čini provjerljivim.
+Jedna riječ vodi cijeli sat, a ta riječ je **najmanje moguće**. Ne petnaest
+alata, nego najmanji skup dijelova koji istraživanje čini provjerljivim.
 
 
 ::: {.divider background-color="#000000"}
-## 0 · Uvod
+## 1 · Dug provjere
 
-Upravo ste čuli tvrdnju. Sada je otvaramo.
+Što se stvarno promijenilo.
 :::
 
-## Jedan broj s prethodnog izlaganja
-
-> Porast inflacije za jedan postotni bod širi institucionalni jaz u pažnji za
-> **0,00201** jedinica.
-
-. . .
-
-::: {.krupno}
-Možete li taj broj provjeriti?
-:::
-
-::: {.tiho}
-Pitanje nije vjerujete li mu, nego koliko bi vas vremena stajalo da ga provjerite.
-:::
-
-## Cijena je asimetrična
+## Cijena je pala samo s jedne strane
 
 ::: {.kartice}
 ::: {}
-**Proizvesti tvrdnju**
-jeftino, i sve jeftinije
+**Izvršiti**
+očistiti podatke, napisati kod, nacrtati sliku, procijeniti model
+
+*jeftino, i sve jeftinije*
 :::
 ::: {}
-**Provjeriti tvrdnju**
-skupo, i ne postaje jeftinije samo od sebe
+**Provjeriti**
+je li to točno, je li uzorak onaj koji mislite, znači li koeficijent to što
+mislite
+
+*skupo, i ne postaje jeftinije samo od sebe*
 :::
 :::
 
 . . .
 
-Ta asimetrija je cijeli problem. Otvorenost, reproducibilnost i AI tri su
-odgovora na **isto pitanje**.
+::: {.krupno}
+Ta asimetrija je cijeli problem.
+:::
+
+## Ali nije problem samo u cijeni
+
+Dok ste kod pisali sami, provjeravali ste **usput**. Deset redaka, pogled,
+dalje.
+
+. . .
+
+Agent vam vrati dvjesto redaka odjednom. Provjera se odgađa, pa se
+**gomila**.
 
 ::: {.krupno}
-Tko ovo može provjeriti i po kojoj cijeni?
+Dug provjere
 :::
 
-
-::: {.divider background-color="#000000"}
-## 1 · Okvir
-
-Tri stupa, jedna ljestvica.
+::: {.tiho}
+Razlika između koda koji radi i koda za koji znate zašto radi. Kamate se
+plaćaju na recenziji, kod koautora i kod vas samih za godinu dana.
 :::
 
-## Tri stupa, jedno pitanje
+## Gdje agenta pustiti, a gdje ne
 
-| Stup | Tko provjerava | Što konkretno znači |
+|  | **lako izvršiti** | **teško izvršiti** |
 |---|---|---|
-| **Otvoreno** | drugi ljudi | kod, podaci i metapodaci su dostupni |
-| **Reproducibilno** | vi za godinu dana i stroj | jedna naredba ponovno gradi sve |
-| **AI podržano** | vi sami, brže, ako provjeravate | alat predlaže, vi odgovarate |
+| **lako provjeriti** | delegirajte bez razmišljanja | **ovdje je najveći dobitak** |
+| **teško provjeriti** | oprez, sjednite pokraj | ovdje se rade tihe štete |
+
+. . .
+
+::: {.tiho}
+Nije pitanje je li zadatak težak, nego biste li primijetili da je odgovor
+kriv.
+:::
+
+## Ista podjela na našem primjeru
+
+| Zadatak | Provjera | Odluka |
+|---|---|---|
+| spojiti dvije Eurostatove tablice | pogledam broj redaka | delegiram |
+| nacrtati sliku po zadanom predlošku | vidim je | delegiram |
+| **odabrati koje su oznake zemlje** | ne vidim, panel izgleda uredno | **provjera u kodu** |
+| **fiksni učinci zemlje ili i godine** | mijenja pitanje, ne odgovor | **ne delegiram** |
+
+. . .
+
+Treći redak je razlog zbog kojeg ova radionica postoji, a četvrti je razlog
+zbog kojeg ćete i dalje biti potrebni.
+
+
+::: {.divider background-color="#000000"}
+## 2 · Ispod haube
+
+Model, alati, ograda, kontekst.
+:::
+
+## Četiri riječi i gotovi ste
+
+::: {.kartice}
+::: {}
+**Model**
+Predviđa sljedeću riječ. Ništa ne zna i ništa ne može učiniti.
+:::
+::: {}
+**Alati**
+Čitaj datoteku, pokreni naredbu, pretraži web. Time model postaje agent.
+:::
+::: {}
+**Ograda**
+Program koji odlučuje koji se alat smije pozvati. Tu ste vi.
+:::
+:::
 
 . . .
 
 ::: {.krupno}
-Agent generira. Vi jamčite.
+Kontekst je sve što model u tom trenutku vidi.
 :::
 
 ::: {.tiho}
-AI ne mijenja standard dokaza. Mijenja cijenu proizvodnje tvrdnji, pa dokazni
-lanac postaje uže grlo.
+Sustavska uputa, vaša poruka, sadržaj datoteka, ispis naredbi. Ništa više.
+Ako nešto nije u kontekstu, za model ne postoji.
 :::
 
-## Ljestvica reproducibilnosti
+## Iz toga slijedi cijela radionica
 
-::: {.ljestvica}
-::: {}
-**0** · Objavljen je samo PDF.
-:::
-::: {.tu}
-**1** · Stranica projekta, citat i metapodaci. *← ovaj projekt danas*
-:::
-::: {}
-**2** · Kod je javan, podaci dokumentirani (manifest i kodna knjiga).
-:::
-::: {.cilj}
-**3** · Jedna naredba gradi sve, okruženje zaključano, CI to provjerava.
-:::
-:::
-
-. . .
-
-Nije da/ne, nego **prečka po prečka**. Pitanje na kraju sata nije "jeste li
-otvoreni" nego **koju prečku uzimate ove godine**.
-
-## Kada podaci ne smiju van
-
-Naš izvorni korpus je licenciran. To je normalno stanje, ne iznimka.
+Ako je sve što agent zna **kontekst**, a sve što smije **ograda**, onda
+postoje točno dvije ručke.
 
 ::: {.kartice}
 ::: {}
-**Ne izlazi**
-sirovi tekst objava, sadržaj trećih strana
+**Napišite kontekst sami**
+Umjesto da ga svaki put ponavljate u razgovoru, zapišite ga u datoteku koju
+projekt nosi sa sobom.
 :::
 ::: {}
-**Izlazi**
-kod, pravila pretrage, izvedeni agregati, manifest, kodna knjiga, sjeme
+**Napišite ogradu sami**
+Umjesto da se pouzdate u dobru namjeru, popišite što smije, što pita i što
+je zabranjeno.
 :::
 :::
 
 . . .
 
-Ograničeni podaci **nisu izlika za prečku 0**. Prečka 2 je dostižna gotovo
-uvijek, a razlika između prve i druge prečke je ono što recenzent stvarno može provjeriti.
+To su prve dvije od četiri datoteke. Nisu konvencija koju je netko izmislio,
+nego jedine dvije ručke koje uopće postoje.
+
+## Ne birajte alat, birajte način
+
+| Način | Vidite | Kada |
+|---|---|---|
+| **preglednik** | samo odgovor | pitanja, ideje, tekst |
+| **uređivač koda** | svaku promjenu dok nastaje | teško provjerljiv zadatak |
+| **terminal** | sažetak na kraju | jasan zadatak s provjerom u kodu |
+
+. . .
+
+::: {.krupno}
+Način biramo prema tome koliko je skupa provjera.
+:::
+
+::: {.tiho}
+Nije važno je li Claude ili nešto drugo. Kao iPhone 17 ili 18. Važno je
+sjedite li pokraj ili ne, i po čemu ćete znati.
+:::
 
 
 ::: {.divider background-color="#000000"}
-## 2 · Anatomija
+## 3 · AI sloj
 
-Kako izgleda projekt koji se sam provjerava.
+Četiri datoteke u vašem repozitoriju.
 :::
 
-## Lanac je kratak i vidljiv
+## Projekt koji ćemo gledati
 
 ```
-data/raw/naslovi.csv         sirovi naslovi
-    ↓  R/korpus.R             pravilo pretrage   ← mjerni sloj
-    ↓  R/podaci.R             udjeli i IAG
-data/derived/panel.csv       tjedni agregati
-    ↓  R/modeli.R             OLS + Newey-West, lokalne projekcije
-    ↓  R/slike.R              slike
-results/procjene.json        svi brojevi na jednom mjestu
-    ↓  paper/nalaz.qmd        tekst koji samo čita procjene.json
+data/raw/hicp.csv              Eurostat, 45 oznaka
+data/raw/nezaposlenost.csv     Eurostat, 38 oznaka
+    ↓  R/zemlje.R               odabir zemalja   ← mjerni sloj
+    ↓  R/podaci.R               spajanje u panel
+data/derived/panel.csv         220 opažanja, 20 zemalja
+    ↓  R/modeli.R               četiri regresije
+    ↓  R/slike.R                dvije slike
+results/procjene.json          svi brojevi na jednom mjestu
+    ↓  paper/nalaz.qmd          tekst koji samo čita procjene.json
 ```
 
 ::: {.tiho}
-Bez okvira za orkestraciju, bez okvira za testiranje. Jedna skripta koja se
-čita naglas.
+Phillipsova krivulja u europodručju, 2014. do 2024. Dvije javne tablice,
+jedna naredba, nijedan broj upisan rukom.
 :::
 
-## Tri pravila koja sve drže
+## Četiri datoteke i kvar koji svaka sprječava
 
-::: {.kartice}
-::: {}
-**Konstante**
-Ako se broj pojavljuje na dva mjesta, jedno je greška. Sve u `R/config.R`.
-:::
-::: {}
-**Izlošci**
-Svaka slika i tablica ima funkciju koja je proizvodi. Nijedna ne nastaje u sesiji.
-:::
-::: {}
-**Brojevi**
-Nijedan broj u tekstu nije upisan rukom. Svi dolaze iz `procjene.json`.
-:::
-:::
+| Datoteka | Sprječava |
+|---|---|
+| `CLAUDE.md` | povratak na opće pretpostavke |
+| `.claude/settings.json` | da samostalan proces dira što god želi |
+| `.claude/rules/provjera.md` | da se posao proglasi gotovim bez gradnje |
+| `tests/checks.R` | da uvjerljiva besmislica uđe u tekst |
 
 . . .
 
-Treće je pravilo najjače jer tekst **ne može** tiho odstupiti od tablice, budući da se
-gradnja ruši na svaki decimalni broj upisan rukom.
-
-## Petlja s agentom
+Peta je git, ali git već imate.
 
 ::: {.krupno}
 opiši → plan → **odobrim** → izvrši → **provjeri** → commitam
 :::
 
-| Komponenta | Sprječava |
-|---|---|
-| **Kontekst** u `CLAUDE.md` | povratak na generičke pretpostavke |
-| **Plan** prije svake izmjene | da se brzo riješi krivi problem |
-| **Ograde** u `settings.json` | da samostalan proces dira što god želi |
-| **Provjera** u `run.R` | da uvjerljiva besmislica uđe u tekst |
-| **Git** i mali zapisi promjena | da se pogreška ponovi i da nema povratka |
-
 ## Ograde su datoteka, ne obećanje
 
 ```json
 "allow": ["Bash(Rscript:*)", "Bash(quarto render:*)", "Bash(git diff:*)"],
-"ask":   ["Bash(git commit:*)"],
-"deny":  ["Read(./data/restricted/**)", "Bash(git push:*)", "Bash(rm -rf:*)"]
+"ask":   ["Bash(git commit:*)", "Write(./R/zemlje.R)"],
+"deny":  ["Read(./data/restricted/**)", "Bash(git push:*)"]
 ```
 
 . . .
@@ -224,30 +273,58 @@ opiši → plan → **odobrim** → izvrši → **provjeri** → commitam
 Agent orkestrira analizu čije osjetljive ulaze **nikada ne vidi**.
 
 ::: {.tiho}
-Za institucionalni rad provjerite uvjete korištenja i verziju alata prije nego
-ga stavite u zajednički projekt.
+Primijetite drugi redak. Mjerni sloj je u `ask`, ne u `allow`. Nije zabranjen,
+ali me mora pitati.
+:::
+
+## Provjera je mjesto gdje se dug plaća
+
+| Provjera | Hvata |
+|---|---|
+| **ograda** | ograničen sadržaj u bilo kojem izlazu |
+| **pokrivenost** | mjerni sloj koji je promijenio uzorak |
+| **provenijencija** | broj upisan rukom u odjeljku Rezultati |
+
+. . .
+
+::: {.krupno}
+Ne provjeravam ja svaki put. Provjerava repozitorij, svaki put.
+:::
+
+::: {.tiho}
+Tu se dug provjere prestaje gomilati. Ne zato što ste disciplinirani, nego
+zato što gradnja pukne ako niste.
 :::
 
 
 ::: {.divider background-color="#000000"}
-## 3 · Demonstracija
+## 4 · Demonstracija
 
-Tri greške, po jedna za svaki stup.
+Prvo korist, pa onda šteta.
 :::
 
-## Što gledati u sljedećih petnaest minuta
+## Što gledati u sljedećih sedamnaest minuta
 
-| Greška | Stup | Uhvatit će je |
-|---|---|---|
-| **Curenje** ograničenog sadržaja u rukopis | otvoreno | ograda |
-| **Odstupanje** koeficijenta upisanog rukom | reproducibilno | podrijetlo |
-| **Pokrivenost** kada pretraga izgubi dijakritiku | mjerenje i AI | pokrivenost |
+::: {.kartice}
+::: {}
+**Prvi dio**
+Agent dobiva stvaran zadatak i radi ga dobro, od plana do gotove slike i
+osvježenog teksta.
+:::
+::: {}
+**Drugi dio**
+U projektu su tri tihe greške. Nijedna ne ruši program i sve tri bi prošle
+recenziju.
+:::
+:::
 
 . . .
 
-Treća je domaća specijalnost jer portali pišu i *središnja* i *sredisnja*.
-Ispadne li normalizacija, tiho nestane pola korpusa i koeficijent se
-prepolovi, a **ništa ne pukne**.
+| Greška | Uhvatit će je |
+|---|---|
+| **Curenje** ograničenog sadržaja u tekst | ograda |
+| **Odstupanje** koeficijenta upisanog rukom | provenijencija |
+| **Pokrivenost** kada Grčka postane `GR` umjesto `EL` | pokrivenost |
 
 ## Demonstracija {background-color="#000000"}
 
@@ -257,6 +334,27 @@ Terminal
 
 ::: {style="color:rgba(255,255,255,0.8)"}
 `Rscript demo/podmetni.R` → `Rscript analysis/run.R`
+:::
+
+## Treća greška, pobliže
+
+Eurostat Grčku označava kao `EL`. Cijeli ostatak svijeta piše `GR`.
+
+::: {.kartice}
+::: {}
+**Što se dogodi**
+Panel padne s 220 na 209 opažanja. Nagib se pomakne s 0,61 na 0,69.
+:::
+::: {}
+**Što ne pukne**
+Ništa. Kod se izvrši, slike se nacrtaju, tekst se sastavi, gradnja prođe.
+:::
+:::
+
+. . .
+
+::: {.krupno}
+Jedna zemlja tiho nestane i nitko ne dobije poruku o grešci.
 :::
 
 ## Što smo upravo vidjeli
@@ -284,31 +382,35 @@ Ovo je ono što promakne umornom čovjeku pred rok.
 
 
 ::: {.divider background-color="#000000"}
-## 4 · Granice
+## 5 · Granice
 
-Trošak, mjerenje, i što ne delegirati.
+Povjerljivost, mjerenje, podjela rada.
 :::
 
-## Kada AI proizvodi vašu varijablu
-
-Naša zavisna varijabla je **strojno konstruirana**, dakle pravilo pretrage nad
-milijunima objava.
+## Ako podaci ne smiju izaći
 
 ::: {.kartice}
 ::: {}
-**Pravilo**
-Nijedna strojno označena varijabla ne ulazi u regresiju bez **ljudski
-označenog validacijskog poduzorka**.
+**Ograda**
+Agent orkestrira analizu čije ulaze ne čita. Zabrana je u datoteci i
+provjera je dokazuje.
 :::
 ::: {}
-**U tekstu**
-Prijavite kako je varijabla nastala, koliko je validirano i s kojom
-pouzdanošću.
+**Uvjeti**
+Pretplata i plaćanje po upotrebi nemaju iste uvjete o korištenju vaših
+podataka. Pročitajte ih prije institucionalne primjene.
+:::
+::: {}
+**Lokalno**
+Za podatke koji ne smiju napustiti zgradu postoje modeli s otvorenim
+težinama koji rade na vašem računalu.
 :::
 :::
 
+. . .
+
 ::: {.tiho}
-Greška u mjerenju ne ruši ništa. Ona samo tiho pomiče koeficijent.
+Ovo je nabava, a ne alat. Riješite to prije projekta, ne usred njega.
 :::
 
 ## Što ne delegirati
@@ -316,54 +418,65 @@ Greška u mjerenju ne ruši ništa. Ona samo tiho pomiče koeficijent.
 ::: {.kartice}
 ::: {}
 **Delegirajte**
-refaktoriranje, dokumentaciju, testove, ponovne procjene, formatiranje,
-robusnost, pretrage
+čišćenje podataka, spajanje tablica, slike po predlošku, refaktoriranje,
+dokumentaciju, testove, ponovne procjene, robusnost
 :::
 ::: {}
 **Ne delegirajte**
-istraživačko pitanje, izbor identifikacije, tumačenje nalaza, snagu tvrdnje,
+istraživačko pitanje, izbor specifikacije, tumačenje nalaza, snagu tvrdnje,
 odluku o objavi
 :::
 :::
 
 . . .
 
-Alat **podiže pod, ne strop**. Zato iskusna prosudba postaje rjeđi, a ne
+Desni stupac nije stvar ukusa. To su **redci iz gornje polovice tablice**,
+oni koje ne biste primijetili da su krivi.
+
+::: {.tiho}
+Alat podiže pod, ne strop. Zato iskusna prosudba postaje rjeđi, a ne
 suvišniji ulaz.
+:::
 
 
 ::: {.divider background-color="#000000"}
-## 5 · Zaključak
+## 6 · Zaključak
 :::
 
 ## Pet redaka za ponijeti
 
 | | |
 |---|---|
-| **Jedno pitanje** | Tko ovo može provjeriti i po kojoj cijeni? |
-| **Tri stupa** | otvoreno · reproducibilno · AI podržano |
-| **Jedna ljestvica** | četiri prečke, popnite se za jednu |
+| **Jedan pojam** | dug provjere, i raste dok ne pogledate |
+| **Dvije ručke** | kontekst i ograda, ništa treće ne postoji |
+| **Četiri datoteke** | ustav, ograde, pravilo, provjere |
 | **Jedna petlja** | opiši → plan → odobri → izvrši → **provjeri** → commit |
-| **Tri greške** | curenje · odstupanje · pokrivenost |
+| **Jedno pitanje** | biste li primijetili da je ovo krivo? |
 
-## Jedna prečka
+## Jedan zadatak, ovaj tjedan
 
 ::: {.krupno}
-Odaberite jedan projekt. Odredite na kojoj je prečki. Popnite se za jednu, i to ovaj tjedan.
+Klonirajte repozitorij, uzmite jedan svoj projekt i napišite mu `CLAUDE.md`.
 :::
 
 . . .
 
-Za većinu je to druga prečka, dakle **javni kod i dokumentirani podaci**, bez ijednog
-retka novog istraživanja.
+Dvadeset redaka. Što je projekt, gdje što stoji, što se nikad ne dira.
+Bez ijednog retka novog istraživanja.
+
+::: {.tiho}
+Sljedeći tjedan dodajte jednu provjeru. Onu koja hvata grešku koja vam se
+već jednom dogodila.
+:::
 
 ## Materijali
 
 - **Radionica i slajdovi** na `lusiki.github.io/Ekonomski-susreti/workshop/`
-- **Cjevovod za kloniranje** u `workshop/pipeline/`
+- **Repozitorij za kloniranje** u `workshop/projekt/`
+- **Presađivanje na vaš projekt** u `PRESADI.md`
 - **Rukovanje** u `RUNBOOK.md` · **pojmovnik** u `GLOSSARY.md` · **literatura** u `READING.md`
 
 ::: {.tiho}
-Kod MIT, tekst CC BY 4.0. Demonstracijski podaci su kalibrirani i ne smiju se
-citirati kao rezultati istraživanja.
+Kod MIT, tekst CC BY 4.0. Podaci su stvarni i javni, iz Eurostatovih tablica
+`prc_hicp_aind` i `une_rt_a`.
 :::

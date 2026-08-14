@@ -1,9 +1,0 @@
-.Rproj.user
-.Rhistory
-.RData
-results/slike/
-results/*.json
-results/*.csv
-paper/nalaz.html
-paper/nalaz_files/
-demo/.backup/

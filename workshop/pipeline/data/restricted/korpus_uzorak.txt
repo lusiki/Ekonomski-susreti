@@ -1,4 +1,0 @@
-OGRANICENO-NE-DIJELITI
-Ova mapa predstavlja licencirani izvorni korpus.
-Agent je ne smije citati (vidi .claude/settings.json).
-Na radionici sluzi kao meta za provjeru "ograda".

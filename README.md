@@ -7,15 +7,21 @@ Javni repozitorij istraživanja **„Pasivno zamijenjena. Cijena inflacije koju 
 [![Pregled](https://img.shields.io/badge/pregled_istraživanja-PDF-000000?style=flat-square&labelColor=000000)](https://lusiki.github.io/Ekonomski-susreti/downloads/Pregled-istrazivanja.pdf)
 [![GitHub Pages](https://github.com/lusiki/Ekonomski-susreti/actions/workflows/pages.yml/badge.svg)](https://lusiki.github.io/Ekonomski-susreti/)
 
+<a href="https://lusiki.github.io/Ekonomski-susreti/"><img src="docs/assets/qr-projekt.svg" alt="QR kod koji vodi na stranicu projekta" width="150" align="right"></a>
+
+Skenirajte kod mobitelom i stranica projekta otvorit će se izravno, sa sažetcima, prezentacijom i svim materijalima radionice. Kod vodi na [lusiki.github.io/Ekonomski-susreti](https://lusiki.github.io/Ekonomski-susreti/).
+
+<br clear="right">
+
 ## Materijali
 
 | Sadržaj | Pregled | Preuzimanje |
 |---|---|---|
 | Sažetak izlaganja | [Kada inflacija istisne glas središnje banke](https://lusiki.github.io/Ekonomski-susreti/abstracts/#izlaganje) | [tekst](materials/abstract-presentation.md) |
-| Sažetak radionice | [Otvoreno, reproducibilno i AI podržano istraživanje](https://lusiki.github.io/Ekonomski-susreti/abstracts/#radionica) | [tekst](materials/abstract-workshop.md) |
+| Sažetak radionice | [AI u ekonomskim istraživanjima](https://lusiki.github.io/Ekonomski-susreti/abstracts/#radionica) | [tekst](materials/abstract-workshop.md) |
 | Sažeti prikaz istraživanja | Pet stranica s glavnim nalazima i grafikonima | [PDF](https://lusiki.github.io/Ekonomski-susreti/downloads/Pregled-istrazivanja.pdf) · [izvor](materials/brief/pregled.qmd) |
 | Konferencijska prezentacija | [Otvori slajdove u pregledniku](https://lusiki.github.io/Ekonomski-susreti/slides/) | [PDF](https://lusiki.github.io/Ekonomski-susreti/downloads/Ekonomski-susreti.pdf) · [PowerPoint](https://lusiki.github.io/Ekonomski-susreti/downloads/Ekonomski-susreti.pptx) |
-| Materijali radionice | [Ljestvica, cjevovod i demonstracija](https://lusiki.github.io/Ekonomski-susreti/workshop/) | [slajdovi](https://lusiki.github.io/Ekonomski-susreti/workshop/slides/) · [jedna stranica](https://lusiki.github.io/Ekonomski-susreti/workshop/handout.html) |
+| Materijali radionice | [AI sloj, repozitorij i demonstracija](https://lusiki.github.io/Ekonomski-susreti/workshop/) | [slajdovi](https://lusiki.github.io/Ekonomski-susreti/workshop/slides/) · [jedna stranica](https://lusiki.github.io/Ekonomski-susreti/workshop/handout.html) |
 
 ## Sadržaj
 
@@ -40,11 +46,15 @@ Projekt zato postavlja dva povezana pitanja.
 
 ## Radionica
 
-Uz izlaganje se drži šezdesetominutna radionica **[Otvoreno, reproducibilno i AI podržano istraživanje](workshop/)** Luke Sikića. Izlaganje iznosi tvrdnju, a radionica pokazuje kako se ta tvrdnja može provjeriti i koliko takva provjera stoji.
+Uz izlaganje se drži šezdesetominutna radionica **[AI u ekonomskim istraživanjima](workshop/)** Luke Sikića. Radionica stoji samostalno i ne pretpostavlja da je publika slušala izlaganje.
 
-Cijeli sat drži jedno pitanje, a ono glasi **tko ovo može provjeriti i uz koliki trošak?** Otvorenost, reproducibilnost i AI tri su odgovora na to pitanje. Sudionici dobivaju ljestvicu s četiri prečke, petlju rada s AI agentom i cjevovod koji se gradi jednom naredbom te uživo otkriva tri podmetnute pogreške. Prva je curenje ograničenih podataka u javni tekst, druga je koeficijent upisan rukom koji više ne odgovara tablici, a treća je pravilo pretrage koje ne prepoznaje hrvatsku dijakritiku.
+Cijeli sat drži jedno preseljenje. Većina istraživača AI koristi u prozoru preglednika, dakle izvan vlastitog projekta, gdje alat ne zna ništa o projektu, ne može ništa pokrenuti i ne može biti provjeren. Radionica pokazuje što se dogodi kada ga preselite u sam repozitorij i zašto to nije stvar udobnosti.
 
-Materijali se nalaze u mapi [`workshop/`](workshop/) i obuhvaćaju [slajdove](workshop/slides/slides.qmd), [scenarij izlaganja](workshop/SCRIPT.md), [rukovanje demonstracijom](workshop/RUNBOOK.md), [jednu stranicu za tisak](workshop/handout.html), [pojmovnik](workshop/GLOSSARY.md), [literaturu](workshop/READING.md) i [cjevovod](workshop/pipeline/).
+Polazište je da je izvršavanje pojeftinilo, a provjera nije. Ta se razlika nakuplja kao **dug provjere**, a odgovor na nju je AI sloj od četiri datoteke koji taj dug naplaćuje pri svakom pokretanju. Sudionici odnose repozitorij koji se klonira i pokreće jednom naredbom te upute za presađivanje istog sloja na vlastiti projekt.
+
+Pokazni primjer je Phillipsova krivulja u dvadeset zemalja europodručja na dvije javne Eurostatove tablice, a u njega su podmetnute tri tihe greške koje projekt sam otkriva. Prva je curenje ograničenih podataka u javni tekst, druga je koeficijent upisan rukom koji više ne odgovara procjeni, a treća je oznaka zemlje, jer Eurostat Grčku bilježi kao EL, a ostatak svijeta piše GR.
+
+Materijali se nalaze u mapi [`workshop/`](workshop/) i obuhvaćaju [slajdove](workshop/slides/slides.qmd), [scenarij izlaganja](workshop/SCRIPT.md), [rukovanje demonstracijom](workshop/RUNBOOK.md), [upute za presađivanje](workshop/PRESADI.md), [jednu stranicu za tisak](workshop/handout.html), [pojmovnik](workshop/GLOSSARY.md), [literaturu](workshop/READING.md) i [sam repozitorij](workshop/projekt/).
 
 ## Glavni nalazi
 
@@ -99,7 +109,7 @@ Svi materijali dijele jedan vizualni sustav. Jedini izvor istine je mapa [`desig
 
 Predložak je bauhausovski, dakle crno-bijeli i prozračan, bez boje, sjena i zaobljenih rubova. Hijerarhiju nosi isključivo tipografija, pa razliku između naslova, međunaslova i teksta pravi veličina i debljina slova. Sadržaj stoji u stupcu širine najviše 1120 piksela uz rub od 48 piksela, odjeljke dijele linije od jednog piksela, a razmaci idu u skoku od osam piksela. Pismo je Roboto, priloženo u mapi [`fonts/`](fonts/) za gradnju PDF-a i u [`docs/fonts/`](docs/fonts/) za stranicu, uz Apache licenciju. Grafikoni su sivi i serije se razlikuju debljinom i vrstom linije, a ne bojom.
 
-Sustav je zapisan na jednom mjestu po mediju. Stranica ga provodi kroz [`docs/style.css`](docs/style.css), prezentacije kroz [`docs/slides/presentation-ekonomski-susreti.css`](docs/slides/presentation-ekonomski-susreti.css) i [`workshop/slides/theme.scss`](workshop/slides/theme.scss), tiskani materijali kroz [`workshop/handout.html`](workshop/handout.html) i [`materials/brief/pregled.qmd`](materials/brief/pregled.qmd), a grafikoni kroz [`workshop/pipeline/R/slike.R`](workshop/pipeline/R/slike.R).
+Sustav je zapisan na jednom mjestu po mediju. Stranica ga provodi kroz [`docs/style.css`](docs/style.css), prezentacije kroz [`docs/slides/presentation-ekonomski-susreti.css`](docs/slides/presentation-ekonomski-susreti.css) i [`workshop/slides/theme.scss`](workshop/slides/theme.scss), tiskani materijali kroz [`workshop/handout.html`](workshop/handout.html) i [`materials/brief/pregled.qmd`](materials/brief/pregled.qmd), a grafikoni kroz [`workshop/projekt/R/slike.R`](workshop/projekt/R/slike.R).
 
 ## Autori i citiranje
 

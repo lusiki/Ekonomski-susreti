@@ -1,0 +1,6 @@
+demo/.backup/
+*.Rproj.user
+.Rhistory
+.RData
+paper/nalaz_files/
+/.quarto/

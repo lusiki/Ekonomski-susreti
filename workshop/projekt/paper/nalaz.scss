@@ -1,0 +1,71 @@
+/*-- scss:defaults --*/
+
+// Bauhaus, crno bijelo, prozracno. Isti sustav kao ostatak projekta.
+$body-bg:    #ffffff;
+$body-color: #000000;
+$link-color: #000000;
+$font-family-sans-serif: Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-size-root: 16px;
+
+/*-- scss:rules --*/
+
+body {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 64px 48px 96px;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+h1.title {
+  font-weight: 100;
+  font-size: 2.6rem;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+}
+
+p.subtitle {
+  font-weight: 300;
+  color: #555555;
+  font-size: 1.05rem;
+  margin-bottom: 48px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+h2 {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  border-top: 1px solid #000000;
+  padding-top: 16px;
+  margin-top: 64px;
+  margin-bottom: 24px;
+}
+
+strong { font-weight: 500; }
+
+figure {
+  margin: 48px 0;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+}
+
+figcaption {
+  font-size: 13px;
+  color: #555555;
+  padding-top: 8px;
+  border-top: 1px solid #d9d9d9;
+  margin-top: 8px;
+}
+
+code {
+  font-size: 0.9em;
+  color: #000000;
+  background: transparent;
+}
