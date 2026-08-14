@@ -29,17 +29,17 @@ format:
 #show figure: set block(above: 1.5em, below: 1.5em)
 #show figure.caption: it => align(left)[
   #v(0.2em)
-  #text(size: 7.6pt, weight: "regular", fill: luma(110))[#it.body]
+  #text(size: 7.6pt, weight: "regular", fill: luma(85))[#it.body]
 ]
 
 #block(width: 100%, below: 2.4em)[
-  #text(size: 7.4pt, weight: 700, tracking: 0.32em)[EKONOMSKI SUSRETI]
+  #text(size: 7.4pt, weight: 700, tracking: 0.2em)[EKONOMSKI SUSRETI]
   #v(0.6em)
-  #line(length: 100%, stroke: 1.4pt + black)
+  #line(length: 100%, stroke: 0.5pt + black)
   #v(1.5em)
   #block(width: 100%)[
     #set par(leading: 0.36em)
-    #text(size: 31pt, weight: 300, tracking: -0.9pt)[
+    #text(size: 31pt, weight: 200, tracking: -0.31pt)[
       Kada inflacija istisne#linebreak()glas središnje banke
     ]
   ]
@@ -48,7 +48,7 @@ format:
     Sažeti prikaz istraživanja o institucionalnom jazu u pažnji
   ]
   #v(1.5em)
-  #text(size: 7.4pt, weight: 500, tracking: 0.18em, fill: luma(110))[
+  #text(size: 7.4pt, weight: 700, tracking: 0.16em, fill: luma(85))[
     PETRA PALIĆ I LUKA SIKIĆ #h(1em) HRVATSKO KATOLIČKO SVEUČILIŠTE
   ]
 ]

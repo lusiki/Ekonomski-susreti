@@ -4,8 +4,8 @@
 
 $ink:   #000000;
 $paper: #ffffff;
-$muted: #6e6e6e;
-$hair:  #cccccc;
+$muted: #555555;
+$hair:  #d9d9d9;
 
 $body-bg:    $paper;
 $body-color: $ink;
@@ -15,7 +15,7 @@ $font-family-sans-serif: Roboto, "Helvetica Neue", Arial, sans-serif;
 $presentation-font-size-root: 34px;
 $presentation-heading-font: Roboto, "Helvetica Neue", Arial, sans-serif;
 $presentation-heading-color: $ink;
-$presentation-heading-font-weight: 300;
+$presentation-heading-font-weight: 200;
 $presentation-line-height: 1.45;
 
 /*-- scss:rules --*/
@@ -29,16 +29,16 @@ $presentation-line-height: 1.45;
 .reveal h1,
 .reveal h2,
 .reveal h3 {
-  font-weight: 300;
-  letter-spacing: -0.028em;
-  line-height: 1.04;
+  font-weight: 200;
+  letter-spacing: -0.01em;
+  line-height: 1.06;
   text-transform: none;
 }
 
 .reveal h2 {
   padding-bottom: 0.18em;
   margin-bottom: 0.7em;
-  border-bottom: 2px solid $ink;
+  border-bottom: 1px solid $ink;
   font-size: 1.5em;
 }
 
@@ -60,7 +60,7 @@ $presentation-line-height: 1.45;
   left: 0;
   top: 0.62em;
   width: 0.42em;
-  height: 2px;
+  height: 1px;
   background: $ink;
 }
 .reveal ol li { padding-left: 0.2em; }
@@ -73,14 +73,14 @@ $presentation-line-height: 1.45;
   width: 92%;
   margin: 0.3em 0 0.9em 0;
   padding: 0 0 0 0.6em;
-  border-left: 3px solid $ink;
+  border-left: 1px solid $ink;
   background: none;
   color: $ink;
   font-size: 1.15em;
-  font-weight: 300;
+  font-weight: 200;
   font-style: normal;
   line-height: 1.16;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   box-shadow: none;
 }
 
@@ -88,11 +88,11 @@ $presentation-line-height: 1.45;
 .reveal table th {
   color: $ink;
   background: none;
-  border-bottom: 2px solid $ink;
+  border-bottom: 1px solid $ink;
   text-align: left;
   font-size: 0.82em;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 .reveal table td { border-bottom: 1px solid $hair; }
@@ -105,8 +105,8 @@ $presentation-line-height: 1.45;
   padding: 0;
   color: $paper;
   font-size: 2.4em;
-  font-weight: 300;
-  letter-spacing: -0.035em;
+  font-weight: 200;
+  letter-spacing: -0.01em;
 }
 .reveal section.divider p {
   color: rgba(255, 255, 255, 0.72);
@@ -117,9 +117,9 @@ $presentation-line-height: 1.45;
 /* Velika jedna tvrdnja */
 .reveal .krupno {
   font-size: 1.6em;
-  font-weight: 300;
+  font-weight: 100;
   line-height: 1.08;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
   color: $ink;
 }
 .reveal .naglasak { font-weight: 700; }
@@ -138,7 +138,7 @@ $presentation-line-height: 1.45;
   background: none;
 }
 .reveal .ljestvica div.tu { font-weight: 500; }
-.reveal .ljestvica b { flex: 0 0 auto; width: 1.4em; font-weight: 300; font-size: 1.3em; line-height: 1; }
+.reveal .ljestvica b { flex: 0 0 auto; width: 1.4em; font-weight: 100; font-size: 1.3em; line-height: 1; }
 
 /* Kartice */
 .reveal .kartice { display: flex; gap: 0; margin-top: 0.6em; border-left: 1px solid $ink; }
@@ -167,7 +167,7 @@ $presentation-line-height: 1.45;
 .reveal pre { box-shadow: none; }
 .reveal pre code {
   padding: 0.7em 0.9em;
-  border-left: 3px solid $ink;
+  border-left: 1px solid $ink;
   background: none;
   font-size: 0.76em;
   line-height: 1.38;
@@ -182,4 +182,4 @@ $presentation-line-height: 1.45;
   text-transform: uppercase;
 }
 .reveal .slide-number { background: none; color: $muted; font-size: 0.5em; font-weight: 500; }
-.reveal .progress { color: $ink; height: 2px; }
+.reveal .progress { color: $ink; height: 1px; }

@@ -1,4 +1,4 @@
-# Radionica o otvorenom, reproducibilnom i AI-podržanom istraživanju
+# Radionica o otvorenom, reproducibilnom i AI podržanom istraživanju
 
 Šezdesetominutna radionica Luke Sikića uz izlaganje rada *Pasivno zamijenjena*. Izlaganje iznosi
 tvrdnju, a radionica pokazuje kako se ta tvrdnja može provjeriti i koliko takva provjera stoji.
@@ -24,7 +24,7 @@ glasi **alat predlaže, vi odgovarate**.
 | | |
 |---|---|
 | **Jedno pitanje** | Tko ovo može provjeriti i uz koliki trošak? |
-| **Tri stupa** | otvoreno · reproducibilno · AI-podržano |
+| **Tri stupa** | otvoreno · reproducibilno · AI podržano |
 | **Jedna ljestvica** | četiri prečke, popnite se za jednu |
 | **Jedna petlja** | opiši, isplaniraj, odobri, izvrši, **provjeri**, zapiši |
 | **Tri pogreške** | curenje · odstupanje · pokrivenost |

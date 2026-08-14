@@ -1,6 +1,6 @@
 ---
 title: "Institucionalni jaz u pažnji, demonstracijski nalaz"
-subtitle: "Radionica o otvorenom, reproducibilnom i AI-podržanom istraživanju"
+subtitle: "Radionica o otvorenom, reproducibilnom i AI podržanom istraživanju"
 lang: hr
 format:
   html:

@@ -2,7 +2,7 @@
 
 Mali, potpun istraživački cjevovod: od sirovih naslova do rukopisa u kojem
 **nijedan broj nije upisan rukom**. Služi kao pokazni objekt na radionici
-*Otvoreno, reproducibilno i AI-podržano istraživanje*.
+*Otvoreno, reproducibilno i AI podržano istraživanje*.
 
 > **Podaci su kalibrirani, ne izvorni.** Izvorni medijski korpus je licenciran
 > i ne redistribuira se. Brojke su reda veličine objavljenih, ali nisu

@@ -3,31 +3,35 @@
 
 suppressPackageStartupMessages(library(ggplot2))
 
-# Crno-bijelo. Serije se razlikuju debljinom i vrstom linije, ne bojom.
+# Crno-bijelo, prema design/design-system.md. Serije se razlikuju debljinom
+# i vrstom linije, nikad bojom. Sivi tonovi su oni iz sustava.
 # Obitelj pisma ostaje "sans" da cjevovod radi na svakom racunalu bez
 # instalacije fonta; na stranici projekta sve ostalo koristi Roboto.
 tema_radionica <- function() {
   theme_minimal(base_size = 12) +
     theme(
       panel.grid.minor = element_blank(),
-      panel.grid.major = element_line(colour = "grey88", linewidth = 0.3),
+      panel.grid.major = element_line(colour = SIVA_LINIJA, linewidth = 0.3),
       plot.title = element_text(face = "bold", size = 13, colour = "black"),
-      plot.subtitle = element_text(colour = "grey35", size = 10),
-      plot.caption = element_text(colour = "grey50", size = 8, hjust = 0),
-      axis.text = element_text(colour = "grey30"),
+      plot.subtitle = element_text(colour = SIVA_TEKST, size = 10),
+      plot.caption = element_text(colour = SIVA_SVJETLA, size = 8, hjust = 0),
+      axis.text = element_text(colour = SIVA_TEKST),
       axis.title = element_text(colour = "black")
     )
 }
 
-CRNA <- "black"
-SIVA <- "grey55"
+CRNA <- "#000000"
+SIVA <- "#8a8a8a"
+SIVA_TEKST <- "#555555"
+SIVA_SVJETLA <- "#8a8a8a"
+SIVA_LINIJA <- "#d9d9d9"
 
 # Slika 1: inflacija i institucionalni jaz u paznji kroz vrijeme.
 slika_jaz <- function(d, put) {
   faktor <- max(d$pi) / max(d$iag)
   d$iag_gl <- stats::filter(d$iag, rep(1 / 8, 8), sides = 2)
   p <- ggplot(d, aes(x = tjedan)) +
-    geom_hline(yintercept = 0, colour = "grey70", linewidth = 0.3) +
+    geom_hline(yintercept = 0, colour = SIVA_LINIJA, linewidth = 0.3) +
     geom_line(aes(y = iag * faktor), colour = SIVA, linewidth = 0.3,
               alpha = 0.5) +
     geom_line(aes(y = pi), colour = CRNA, linewidth = 0.5,
@@ -35,7 +39,7 @@ slika_jaz <- function(d, put) {
     geom_line(aes(y = iag_gl * faktor), colour = CRNA, linewidth = 1,
               na.rm = TRUE) +
     geom_vline(xintercept = EURO_OD, linetype = "dashed",
-               colour = "grey45") +
+               colour = SIVA_SVJETLA) +
     scale_y_continuous(
       name = "HICP, godišnja stopa (%)",
       sec.axis = sec_axis(~ . / faktor, name = "IAG")
@@ -56,8 +60,8 @@ slika_jaz <- function(d, put) {
 slika_projekcije <- function(lp, put) {
   lp$oznaka <- ifelse(lp$znacajno, "značajno", "nije značajno")
   p <- ggplot(lp, aes(x = h, y = beta)) +
-    geom_hline(yintercept = 0, colour = "grey60", linewidth = 0.4) +
-    geom_ribbon(aes(ymin = lo, ymax = hi), fill = "grey85") +
+    geom_hline(yintercept = 0, colour = SIVA_SVJETLA, linewidth = 0.4) +
+    geom_ribbon(aes(ymin = lo, ymax = hi), fill = SIVA_LINIJA) +
     geom_line(colour = CRNA, linewidth = 0.6) +
     geom_point(aes(shape = oznaka), colour = CRNA, fill = "white",
                size = 2.2) +

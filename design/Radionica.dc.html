@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#ffffff;color:#000000;font-family:'Roboto',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#000000}
+a:hover{color:#555555}
+::selection{background:#000000;color:#ffffff}
+</style>
+</helmet>
+<div style="min-height:100vh;background:#ffffff">
+  <div style="border-bottom:1px solid #000000">
+    <div style="max-width:1120px;margin:0 auto;padding:20px 48px;display:flex;justify-content:space-between;align-items:baseline;gap:24px;flex-wrap:wrap">
+      <a href="Pocetna.dc.html" style="font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none">Ekonomski susreti 2026</a>
+      <div style="display:flex;gap:32px;font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase">
+        <a href="Pocetna.dc.html" style="text-decoration:none">Početna</a>
+        <a href="Sazeci.dc.html" style="text-decoration:none">Sažeci</a>
+        <a href="Radionica.dc.html" style="text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px">Radionica</a>
+      </div>
+    </div>
+  </div>
+  <section data-screen-label="Radionica naslov" style="max-width:1120px;margin:0 auto;padding:96px 48px 88px">
+    <p style="margin:0 0 40px;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Radionica · 60 minuta · bez pripreme i instalacije</p>
+    <h1 style="margin:0;font-size:clamp(40px,6vw,80px);font-weight:200;line-height:1.06;letter-spacing:-0.01em;text-wrap:balance">Otvoreno, reproducibilno i AI podržano istraživanje</h1>
+    <p style="margin:28px 0 0;font-size:clamp(20px,2.4vw,26px);font-weight:300;line-height:1.4;max-width:720px">Kako izgleda istraživanje koje se može provjeriti</p>
+    <p style="margin:44px 0 0;font-size:17px;line-height:1.65;max-width:660px;text-wrap:pretty">Ako je proizvodnja tvrdnji postala gotovo besplatna, ono što razlikuje istraživanje od teksta jest lanac po kojem se može provjeriti.</p>
+    <p style="margin:24px 0 0;font-size:14px;font-weight:500;letter-spacing:0.06em">Luka Sikić · Hrvatsko katoličko sveučilište</p>
+  </section>
+  <section data-screen-label="Jedno pitanje" style="border-top:1px solid #000000">
+    <div style="max-width:1120px;margin:0 auto;padding:64px 48px 80px">
+      <p style="margin:0;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Jedno pitanje nosi cijeli sat</p>
+      <p style="margin:28px 0 0;font-size:clamp(32px,4.4vw,56px);font-weight:200;line-height:1.15;max-width:900px;text-wrap:balance">Tko ovu tvrdnju može provjeriti i uz koliki trošak?</p>
+      <div style="margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:48px">
+        <div style="border-top:1px solid #000000;padding-top:16px">
+          <p style="margin:0;font-size:22px;font-weight:300">Otvoreno</p>
+          <p style="margin:12px 0 0;font-size:15px;line-height:1.65">Provjeriti vas mogu drugi istraživači.</p>
+        </div>
+        <div style="border-top:1px solid #000000;padding-top:16px">
+          <p style="margin:0;font-size:22px;font-weight:300">Reproducibilno</p>
+          <p style="margin:12px 0 0;font-size:15px;line-height:1.65">Provjeriti vas može stroj, i vi sami nakon godine dana.</p>
+        </div>
+        <div style="border-top:1px solid #000000;padding-top:16px">
+          <p style="margin:0;font-size:22px;font-weight:300">AI podržano</p>
+          <p style="margin:12px 0 0;font-size:15px;line-height:1.65">Rezultati nastaju brže, pa provjera postaje najuže grlo. Alat predlaže, a istraživač odgovara.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section data-screen-label="Ljestvica" style="border-top:1px solid #000000">
+    <div style="max-width:1120px;margin:0 auto;padding:64px 48px 80px">
+      <p style="margin:0;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Ljestvica reproducibilnosti</p>
+      <p style="margin:24px 0 0;font-size:17px;line-height:1.65;max-width:660px;text-wrap:pretty">Umjesto ideala, četiri prečke i jedno pitanje za vlastiti projekt. Gdje sam danas i koja je sljedeća prečka.</p>
+      <div style="margin-top:40px;display:flex;flex-direction:column">
+        <sc-for list="{{ ljestvica }}" as="precka" hint-placeholder-count="4">
+          <div style="display:grid;grid-template-columns:96px 1fr auto;gap:24px;align-items:baseline;padding:20px 0;border-bottom:1px solid #d9d9d9">
+            <p style="margin:0;font-size:48px;font-weight:100;line-height:1">{{ precka.broj }}</p>
+            <p style="margin:0;font-size:16px;line-height:1.6">{{ precka.opis }}</p>
+            <p style="margin:0;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;white-space:nowrap">{{ precka.oznaka }}</p>
+          </div>
+        </sc-for>
+      </div>
+      <p style="margin:32px 0 0;font-size:14px;line-height:1.7;max-width:660px;text-wrap:pretty">Poseban naglasak je na istraživanju s licenciranim ili povjerljivim podacima. Puna replikacija tada nije moguća, ali kod, pravila mjerenja, izvedeni agregati, popis izvora i kodna knjiga mogu biti javni i onda kada sami podaci ne smiju izaći.</p>
+    </div>
+  </section>
+  <section data-screen-label="Demonstracija" style="border-top:1px solid #000000">
+    <div style="max-width:1120px;margin:0 auto;padding:64px 48px 80px">
+      <p style="margin:0;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Demonstracija uživo · tri podmetnute pogreške</p>
+      <p style="margin:24px 0 0;font-size:17px;line-height:1.65;max-width:660px;text-wrap:pretty">U središnjem dijelu sata uživo se gradi mali istraživački cjevovod. Vodi od sirovog teksta preko mjerenja i procjene do rukopisa u kojem nijedan broj nije upisan rukom. U njega su unaprijed podmetnute tri pogreške koje on sam otkriva.</p>
+      <div style="margin-top:48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:48px">
+        <div style="border-top:1px solid #000000;padding-top:16px">
+          <p style="margin:0;font-size:40px;font-weight:100;line-height:1">1</p>
+          <p style="margin:16px 0 0;font-size:18px;font-weight:500">Curenje ograničenih podataka</p>
+          <p style="margin:12px 0 0;font-size:15px;line-height:1.65;text-wrap:pretty">Sadržaj koji ne smije izaći nađe se u javnom tekstu. Provjera pokazuje da je zabrana datoteka, a ne dobra namjera.</p>
+        </div>
+        <div style="border-top:1px solid #000000;padding-top:16px">
+          <p style="margin:0;font-size:40px;font-weight:100;line-height:1">2</p>
+          <p style="margin:16px 0 0;font-size:18px;font-weight:500">Koeficijent upisan rukom</p>
+          <p style="margin:12px 0 0;font-size:15px;line-height:1.65;text-wrap:pretty">Broj u tekstu više ne odgovara tablici iz koje je nastao. Tekst ne smije moći odstupiti od tablice.</p>
+        </div>
+        <div style="border-top:1px solid #000000;padding-top:16px">
+          <p style="margin:0;font-size:40px;font-weight:100;line-height:1">3</p>
+          <p style="margin:16px 0 0;font-size:18px;font-weight:500">Izgubljena dijakritika</p>
+          <p style="margin:12px 0 0;font-size:15px;line-height:1.65;text-wrap:pretty">Pravilo pretrage ne prepoznaje hrvatske znakove pa tiho izgubi velik dio korpusa. Ništa ne pukne, a rezultat se prepolovi.</p>
+        </div>
+      </div>
+      <p style="margin:48px 0 0;font-size:17px;font-weight:300;line-height:1.5;max-width:660px;text-wrap:pretty">Nijedna od tri pogreške ne ruši program i sve tri mogle bi proći recenziju.</p>
+    </div>
+  </section>
+  <sc-if value="{{ showSadrzaj }}" hint-placeholder-val="{{ true }}">
+    <section data-screen-label="Sadržaj sata" style="border-top:1px solid #000000">
+      <div style="max-width:1120px;margin:0 auto;padding:64px 48px 80px">
+        <p style="margin:0;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Sadržaj sata</p>
+        <div style="margin-top:32px;max-width:720px;display:flex;flex-direction:column">
+          <sc-for list="{{ sadrzaj }}" as="stavka" hint-placeholder-count="7">
+            <div style="display:grid;grid-template-columns:56px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid #d9d9d9;align-items:baseline">
+              <p style="margin:0;font-size:24px;font-weight:100;line-height:1">{{ stavka.broj }}</p>
+              <p style="margin:0;font-size:15px;line-height:1.6">{{ stavka.tekst }}</p>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+  </sc-if>
+  <section data-screen-label="Praktično" style="border-top:1px solid #000000">
+    <div style="max-width:1120px;margin:0 auto;padding:64px 48px 88px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:48px">
+      <div>
+        <p style="margin:0;border-top:1px solid #000000;padding-top:14px;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Što odnosite</p>
+        <p style="margin:16px 0 0;font-size:15px;line-height:1.7;text-wrap:pretty">Ljestvicu reproducibilnosti s odredištem za vlastiti projekt, kratak skup pravila za rad s AI agentom, javno dostupan cjevovod koji se kloniranjem i jednom naredbom pokreće na svakom prijenosnom računalu te sažetak na jednoj stranici.</p>
+      </div>
+      <div>
+        <p style="margin:0;border-top:1px solid #000000;padding-top:14px;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Kome je namijenjena</p>
+        <p style="margin:16px 0 0;font-size:15px;line-height:1.7;text-wrap:pretty">Istraživačima, doktorandima i analitičarima u institucijama, bez pretpostavke o programerskom iskustvu. Prati se bez pripreme i bez instalacije, a potreban je samo projektor.</p>
+      </div>
+      <div>
+        <p style="margin:0;border-top:1px solid #000000;padding-top:14px;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Jezik</p>
+        <p style="margin:16px 0 0;font-size:15px;line-height:1.7;text-wrap:pretty">Izlaganje je na hrvatskom jeziku. Kod i tehnički nazivi na engleskom su uz priloženi pojmovnik.</p>
+      </div>
+    </div>
+  </section>
+  <section data-screen-label="Veza s izlaganjem" style="border-top:1px solid #000000">
+    <div style="max-width:1120px;margin:0 auto;padding:48px 48px 64px">
+      <p style="margin:0;font-size:15px;line-height:1.7;max-width:720px;text-wrap:pretty">Radionica se nadovezuje na izlaganje <a href="Sazeci.dc.html#izlaganje">Kada inflacija istisne glas središnje banke</a> i u prvoj se minuti poziva na rezultat koji je publika upravo čula, a stoji i samostalno.</p>
+    </div>
+  </section>
+  <footer style="border-top:1px solid #000000">
+    <div style="max-width:1120px;margin:0 auto;padding:48px 48px 64px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:48px;font-size:14px;line-height:1.7">
+      <div>
+        <p style="margin:0;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;font-size:11px">Voditelj</p>
+        <p style="margin:12px 0 0">Luka Sikić<br>Hrvatsko katoličko sveučilište</p>
+      </div>
+      <div>
+        <p style="margin:0;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;font-size:11px">Kontakt</p>
+        <p style="margin:12px 0 0"><a href="mailto:luka.sikic@unicath.hr">luka.sikic@unicath.hr</a></p>
+      </div>
+      <div>
+        <p style="margin:0;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;font-size:11px">Konferencija</p>
+        <p style="margin:12px 0 0">Ekonomski susreti 2026<br>Split, hotel Lav · 27. i 28. studenog</p>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showSadrzaj&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sadržaj&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      showSadrzaj: this.props.showSadrzaj ?? true,
+      ljestvica: [
+        { broj: '0', opis: 'Objavljen je samo PDF rada.', oznaka: '' },
+        { broj: '1', opis: 'Stranica projekta uz citat i metapodatke.', oznaka: 'naša pozicija danas' },
+        { broj: '2', opis: 'Kod je javan, a podaci su dokumentirani manifestom i kodnom knjigom.', oznaka: '' },
+        { broj: '3', opis: 'Jedna naredba gradi sve, okruženje je zaključano i provjerava ga stroj.', oznaka: '' }
+      ],
+      sadrzaj: [
+        { broj: '1', tekst: 'Trošak provjere i razlozi zbog kojih je taj trošak nejednako raspoređen.' },
+        { broj: '2', tekst: 'Otvorenost, reproducibilnost i umjetna inteligencija kao odgovori na isto pitanje.' },
+        { broj: '3', tekst: 'Ljestvica reproducibilnosti i objava rezultata kada podaci ne smiju izaći.' },
+        { broj: '4', tekst: 'Građa istraživačkog cjevovoda i način na koji su brojevi vezani uz kod.' },
+        { broj: '5', tekst: 'Rad s AI agentom kroz plan, ograde, provjeru i male zapise promjena.' },
+        { broj: '6', tekst: 'Demonstracija uživo s tri pogreške i tri provjere.' },
+        { broj: '7', tekst: 'Strojno mjerenje, validacijski poduzorak i poslovi koje se ne delegira.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

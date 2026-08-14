@@ -12,7 +12,7 @@ Javni repozitorij istraživanja **„Pasivno zamijenjena. Cijena inflacije koju 
 | Sadržaj | Pregled | Preuzimanje |
 |---|---|---|
 | Sažetak izlaganja | [Kada inflacija istisne glas središnje banke](https://lusiki.github.io/Ekonomski-susreti/abstracts/#izlaganje) | [tekst](materials/abstract-presentation.md) |
-| Sažetak radionice | [Otvoreno, reproducibilno i AI-podržano istraživanje](https://lusiki.github.io/Ekonomski-susreti/abstracts/#radionica) | [tekst](materials/abstract-workshop.md) |
+| Sažetak radionice | [Otvoreno, reproducibilno i AI podržano istraživanje](https://lusiki.github.io/Ekonomski-susreti/abstracts/#radionica) | [tekst](materials/abstract-workshop.md) |
 | Sažeti prikaz istraživanja | Pet stranica s glavnim nalazima i grafikonima | [PDF](https://lusiki.github.io/Ekonomski-susreti/downloads/Pregled-istrazivanja.pdf) · [izvor](materials/brief/pregled.qmd) |
 | Konferencijska prezentacija | [Otvori slajdove u pregledniku](https://lusiki.github.io/Ekonomski-susreti/slides/) | [PDF](https://lusiki.github.io/Ekonomski-susreti/downloads/Ekonomski-susreti.pdf) · [PowerPoint](https://lusiki.github.io/Ekonomski-susreti/downloads/Ekonomski-susreti.pptx) |
 | Materijali radionice | [Ljestvica, cjevovod i demonstracija](https://lusiki.github.io/Ekonomski-susreti/workshop/) | [slajdovi](https://lusiki.github.io/Ekonomski-susreti/workshop/slides/) · [jedna stranica](https://lusiki.github.io/Ekonomski-susreti/workshop/handout.html) |
@@ -40,7 +40,7 @@ Projekt zato postavlja dva povezana pitanja.
 
 ## Radionica
 
-Uz izlaganje se drži šezdesetominutna radionica **[Otvoreno, reproducibilno i AI-podržano istraživanje](workshop/)** Luke Sikića. Izlaganje iznosi tvrdnju, a radionica pokazuje kako se ta tvrdnja može provjeriti i koliko takva provjera stoji.
+Uz izlaganje se drži šezdesetominutna radionica **[Otvoreno, reproducibilno i AI podržano istraživanje](workshop/)** Luke Sikića. Izlaganje iznosi tvrdnju, a radionica pokazuje kako se ta tvrdnja može provjeriti i koliko takva provjera stoji.
 
 Cijeli sat drži jedno pitanje, a ono glasi **tko ovo može provjeriti i uz koliki trošak?** Otvorenost, reproducibilnost i AI tri su odgovora na to pitanje. Sudionici dobivaju ljestvicu s četiri prečke, petlju rada s AI agentom i cjevovod koji se gradi jednom naredbom te uživo otkriva tri podmetnute pogreške. Prva je curenje ograničenih podataka u javni tekst, druga je koeficijent upisan rukom koji više ne odgovara tablici, a treća je pravilo pretrage koje ne prepoznaje hrvatsku dijakritiku.
 
@@ -95,7 +95,11 @@ Puni tekst rada nije objavljen jer je u radnoj verziji, a dostupan je na upit au
 
 ## Oblikovanje
 
-Svi materijali dijele jedan vizualni sustav. Predložak je bauhausovski, dakle crno-bijeli i prozračan, bez boje, sjena i zaobljenih rubova. Hijerarhiju nosi isključivo tipografija, pa razliku između naslova, međunaslova i teksta pravi veličina i debljina slova. Pismo je Roboto, priloženo u mapi [`fonts/`](fonts/) za gradnju PDF-a i u [`docs/fonts/`](docs/fonts/) za stranicu, uz Apache licenciju. Grafikoni su sivi i serije se razlikuju debljinom i vrstom linije, a ne bojom.
+Svi materijali dijele jedan vizualni sustav. Jedini izvor istine je [`design/design-system.md`](design/design-system.md), a stranice u istoj mapi žive su primjere sustava iz kojih se preuzimaju obrasci navigacije, oznaka sekcija i podnožja.
+
+Predložak je bauhausovski, dakle crno-bijeli i prozračan, bez boje, sjena i zaobljenih rubova. Hijerarhiju nosi isključivo tipografija, pa razliku između naslova, međunaslova i teksta pravi veličina i debljina slova. Sadržaj stoji u stupcu širine najviše 1120 piksela uz rub od 48 piksela, odjeljke dijele linije od jednog piksela, a razmaci idu u skoku od osam piksela. Pismo je Roboto, priloženo u mapi [`fonts/`](fonts/) za gradnju PDF-a i u [`docs/fonts/`](docs/fonts/) za stranicu, uz Apache licenciju. Grafikoni su sivi i serije se razlikuju debljinom i vrstom linije, a ne bojom.
+
+Sustav je zapisan na jednom mjestu po mediju. Stranica ga provodi kroz [`docs/style.css`](docs/style.css), prezentacije kroz [`docs/slides/presentation-ekonomski-susreti.css`](docs/slides/presentation-ekonomski-susreti.css) i [`workshop/slides/theme.scss`](workshop/slides/theme.scss), tiskani materijali kroz [`workshop/handout.html`](workshop/handout.html) i [`materials/brief/pregled.qmd`](materials/brief/pregled.qmd), a grafikoni kroz [`workshop/pipeline/R/slike.R`](workshop/pipeline/R/slike.R).
 
 ## Autori i citiranje
 

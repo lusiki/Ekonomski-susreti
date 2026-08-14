@@ -1,5 +1,5 @@
 ---
-title: "Otvoreno, reproducibilno i AI-podržano istraživanje"
+title: "Otvoreno, reproducibilno i AI podržano istraživanje"
 subtitle: "Radionica · Ekonomski susreti"
 author: "Luka Sikić · Hrvatsko katoličko sveučilište"
 lang: hr
@@ -13,7 +13,7 @@ format:
     transition: none
     width: 1280
     height: 760
-    footer: "Otvoreno, reproducibilno i AI-podržano istraživanje · Ekonomski susreti"
+    footer: "Otvoreno, reproducibilno i AI podržano istraživanje · Ekonomski susreti"
 ---
 
 ## Sat vremena, tri stvari koje odnosite
@@ -95,7 +95,7 @@ Tri stupa, jedna ljestvica.
 |---|---|---|
 | **Otvoreno** | drugi ljudi | kod, podaci i metapodaci su dostupni |
 | **Reproducibilno** | vi za godinu dana i stroj | jedna naredba ponovno gradi sve |
-| **AI-podržano** | vi sami, brže, ako provjeravate | alat predlaže, vi odgovarate |
+| **AI podržano** | vi sami, brže, ako provjeravate | alat predlaže, vi odgovarate |
 
 . . .
 
@@ -341,7 +341,7 @@ suvišniji ulaz.
 | | |
 |---|---|
 | **Jedno pitanje** | Tko ovo može provjeriti i po kojoj cijeni? |
-| **Tri stupa** | otvoreno · reproducibilno · AI-podržano |
+| **Tri stupa** | otvoreno · reproducibilno · AI podržano |
 | **Jedna ljestvica** | četiri prečke, popnite se za jednu |
 | **Jedna petlja** | opiši → plan → odobri → izvrši → **provjeri** → commit |
 | **Tri greške** | curenje · odstupanje · pokrivenost |

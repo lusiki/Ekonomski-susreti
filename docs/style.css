@@ -1,18 +1,24 @@
 @import url("fonts/roboto.css");
 
 /*
-  Bauhaus, crno-bijelo, prozračno.
-  Hijerarhiju nosi isključivo tipografija, dakle veličina i debljina slova.
-  Boje nema, ukrasa nema, obline nema.
+  Dizajn sustav Ekonomski susreti 2026.
+  Izvor istine su design/design-system.md i design/readme.md, a žive stranice u istoj
+  mapi drže obrasce navigacije, oznaka sekcija, ljestvice i podnožja.
+  Bijeli papir, crna tinta, ništa drugo. Naglasak nosi težina pisma, nikad boja.
 */
 
 :root {
   color-scheme: light;
-  --ink: #000;
-  --paper: #fff;
-  --muted: #6e6e6e;
-  --line: #000;
-  --hair: #d6d6d6;
+
+  --paper: #ffffff;
+  --ink: #000000;
+  --hair: #d9d9d9;
+  --muted: #555555;
+  --muted-light: #8a8a8a;
+  --muted-lighter: #bdbdbd;
+
+  --measure: 1120px;
+  --gutter: 48px;
 }
 
 * { box-sizing: border-box; }
@@ -27,193 +33,314 @@ body {
   font-weight: 400;
   font-size: 17px;
   line-height: 1.65;
-  letter-spacing: .005em;
   -webkit-font-smoothing: antialiased;
 }
 
-main {
-  width: min(1080px, calc(100% - 48px));
-  margin: 0 auto;
-  padding: 96px 0 80px;
-}
+::selection { background: var(--ink); color: var(--paper); }
 
-/* ---------- tipografska ljestvica ---------- */
+a { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+a:hover { color: var(--muted); }
 
-.eyebrow {
-  margin: 0 0 34px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid var(--line);
-  color: var(--ink);
-  font-size: .72rem;
-  font-weight: 700;
-  letter-spacing: .34em;
-  text-transform: uppercase;
-}
-
-h1, h2, h3 { color: var(--ink); }
-
-h1 {
-  max-width: 20ch;
-  margin: 0;
-  font-size: clamp(2.9rem, 8.4vw, 6.6rem);
-  font-weight: 300;
-  line-height: .96;
-  letter-spacing: -.035em;
-}
-
-h2 {
-  margin: 0 0 22px;
-  font-size: .82rem;
-  font-weight: 700;
-  letter-spacing: .26em;
-  line-height: 1.3;
-  text-transform: uppercase;
-}
-
-h3 {
-  margin: 30px 0 8px;
-  font-size: .74rem;
-  font-weight: 700;
-  letter-spacing: .22em;
-  text-transform: uppercase;
-}
-
-.lead {
-  max-width: 34ch;
-  margin: 26px 0 0;
-  font-size: clamp(1.2rem, 2.6vw, 1.85rem);
-  font-weight: 300;
-  line-height: 1.24;
-  letter-spacing: -.012em;
-}
-
-.summary {
-  max-width: 62ch;
-  margin: 40px 0 0;
-  font-size: 1.06rem;
-  font-weight: 400;
-}
-
-p { margin: 0 0 1.15em; }
+p { margin: 0 0 16px; }
 p:last-child { margin-bottom: 0; }
-
-a { color: var(--ink); text-decoration: underline; text-underline-offset: .22em; text-decoration-thickness: 1px; }
-a:hover { text-decoration-thickness: 2px; }
 
 em { font-style: italic; }
 strong { font-weight: 700; }
 
+/* ---------- mreža ---------- */
+
+.wrap {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+/* Odjeljak odvojen tankom linijom preko cijele širine stranice. */
+.band { border-top: 1px solid var(--ink); }
+.band > .wrap { padding-top: 64px; padding-bottom: 80px; }
+
+.hero { padding-top: 96px; padding-bottom: 96px; }
+
+.cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 48px;
+}
+.cols.wide { gap: 64px; }
+.cols.tight { gap: 32px; }
+
+.prose { max-width: 720px; }
+.narrow { max-width: 660px; }
+
 /* ---------- navigacija ---------- */
 
-.actions {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 0;
-  margin: 56px 0 0;
-  border-top: 1px solid var(--line);
-  border-left: 1px solid var(--line);
-}
-.actions a {
+.topbar { border-bottom: 1px solid var(--ink); }
+.topbar .wrap {
   display: flex;
-  align-items: center;
-  padding: 20px 20px;
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  background: var(--paper);
-  color: var(--ink);
-  font-size: .76rem;
-  font-weight: 500;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  text-decoration: none;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-.actions a:hover { background: var(--ink); color: var(--paper); }
-.actions .primary { background: var(--ink); color: var(--paper); font-weight: 700; }
-.actions .primary:hover { background: var(--paper); color: var(--ink); }
-
-.back {
-  display: inline-block;
-  margin-bottom: 44px;
-  font-size: .72rem;
+.topbar .brand {
+  font-size: 12px;
   font-weight: 700;
-  letter-spacing: .22em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
-  border-bottom: 2px solid var(--line);
-  padding-bottom: 4px;
+}
+.topbar nav {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.topbar nav a { text-decoration: none; }
+.topbar nav a[aria-current="page"] { text-decoration: underline; }
+
+/* ---------- tipografska ljestvica ---------- */
+
+.label {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  line-height: 1.5;
+  text-transform: uppercase;
 }
 
-/* ---------- odjeljci ---------- */
+/* Oznaka sekcije nad tankom linijom, jedini način otvaranja sekcije u sustavu. */
+.label.ruled {
+  border-top: 1px solid var(--ink);
+  padding-top: 14px;
+}
+.label.ruled.soft { border-top-color: var(--hair); }
 
-section {
-  margin: 78px 0 0;
-  padding: 34px 0 0;
-  border-top: 1px solid var(--line);
-  background: none;
+h1 {
+  margin: 0;
+  font-size: clamp(44px, 7vw, 92px);
+  font-weight: 200;
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
 }
 
-blockquote {
-  max-width: 30ch;
-  margin: 0 0 34px;
-  padding: 0;
-  border: 0;
-  font-size: clamp(1.5rem, 3.4vw, 2.5rem);
+h2 {
+  margin: 0;
+  font-size: 28px;
   font-weight: 300;
-  line-height: 1.12;
-  letter-spacing: -.022em;
+  line-height: 1.25;
+  letter-spacing: -0.005em;
+  text-wrap: balance;
 }
+
+h2.sm { font-size: 22px; }
+
+h3 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.title-md { font-size: clamp(36px, 4.6vw, 60px); line-height: 1.1; }
+
+.label + h1, .label + .title-md { margin-top: 40px; }
+.label.ruled + p, .label.ruled + div { margin-top: 16px; }
+.label + .numbers, .label + .links, .label + .rows, .label + table.plain { margin-top: 32px; }
+.label + .intro, .label + .statement { margin-top: 24px; }
+
+/* Sitna verzalna poveznica na kraju stupca, umjesto gumba. */
+.more {
+  align-self: flex-start;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.mt { margin-top: 32px; }
+.mt-lg { margin-top: 48px; }
+
+.subtitle {
+  margin: 32px 0 0;
+  font-size: clamp(20px, 2.4vw, 26px);
+  font-weight: 300;
+  line-height: 1.4;
+  max-width: 720px;
+}
+
+.intro {
+  margin: 48px 0 0;
+  font-size: 17px;
+  line-height: 1.65;
+  max-width: 640px;
+  text-wrap: pretty;
+}
+
+.byline {
+  margin: 24px 0 0;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
+
+.statement {
+  font-size: clamp(32px, 4.4vw, 56px);
+  font-weight: 200;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  max-width: 900px;
+  text-wrap: balance;
+}
+
+.note {
+  font-size: 14px;
+  line-height: 1.7;
+  max-width: 720px;
+  text-wrap: pretty;
+}
+
+.body-sm { font-size: 15px; line-height: 1.65; text-wrap: pretty; }
 
 /* ---------- brojevi ---------- */
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-  margin-top: 34px;
-  padding: 0;
-  border: 0;
-  border-left: 1px solid var(--line);
-}
-.grid article {
-  min-height: 0;
-  padding: 26px 24px 30px;
-  border: 0;
-  border-right: 1px solid var(--line);
-  background: none;
-}
-.grid strong {
-  display: block;
-  font-size: clamp(1.9rem, 4.2vw, 3rem);
-  font-weight: 300;
+.figure-xl {
+  margin: 24px 0 0;
+  font-size: clamp(72px, 11vw, 150px);
+  font-weight: 100;
   line-height: 1;
-  letter-spacing: -.03em;
+  letter-spacing: -0.02em;
 }
-.grid span {
-  display: block;
-  margin-top: 14px;
-  color: var(--muted);
-  font-size: .78rem;
-  font-weight: 400;
-  letter-spacing: .06em;
-  line-height: 1.4;
+.pillar .n { letter-spacing: -0.02em; }
+
+.numbers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(168px, 1fr));
+  gap: 32px;
+}
+.numbers p { margin: 0; }
+.numbers .n { font-size: 40px; font-weight: 100; line-height: 1; letter-spacing: -0.02em; }
+.numbers .n + p { max-width: 260px; margin-top: 10px; font-size: 13px; line-height: 1.5; }
+
+/* ---------- popisi i ljestvice ---------- */
+
+/* Okomiti niz s jednakim razmakom, bez vanjskih margina na članovima. */
+.stack { display: flex; flex-direction: column; gap: 24px; }
+.stack > * { margin-top: 0; margin-bottom: 0; }
+.stack.tight { gap: 20px; }
+.stack .label.ruled + p, .stack .label.ruled + div { margin-top: 0; }
+
+.rows { display: flex; flex-direction: column; }
+.rows > div {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 16px;
+  align-items: baseline;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--hair);
+}
+.rows > div > p { margin: 0; }
+.rows .n { font-size: 24px; font-weight: 100; line-height: 1; }
+.rows p:not(.n) { font-size: 15px; line-height: 1.6; }
+
+.ladder > div { grid-template-columns: 96px 1fr auto; gap: 24px; padding: 20px 0; }
+.ladder .n { font-size: 48px; }
+.ladder p:not(.n) { font-size: 16px; }
+.ladder .here {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
-footer {
-  margin-top: 96px;
-  padding-top: 16px;
-  border-top: 2px solid var(--line);
-  color: var(--muted);
-  font-size: .72rem;
-  font-weight: 500;
-  letter-spacing: .16em;
+/* Stupac s vlastitom linijom iznad, umjesto kartice. */
+.pillar { border-top: 1px solid var(--ink); padding-top: 16px; }
+.pillar .n { margin: 0; font-size: 40px; font-weight: 100; line-height: 1; }
+.pillar .head { margin: 16px 0 0; font-size: 18px; font-weight: 500; line-height: 1.35; }
+.pillar p + p, .pillar h2 + p { margin-top: 12px; }
+
+/* ---------- tablice ---------- */
+
+table.plain {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 32px 0 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+table.plain th {
+  border-bottom: 1px solid var(--ink);
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
 }
+table.plain th, table.plain td { padding: 14px 24px 14px 0; vertical-align: top; }
+table.plain td { border-bottom: 1px solid var(--hair); }
+table.plain td.k { white-space: nowrap; font-weight: 500; }
+
+/* ---------- popis materijala ---------- */
+
+.links { display: flex; flex-direction: column; }
+.links a {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 24px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--hair);
+  font-size: 15px;
+  text-decoration: none;
+}
+.links a:first-child { border-top: 1px solid var(--hair); }
+.links a:hover { color: var(--ink); }
+.links a:hover .what { text-decoration: underline; text-underline-offset: 4px; }
+.links .what { font-weight: 500; }
+.links .how {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* ---------- podnožje ---------- */
+
+.site-footer { border-top: 1px solid var(--ink); }
+.site-footer .wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 48px;
+  padding-top: 48px;
+  padding-bottom: 64px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.site-footer p { margin: 0; }
+.site-footer .label { font-size: 11px; letter-spacing: 0.14em; }
+.site-footer .label + p { margin-top: 12px; }
+
+/* ---------- uski zasloni ---------- */
 
 @media (max-width: 760px) {
+  :root { --gutter: 24px; }
   body { font-size: 16px; }
-  main { width: calc(100% - 34px); padding: 56px 0 56px; }
-  section { margin-top: 52px; }
-  .grid { grid-template-columns: 1fr; border-left: 0; border-top: 1px solid var(--line); }
-  .grid article { border-right: 0; border-bottom: 1px solid var(--line); }
-  .actions a { min-width: 100%; }
+  .hero { padding-top: 64px; padding-bottom: 64px; }
+  .band > .wrap { padding-top: 48px; padding-bottom: 56px; }
+  .cols, .cols.wide { gap: 40px; }
+  .ladder > div { grid-template-columns: 56px 1fr; }
+  .ladder .n { font-size: 36px; }
+  .ladder .here { grid-column: 2; }
+  .links a { flex-direction: column; gap: 8px; }
 }

@@ -1,0 +1,20 @@
+:root{
+  /* razmaci u skoku od 8 px */
+  --space-1:8px;
+  --space-2:16px;
+  --space-3:24px;
+  --space-4:32px;
+  --space-5:48px;
+  --space-6:64px;
+  --space-7:96px;
+  /* stranica */
+  --page-max:1120px;
+  --page-pad:48px;
+  --measure:720px;
+  --measure-narrow:660px;
+  /* površine, pravi kutovi, bez sjena */
+  --radius-none:0;
+  --shadow-none:none;
+  --rule:1px solid var(--color-ink);
+  --rule-soft:1px solid var(--color-hairline-soft);
+}

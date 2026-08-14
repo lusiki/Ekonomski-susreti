@@ -8,8 +8,8 @@
 :root {
   --ink: #000;
   --paper: #fff;
-  --muted: #6e6e6e;
-  --hair: #ccc;
+  --muted: #555555;
+  --hair: #d9d9d9;
 
   --r-background-color: #fff;
   --r-main-color: #000;
@@ -21,7 +21,7 @@
   --r-selection-color: #fff;
   --r-main-font: Roboto, "Helvetica Neue", Arial, sans-serif;
   --r-heading-font: Roboto, "Helvetica Neue", Arial, sans-serif;
-  --r-heading-font-weight: 300;
+  --r-heading-font-weight: 200;
   --r-heading-text-transform: none;
   --r-code-font: "Roboto Mono", Consolas, monospace;
 }
@@ -42,9 +42,9 @@
 .reveal h3 {
   color: var(--ink);
   font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-weight: 300;
-  letter-spacing: -0.028em;
-  line-height: 1.04;
+  font-weight: 200;
+  letter-spacing: -0.01em;
+  line-height: 1.06;
   text-transform: none;
   text-shadow: none;
 }
@@ -52,7 +52,7 @@
 .reveal h2 {
   padding-bottom: 0.18em;
   margin-bottom: 0.72em;
-  border-bottom: 2px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
   font-size: 1.5em;
 }
 
@@ -71,7 +71,7 @@
   left: 0;
   top: 0.62em;
   width: 0.42em;
-  height: 2px;
+  height: 1px;
   background: var(--ink);
 }
 .reveal ol li { padding-left: 0.2em; }
@@ -83,14 +83,14 @@
   width: 92%;
   margin: 0.3em 0 0.9em 0;
   padding: 0 0 0 0.6em;
-  border-left: 3px solid var(--ink);
+  border-left: 1px solid var(--ink);
   background: none;
   color: var(--ink);
   font-size: 1.15em;
-  font-weight: 300;
+  font-weight: 200;
   font-style: normal;
   line-height: 1.16;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   box-shadow: none;
 }
 
@@ -100,11 +100,11 @@
 .reveal table th {
   color: var(--ink);
   background: none;
-  border-bottom: 2px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
   text-align: left;
   font-size: 0.84em;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 .reveal table td { border-bottom: 1px solid var(--hair); background: none; }
@@ -118,7 +118,7 @@
   margin: 0.5em 0;
   padding: 0 0 0 0.7em;
   border: 0;
-  border-left: 3px solid var(--ink);
+  border-left: 1px solid var(--ink);
   border-radius: 0;
   background: none;
   color: var(--ink);
@@ -132,8 +132,8 @@
   display: block;
   color: var(--ink);
   font-size: 1.6em;
-  font-weight: 300;
-  letter-spacing: -0.03em;
+  font-weight: 100;
+  letter-spacing: -0.02em;
 }
 
 .reveal .metric.accent span,
@@ -150,7 +150,7 @@
   margin-top: 0.8em;
   padding: 0.5em 0 0;
   border: 0;
-  border-top: 2px solid var(--ink);
+  border-top: 1px solid var(--ink);
   background: none;
   font-size: 0.76em;
   font-weight: 500;
@@ -199,8 +199,8 @@
   background: none;
   color: var(--ink);
   font-size: 1.5em;
-  font-weight: 300;
-  letter-spacing: -0.03em;
+  font-weight: 200;
+  letter-spacing: -0.01em;
   line-height: 1.1;
   text-align: left;
 }
@@ -214,9 +214,9 @@
 .reveal .quarto-title-block .title {
   color: var(--ink);
   font-size: 2.3em;
-  font-weight: 300;
-  letter-spacing: -0.035em;
-  line-height: 1.02;
+  font-weight: 200;
+  letter-spacing: -0.01em;
+  line-height: 1.06;
 }
 .reveal .quarto-title-block .subtitle {
   margin-top: 0.5em;
@@ -244,12 +244,12 @@
 }
 
 .reveal .slide-number { background: none; color: var(--muted); font-size: 0.5em; font-weight: 500; }
-.reveal .progress { color: var(--ink); height: 2px; }
+.reveal .progress { color: var(--ink); height: 1px; }
 
 .reveal pre { box-shadow: none; }
 .reveal pre code {
   padding: 0.7em 0.9em;
-  border-left: 3px solid var(--ink);
+  border-left: 1px solid var(--ink);
   background: none;
   font-size: 0.76em;
   line-height: 1.38;

@@ -1,0 +1,19 @@
+:root{
+  /* papir i tinta */
+  --color-paper:#ffffff;
+  --color-ink:#000000;
+  --color-ink-2:#555555;
+  --color-ink-3:#8a8a8a;
+  /* linije */
+  --color-hairline:#000000;
+  --color-hairline-soft:#d9d9d9;
+  /* grafikoni, serije se razlikuju debljinom i crticama, ne bojom */
+  --color-chart-1:#000000;
+  --color-chart-2:#555555;
+  --color-chart-3:#8a8a8a;
+  --color-chart-4:#bdbdbd;
+  /* semantika */
+  --surface-page:var(--color-paper);
+  --text-primary:var(--color-ink);
+  --text-secondary:var(--color-ink-2);
+}

@@ -4,6 +4,9 @@ Thumbs.db
 ~$*.docx
 *.tmp
 
+# Ispis analize stilova koji Quarto ostavlja pri gradnji
+_quarto_internal_scss_error.scss
+
 # Tekst rada — ostaje lokalno, ne objavljuje se
 docs/paper/
 docs/downloads/Pasivno-zamijenjena.*
@@ -12,6 +15,9 @@ docs/downloads/Pasivno-zamijenjena.*
 materials/internal-brief.md
 materials/conference-brief.md
 materials/conference-submission.md
+
+# Ulazni tekstovi dizajn sustava, kopije radnih dokumenata odozgo
+design/source_material-*.md
 
 # Izlaz kratkog pregleda (objavljena kopija je u docs/downloads/)
 materials/brief/pregled.pdf

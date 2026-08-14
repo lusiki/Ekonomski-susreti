@@ -1,6 +1,6 @@
 # Scenarij izlaganja — punih šezdeset minuta
 
-*„Otvoreno, reproducibilno i AI-podržano istraživanje”* · radionica na Ekonomskim susretima.
+*„Otvoreno, reproducibilno i AI podržano istraživanje”* · radionica na Ekonomskim susretima.
 
 Ovo je **govorni scenarij**: što **napraviti**, što **pokazati** i što **reći**, slajd po slajd.
 Prati dva druga dokumenta:
@@ -138,7 +138,7 @@ kojoj cijeni?* Sve ostalo večeras je razrada te rečenice."
 **KAŽI** —
 - „**Otvoreno** znači da vas mogu provjeriti drugi ljudi. Kod, podaci, metapodaci — dostupni."
 - „**Reproducibilno** znači da vas može provjeriti stroj, i vi sami za godinu dana. Jedna naredba ponovno gradi sve."
-- „**AI-podržano** znači da radite brže — ali samo ako prva dva stupa stoje. Inače brže proizvodite nešto što nitko ne može provjeriti."
+- „**AI podržano** znači da radite brže — ali samo ako prva dva stupa stoje. Inače brže proizvodite nešto što nitko ne može provjeriti."
 
 **KAŽI** *(naglasak)* — „**Agent generira. Vi jamčite.** AI ne mijenja standard dokaza ni za milimetar.
 Mijenja samo cijenu proizvodnje tvrdnji — pa dokazni lanac postaje usko grlo. Zato radionica o AI-u
@@ -357,7 +357,7 @@ ne strop**. Najviše dobivaju početnici, iskusni gotovo ništa. Što znači da 
 **POKAŽI** Tablica pet redaka. **NAPRAVI** Pročitajte ih naglas, sve. Traje dvadeset sekundi.
 
 **KAŽI** — „Jedno pitanje: tko ovo može provjeriti i po kojoj cijeni. Tri stupa: otvoreno,
-reproducibilno, AI-podržano. Jedna ljestvica: četiri prečke, popnite se za jednu. Jedna petlja: opiši,
+reproducibilno, AI podržano. Jedna ljestvica: četiri prečke, popnite se za jednu. Jedna petlja: opiši,
 plan, odobri, izvrši, **provjeri**, commit. Tri greške: curenje, odstupanje, pokrivenost."
 
 ---

@@ -1,4 +1,4 @@
-# Otvoreno, reproducibilno i AI-podržano istraživanje
+# Otvoreno, reproducibilno i AI podržano istraživanje
 
 **Kako izgleda istraživanje koje se može provjeriti**
 
