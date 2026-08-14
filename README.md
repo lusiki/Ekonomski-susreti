@@ -95,7 +95,7 @@ Puni tekst rada nije objavljen jer je u radnoj verziji, a dostupan je na upit au
 
 ## Oblikovanje
 
-Svi materijali dijele jedan vizualni sustav. Jedini izvor istine je [`design/design-system.md`](design/design-system.md), a stranice u istoj mapi žive su primjere sustava iz kojih se preuzimaju obrasci navigacije, oznaka sekcija i podnožja.
+Svi materijali dijele jedan vizualni sustav. Jedini izvor istine je mapa [`design/`](design/), u kojoj [`README.md`](design/README.md) opisuje pravila, [`design-system.md`](design/design-system.md) sažima ih na jednu stranicu, `tokens/` drži boje, pismo, tipografiju i raster, `guidelines/` primjere, `components/core/` pet komponenti koje se ponavljaju, a [`pages/`](design/pages/) tri žive stranice iz kojih se preuzimaju obrasci navigacije, oznaka sekcija i podnožja.
 
 Predložak je bauhausovski, dakle crno-bijeli i prozračan, bez boje, sjena i zaobljenih rubova. Hijerarhiju nosi isključivo tipografija, pa razliku između naslova, međunaslova i teksta pravi veličina i debljina slova. Sadržaj stoji u stupcu širine najviše 1120 piksela uz rub od 48 piksela, odjeljke dijele linije od jednog piksela, a razmaci idu u skoku od osam piksela. Pismo je Roboto, priloženo u mapi [`fonts/`](fonts/) za gradnju PDF-a i u [`docs/fonts/`](docs/fonts/) za stranicu, uz Apache licenciju. Grafikoni su sivi i serije se razlikuju debljinom i vrstom linije, a ne bojom.
 

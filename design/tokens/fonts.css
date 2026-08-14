@@ -1,0 +1,6 @@
+/*
+  Roboto, jedino pismo sustava, težine 100 do 900.
+  Projekt ima vlastite datoteke pisma, pa se učitavaju one, a ne Google Fonts.
+  Iste datoteke koristi i objavljena stranica u docs/.
+*/
+@import url('../../docs/fonts/roboto.css');

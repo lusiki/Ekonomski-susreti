@@ -1,0 +1,49 @@
+/*
+  Tipografski tokeni. Ova datoteka nedostajala je u izvornom paketu, a na nju se
+  poziva styles.css i svaka komponenta, pa su vrijednosti preuzete iz
+  design-system.md i iz živih stranica u pages/.
+*/
+
+:root{
+  /* pismo, jedina obitelj u sustavu */
+  --font-sans:Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* težine, hijerarhiju nosi težina, nikad boja */
+  --weight-figure:100;
+  --weight-display:200;
+  --weight-subtitle:300;
+  --weight-body:400;
+  --weight-emphasis:500;
+  --weight-label:700;
+
+  /* veličine */
+  --size-display:clamp(44px, 7vw, 92px);
+  --size-display-md:clamp(36px, 4.6vw, 60px);
+  --size-statement:clamp(32px, 4.4vw, 56px);
+  --size-subtitle:clamp(20px, 2.4vw, 26px);
+  --size-heading:28px;
+  --size-body:17px;
+  --size-body-sm:15px;
+  --size-meta:14px;
+  --size-caption:13px;
+  --size-label:12px;
+  --size-label-sm:11px;
+
+  /* veliki brojevi */
+  --size-stat:clamp(72px, 11vw, 150px);
+  --size-stat-sm:40px;
+
+  /* razmak slova */
+  --tracking-display:-0.01em;
+  --tracking-figure:-0.02em;
+  --tracking-byline:0.06em;
+  --tracking-label:0.2em;
+  --tracking-label-tight:0.14em;
+
+  /* prored */
+  --leading-display:1.06;
+  --leading-heading:1.25;
+  --leading-body:1.65;
+  --leading-meta:1.7;
+  --leading-figure:1;
+}

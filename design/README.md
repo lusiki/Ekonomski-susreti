@@ -13,17 +13,29 @@ gradijenata, mnogo namjerno prazne bijele površine. Cijelu hijerarhiju nosi tip
 ## Izvori
 
 Tekstovi potječu iz konferencijske prijave i sažetaka u `uploads/`. Nije priložen
-logotip ni Figma. Roboto se učitava s Google Fonts dok se ne prilože lokalne datoteke pisma.
+logotip ni Figma. Roboto se učitava iz vlastitih datoteka projekta u `docs/fonts/`,
+istih koje koristi objavljena stranica, pa paket radi i bez mreže.
 
 ## Kazalo
 
 - `styles.css` — ulazna točka, samo uvozi tokene
-- `tokens/` — boje, tipografija, raster, pismo
-- `guidelines/` — kartice s uzorcima boja, pisma, razmaka, grafikona i pisanja
-- `components/core/` — SectionLabel, Stat, NavBar, LadderRow, PageFooter
-- `slides/` — uzorci naslovnog, sekcijskog i grafikonskog slajda, 1280 na 720
-- `Pocetna.dc.html`, `Sazeci.dc.html`, `Radionica.dc.html` — žive stranice, ujedno UI kit
+- `tokens/` — `colors.css`, `typography.css`, `layout.css`, `fonts.css`
+- `guidelines/` — kartice s uzorcima boja, pisma, razmaka, linija i grafikona
+- `components/core/` — SectionLabel, Stat, NavBar, LadderRow, PageFooter, svaki
+  u tri datoteke, `.jsx` je kod, `.d.ts` je sučelje, `.prompt.md` je opis uporabe
+- `slides/` — uzorci sekcijskog i grafikonskog slajda, 1280 na 720
+- `pages/` — `Pocetna.dc.html`, `Sazeci.dc.html`, `Radionica.dc.html` uz `support.js`,
+  žive stranice, ujedno UI kit
+- `design-system.md` — sažetak sustava na jednoj stranici
 - `SKILL.md` — uputa za agente
+- `uploads/` — ulazni tekstovi, ostaju lokalno jer sadrže radne dokumente
+
+## Stanje paketa
+
+Datoteke su pri izvozu dobile pomaknuta imena, pa je svaka preimenovana prema
+sadržaju koji stvarno nosi. Iz izvoza nedostaju tri primjera, kartica o pisanju,
+naslovni slajd i opis uporabe za Stat. Tokeni tipografije napisani su ovdje jer
+ih `styles.css` uvozi, a svaka se komponenta na njih poziva.
 
 ## Temelji sadržaja
 
