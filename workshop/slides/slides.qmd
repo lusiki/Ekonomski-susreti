@@ -36,11 +36,11 @@ povjerenje · povjerljivost podataka · ne znam odakle početi
 . . .
 
 ::: {.tiho}
-Ako ste podigli ruku na preglednik, ovaj je sat za vas. Idemo ga preseliti
-odande u sam projekt.
+Ako ste podigli ruku na preglednik, ova je radionica za vas. Alat ćemo
+premjestiti odande u sam projekt.
 :::
 
-## Sat vremena, tri stvari koje odnosite
+## Šezdeset minuta, tri stvari koje odnosite
 
 ::: {.kartice}
 ::: {}
@@ -59,8 +59,9 @@ Klonirate ga danas i presadite na svoj projekt.
 
 . . .
 
-Jedna riječ vodi cijeli sat, a ta riječ je **najmanje moguće**. Ne petnaest
-alata, nego najmanji skup dijelova koji istraživanje čini provjerljivim.
+Cijela radionica počiva na jednom načelu, a to je **najmanje moguće**. Ne
+petnaest alata, nego najmanji skup dijelova koji istraživanje čini
+provjerljivim.
 
 
 ::: {.divider background-color="#000000"}
@@ -93,46 +94,46 @@ mislite
 Ta asimetrija je cijeli problem.
 :::
 
-## Ali nije problem samo u cijeni
+## Ali problem nije samo u cijeni
 
-Dok ste kod pisali sami, provjeravali ste **usput**. Deset redaka, pogled,
-dalje.
+Dok ste kod pisali sami, provjeravali ste ga **usput**. Desetak redaka,
+pogled, dalje.
 
 . . .
 
-Agent vam vrati dvjesto redaka odjednom. Provjera se odgađa, pa se
-**gomila**.
+Agent vraća dvjesto redaka odjednom. Provjera se odgađa, pa se **nakuplja**.
 
 ::: {.krupno}
 Dug provjere
 :::
 
 ::: {.tiho}
-Razlika između koda koji radi i koda za koji znate zašto radi. Kamate se
-plaćaju na recenziji, kod koautora i kod vas samih za godinu dana.
+Razlika između koda koji daje rezultat i koda za koji znate zašto ga daje.
+Dug dospijeva kasnije, u recenziji, u pitanju koautora o podrijetlu broja i
+pri povratku na vlastiti projekt nakon dulje stanke.
 :::
 
 ## Gdje agenta pustiti, a gdje ne
 
 |  | **lako izvršiti** | **teško izvršiti** |
 |---|---|---|
-| **lako provjeriti** | delegirajte bez razmišljanja | **ovdje je najveći dobitak** |
-| **teško provjeriti** | oprez, sjednite pokraj | ovdje se rade tihe štete |
+| **lako provjeriti** | delegira se bez zadrške | **ovdje je dobitak najveći** |
+| **teško provjeriti** | uz nadzor, korak po korak | ovdje nastaju tihe greške |
 
 . . .
 
 ::: {.tiho}
-Nije pitanje je li zadatak težak, nego biste li primijetili da je odgovor
-kriv.
+Mjerodavno pitanje nije koliko je zadatak zahtjevan, nego biste li prepoznali
+pogrešan ishod.
 :::
 
 ## Ista podjela na našem primjeru
 
 | Zadatak | Provjera | Odluka |
 |---|---|---|
-| spojiti dvije Eurostatove tablice | pogledam broj redaka | delegiram |
-| nacrtati sliku po zadanom predlošku | vidim je | delegiram |
-| **odabrati koje su oznake zemlje** | ne vidim, panel izgleda uredno | **provjera u kodu** |
+| spojiti dvije Eurostatove tablice | broj redaka na izlazu | delegiram |
+| nacrtati sliku po zadanom predlošku | izravan uvid u sliku | delegiram |
+| **odabrati koje su oznake zemlje** | nema je, panel izgleda uredno | **provjera u kodu** |
 | **fiksni učinci zemlje ili i godine** | mijenja pitanje, ne odgovor | **ne delegiram** |
 
 . . .
@@ -142,12 +143,12 @@ zbog kojeg ćete i dalje biti potrebni.
 
 
 ::: {.divider background-color="#000000"}
-## 2 · Ispod haube
+## 2 · Od čega se agent sastoji
 
 Model, alati, ograda, kontekst.
 :::
 
-## Četiri riječi i gotovi ste
+## Četiri pojma i gotovi ste
 
 ::: {.kartice}
 ::: {}
@@ -178,25 +179,25 @@ Ako nešto nije u kontekstu, za model ne postoji.
 ## Iz toga slijedi cijela radionica
 
 Ako je sve što agent zna **kontekst**, a sve što smije **ograda**, onda
-postoje točno dvije ručke.
+istraživač odlučuje o točno dvije stvari.
 
 ::: {.kartice}
 ::: {}
-**Napišite kontekst sami**
-Umjesto da ga svaki put ponavljate u razgovoru, zapišite ga u datoteku koju
-projekt nosi sa sobom.
+**Kontekst pišete sami**
+Umjesto da ga svaki put ponavljate u razgovoru, zapisujete ga u datoteku
+koja putuje s projektom.
 :::
 ::: {}
-**Napišite ogradu sami**
-Umjesto da se pouzdate u dobru namjeru, popišite što smije, što pita i što
-je zabranjeno.
+**Ogradu pišete sami**
+Umjesto da se pouzdate u dobru namjeru, popisujete što agent smije, što vas
+mora pitati i što mu je zabranjeno.
 :::
 :::
 
 . . .
 
 To su prve dvije od četiri datoteke. Nisu konvencija koju je netko izmislio,
-nego jedine dvije ručke koje uopće postoje.
+nego jedine dvije odluke koje uopće postoje.
 
 ## Ne birajte alat, birajte način
 
@@ -213,8 +214,9 @@ Način biramo prema tome koliko je skupa provjera.
 :::
 
 ::: {.tiho}
-Nije važno je li Claude ili nešto drugo. Kao iPhone 17 ili 18. Važno je
-sjedite li pokraj ili ne, i po čemu ćete znati.
+Nije važno je li posrijedi Claude ili neki drugi alat, jer se to mijenja
+svakih nekoliko mjeseci. Važno je koliko blizu stojite i po čemu ćete znati
+da je ishod ispravan.
 :::
 
 
@@ -292,7 +294,7 @@ Ne provjeravam ja svaki put. Provjerava repozitorij, svaki put.
 :::
 
 ::: {.tiho}
-Tu se dug provjere prestaje gomilati. Ne zato što ste disciplinirani, nego
+Tu se dug provjere prestaje nakupljati. Ne zato što ste disciplinirani, nego
 zato što gradnja pukne ako niste.
 :::
 
@@ -430,12 +432,12 @@ odluku o objavi
 
 . . .
 
-Desni stupac nije stvar ukusa. To su **redci iz gornje polovice tablice**,
-oni koje ne biste primijetili da su krivi.
+Desni stupac nije stvar ukusa. To je **donji red tablice od ranije**, dakle
+ono čiju pogrešnost ne biste prepoznali.
 
 ::: {.tiho}
-Alat podiže pod, ne strop. Zato iskusna prosudba postaje rjeđi, a ne
-suvišniji ulaz.
+Alat podiže pod, a ne strop. Iskusna prosudba time postaje rjeđi, a ne
+suvišniji ulaz u istraživanje.
 :::
 
 
@@ -447,8 +449,8 @@ suvišniji ulaz.
 
 | | |
 |---|---|
-| **Jedan pojam** | dug provjere, i raste dok ne pogledate |
-| **Dvije ručke** | kontekst i ograda, ništa treće ne postoji |
+| **Jedan pojam** | dug provjere, i nakuplja se dok ga ne podmirite |
+| **Dvije odluke** | kontekst i ograda, trećega nema |
 | **Četiri datoteke** | ustav, ograde, pravilo, provjere |
 | **Jedna petlja** | opiši → plan → odobri → izvrši → **provjeri** → commit |
 | **Jedno pitanje** | biste li primijetili da je ovo krivo? |

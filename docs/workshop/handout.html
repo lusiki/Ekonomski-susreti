@@ -89,25 +89,25 @@
 
   <p class="quote">Izvršavanje je pojeftinilo. Provjera nije.</p>
 
-  <p>Dok ste kod pisali sami, provjeravali ste usput, po deset redaka, a da to niste ni zvali provjerom. Agent vam vrati dvjesto redaka odjednom, pogledate prvih dvadeset i idete dalje. Ono što ste preskočili nije nestalo nego se nakupilo.</p>
+  <p>Dok ste kod pisali sami, provjeravali ste ga usput, u razmacima od desetak redaka, i ta provjera nije imala zasebnu cijenu. Agent vraća dvjesto redaka odjednom, vi pregledate prvih dvadeset i nastavite dalje. Ono što je preskočeno nije nestalo nego se nakupilo.</p>
 
-  <p>To je <strong>dug provjere</strong>, dakle razlika između koda koji radi i koda za koji znate zašto radi. Kao svaki dug ima kamate, a plaćaju se na recenziji, kod koautora koji pita odakle taj broj i kod vas samih za godinu dana.</p>
+  <p><strong>Dug provjere</strong> je razlika između koda koji daje rezultat i koda za koji znate zašto ga daje. Taj se dug ne otpisuje sam od sebe nego dospijeva kasnije, u recenziji, u pitanju koautora o podrijetlu pojedinog broja i pri povratku na vlastiti projekt nakon dulje stanke.</p>
 
   <h2>Gdje agenta pustiti, a gdje ne</h2>
 
   <table>
     <tr><th></th><th>lako izvršiti</th><th>teško izvršiti</th></tr>
-    <tr><td class="k">lako provjeriti</td><td>delegirajte bez razmišljanja</td><td>ovdje je najveći dobitak</td></tr>
-    <tr><td class="k">teško provjeriti</td><td>oprez, sjednite pokraj</td><td>ovdje se rade tihe štete</td></tr>
+    <tr><td class="k">lako provjeriti</td><td>delegira se bez zadrške</td><td>ovdje je dobitak najveći</td></tr>
+    <tr><td class="k">teško provjeriti</td><td>uz nadzor, korak po korak</td><td>ovdje nastaju tihe greške</td></tr>
   </table>
 
-  <p>Pitanje nije je li zadatak težak. Pitanje je biste li primijetili da je odgovor kriv. AI je pomaknuo samo vodoravnu os.</p>
+  <p>Mjerodavno pitanje nije koliko je zadatak zahtjevan nego biste li prepoznali pogrešan ishod. Umjetna inteligencija pomaknula je samo vodoravnu os ove tablice.</p>
 
-  <h2>Dvije ručke, i nema treće</h2>
+  <h2>Dvije odluke, i nema treće</h2>
 
-  <p>Model predviđa sljedeću riječ i sam po sebi ništa ne zna i ništa ne može učiniti. Alati mu daju sposobnost djelovanja, a ograda odlučuje smije li se alat pozvati. Kontekst je sve što model u tom trenutku vidi. Ako nešto nije u kontekstu, za model ne postoji.</p>
+  <p>Model predviđa sljedeću riječ i sam po sebi ništa ne zna i ništa ne može učiniti. Alati mu daju sposobnost djelovanja, a ograda odlučuje smije li se pojedini alat pozvati. Kontekst je sve što model u tom trenutku vidi. Ako nešto nije u kontekstu, za model ne postoji.</p>
 
-  <p>Iz toga slijedi da postoje točno dvije ručke. Prva je da kontekst zapišete u datoteku umjesto da ga ponavljate u razgovoru. Druga je da sami popišete što agent smije, što vas mora pitati i što je zabranjeno.</p>
+  <p>Iz toga slijedi da istraživač odlučuje o samo dvije stvari. Prva je kontekst, koji zapisujete u datoteku umjesto da ga ponavljate u razgovoru. Druga su dopuštenja, koja popisujete sami, dakle što agent smije učiniti, što vas mora pitati i što mu je zabranjeno.</p>
 
   <h2>AI sloj, četiri datoteke</h2>
 
@@ -160,7 +160,7 @@ results/procjene.json          svi brojevi na jednom mjestu
     <li><strong>Treći tjedan.</strong> Napišite jednu provjeru, i to onu koja hvata grešku koja vam se već jednom dogodila. Mora se izvršavati pri gradnji, mora rušiti gradnju kad padne i mora reći što je krivo brojkom.</li>
   </ul>
 
-  <p>Uvjet da sve to ima smisla je da brojevi u tekstu dolaze iz koda. Analiza zapiše sve brojke u jednu datoteku, tekst je čita i sam ne sadrži nijedan broj, a provjera odbija tekst u kojem se pojavi broj koji odande nije došao.</p>
+  <p>Uvjet da sve to ima smisla je da brojevi u tekstu dolaze iz koda. Analiza zapisuje sve procjene u jednu datoteku, rukopis ih odande čita i sam ne sadrži nijedan broj, a provjera odbija tekst u kojem se pojavi broj koji odande nije došao.</p>
 
   <h2>Što ne delegirati</h2>
 
@@ -173,7 +173,7 @@ results/procjene.json          svi brojevi na jednom mjestu
     </div>
   </div>
 
-  <p>Desni stupac nije stvar ukusa nego popis redaka iz gornje polovice tablice, dakle onih koje ne biste primijetili da su krivi.</p>
+  <p>Desni stupac nije stvar ukusa nego popis onoga čiju pogrešnost ne biste prepoznali, dakle donjeg reda tablice s prve stranice.</p>
 
   <h2>Zadatak za ovaj tjedan</h2>
 

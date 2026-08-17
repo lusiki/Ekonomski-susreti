@@ -6,9 +6,10 @@ pažnji Hrvatske narodne banke u medijima, radionica pita tko istraživačku tvr
 može provjeriti i uz koliki trošak. Autori su Petra Palić i Luka Sikić,
 Hrvatsko katoličko sveučilište.
 
-Stil je Bauhaus u doslovnom smislu. Bijeli papir, crna tinta, ništa drugo. Tanke
+Stil je Bauhaus u doslovnom smislu. Bijeli papir, crna tinta i jedna crvena. Tanke
 linije umjesto okvira, strogi raster umjesto kartica, pravi kutovi, bez sjena i
-gradijenata, mnogo namjerno prazne bijele površine. Cijelu hijerarhiju nosi tipografija.
+gradijenata, mnogo namjerno prazne bijele površine. Cijelu hijerarhiju nosi tipografija,
+a crvena označava isključivo ono na što se može kliknuti.
 
 ## Izvori
 
@@ -50,7 +51,8 @@ Brojevi se pišu hrvatski, decimalni zarez i točka za tisućice, na primjer 0,0
 ## Vizualni temelji
 
 - Boje. Papir #ffffff i tinta #000000. Sivi tonovi #555555, #8a8a8a, #bdbdbd samo za
-  sekundarni tekst i serije grafikona. Meka linija popisa #d9d9d9. Ništa drugo.
+  sekundarni tekst i serije grafikona. Meka linija popisa #d9d9d9. Crvena #c8102e i
+  tamnija #8e0b20 samo za poveznice i stanja fokusa. Ništa drugo.
 - Pismo. Roboto u svim materijalima. Naslovi vrlo veliki i vrlo lagani, težina 100 do
   300. Oznake sekcija 11 do 12 px, težina 700, verzal, razmak slova 0.16 do 0.2 em,
   uvijek nad linijom od 1 px. Tekući tekst težina 400, 15 do 17 px, prored 1.65.

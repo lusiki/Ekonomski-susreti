@@ -4,36 +4,40 @@
 repozitorij, a ne u prozor preglednika.
 
 [**Slajdovi**](https://lusiki.github.io/Ekonomski-susreti/workshop/slides/) ·
-[scenarij](SCRIPT.md) · [rukovanje demonstracijom](RUNBOOK.md) ·
+[rukovanje demonstracijom](RUNBOOK.md) ·
 [presađivanje na vaš projekt](PRESADI.md) · [repozitorij](projekt/) ·
 [pojmovnik](GLOSSARY.md) · [literatura](READING.md)
 
 ## Ideja
 
-Većina istraživača danas koristi AI u prozoru preglednika, dakle izvan
-projekta. Kod se kopira van, odgovor se kopira natrag. Agent pritom ne zna
-ništa o projektu, ne može ništa pokrenuti i ne može biti provjeren.
+Umjetna inteligencija u istraživanju danas se najčešće koristi u prozoru
+preglednika, dakle izvan projekta na kojem se radi. Kod se prenosi van,
+odgovor se prenosi natrag, a alat pritom ne poznaje strukturu projekta, ne
+može pokrenuti nijedan njegov korak i njegov se rad ne može provjeriti
+sredstvima samog projekta.
 
-Radionica pokazuje što se dogodi kada ga preselite unutra. To nije stvar
-udobnosti nego jedini način da se plati ono što je AI zapravo stvorio, a
-to je dug provjere.
+Radionica pokazuje što se mijenja kada se alat premjesti u repozitorij. Ta
+razlika je metodološka, a ne stvar udobnosti, jer je repozitorij jedino
+mjesto na kojem se može podmiriti ono što je umjetna inteligencija zapravo
+stvorila, a to je dug provjere.
 
 > **Izvršavanje je pojeftinilo. Provjera nije.**
 
-Dok ste kod pisali sami, provjeravali ste usput, po deset redaka. Agent vam
-vrati dvjesto redaka odjednom, pa se provjera odgađa i gomila. Ta razlika
-između koda koji radi i koda za koji znate zašto radi je dug provjere, a
-kamate se plaćaju na recenziji i kod koautora.
+Dok ste kod pisali sami, provjeravali ste ga usput, u razmacima od desetak
+redaka. Agent vraća dvjesto redaka odjednom, pa se provjera odgađa i
+nakuplja. Dug provjere je razlika između koda koji daje rezultat i koda za
+koji znate zašto ga daje, a dospijeva kasnije, u recenziji i u pitanju
+koautora o podrijetlu pojedinog broja.
 
 Odgovor nije veća disciplina nego četiri datoteke u repozitoriju koje taj
 dug naplaćuju pri svakom pokretanju.
 
-## Pet redaka koje publika nosi kući
+## Pet redaka koje publika odnosi
 
 | | |
 |---|---|
-| **Jedan pojam** | dug provjere, i raste dok ga ne pogledate |
-| **Dvije ručke** | kontekst i ograda, ništa treće ne postoji |
+| **Jedan pojam** | dug provjere, i nakuplja se dok ga ne podmirite |
+| **Dvije odluke** | kontekst i ograda, trećega nema |
 | **Četiri datoteke** | ustav, ograde, pravilo, provjere |
 | **Jedna petlja** | opiši, isplaniraj, odobri, izvrši, **provjeri**, zapiši |
 | **Jedno pitanje** | biste li primijetili da je ovo krivo? |
@@ -53,19 +57,20 @@ Peta je git, ali git već imate.
 
 ## Gdje agenta pustiti, a gdje ne
 
-Podjela nije po tome koliko je zadatak težak nego po tome biste li
-primijetili da je odgovor kriv.
+Podjela ne ide po tome koliko je zadatak zahtjevan nego po tome biste li
+prepoznali pogrešan ishod.
 
 |  | lako izvršiti | teško izvršiti |
 |---|---|---|
-| **lako provjeriti** | delegirajte bez razmišljanja | ovdje je najveći dobitak |
-| **teško provjeriti** | oprez, sjednite pokraj | ovdje se rade tihe štete |
+| **lako provjeriti** | delegira se bez zadrške | ovdje je dobitak najveći |
+| **teško provjeriti** | uz nadzor, korak po korak | ovdje nastaju tihe greške |
 
-Na primjeru iz radionice, spajanje dviju Eurostatovih tablica provjerite
-pogledom na broj redaka i mirno ga delegirate. Odabir oznaka zemalja ne
-vidite jer panel izgleda uredno u oba slučaja, pa taj korak dobiva provjeru
-u kodu. Izbor između fiksnih učinaka zemlje i fiksnih učinaka zemlje i
-godine mijenja pitanje na koje odgovarate, pa se ne delegira uopće.
+Na primjeru iz radionice, spajanje dviju Eurostatovih tablica provjerava se
+brojem redaka na izlazu, pa se delegira bez zadrške. Odabir oznaka zemalja
+ne provjerava se uvidom jer panel izgleda uredno u oba slučaja, pa taj korak
+dobiva provjeru zapisanu u kodu. Izbor između fiksnih učinaka zemlje i
+fiksnih učinaka zemlje i godine mijenja pitanje na koje odgovarate, pa se ne
+delegira.
 
 ## Primjer
 
@@ -83,7 +88,6 @@ nalazu nego o tome kako je nalaz nastao.
 | Datoteka | Što je |
 |---|---|
 | [`slides/slides.qmd`](slides/slides.qmd) | prezentacija, Quarto i reveal.js, na hrvatskom |
-| [`SCRIPT.md`](SCRIPT.md) | tijek radionice minutu po minutu |
 | [`RUNBOOK.md`](RUNBOOK.md) | rukovanje demonstracijom, tri podmetnute greške |
 | [`PRESADI.md`](PRESADI.md) | kako AI sloj staviti na vlastiti projekt |
 | [`handout.html`](handout.html) | jedna stranica za tisak, A4 obostrano |

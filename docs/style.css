@@ -4,7 +4,10 @@
   Dizajn sustav Ekonomski susreti 2026.
   Izvor istine su design/README.md i design/design-system.md, a stranice u design/pages
   drže obrasce navigacije, oznaka sekcija, ljestvice i podnožja.
-  Bijeli papir, crna tinta, ništa drugo. Naglasak nosi težina pisma, nikad boja.
+  Bijeli papir, crna tinta i jedna crvena. Naglasak u tekstu nosi težina pisma, nikad boja.
+  Crvena je rezervirana isključivo za ono na što se može kliknuti, u tri jačine.
+  Tiha crta ispod imena i adresa, puna crvena na sitnim verzalnim poveznicama,
+  cijeli redak popisa materijala koji na prijelaz mišem prelazi u crveno.
 */
 
 :root {
@@ -16,6 +19,11 @@
   --muted: #555555;
   --muted-light: #8a8a8a;
   --muted-lighter: #bdbdbd;
+
+  /* jedina boja u sustavu, i to samo za interakciju */
+  --red: #c8102e;
+  --red-deep: #8e0b20;
+  --red-hair: rgba(200, 16, 46, 0.38);
 
   --measure: 1120px;
   --gutter: 48px;
@@ -38,8 +46,18 @@ body {
 
 ::selection { background: var(--ink); color: var(--paper); }
 
-a { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
-a:hover { color: var(--muted); }
+/* Prva jačina. Poveznica u tekućem tekstu ostaje crna da se odlomak ne išara,
+   a crvena stoji samo u tankoj crti ispod i preuzima tekst na prijelaz mišem. */
+a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--red-hair);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+a:hover { color: var(--red); text-decoration-color: var(--red); }
+a:active { color: var(--red-deep); text-decoration-color: var(--red-deep); }
+a:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
 
 p { margin: 0 0 16px; }
 p:last-child { margin-bottom: 0; }
@@ -101,8 +119,17 @@ strong { font-weight: 700; }
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
+.topbar .brand:hover { color: var(--red); }
 .topbar nav a { text-decoration: none; }
-.topbar nav a[aria-current="page"] { text-decoration: underline; }
+.topbar nav a:hover { color: var(--red); }
+/* Trenutna stranica nosi crvenu crtu umjesto crne, jedina stalna boja u zaglavlju. */
+.topbar nav a[aria-current="page"] {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--red);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
 
 /* ---------- tipografska ljestvica ---------- */
 
@@ -157,14 +184,18 @@ h3 {
 .label + .numbers, .label + .links, .label + .rows, .label + table.plain { margin-top: 32px; }
 .label + .intro, .label + .statement { margin-top: 24px; }
 
-/* Sitna verzalna poveznica na kraju stupca, umjesto gumba. */
+/* Druga jačina. Sitna verzalna poveznica na kraju stupca, umjesto gumba.
+   Ona vodi dalje u sadržaj pa nosi punu crvenu i u mirovanju. */
 .more {
   align-self: flex-start;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+  color: var(--red);
+  text-decoration-color: var(--red);
 }
+.more:hover { color: var(--red-deep); text-decoration-color: var(--red-deep); }
 
 .mt { margin-top: 32px; }
 .mt-lg { margin-top: 48px; }
@@ -303,9 +334,17 @@ table.plain td.k { white-space: nowrap; font-weight: 500; }
   text-decoration: none;
 }
 .links a:first-child { border-top: 1px solid var(--hair); }
-.links a:hover { color: var(--ink); }
-.links a:hover .what { text-decoration: underline; text-underline-offset: 4px; }
-.links .what { font-weight: 500; }
+/* Treća jačina. Cijeli redak je meta, pa naslov nosi tanku crvenu crtu u mirovanju,
+   a na prijelaz mišem u crveno prelaze i naslov i oznaka formata. */
+.links .what {
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: var(--red-hair);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+.links a:hover .what { color: var(--red); text-decoration-color: var(--red); }
+.links a:hover .how { color: var(--red); }
 .links .how {
   color: var(--muted);
   font-size: 11px;

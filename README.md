@@ -54,7 +54,7 @@ Polazište je da je izvršavanje pojeftinilo, a provjera nije. Ta se razlika nak
 
 Pokazni primjer je Phillipsova krivulja u dvadeset zemalja europodručja na dvije javne Eurostatove tablice, a u njega su podmetnute tri tihe greške koje projekt sam otkriva. Prva je curenje ograničenih podataka u javni tekst, druga je koeficijent upisan rukom koji više ne odgovara procjeni, a treća je oznaka zemlje, jer Eurostat Grčku bilježi kao EL, a ostatak svijeta piše GR.
 
-Materijali se nalaze u mapi [`workshop/`](workshop/) i obuhvaćaju [slajdove](workshop/slides/slides.qmd), [scenarij izlaganja](workshop/SCRIPT.md), [rukovanje demonstracijom](workshop/RUNBOOK.md), [upute za presađivanje](workshop/PRESADI.md), [jednu stranicu za tisak](workshop/handout.html), [pojmovnik](workshop/GLOSSARY.md), [literaturu](workshop/READING.md) i [sam repozitorij](workshop/projekt/).
+Materijali se nalaze u mapi [`workshop/`](workshop/) i obuhvaćaju [slajdove](workshop/slides/slides.qmd), [rukovanje demonstracijom](workshop/RUNBOOK.md), [upute za presađivanje](workshop/PRESADI.md), [jednu stranicu za tisak](workshop/handout.html), [pojmovnik](workshop/GLOSSARY.md), [literaturu](workshop/READING.md) i [sam repozitorij](workshop/projekt/).
 
 ## Glavni nalazi
 
