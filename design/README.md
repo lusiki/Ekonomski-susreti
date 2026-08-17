@@ -1,52 +1,54 @@
-# Ekonomski susreti 2026 — dizajn sustav
+# Sustav oblikovanja za Ekonomske susrete 2026
 
-Javno lice jednog istraživanja i jedne radionice za konferenciju Ekonomski susreti,
-Split, hotel Lav, 27. i 28. studenog 2026. Istraživanje mjeri institucionalni jaz u
-pažnji Hrvatske narodne banke u medijima, radionica pita tko istraživačku tvrdnju
-može provjeriti i uz koliki trošak. Autori su Petra Palić i Luka Sikić,
-Hrvatsko katoličko sveučilište.
+Ovaj sustav oblikuje javne materijale istraživanja i radionice za konferenciju
+Ekonomski susreti, koja će se održati 27. i 28. studenoga 2026. u Hotelu Lav u
+Splitu. Istraživanje mjeri institucionalni jaz u medijskoj vidljivosti HNB-a.
+Radionica pokazuje kako s umjetnom inteligencijom raditi u istraživačkom
+repozitoriju. Autori su Petra Palić i Luka Sikić s Hrvatskoga katoličkog sveučilišta.
 
-Stil je Bauhaus u doslovnom smislu. Bijeli papir, crna tinta i jedna crvena. Tanke
-linije umjesto okvira, strogi raster umjesto kartica, pravi kutovi, bez sjena i
-gradijenata, mnogo namjerno prazne bijele površine. Cijelu hijerarhiju nosi tipografija,
-a crvena označava isključivo ono na što se može kliknuti.
+Sustav se oslanja na bauhausovski stil. Koristi bijelu podlogu, crni tekst i samo
+jednu crvenu boju. Tanke linije zamjenjuju okvire, a strogi raster kartice. Kutovi
+su pravi, nema sjena ni gradijenata, a praznog prostora ima mnogo. Tipografija
+određuje hijerarhiju. Crvena označava elemente na koje se može kliknuti.
 
 ## Izvori
 
-Tekstovi potječu iz konferencijske prijave i sažetaka u `uploads/`. Nije priložen
-logotip ni Figma. Roboto se učitava iz vlastitih datoteka projekta u `docs/fonts/`,
-istih koje koristi objavljena stranica, pa paket radi i bez mreže.
+Tekstovi potječu iz konferencijske prijave i sažetaka u `uploads/`. Nisu priloženi
+logotip ni datoteka iz Figme. Roboto se učitava iz datoteka u `docs/fonts/`, pa
+paket radi i bez mrežne veze.
 
 ## Kazalo
 
-- `styles.css` — ulazna točka, samo uvozi tokene
+- `styles.css` — glavna stilska datoteka; uvozi samo varijable
 - `tokens/` — `colors.css`, `typography.css`, `layout.css`, `fonts.css`
 - `guidelines/` — kartice s uzorcima boja, pisma, razmaka, linija i grafikona
 - `components/core/` — SectionLabel, Stat, NavBar, LadderRow, PageFooter, svaki
   u tri datoteke, `.jsx` je kod, `.d.ts` je sučelje, `.prompt.md` je opis uporabe
 - `slides/` — uzorci sekcijskog i grafikonskog slajda, 1280 na 720
 - `pages/` — `Pocetna.dc.html`, `Sazeci.dc.html`, `Radionica.dc.html` uz `support.js`,
-  žive stranice, ujedno UI kit
+  radni primjeri stranica i zbirka elemenata sučelja
 - `design-system.md` — sažetak sustava na jednoj stranici
 - `SKILL.md` — uputa za agente
 - `uploads/` — ulazni tekstovi, ostaju lokalno jer sadrže radne dokumente
 
 ## Stanje paketa
 
-Datoteke su pri izvozu dobile pomaknuta imena, pa je svaka preimenovana prema
-sadržaju koji stvarno nosi. Iz izvoza nedostaju tri primjera, kartica o pisanju,
-naslovni slajd i opis uporabe za Stat. Tokeni tipografije napisani su ovdje jer
-ih `styles.css` uvozi, a svaka se komponenta na njih poziva.
+Pri izvozu su datoteke dobile pogrešna imena, pa je svaka preimenovana prema
+svojem sadržaju. U izvozu nedostaju kartica o pisanju, naslovni slajd i opis
+uporabe komponente Stat. Tipografske su varijable definirane ovdje jer ih
+`styles.css` uvozi, a koriste ih sve komponente.
 
 ## Temelji sadržaja
 
-Mirna tekuća proza na hrvatskom, bez crtica, dvotočaka i točke sa zarezom. Metode se
-imenuju riječima koje razumije opći čitatelj, a pojam poput jaza u pažnji objasni se
-gdje se prvi put spomene. Nema uzvika, nema marketinškog tona, nema emojija. Obraćanje
-je neutralno, u trećem licu ili mi obliku. Primjer tona, iz sažetka. "Vlastita
-komunikacija banke pritom nije oslabjela, nego je bila intenzivnija u razdobljima jače
-inflacije, pa jaz nastaje u prijenosu kroz medije, a ne u šutnji institucije."
-Brojevi se pišu hrvatski, decimalni zarez i točka za tisućice, na primjer 0,00201 i 58.448.
+Mirna tekuća proza na prirodnom hrvatskom, bez crtica, dvotočaka i točke sa zarezom.
+Rečenice su kratke, glagoli konkretni, a riječi razumljive općem čitatelju. Metoda i
+svaki stručni pojam objašnjavaju se gdje se prvi put spomenu. Izbjegavaju se nepotrebne
+tuđice, gomilanje imenica i obrasci poput „nije X, nego Y” i „ne samo X, nego i Y”.
+Nema uzvika, marketinškog tona ni emojija. Obraćanje je neutralno, u trećem licu ili
+u prvom licu množine. Primjer tona iz sažetka glasi ovako. „HNB je u razdobljima više inflacije
+objavljivao više vlastitih sadržaja. Doseg poruka banke ovisi i o tome koliko ih često
+neovisni mediji prenose.” Brojevi se zapisuju prema hrvatskim pravilima, s
+decimalnim zarezom i točkom za tisućice, na primjer 0,00201 i 58.448.
 
 ## Vizualni temelji
 
@@ -58,24 +60,28 @@ Brojevi se pišu hrvatski, decimalni zarez i točka za tisućice, na primjer 0,0
   uvijek nad linijom od 1 px. Tekući tekst težina 400, 15 do 17 px, prored 1.65.
   Naglasak je težina 500 ili 700, nikad boja.
 - Pozadine. Uvijek čisti papir. Nema slika, tekstura, uzoraka ni gradijenata.
-  Fotografija se ne koristi. Ako slika ikad zatreba, crno bijela i iza tanke linije.
-- Raster. Sadržaj u stupcu do 1120 px, rub 48 px, mjera teksta do 720 px. Razmaci u
-  skoku od 8 px, tipično 16, 24, 32, 48, 64, 96. Susjedne cjeline slaže flex ili grid s gap.
-- Rubovi i kutovi. Pravi kutovi, polumjer 0. Tanka linija od 1 px umjesto svake kutije,
-  kartice i okvira. Bez sjena, unutarnjih i vanjskih. Bez prozirnosti i zamućenja.
-- Stanja. Poveznice su crne i podcrtane, na prijelaz miša postanu #555555. Trenutna
-  stranica u navigaciji je podcrtana. Bez animacija, iznimno diskretan fade do 200 ms.
-- Grafikoni. Sivi tonovi, serije razdvojene debljinom linije i crticama, ne bojom.
+  Fotografija se ne koristi. Ako slika ikad zatreba, treba biti crno-bijela i
+  odvojena tankom linijom.
+- Raster. Sadržaj u stupcu do 1120 px, rub 48 px, mjera teksta do 720 px. Razmaci se
+  povećavaju u koracima od 8 px, najčešće 16, 24, 32, 48, 64 i 96 px. Susjedne
+  cjeline raspoređuju se s pomoću CSS rasporeda `flex` ili `grid`, a razmak se
+  zadaje svojstvom `gap`.
+- Rubovi i kutovi. Kutovi su pravi i bez zaobljenja. Tanka linija od 1 px zamjenjuje
+  kutije, kartice i okvire. Nema sjena, prozirnosti ni zamućenja.
+- Stanja. Poveznice su crne i podcrtane, a pri prelasku pokazivačem postaju sive.
+  Trenutačna stranica u navigaciji je podcrtana. Nema animacija, osim vrlo blagog
+  prijelaza koji traje najviše 200 ms.
+- Grafikoni. Koriste sive tonove. Serije se razlikuju debljinom i vrstom linije.
   Oznake izravno uz kraj serije, bez legendi u okvirima. Stranica mora izgledati
   jednako na projektoru, u tisku i u sivim tonovima.
 
 ## Ikonografija
 
 Nema ikona, ikonskog pisma ni emojija. Dopušteni su samo tipografski znakovi, srednja
-točka · kao razdjelnik i strelica → uz poveznice kada je nužna. Nema logotipa, marka
-se piše čistim verzalom, Ekonomski susreti 2026. Ne crtati ni rekonstruirati znakove.
+točka · kao razdjelnik i strelica → uz poveznice kada je nužna. Nema logotipa. Naziv
+Ekonomski susreti 2026 piše se velikim slovima. Ne treba crtati ni rekonstruirati znakove.
 
 ## Namjerna dopuna
 
-Komponente su autorske jer izvor ne definira komponentnu knjižnicu, izvedene su iz
-živih stranica projekta i svedene na pet dijelova koji se stvarno ponavljaju.
+Izvor ne sadrži zbirku komponenata, pa su one izrađene za ovaj projekt. Izvedene
+su iz postojećih stranica i svedene na pet dijelova koji se ponavljaju.

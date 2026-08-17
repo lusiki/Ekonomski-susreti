@@ -1,137 +1,140 @@
-# AI u ekonomskim istraživanjima
+# Umjetna inteligencija u ekonomskim istraživanjima
 
-Šezdesetominutna radionica Luke Sikića. Kako AI ugraditi u istraživački
-repozitorij, a ne u prozor preglednika.
+Šezdesetominutna radionica Luke Sikića o radu s umjetnom inteligencijom u
+istraživačkom repozitoriju.
 
 [**Slajdovi**](https://lusiki.github.io/Ekonomski-susreti/workshop/slides/) ·
-[rukovanje demonstracijom](RUNBOOK.md) ·
-[prijenos na vaš projekt](PRESADI.md) · [repozitorij](projekt/) ·
+[upute za demonstraciju](RUNBOOK.md) ·
+[primjena u vašem projektu](PRESADI.md) · [repozitorij](projekt/) ·
 [pojmovnik](GLOSSARY.md) · [literatura](READING.md)
 
 ## Ideja
 
-Umjetna inteligencija u istraživanju danas se najčešće koristi u prozoru
-preglednika, dakle izvan projekta na kojem se radi. Kod se prenosi van,
-odgovor se prenosi natrag, a alat pritom ne poznaje strukturu projekta, ne
-može pokrenuti nijedan njegov korak i njegov se rad ne može provjeriti
-sredstvima samog projekta.
+Istraživači se umjetnom inteligencijom najčešće služe u pregledniku. Kopiraju
+dio koda u razgovor s alatom, a njegov odgovor zatim prenesu u projekt. Alat
+tada vidi samo ono što su mu poslali. Ne poznaje strukturu projekta, ne može
+pokrenuti cijelu analizu ni provjeriti uklapa li se odgovor u ostatak rada.
 
-Radionica pokazuje što se mijenja kada se alat premjesti u repozitorij. Ta
-razlika je metodološka, a ne stvar udobnosti, jer je repozitorij jedino
-mjesto na kojem se može podmiriti ono što je umjetna inteligencija zapravo
-stvorila, a to je dug provjere.
+Radionica pokazuje kako s alatom raditi izravno u repozitoriju. Alat tada može
+pokrenuti analizu i druge dijelove projekta, a automatske provjere otkrivaju
+pogreške u njegovu radu. Provjera tako postaje dio svakog zadatka.
 
-> **Izvršavanje je pojeftinilo. Provjera nije.**
+> **Rezultate danas možemo dobiti brže. Temeljita provjera i dalje traži vrijeme.**
 
-Dok ste kod pisali sami, provjeravali ste ga usput, u razmacima od desetak
-redaka. Agent vraća dvjesto redaka odjednom, pa se provjera odgađa i
-nakuplja. Dug provjere je razlika između koda koji daje rezultat i koda za
-koji znate zašto ga daje, a dospijeva kasnije, u recenziji i u pitanju
-koautora o podrijetlu pojedinog broja.
+Kad sami pišemo kod, obično ga provjeravamo u hodu, svakih nekoliko redaka.
+Agent može odjednom napisati dvjesto redaka, pa se provjera lako odgodi i
+neprovjereni se dijelovi nakupe. Taj zaostatak nazivamo dugom provjere. Rezultat
+se pojavi prije nego što smo temeljito provjerili kako je nastao. Posljedice se
+obično vide tijekom recenzije, kada koautor pita odakle dolazi neki broj ili
+kada se nakon dulje stanke vratimo projektu.
 
-Odgovor nije veća disciplina nego četiri datoteke u repozitoriju koje taj
-dug naplaćuju pri svakom pokretanju.
+Četiri datoteke sadrže kontekst, dopuštenja, pravilo i provjere potrebne za rad
+agenta. Provjere se pokreću zajedno s ostalim dijelovima projekta i prijavljuju
+problem prije objave.
 
-## Pet redaka koje publika odnosi
+## Pet glavnih poruka
 
 | | |
 |---|---|
-| **Jedan pojam** | dug provjere, i nakuplja se dok ga ne podmirite |
-| **Dvije odluke** | kontekst i dopuštenja, trećega nema |
-| **Četiri datoteke** | ustav, ograde, pravilo, provjere |
+| **Jedan pojam** | dug provjere, odnosno neprovjereni dijelovi koda koji se nakupljaju |
+| **Dvije odluke** | kontekst koji agent vidi i dopuštenja koja mu istraživač daje |
+| **Četiri datoteke** | kontekst, dopuštenja, pravilo i provjere |
 | **Jedna petlja** | opiši, isplaniraj, odobri, izvrši, **provjeri**, zapiši |
-| **Jedno pitanje** | biste li primijetili da je ovo krivo? |
+| **Jedno pitanje** | biste li prepoznali pogrešan rezultat? |
 
-## AI sloj, četiri datoteke
+## Sloj za rad s umjetnom inteligencijom
 
-Cijela je poanta da ih ima malo i da stanu na jedan ekran.
+Taj sloj ima samo četiri datoteke, a sve stanu na jedan ekran.
 
-| Datoteka | Što je | Sprječava |
+| Datoteka | Što je | Čemu služi |
 |---|---|---|
-| `CLAUDE.md` | kontekst koji agent čita svaku sesiju | povratak na opće pretpostavke |
-| `.claude/settings.json` | dopuštenja, popis dopuštenog i zabranjenog | da samostalan proces dira što god želi |
-| `.claude/rules/provjera.md` | pravilo koje se učitava uz izmjenu koda | da se posao proglasi gotovim bez gradnje |
-| `tests/checks.R` | provjere koje ruše gradnju | da uvjerljiva besmislica uđe u tekst |
+| `CLAUDE.md` | kontekst koji agent čita u svakoj sesiji | daje agentu opis i pravila projekta |
+| `.claude/settings.json` | dopuštenja: što agent smije učiniti, kada mora tražiti odobrenje i što mu je zabranjeno | ograničava što agent može učiniti samostalno |
+| `.claude/rules/provjera.md` | pravilo koje se učitava pri izmjeni koda | zahtijeva pokretanje svih koraka projekta prije završetka zadatka |
+| `tests/checks.R` | automatske provjere koje zaustavljaju izvođenje kada pronađu pogrešku | sprječava da pogrešan rezultat završi u tekstu |
 
-Peta je git, ali git već imate.
+Uz te četiri datoteke Git bilježi sve izmjene projekta.
 
-## Gdje agenta pustiti, a gdje ne
+## Kako podijeliti posao s agentom
 
-Podjela ne ide po tome koliko je zadatak zahtjevan nego po tome biste li
-prepoznali pogrešan ishod.
+Zadatke dijelimo prema tome koliko lako možemo prepoznati pogrešan rezultat.
+Težina izvršenja pritom je manje važna.
 
 |  | lako izvršiti | teško izvršiti |
 |---|---|---|
-| **lako provjeriti** | delegira se bez zadrške | ovdje je dobitak najveći |
-| **teško provjeriti** | uz nadzor, korak po korak | ovdje nastaju tihe greške |
+| **lako provjeriti** | agentu se može prepustiti cijeli zadatak | ovdje je ušteda vremena najveća |
+| **teško provjeriti** | radi se uz nadzor, korak po korak | potrebna je provjera zapisana u kodu |
 
-Na primjeru iz radionice, spajanje dviju Eurostatovih tablica provjerava se
-brojem redaka na izlazu, pa se delegira bez zadrške. Odabir oznaka zemalja
-ne provjerava se uvidom jer panel izgleda uredno u oba slučaja, pa taj korak
-dobiva provjeru zapisanu u kodu. Izbor između fiksnih učinaka zemlje i
-fiksnih učinaka zemlje i godine mijenja pitanje na koje odgovarate, pa se ne
-delegira.
+U radionici agent spaja dvije Eurostatove tablice. Unaprijed znamo koliko redaka
+rezultat treba imati, pa ga možemo brzo provjeriti. Pri spajanju tablica po
+oznakama zemalja rezultat može izgledati uredno i kada zbog pogrešne oznake
+nedostaje cijela zemlja. Zato taj korak provjeravamo automatski. Izbor između
+fiksnih učinaka samo za zemlje ili za zemlje i godine mijenja istraživačko
+pitanje. Tu odluku donosi istraživač.
 
 ## Primjer
 
-Phillipsova krivulja u dvadeset zemalja europodručja od 2014. do 2024.
-godine. Podaci su dvije javne Eurostatove tablice, jedna za harmonizirani
-indeks potrošačkih cijena i jedna za stopu nezaposlenosti.
+Pokazni projekt procjenjuje Phillipsovu krivulju za dvadeset zemalja
+europodručja od 2014. do 2024. godine. Koristi dvije javne Eurostatove tablice:
+jednu za harmonizirani indeks potrošačkih cijena i drugu za stopu
+nezaposlenosti.
 
-Primjer je namjerno običan. Svatko u dvorani zna što je Phillipsova
-krivulja, podaci su javni i preuzimaju se jednom skriptom, a cijeli lanac
-od podatka do rečenice pročita se naglas u dvije minute. Radionica nije o
-nalazu nego o tome kako je nalaz nastao.
+Primjer je poznat i jednostavan. Podaci su javni i preuzimaju se jednom skriptom.
+Put od podataka do završne rečenice možemo objasniti u dvije minute. Zato se
+možemo usredotočiti na postupak kojim nastaje nalaz.
 
 ## Sadržaj
 
 | Datoteka | Što je |
 |---|---|
-| [`slides/slides.qmd`](slides/slides.qmd) | prezentacija, Quarto i reveal.js, na hrvatskom |
-| [`RUNBOOK.md`](RUNBOOK.md) | rukovanje demonstracijom, tri podmetnute greške |
-| [`PRESADI.md`](PRESADI.md) | kako AI sloj prenijeti na vlastiti projekt |
-| [`handout.html`](handout.html) | jedna stranica za tisak, A4 obostrano |
+| [`slides/slides.qmd`](slides/slides.qmd) | izvor prezentacije na hrvatskom u formatu Quarto |
+| [`RUNBOOK.md`](RUNBOOK.md) | upute za demonstraciju i tri podmetnute greške |
+| [`PRESADI.md`](PRESADI.md) | upute za primjenu istog načina rada u vlastitom projektu |
+| [`handout.html`](handout.html) | materijal za obostrani ispis na jednom listu formata A4 |
 | [`GLOSSARY.md`](GLOSSARY.md) | hrvatsko i englesko nazivlje |
 | [`READING.md`](READING.md) | dvanaest naslova u tri skupine |
-| [`projekt/`](projekt/) | repozitorij koji se klonira i pokreće jednom naredbom |
+| [`projekt/`](projekt/) | repozitorij koji se preuzima i pokreće jednom naredbom |
 
-## Gradnja materijala
+## Izrada materijala
+
+Sljedeća naredba izrađuje sve materijale.
 
 ```bash
-Rscript workshop/build.R    # slajdovi, projekt i objava na stranicu
+Rscript workshop/build.R    # izrada slajdova i projekta te objava na mrežnim stranicama
 ```
 
-Ili odvojeno.
+Pojedine dijelove možete izraditi odvojeno.
 
 ```bash
 quarto render slides/slides.qmd        # -> slides/slides.html
 cd projekt && Rscript analysis/run.R   # -> paper/nalaz.html + results/
 ```
 
-Traži Quarto verzije 1.4 ili novije i R verzije 4.2 ili novije. Bez GPU-a.
+Potrebni su Quarto u verziji 1.4 ili novijoj i R u verziji 4.2 ili novijoj.
+Grafički procesor nije potreban.
 
 ## Demonstracija u tri poteza
 
 ```bash
 cd projekt
 Rscript demo/podmetni.R    # podmetni tri greške
-Rscript analysis/run.R     # sve tri se prijave u jednom ispisu, nalaz se ne gradi
+Rscript analysis/run.R     # prijavljuje sve tri pogreške i zaustavlja izradu nalaza
 Rscript demo/vrati.R       # vrati čisto stanje
 ```
 
 ## Ako želite vlastitu kopiju
 
-Mapa [`projekt/`](projekt/) je samostalna. Kopirajte je u cijelosti u novi
-repozitorij i radi bez ijedne izmjene jer ništa u njoj ne ovisi o ostatku
-ovog projekta. Kada je vidite kako radi, prijeđite na [`PRESADI.md`](PRESADI.md)
-i stavite isti sloj na projekt koji već imate.
+Mapa [`projekt/`](projekt/) zaseban je projekt. Možete je u cijelosti
+kopirati u novi repozitorij i pokrenuti bez izmjena jer nijedan njezin korak
+ne ovisi o ostatku ovog projekta. Kada provjerite da radi, slijedite
+[`PRESADI.md`](PRESADI.md) i primijenite isti način rada u svom postojećem projektu.
 
 ## Napomena o podacima
 
-Podaci su stvarni i javni. Izvor su Eurostatove tablice `prc_hicp_aind` i
+Podaci su stvarni i javni. Dolaze iz Eurostatovih tablica `prc_hicp_aind` i
 `une_rt_a`. Mapa `projekt/data/restricted/` sadrži izmišljenu datoteku koja
-stoji na mjestu mikropodataka koji u stvarnom projektu ne bi smjeli izaći.
+oponaša mikropodatke. U stvarnom projektu takvi se podaci ne bi smjeli objaviti.
 
 ## Licencija
 
-Kod MIT, tekst CC BY 4.0.
+Kod je objavljen pod licencijom MIT, a tekst pod licencijom CC BY 4.0.

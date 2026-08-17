@@ -1,85 +1,86 @@
-# AI u ekonomskim istraživanjima
+# Umjetna inteligencija u ekonomskim istraživanjima
 
-**Kako AI ugraditi u istraživački repozitorij, a ne u prozor preglednika**
+**Kako umjetnu inteligenciju uključiti u istraživački repozitorij**
 
 Luka Sikić · Hrvatsko katoličko sveučilište
 
 ## Sažetak
 
-Umjetna inteligencija u istraživanju danas se najčešće koristi u prozoru
-preglednika, dakle izvan projekta na kojem se radi. Kod se prenosi van,
-odgovor se prenosi natrag, a alat pritom ne poznaje strukturu projekta, ne
-može pokrenuti nijedan njegov korak i njegov se rad ne može provjeriti
-sredstvima samog projekta. Radionica pokazuje što se mijenja kada se alat
-premjesti u repozitorij i zašto je ta razlika metodološka, a ne stvar
-udobnosti.
+Istraživači se umjetnom inteligencijom najčešće služe u pregledniku. Kopiraju
+dio koda u razgovor s alatom, a njegov odgovor zatim prenesu u projekt. Alat
+tada vidi samo ono što su mu poslali. Ne poznaje ostatak projekta, ne može
+pokrenuti analizu ni upotrijebiti provjere zapisane u projektu. Radionica
+pokazuje kako s alatom raditi izravno u repozitoriju. Alat tada može pokrenuti
+analizu i druge dijelove projekta, a automatske provjere otkrivaju pogreške u
+njegovu radu.
 
-Polazna tvrdnja je da je izvršavanje pojeftinilo, a provjera nije. Dok je
-istraživač kod pisao sam, provjeravao ga je usput, u razmacima od nekoliko
-redaka, i ta provjera nije imala zasebnu cijenu. Agent vraća dvjesto redaka
-odjednom, pa se provjera odgađa i nakuplja. Razliku između koda koji daje
-rezultat i koda za koji znamo zašto ga daje radionica naziva dugom provjere.
-Taj se dug ne otpisuje sam od sebe nego dospijeva kasnije, u recenziji, u
-pitanju koautora o podrijetlu pojedinog broja i pri povratku na vlastiti
-projekt nakon dulje stanke.
+Umjetna inteligencija može vrlo brzo napisati mnogo koda. Provjera tog koda i
+dalje traži vrijeme. Kad sami pišemo kod, obično ga provjeravamo u hodu, svakih
+nekoliko redaka. Agent može odjednom napisati dvjesto redaka, pa se provjera lako
+odgodi. Tako nastaje dug provjere. Rezultat se pojavi prije nego što smo temeljito
+provjerili kako je nastao. Posljedice se obično vide tijekom recenzije, u razgovoru
+s koautorom ili kada se nakon dulje stanke vratimo projektu.
 
-Iz toga slijedi mjerilo za podjelu rada između istraživača i agenta.
-Mjerodavno pitanje nije koliko je zadatak zahtjevan nego bi li istraživač
-prepoznao pogrešan ishod. Zadaci čija se ispravnost utvrđuje izravnim uvidom
-delegiraju se bez zadrške. Zadaci čiji ishod izgleda jednako uredno i kada je
-točan i kada nije dobivaju provjeru zapisanu u kodu. Odluke koje mijenjaju
-istraživačko pitanje, a ne odgovor na njega, ne delegiraju se.
+Posao između istraživača i agenta zato dijelimo prema tome koliko je lako
+prepoznati pogrešan rezultat. Zadaci s jasnim i lako provjerljivim ishodom mogu
+se prepustiti agentu i provjeriti kratkim pregledom. Kada pogrešan rezultat
+izgleda uvjerljivo, provjeru treba unaprijed zapisati u kod. Istraživač određuje
+istraživačko pitanje i odlučuje o njegovim promjenama.
 
-Središnji dio radionice pokazuje kako se to mjerilo provodi. Nakon kratkog
-prikaza sastavnica agentskog rada, dakle modela, alata, ograde i konteksta,
-slijedi zaključak da istraživač odlučuje o samo dvije stvari. Prva je
-kontekst, koji se zapisuje u datoteku umjesto da se ponavlja u razgovoru.
-Druga su dopuštenja, koja istraživač popisuje sam, dakle što agent smije
-učiniti, što mora zatražiti i što mu je zabranjeno. Te dvije odluke, zajedno
-s pravilom koje se učitava uz svaku izmjenu koda i sa skupom provjera koje
-ruše gradnju kada padnu, čine AI sloj od četiri datoteke.
+Radionica zatim pokazuje kako takav način rada organizirati. Agentu su potrebni
+model, alati, jasno određena pravila pristupa i kontekst. Istraživač određuje
+što agent mora znati o projektu te što smije učiniti sam. Kontekst se čuva u
+datoteci pa ga nije potrebno iznova objašnjavati u svakom razgovoru. U
+dopuštenjima piše što agent smije učiniti, kada mora tražiti odobrenje i što mu
+je zabranjeno. Još dvije datoteke sadrže pravilo za izmjene koda i automatske
+provjere koje prekidaju postupak čim otkriju problem. Te četiri datoteke čine
+sloj za rad s umjetnom inteligencijom.
 
-Pokazni primjer je Phillipsova krivulja u dvadeset zemalja europodručja od
-2014. do 2024. godine, procijenjena na dvije javne Eurostatove tablice.
-Primjer je namjerno poznat i jednostavan jer predmet radionice nije nalaz
-nego postupak kojim je nalaz nastao. Demonstracija ima dva dijela. U prvom
-agent dobiva stvaran zadatak i izvršava ga ispravno, od plana preko izvršenja
-do osvježenog teksta u kojem nijedan broj nije upisan rukom. U drugom se u
-projekt unose tri greške koje projekt otkriva sam. Prva je ulazak ograničenih
-podataka u javni tekst. Druga je koeficijent upisan rukom koji više ne
-odgovara procjeni iz koje je nastao. Treća je oznaka zemlje, jer Eurostat
-Grčku bilježi kao EL, a većina drugih izvora piše GR, pa filtar bez
-upozorenja izgubi cijelu zemlju i pomakne procjenu. Nijedna od tri greške ne
-prekida izvršavanje programa i sve tri bi prošle recenziju.
+U pokaznom primjeru procjenjujemo Phillipsovu krivulju za dvadeset zemalja
+europodručja od 2014. do 2024. s pomoću dviju javnih Eurostatovih tablica.
+Primjer je poznat i jednostavan, pa se možemo usredotočiti na postupak. U prvom
+dijelu agent sastavlja plan, provodi analizu i unosi nove rezultate u tekst. Svi
+se brojevi automatski preuzimaju iz rezultata analize. U drugom dijelu u projekt
+unosimo tri greške koje automatske provjere pronalaze. U prvoj u javnom tekstu
+završe podaci s ograničenim pristupom. U drugoj se ručno upisani koeficijent
+više ne podudara s procjenom. Treća se odnosi na oznaku Grčke. Eurostat za Grčku
+koristi EL, a većina drugih izvora GR. Zbog pogrešne oznake cijela zemlja
+nestane iz analize bez poruke o pogrešci, pa se procjena promijeni. Bez
+automatskih provjera program bi se unatoč tim greškama izvršio i dao naizgled
+uredan rezultat. Sve tri pogreške mogle bi ostati neopažene i tijekom recenzije.
+Provjere zaustavljaju postupak čim otkriju problem.
 
-## Sadržaj
+## Program
 
-1. Dug provjere, njegov nastanak i razlog zbog kojeg raste brže nego prije.
-2. Podjela zadataka prema trošku provjere ishoda, a ne prema težini izvršenja.
-3. Sastavnice agentskog rada, dakle model, alati, ograda i kontekst.
-4. Dvije odluke koje iz toga slijede i četiri datoteke u kojima su zapisane.
+1. Kako nastaje dug provjere i zašto se s agentom brže gomila.
+2. Kako odlučiti koje zadatke prepustiti agentu.
+3. Model, alati, ograničenja pristupa i kontekst.
+4. Kontekst i dopuštenja koja istraživač određuje prije rada.
 5. Izbor načina rada prema razini nadzora koju zadatak traži.
-6. Demonstracija uživo, najprije ispravan rad agenta pa onda tri tihe greške.
-7. Povjerljivi podaci, uvjeti korištenja usluga i modeli koji rade lokalno.
-8. Podjela rada između istraživača i agenta te odluke koje se ne delegiraju.
+6. Prikaz ispravnog rada agenta i tri greške koje otkrivaju automatske provjere.
+7. Rad s povjerljivim podacima, uvjeti korištenja usluga i modeli koji se
+   pokreću na vlastitom računalu.
+8. Podjela odgovornosti između istraživača i agenta.
 
-## Što sudionici odnose
+## Što sudionici dobivaju
 
-Sudionici odnose repozitorij koji se klonira i pokreće jednom naredbom na
-svakom prijenosnom računalu, upute za prenošenje istog sloja na vlastiti
-projekt u tri koraka, mjerilo za odluku o tome što se delegira, i sažetak
-radionice na jednoj stranici.
+Sudionici dobivaju repozitorij koji mogu preuzeti i pokrenuti jednom naredbom
+na svom prijenosnom računalu. Dobivaju i upute koje u tri koraka pokazuju kako
+isti način rada primijeniti u vlastitom projektu, pravilo za podjelu posla s
+agentom te sažetak radionice na jednoj stranici.
 
 ## Ključne riječi
 
-umjetna inteligencija u istraživanju, agentski rad, dug provjere,
-reproducibilnost, ograničeni podaci, mjerni sloj, podrijetlo rezultata
+umjetna inteligencija u istraživanju, rad s agentom, dug provjere,
+reproducibilnost, podaci s ograničenim pristupom, mjerni sloj, automatske
+provjere, sljedivost rezultata
 
-## Održavanje
+## Praktične informacije
 
-Radionica traje 60 minuta uz pitanja. Prati se bez pripreme i bez
-instalacije, a potreban je samo projektor. Izlaganje je na hrvatskom jeziku,
-dok su kod i tehnički nazivi na engleskom uz priloženi pojmovnik. Namijenjena
-je istraživačima, doktorandima i analitičarima u institucijama, bez
-pretpostavke o programerskom iskustvu. Radionica stoji samostalno i ne
-pretpostavlja da je publika slušala ijedno drugo izlaganje.
+Radionica traje 60 minuta i uključuje vrijeme za pitanja. Sudionici se ne
+trebaju unaprijed pripremati ni instalirati programe. Programersko iskustvo
+nije potrebno. Radionica je namijenjena istraživačima, doktorandima i
+analitičarima u institucijama. Za održavanje je potreban samo projektor.
+Izlaganje je na hrvatskom. Kod je pisan na engleskom, a za tehničke se pojmove
+rabe engleski nazivi. Uz materijale je priložen hrvatski pojmovnik. Radionica
+se može pratiti samostalno, bez prethodnog izlaganja.

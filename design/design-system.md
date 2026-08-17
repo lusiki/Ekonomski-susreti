@@ -1,7 +1,8 @@
-# Dizajn sustav — Ekonomski susreti 2026
+# Sustav oblikovanja za Ekonomske susrete 2026
 
-Bauhaus u doslovnom smislu. Bijeli papir, crna tinta i jedna crvena. Ovaj dokument je jedini
-izvor istine za sve materijale u projektu, od stranica preko slajdova do tiskanih dokumenata.
+Sustav se oslanja na bauhausovski stil. Koristi bijelu podlogu, crni tekst i jednu
+crvenu boju. Ovaj dokument sadrži pravila za sve materijale u projektu, od mrežnih
+stranica i slajdova do tiskanih dokumenata.
 
 ## Boje
 
@@ -14,18 +15,18 @@ izvor istine za sve materijale u projektu, od stranica preko slajdova do tiskani
 
 ## Crvena
 
-Crvena znači samo jedno, da se na to može kliknuti. Nikad ne ulazi u naslove, brojeve,
-oznake sekcija, linije ni grafikone. Radi u tri jačine.
+Crvena se upotrebljava samo za elemente na koje se može kliknuti. Ne pojavljuje se
+u naslovima, brojevima, oznakama sekcija, linijama ni grafikonima. Koristi se na tri načina.
 
-- Poveznica u tekućem tekstu, primjerice ime autora ili adresa. Tekst ostaje crn da se
-  odlomak ne išara, crvena stoji u tankoj crti ispod i preuzima tekst na prijelaz mišem.
-- Sitna verzalna poveznica koja vodi dalje u sadržaj. Puna crvena i u mirovanju.
-- Redak u popisu materijala. Naslov nosi tanku crvenu crtu u mirovanju, a na prijelaz
-  mišem cijeli redak prelazi u crvenu.
+- U tekućem tekstu poveznica ostaje crna i podvučena tankom crvenom crtom. Pri
+  prelasku pokazivačem tekst postaje crven.
+- Mala poveznica pisana velikim slovima ostaje crvena i kada pokazivač nije na njoj.
+- U popisu materijala naslov je podvučen tankom crvenom crtom. Pri prelasku
+  pokazivačem cijeli redak postaje crven.
 
-Uz to, trenutna stranica u zaglavlju nosi crvenu crtu umjesto crne. Fokus s tipkovnice
-uvijek je crveni obrub od 2 px. Stranica u tisku i u sivim tonovima mora ostati čitljiva
-i bez crvene, pa nijedna informacija ne smije počivati samo na njoj.
+Poveznica trenutačne stranice u zaglavlju podvučena je crvenom crtom. Element u
+fokusu pri uporabi tipkovnice dobiva crveni obrub od 2 px. Stranica mora ostati
+čitljiva u tisku i sivim tonovima, pa crvena ne smije biti jedini nositelj informacije.
 
 ## Pismo
 
@@ -44,22 +45,25 @@ Roboto, u svim materijalima.
 - Tanke linije od 1 px umjesto okvira i kartica
 - Pravi kutovi, bez sjena, bez gradijenata, bez zaobljenja
 - Velike bijele površine ostavljene namjerno praznima
-- Razmaci u skoku od 8 px, tipično 16, 24, 32, 48, 64, 96
+- Razmaci se povećavaju u koracima od 8 px, najčešće 16, 24, 32, 48, 64 i 96 px
 
 ## Grafikoni
 
-- Sivi tonovi, serije se razlikuju debljinom linije i crticama, ne bojom
+- Grafikoni su u sivim tonovima. Serije se razlikuju debljinom i vrstom linije
 - Bez pozadinskih mreža u boji, bez legendi u okvirima, oznake izravno uz seriju
 - Stranica mora izgledati jednako na projektoru, u tisku i u sivim tonovima
 
 ## Pisanje
 
 - Mirna tekuća proza bez crtica, dvotočaka i točke sa zarezom
+- Prirodan hrvatski, kratke rečenice i konkretni glagoli
 - Metode imenovane riječima koje razumije opći čitatelj
 - Svaki pojam poput jaza u pažnji objašnjen na mjestu prvog spominjanja
+- Bez nepotrebnih tuđica, gomilanja imenica i obrazaca „nije X, nego Y”
 - Hrvatski zapis brojeva, decimalni zarez i točka za tisućice
 
 ## Predlošci u projektu
 
-Stranice `Pocetna.dc.html`, `Sazeci.dc.html` i `Radionica.dc.html` su živi primjeri sustava.
-Novi materijal se radi kopiranjem njihovih obrazaca, navigacije, oznaka sekcija i podnožja.
+Stranice `Pocetna.dc.html`, `Sazeci.dc.html` i `Radionica.dc.html` služe kao primjeri
+sustava. Novi se materijali izrađuju prema njihovim obrascima za navigaciju, oznake
+sekcija i podnožje.

@@ -1,15 +1,15 @@
 # Kada inflacija istisne glas središnje banke
 
-Javni repozitorij istraživanja **„Pasivno zamijenjena. Cijena inflacije koju ne mjeri indeks potrošačkih cijena”** Petre Palić i Luke Sikića. Projekt proučava gubi li Hrvatska narodna banka relativnu medijsku vidljivost upravo kada inflacija raste te je li učestalost prisutnosti institucionalnog glasa u vijestima povezana s inflacijskim očekivanjima kućanstava.
+Ovo je javni repozitorij istraživanja **„Pasivno zamijenjena. Cijena inflacije koju ne mjeri indeks potrošačkih cijena”** Petre Palić i Luke Sikića. Projekt prati mijenja li se relativna medijska vidljivost Hrvatske narodne banke s rastom inflacije. Istražuje i može li učestalost članaka o HNB-u pomoći u predviđanju inflacijskih očekivanja kućanstava.
 
 [![Prezentacija](https://img.shields.io/badge/prezentacija-otvori-000000?style=flat-square&labelColor=000000)](https://lusiki.github.io/Ekonomski-susreti/slides/)
-[![Sažetci](https://img.shields.io/badge/sažetci-pročitaj-000000?style=flat-square&labelColor=000000)](https://lusiki.github.io/Ekonomski-susreti/abstracts/)
+[![Sažeci](https://img.shields.io/badge/sažeci-pročitaj-000000?style=flat-square&labelColor=000000)](https://lusiki.github.io/Ekonomski-susreti/abstracts/)
 [![Pregled](https://img.shields.io/badge/pregled_istraživanja-PDF-000000?style=flat-square&labelColor=000000)](https://lusiki.github.io/Ekonomski-susreti/downloads/Pregled-istrazivanja.pdf)
 [![GitHub Pages](https://github.com/lusiki/Ekonomski-susreti/actions/workflows/pages.yml/badge.svg)](https://lusiki.github.io/Ekonomski-susreti/)
 
 <a href="https://lusiki.github.io/Ekonomski-susreti/"><img src="docs/assets/qr-projekt.svg" alt="QR kod koji vodi na stranicu projekta" width="150" align="right"></a>
 
-Skenirajte kod mobitelom i stranica projekta otvorit će se izravno, sa sažetcima, prezentacijom i svim materijalima radionice. Kod vodi na [lusiki.github.io/Ekonomski-susreti](https://lusiki.github.io/Ekonomski-susreti/).
+Skenirajte QR kod mobitelom kako biste otvorili stranicu projekta sa sažecima, prezentacijom i svim materijalima radionice. Kod vodi na [lusiki.github.io/Ekonomski-susreti](https://lusiki.github.io/Ekonomski-susreti/).
 
 <br clear="right">
 
@@ -18,98 +18,98 @@ Skenirajte kod mobitelom i stranica projekta otvorit će se izravno, sa sažetci
 | Sadržaj | Pregled | Preuzimanje |
 |---|---|---|
 | Sažetak izlaganja | [Kada inflacija istisne glas središnje banke](https://lusiki.github.io/Ekonomski-susreti/abstracts/#izlaganje) | [tekst](materials/abstract-presentation.md) |
-| Sažetak radionice | [AI u ekonomskim istraživanjima](https://lusiki.github.io/Ekonomski-susreti/abstracts/#radionica) | [tekst](materials/abstract-workshop.md) |
+| Sažetak radionice | [Umjetna inteligencija u ekonomskim istraživanjima](https://lusiki.github.io/Ekonomski-susreti/abstracts/#radionica) | [tekst](materials/abstract-workshop.md) |
 | Sažeti prikaz istraživanja | Pet stranica s glavnim nalazima i grafikonima | [PDF](https://lusiki.github.io/Ekonomski-susreti/downloads/Pregled-istrazivanja.pdf) · [izvor](materials/brief/pregled.qmd) |
 | Konferencijska prezentacija | [Otvori slajdove u pregledniku](https://lusiki.github.io/Ekonomski-susreti/slides/) | [PDF](https://lusiki.github.io/Ekonomski-susreti/downloads/Ekonomski-susreti.pdf) · [PowerPoint](https://lusiki.github.io/Ekonomski-susreti/downloads/Ekonomski-susreti.pptx) |
-| Materijali radionice | [AI sloj, repozitorij i demonstracija](https://lusiki.github.io/Ekonomski-susreti/workshop/) | [slajdovi](https://lusiki.github.io/Ekonomski-susreti/workshop/slides/) · [jedna stranica](https://lusiki.github.io/Ekonomski-susreti/workshop/handout.html) |
+| Materijali radionice | [Rad u repozitoriju i demonstracija](https://lusiki.github.io/Ekonomski-susreti/workshop/) | [slajdovi](https://lusiki.github.io/Ekonomski-susreti/workshop/slides/) · [jedna stranica](https://lusiki.github.io/Ekonomski-susreti/workshop/handout.html) |
 
 ## Sadržaj
 
 - [Istraživački problem](#istraživački-problem)
 - [Radionica](#radionica)
 - [Glavni nalazi](#glavni-nalazi)
-- [Podatci i metode](#podatci-i-metode)
+- [Podaci i metode](#podaci-i-metode)
 - [Zašto je rezultat važan](#zašto-je-rezultat-važan)
 - [Sadržaj prezentacije](#sadržaj-prezentacije)
-- [Reproduktivnost i podatci](#reproduktivnost-i-podatci)
+- [Ponovljivost analize i podaci](#ponovljivost-analize-i-podaci)
 - [Oblikovanje](#oblikovanje)
 - [Autori i citiranje](#autori-i-citiranje)
 
 ## Istraživački problem
 
-Komunikacija središnje banke može utjecati na očekivanja samo ako njezin signal stigne do javnosti. U digitalnom medijskom okruženju taj signal prolazi kroz uredničku selekciju, konkurentske narative i nejednaku raspodjelu pažnje.
+Poruka središnje banke može utjecati na očekivanja tek kada stigne do javnosti. U digitalnim medijima urednici biraju koje će vijesti objaviti, a mnoge se teme istodobno natječu za pažnju publike.
 
 Projekt zato postavlja dva povezana pitanja.
 
-1. Širi li viša inflacija **institucionalni jaz u pažnji**, dakle razliku između vidljivosti koju bi HNB trebao imati u vijestima o cijenama i vidljivosti koju stvarno ima?
-2. Predviđa li manja učestalost članaka o HNB-u pesimističnija inflacijska očekivanja kućanstava?
+1. Povećava li viša inflacija **institucionalni jaz u pažnji**, odnosno odmak vidljivosti HNB-a u vijestima o cijenama od razine iz prve polovice 2021.?
+2. Pomaže li manji udio članaka o HNB-u među vijestima o cijenama predvidjeti pesimističnija inflacijska očekivanja kućanstava?
 
 ## Radionica
 
-Uz izlaganje se drži šezdesetominutna radionica **[AI u ekonomskim istraživanjima](workshop/)** Luke Sikića. Radionica stoji samostalno i ne pretpostavlja da je publika slušala izlaganje.
+Uz izlaganje Luka Sikić vodi šezdesetominutnu radionicu **[Umjetna inteligencija u ekonomskim istraživanjima](workshop/)**. Radionica se može pratiti samostalno, bez prethodnog izlaganja.
 
-Cijeli sat drži jedno preseljenje. Većina istraživača AI koristi u prozoru preglednika, dakle izvan vlastitog projekta, gdje alat ne zna ništa o projektu, ne može ništa pokrenuti i ne može biti provjeren. Radionica pokazuje što se dogodi kada ga preselite u sam repozitorij i zašto to nije stvar udobnosti.
+Istraživači se umjetnom inteligencijom najčešće služe u pregledniku, odvojeno od datoteka na kojima rade. Alat tada vidi samo dio koda koji mu pošalju. Ne poznaje ostatak projekta, ne može pokrenuti cijeli postupak ni koristiti provjere koje su već ugrađene u projekt. Na radionici s alatom radimo izravno u repozitoriju. Alat tada može pokrenuti analizu i druge dijelove projekta, a automatske provjere otkrivaju pogreške u njegovu radu.
 
-Polazište je da je izvršavanje pojeftinilo, a provjera nije. Ta se razlika nakuplja kao **dug provjere**, a odgovor na nju je AI sloj od četiri datoteke koji taj dug naplaćuje pri svakom pokretanju. Sudionici odnose repozitorij koji se klonira i pokreće jednom naredbom te upute za prijenos istog sloja na vlastiti projekt.
+Umjetna inteligencija može vrlo brzo napisati mnogo koda. Provjera tog koda i dalje traži vrijeme. Odgođena provjera stvara **dug provjere**. Četiri datoteke u repozitoriju čuvaju kontekst, određuju dopuštenja, postavljaju pravilo za izmjene i pokreću automatske provjere. Sudionici dobivaju repozitorij koji mogu preuzeti i pokrenuti jednom naredbom te upute za primjenu istog načina rada u vlastitom projektu.
 
-Pokazni primjer je Phillipsova krivulja u dvadeset zemalja europodručja na dvije javne Eurostatove tablice, a u njega su podmetnute tri tihe greške koje projekt sam otkriva. Prva je curenje ograničenih podataka u javni tekst, druga je koeficijent upisan rukom koji više ne odgovara procjeni, a treća je oznaka zemlje, jer Eurostat Grčku bilježi kao EL, a ostatak svijeta piše GR.
+U pokaznom primjeru procjenjujemo Phillipsovu krivulju za dvadeset zemalja europodručja s pomoću dviju javnih Eurostatovih tablica. U projekt namjerno unosimo tri greške koje automatske provjere pronalaze. U prvoj podaci s ograničenim pristupom završe u javnom tekstu. U drugoj ručno upisan koeficijent više ne odgovara procjeni. Treća izostavlja cijelu zemlju zbog pogrešne oznake. Eurostat za Grčku koristi EL, a većina drugih izvora GR.
 
-Materijali se nalaze u mapi [`workshop/`](workshop/) i obuhvaćaju [slajdove](workshop/slides/slides.qmd), [rukovanje demonstracijom](workshop/RUNBOOK.md), [upute za presađivanje](workshop/PRESADI.md), [jednu stranicu za tisak](workshop/handout.html), [pojmovnik](workshop/GLOSSARY.md), [literaturu](workshop/READING.md) i [sam repozitorij](workshop/projekt/).
+Materijali se nalaze u mapi [`workshop/`](workshop/) i obuhvaćaju [slajdove](workshop/slides/slides.qmd), [upute za demonstraciju](workshop/RUNBOOK.md), [upute za primjenu](workshop/PRESADI.md), [jednu stranicu za tisak](workshop/handout.html), [pojmovnik](workshop/GLOSSARY.md), [literaturu](workshop/READING.md) i [sam repozitorij](workshop/projekt/).
 
 ## Glavni nalazi
 
-- Viša inflacija povezana je sa širim institucionalnim jazom u pažnji. Porast inflacije za jedan postotni bod širi jaz za približno **0,0021 jedinicu**.
-- Istiskivanje se odvija prvenstveno kroz **broj objava**, jer u rastućem razgovoru o cijenama pada relativni udio članaka o HNB-u. Za doseg pojedine objave nema jednako jasnog učinka.
-- Manji udio članaka o HNB-u predviđa pesimističnija očekivanja potrošača na horizontima od **2 do 12 tjedana**. Taj se rezultat tumači prediktivno, a ne kao potpuno identificiran kauzalni učinak.
-- Vlastita komunikacijska aktivnost HNB-a ne pada tijekom inflacijskog vala. Jaz zato nije isto što i institucionalna šutnja, nego nastaje u prijenosu informacija kroz neovisne medije.
-- Oko uvođenja eura 1. siječnja 2023. mijenja se mehanizam. Sama inflacija postaje slabiji, a ton medijskog izvještavanja važniji pokretač jaza.
+- Viša inflacija povezana je s većim institucionalnim jazom u pažnji. Kad je inflacija viša za jedan postotni bod, procijenjeni jaz veći je za približno **0,0021 jedinicu**.
+- Kad raste broj vijesti o cijenama, udio članaka u kojima se spominje HNB smanjuje se. Za prosječan doseg objave ne nalazimo jednako jasnu promjenu.
+- Manji udio članaka o HNB-u pomaže predvidjeti pesimističnija očekivanja kućanstava **2 do 12 tjedana** poslije. To ne znači da medijska izloženost uzrokuje promjenu očekivanja.
+- HNB je tijekom inflacijskog vala objavljivao više vlastitih sadržaja. Njegov se udio u vijestima o cijenama ipak smanjio.
+- Nakon uvođenja eura 1. siječnja 2023. veza između inflacije i jaza slabi. Ton medijskog izvještavanja postaje važniji.
 
-## Podatci i metode
+## Podaci i metode
 
-Analiza obuhvaća hrvatski digitalni medijski prostor od 2021. do 2023. godine.
+Analiza obuhvaća hrvatske digitalne medije od siječnja 2021. do siječnja 2024.
 
 - više od **19 milijuna** dostupnih digitalnih objava
-- **58.448** objava u primarnom HNB korpusu
-- **263.601** objava u inflacijskom korpusu
-- **1.239** jedinstvenih izvora
-- mjesečni panel s 36 opažanja i primarni tjedni panel sa 157 opažanja
+- **58.448** objava o HNB-u
+- **263.601** objava o inflaciji
+- **1.239** medijskih izvora
+- 36 mjesečnih opažanja i 157 tjednih opažanja u glavnoj analizi
 
-Procjena počiva na regresiji jaza na inflaciju uz kontrole. Da veza ne ide u suprotnom smjeru provjerava se instrumentalnim varijablama, u kojima ulogu vanjskog izvora inflacije imaju cijene hrane i energije u europodručju, te usporedbom razdoblja prije i poslije uvođenja eura metodom razlike u razlikama. Slijede lokalne projekcije za vezu s očekivanjima, specifikacijske krivulje, permutacijski testovi i usporedba s HANFA-om kao institucijom bez mandata za stabilnost cijena.
+Glavna procjena povezuje jaz s inflacijom i uključuje kontrolne varijable. Instrumentalnim varijablama provjeravamo može li smjer veze biti obrnut. Kao vanjske izvore promjena hrvatske inflacije koristimo cijene hrane i energije u europodručju. Razdoblja prije i nakon uvođenja eura uspoređujemo metodom razlike u razlikama. Vezu s očekivanjima pratimo lokalnim projekcijama. Pouzdanost rezultata provjeravamo specifikacijskim krivuljama, permutacijskim testovima i usporedbom s HANFA-om, institucijom koja nema mandat za stabilnost cijena.
 
 ## Zašto je rezultat važan
 
-Standardna rasprava o komunikaciji središnjih banaka naglašava jasnoću i kredibilitet poruke. Ovaj projekt pokazuje da je **dostupnost signala** zaseban uvjet transmisije. Učinkovita komunikacija zato ne znači samo proizvesti više priopćenja nego povećati broj neovisnih medijskih kontakata s autoritativnim institucionalnim tumačenjem inflacije.
+Jasna i vjerodostojna poruka može djelovati tek kada dovoljno često stigne do javnosti. Projekt zato pokazuje da je za prijenos monetarne politike važno koliko često poruka dolazi do publike. Središnja banka taj prijenos može ojačati češćim stručnim objašnjenjima inflacije u neovisnim medijima.
 
-Nakon ulaska Hrvatske u europodručje ta uloga postaje osobito važna. HNB više ne određuje samostalno ključnu kamatnu stopu, ali zadržava komparativnu prednost u objašnjavanju domaćih kretanja cijena i prijenosa odluka ECB-a.
+Nakon ulaska Hrvatske u europodručje ključnu kamatnu stopu određuje Europska središnja banka. HNB i dalje ima prednost u objašnjavanju domaćih kretanja cijena i može javnosti objasniti kako se odluke ECB-a prenose na Hrvatsku.
 
 ## Sadržaj prezentacije
 
-Konferencijsko izlaganje organizirano je kao dvadesetominutna priča u deset koraka.
+Konferencijsko izlaganje traje dvadeset minuta i prati deset koraka.
 
 1. paradoks medijske vidljivosti HNB-a
-2. mediji kao filtar monetarnog signala
-3. istraživačko pitanje i doprinos
-4. podatkovni okvir
-5. institucionalni jaz u pažnji i njegove dvije margine
-6. empirijska strategija i granice tvrdnji
-7. tri glavna empirijska nalaza
-8. alternativno objašnjenje o komunikacijskoj aktivnosti HNB-a
-9. promjena režima nakon uvođenja eura
-10. robusnost, ograničenja i preporuke za komunikacijsku politiku
+2. način na koji mediji prenose poruke središnje banke
+3. istraživačka pitanja i doprinos rada
+4. podaci korišteni u analizi
+5. institucionalni jaz u pažnji, broj objava i njihov doseg
+6. način procjene i granice zaključaka
+7. tri glavna nalaza
+8. provjera vlastite komunikacijske aktivnosti HNB-a
+9. promjene nakon uvođenja eura
+10. provjere pouzdanosti, ograničenja i preporuke za komunikacijsku politiku
 
-## Reproduktivnost i podatci
+## Ponovljivost analize i podaci
 
-Ovaj repozitorij služi kao **javna prezentacijska i diseminacijska stranica** projekta. Objavljeni su sažetci izlaganja i radionice, sažeti prikaz istraživanja na pet stranica, konferencijska prezentacija i svi materijali radionice.
+U ovom su repozitoriju javno dostupni materijali projekta: sažeci izlaganja i radionice, pregled istraživanja na pet stranica, konferencijska prezentacija i svi materijali radionice.
 
-Puni tekst rada nije objavljen jer je u radnoj verziji, a dostupan je na upit autorima. Izvorna baza medijskog monitoringa i izvedeni podatci na razini pojedine objave nisu redistribuirani jer podliježu uvjetima pristupa izvornom sustavu i mogu sadržavati sadržaj trećih strana. Repozitorij stoga nije potpuni replikacijski paket. Rezultati u prezentaciji generirani su iz analitičkog projekta autora, a status kauzalnih i prediktivnih tvrdnji izričito je označen u radu i slajdovima.
+Cjeloviti rad još je u radnoj verziji i dostupan je na upit autorima. Izvorna baza medijskog praćenja i izvedeni podaci o pojedinim objavama nisu objavljeni zbog uvjeta pristupa izvornom sustavu i mogućeg sadržaja trećih strana. Zato se iz ovih materijala ne može u cijelosti ponoviti analiza. Rezultati u prezentaciji dolaze iz analitičkog projekta autora. U radu i slajdovima jasno navodimo govori li pojedini rezultat o uzročnoj vezi ili samo pomaže u predviđanju.
 
 ## Oblikovanje
 
-Svi materijali dijele jedan vizualni sustav. Jedini izvor istine je mapa [`design/`](design/), u kojoj [`README.md`](design/README.md) opisuje pravila, [`design-system.md`](design/design-system.md) sažima ih na jednu stranicu, `tokens/` drži boje, pismo, tipografiju i raster, `guidelines/` primjere, `components/core/` pet komponenti koje se ponavljaju, a [`pages/`](design/pages/) tri žive stranice iz kojih se preuzimaju obrasci navigacije, oznaka sekcija i podnožja.
+Svi materijali koriste isti vizualni sustav, zapisan u mapi [`design/`](design/). Datoteka [`README.md`](design/README.md) opisuje pravila, a [`design-system.md`](design/design-system.md) daje sažetak na jednoj stranici. Mapa `tokens/` sadrži boje, pismo, tipografiju i raster. U `guidelines/` su primjeri, u `components/core/` pet komponenti koje se ponavljaju, a u [`pages/`](design/pages/) tri radne stranice s obrascima navigacije, oznaka sekcija i podnožja.
 
-Predložak je bauhausovski, dakle crno-bijeli i prozračan, bez boje, sjena i zaobljenih rubova. Hijerarhiju nosi isključivo tipografija, pa razliku između naslova, međunaslova i teksta pravi veličina i debljina slova. Sadržaj stoji u stupcu širine najviše 1120 piksela uz rub od 48 piksela, odjeljke dijele linije od jednog piksela, a razmaci idu u skoku od osam piksela. Pismo je Roboto, priloženo u mapi [`fonts/`](fonts/) za gradnju PDF-a i u [`docs/fonts/`](docs/fonts/) za stranicu, uz Apache licenciju. Grafikoni su sivi i serije se razlikuju debljinom i vrstom linije, a ne bojom.
+Predložak slijedi bauhausovski stil s mnogo praznog prostora, crnim tekstom na bijeloj podlozi, tankim linijama, oštrim kutovima i bez sjena. Veličina i debljina slova razlikuju naslove, međunaslove i tekući tekst. Sadržaj je smješten u stupac širine najviše 1120 piksela s rubom od 48 piksela. Odjeljke dijele linije od jednog piksela, a razmaci rastu u koracima od osam piksela. Pismo Roboto priloženo je u mapi [`fonts/`](fonts/) za izradu PDF-a i u [`docs/fonts/`](docs/fonts/) za stranicu, uz Apache licenciju. Grafikoni koriste sive tonove, a serije se razlikuju debljinom i vrstom linije.
 
-Sustav je zapisan na jednom mjestu po mediju. Stranica ga provodi kroz [`docs/style.css`](docs/style.css), prezentacije kroz [`docs/slides/presentation-ekonomski-susreti.css`](docs/slides/presentation-ekonomski-susreti.css) i [`workshop/slides/theme.scss`](workshop/slides/theme.scss), tiskani materijali kroz [`workshop/handout.html`](workshop/handout.html) i [`materials/brief/pregled.qmd`](materials/brief/pregled.qmd), a grafikoni kroz [`workshop/projekt/R/slike.R`](workshop/projekt/R/slike.R).
+Pravila oblikovanja za svaki oblik materijala nalaze se u zasebnim datotekama. Stranica koristi [`docs/style.css`](docs/style.css), a prezentacije [`docs/slides/presentation-ekonomski-susreti.css`](docs/slides/presentation-ekonomski-susreti.css) i [`workshop/slides/theme.scss`](workshop/slides/theme.scss). Tiskani materijali koriste [`workshop/handout.html`](workshop/handout.html) i [`materials/brief/pregled.qmd`](materials/brief/pregled.qmd), a grafikoni [`workshop/projekt/R/slike.R`](workshop/projekt/R/slike.R).
 
 ## Autori i citiranje
 
@@ -118,11 +118,11 @@ Hrvatsko katoličko sveučilište
 
 Radionicu drži **Luka Sikić**.
 
-Predloženo citiranje glasi ovako.
+Za citiranje predlažemo sljedeći zapis.
 
 > Palić, P. i Sikić, L. (2026). *Pasivno zamijenjena. Cijena inflacije koju ne mjeri indeks potrošačkih cijena. Institucionalni jaz u pažnji u hrvatskom digitalnom medijskom ekosustavu*. Radni materijal.
 
-Strojno čitljivi metapodatci dostupni su u datoteci [`CITATION.cff`](CITATION.cff).
+Strojno čitljivi metapodaci dostupni su u datoteci [`CITATION.cff`](CITATION.cff).
 
 ---
 
