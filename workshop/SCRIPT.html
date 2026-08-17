@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>script</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="SCRIPT_files/libs/clipboard/clipboard.min.js"></script>
+<script src="SCRIPT_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="SCRIPT_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="SCRIPT_files/libs/quarto-html/popper.min.js"></script>
+<script src="SCRIPT_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="SCRIPT_files/libs/quarto-html/anchor.min.js"></script>
+<link href="SCRIPT_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="SCRIPT_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="SCRIPT_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="SCRIPT_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="SCRIPT_files/libs/bootstrap/bootstrap-efbb37e9afcc02144ebbc7afd12a776f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+
+<section id="scenarij-izlaganja-punih-šezdeset-minuta" class="level1">
+<h1>Scenarij izlaganja — punih šezdeset minuta</h1>
+<p><em>„AI u ekonomskim istraživanjima”</em> · radionica na Ekonomskim susretima.</p>
+<p>Ovo je <strong>govorni scenarij</strong>, dakle što <strong>napraviti</strong>, što <strong>pokazati</strong> i što <strong>reći</strong>, slajd po slajd. Prati dva druga dokumenta:</p>
+<ul>
+<li><a href="slides/slides.qmd"><code>slides/slides.qmd</code></a> — sam deck, riječi na ekranu;</li>
+<li><a href="RUNBOOK.md"><code>RUNBOOK.md</code></a> — vlast nad demonstracijom, minute 28–45. Gdje se scenarij i rukovanje razilaze, <strong>rukovanje ima prednost</strong>.</li>
+</ul>
+<p><strong>Cijela radionica počiva na jednom pojmu.</strong> Izvršavanje je pojeftinilo, provjera nije, i razlika se nakuplja kao dug. Četiri datoteke u repozitoriju taj dug naplaćuju automatski. Ako izgubite nit, vratite se na rečenicu <strong>biste li primijetili da je ovo krivo</strong>.</p>
+<p><strong>Registar.</strong> U dvorani su ekonomisti. Većina ih AI koristi u pregledniku i to im radi sasvim solidno. Ne prodajete alat i ne obećavate revoluciju. Prodajete jedno preseljenje, iz preglednika u repozitorij, i objašnjavate zašto.</p>
+<p><strong>Retci <code>KAŽI</code> su izgovorivi, a ne za čitanje naglas.</strong> Deck drži strukturu da vaše oči mogu ostati na dvorani. Podebljano unutar <code>KAŽI</code> označava jedan naglasak po slajdu.</p>
+<hr>
+<section id="prije-nego-itko-uđe-u-dvoranu" class="level2">
+<h2 class="anchored" data-anchor-id="prije-nego-itko-uđe-u-dvoranu">Prije nego itko uđe u dvoranu</h2>
+<ul class="task-list">
+<li><label><input type="checkbox">Proći <strong>predpoletnu listu iz rukovanja</strong> (<a href="RUNBOOK.md"><code>RUNBOOK.md</code></a>), dakle <code>Rscript setup.R</code>, jedan čist prolaz <code>Rscript analysis/run.R</code>, otvorena agentska sesija, <strong>snimka čistog prolaza na jedan pritisak tipke</strong>, jednom uvježbano hvatanje.</label></li>
+<li><label><input type="checkbox">Repozitorij <strong>kopiran izvan Dropboxa ili OneDrivea</strong>, jer sinkronizacija zaključava datoteke i Quarto povremeno padne pri čišćenju.</label></li>
+<li><label><input type="checkbox">Terminal na prezentacijskoj veličini fonta, svijetla tema, obavijesti isključene.</label></li>
+<li><label><input type="checkbox"><strong>Ne podmetati greške još.</strong> Podmeću se u zadnjoj minuti prije početka, vidi minutu 27.</label></li>
+<li><label><input type="checkbox">Deck u prezentacijskom prikazu, ovaj scenarij na dohvat oka.</label></li>
+</ul>
+<p><strong>Vremenska kičma, 59 minuta uz pitanja.</strong> Demonstracija je zaštićeni blok. Ako kasnite, režite <strong>iz sekcije 5</strong>, nikad demonstraciju i nikad zatvaranje.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Sekcija</th>
+<th style="text-align: right;">Završava</th>
+<th style="text-align: right;">Minuta</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Otvaranje, tri pitanja dvorani</td>
+<td style="text-align: right;">04:00</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td>1 · Dug provjere</td>
+<td style="text-align: right;">14:00</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td>2 · Od čega se agent sastoji</td>
+<td style="text-align: right;">21:00</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr class="even">
+<td>3 · AI sloj</td>
+<td style="text-align: right;">28:00</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr class="odd">
+<td><strong>4 · Demonstracija</strong></td>
+<td style="text-align: right;"><strong>45:00</strong></td>
+<td style="text-align: right;"><strong>17</strong></td>
+</tr>
+<tr class="even">
+<td>5 · Granice</td>
+<td style="text-align: right;">53:00</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="odd">
+<td>6 · Zaključak</td>
+<td style="text-align: right;">59:00</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="even">
+<td>Pitanja</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">do kraja</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="otvaranje-0000-0400" class="level1">
+<h1>Otvaranje · 00:00 – 04:00</h1>
+<section id="naslovni-slajd" class="level3">
+<h3 class="anchored" data-anchor-id="naslovni-slajd">⏱ 00:00 — Naslovni slajd</h3>
+<p><strong>POKAŽI</strong> Naslov. <strong>NAPRAVI</strong> Stanite mirno. Ne dirajte klikač prve dvije rečenice.</p>
+<p><strong>KAŽI</strong> — „Hvala. Sljedećih sat vremena namjerno je usko. Ovo nije pregled svega što bi umjetna inteligencija mogla učiniti ekonomiji. Ovo je <strong>jedan repozitorij</strong> koji možete klonirati danas poslijepodne i <strong>četiri datoteke</strong> koje u njemu vidite.”</p>
+<p><strong>→ prijelaz</strong> — „Ali prvo bih htio znati tko je u dvorani.” <em>(dalje)</em></p>
+<hr>
+</section>
+<section id="tri-pitanja-dignite-ruku" class="level3">
+<h3 class="anchored" data-anchor-id="tri-pitanja-dignite-ruku">⏱ 00:30 — „Tri pitanja, dignite ruku”</h3>
+<p><strong>POKAŽI</strong> Tri kartice s pitanjima. <strong>NAPRAVI</strong> Postavite ih jedno po jedno i <strong>stvarno brojite ruke naglas</strong>. Ovo traje dvije minute i vrijedi svake sekunde. Ne bilježite ništa, samo komentirajte što vidite.</p>
+<p><strong>KAŽI</strong> — - „Prvo. Tko koristi AI u istraživanju? Nikad, povremeno, svaki dan.” - „Drugo, i ovo me zanima više. <strong>Gdje ga pokrećete?</strong> U pregledniku, u uređivaču koda, u terminalu?” - „Treće. Što vas najviše koči? Povjerenje u ono što vrati, povjerljivost podataka, ili jednostavno ne znate odakle početi?”</p>
+<p><strong>NAPRAVI</strong> Nakon drugog pitanja stanite. Gotovo sigurno će golema većina podići ruku na preglednik.</p>
+<p><strong>KAŽI</strong> <em>(okret, ovo je cijeli uvod u jednoj rečenici)</em> — „Evo. To je slika koju sam očekivao i nije nikakva kritika, meni je preglednik godinu dana bio jedini alat. Ali cijela je današnja radionica <strong>jedno premještanje</strong>. Iz onog prozora tamo, u sam projekt. I sljedećih deset minuta objašnjavam zašto to nije stvar udobnosti.”</p>
+<p><strong>→ prijelaz</strong> — „Evo točno s čime izlazite.” <em>(dalje)</em></p>
+<hr>
+</section>
+<section id="sat-vremena-tri-stvari-koje-odnosite" class="level3">
+<h3 class="anchored" data-anchor-id="sat-vremena-tri-stvari-koje-odnosite">⏱ 02:40 — „Sat vremena, tri stvari koje odnosite”</h3>
+<p><strong>POKAŽI</strong> Tri kartice. <strong>NAPRAVI</strong> Brojite ih na prste. Fizički.</p>
+<p><strong>KAŽI</strong> — - „Prvo, <strong>jedan pojam</strong>. Dug provjere. Vjerojatno ga već plaćate, samo mu nemate ime.” - „Drugo, <strong>jedan sloj</strong>. Četiri datoteke koje AI ugrađuju u repozitorij.” - „Treće, <strong>jedan repozitorij</strong>. Klonirate ga danas i prenesete na svoj projekt.”</p>
+<p><strong>KAŽI</strong> <em>(načelo dizajna)</em> — „Cijela radionica počiva na jednom načelu, a to je <strong>najmanje moguće</strong>. Ne petnaest alata, ne osamnaest agenata. Najmanji skup dijelova koji istraživanje čini provjerljivim. Ispalo je da su to četiri datoteke.”</p>
+<p><strong>→ prijelaz</strong> — „Krenimo od toga što se zapravo promijenilo.” <em>(dalje)</em></p>
+<hr>
+</section>
+</section>
+<section id="dug-provjere-0400-1400" class="level1">
+<h1>1 · Dug provjere · 04:00 – 14:00</h1>
+<section id="razdjelnik-1-dug-provjere" class="level3">
+<h3 class="anchored" data-anchor-id="razdjelnik-1-dug-provjere">⏱ 04:00 — Razdjelnik „1 · Dug provjere”</h3>
+<p><strong>POKAŽI</strong> Razdjelnik. <strong>NAPRAVI</strong> Pročitajte crtu i idite dalje. Razdjelnici su dah, a ne sadržaj.</p>
+<hr>
+</section>
+<section id="cijena-je-pala-samo-s-jedne-strane" class="level3">
+<h3 class="anchored" data-anchor-id="cijena-je-pala-samo-s-jedne-strane">⏱ 04:20 — „Cijena je pala samo s jedne strane”</h3>
+<p><strong>POKAŽI</strong> Dvije kartice. <strong>NAPRAVI</strong> Ovaj slajd nosi. Usporite.</p>
+<p><strong>KAŽI</strong> — - „Izvršiti nešto je jeftino i svake godine jeftinije. Očistiti podatke, napisati kod, nacrtati sliku, procijeniti model. To je posao koji je nekad trajao tjedan, a sada traje popodne.” - „Provjeriti je li to točno je skupo, i <strong>ne postaje jeftinije samo od sebe</strong>. Je li uzorak onaj koji mislite. Znači li koeficijent to što mislite.”</p>
+<p><strong>KAŽI</strong> <em>(naglasak)</em> — „<strong>Ta asimetrija je cijeli problem.</strong> Ne etika, ne moda, ne alati. Asimetrija troška.”</p>
+<p><strong>→ prijelaz</strong> — „Ali stvar je gora nego što zvuči, jer nije problem samo u cijeni.” <em>(dalje)</em></p>
+<hr>
+</section>
+<section id="ali-nije-problem-samo-u-cijeni" class="level3">
+<h3 class="anchored" data-anchor-id="ali-nije-problem-samo-u-cijeni">⏱ 07:00 — „Ali nije problem samo u cijeni”</h3>
+<p><strong>POKAŽI</strong> Dvije rečenice pa krupno „Dug provjere”. <strong>NAPRAVI</strong> Ovo je najvažniji slajd u prvoj polovici. Izgovorite ga polako i pustite tišinu poslije.</p>
+<p><strong>KAŽI</strong> — - „Sjetite se kako ste radili prije. Napišete deset redaka, pogledate ispis, idete dalje. <strong>Provjeravali ste usput</strong>, a da to niste ni zvali provjerom.” - „Sada napišete jednu rečenicu i vrati vam se dvjesto redaka odjednom. Pogledate prvih dvadeset, izgleda razumno, i idete dalje.”</p>
+<p><strong>NAPRAVI</strong> Kratka stanka.</p>
+<p><strong>KAŽI</strong> <em>(pojam)</em> — „Ono što ste preskočili nije nestalo. <strong>Nakupilo se.</strong> Ja to zovem dug provjere. To je razlika između koda koji daje rezultat i koda za koji znate zašto ga daje.”</p>
+<p><strong>KAŽI</strong> <em>(dospijeće, ovo je rečenica koju pamte)</em> — „I kao svaki dug, taj se dug ne otpisuje nego dospijeva. Na recenziji, kod koautora koji pita odakle taj broj, i kod vas samih za godinu dana kad se vratite na projekt. <strong>Dug se uvijek naplati, samo u najgorem trenutku.</strong>”</p>
+<p><strong>→ prijelaz</strong> — „Ako je to problem, gdje je onda granica? Ovako.” <em>(dalje)</em></p>
+<hr>
+</section>
+<section id="gdje-agenta-pustiti-a-gdje-ne" class="level3">
+<h3 class="anchored" data-anchor-id="gdje-agenta-pustiti-a-gdje-ne">⏱ 10:00 — „Gdje agenta pustiti, a gdje ne”</h3>
+<p><strong>POKAŽI</strong> Tablica dva puta dva. <strong>NAPRAVI</strong> Prstom po kvadrantima, redom lijevo gore, desno gore, lijevo dolje, desno dolje.</p>
+<p><strong>KAŽI</strong> — - „Vodoravno je koliko je teško <strong>izvršiti</strong>. Okomito je koliko je teško <strong>provjeriti</strong>. AI je pomaknuo samo vodoravnu os.” - „Lako izvršiti i lako provjeriti, delegirajte bez zadrške. Teško izvršiti a lako provjeriti, <strong>tu je dobitak najveći</strong> i tu je AI stvarno promijenio posao.” - „Donji red je opasan. Teško provjeriti znači da nećete vidjeti da je krivo.”</p>
+<p><strong>KAŽI</strong> <em>(naglasak)</em> — „I zato pitanje nije <em>je li ovaj zadatak težak</em>. Pitanje je <strong>biste li primijetili da je odgovor kriv</strong>. To je jedina os koja vas zanima.”</p>
+<p><strong>→ prijelaz</strong> — „Da to ne ostane apstraktno, evo ista tablica na primjeru s kojim ćemo raditi.” <em>(dalje)</em></p>
+<hr>
+</section>
+<section id="ista-podjela-na-našem-primjeru" class="level3">
+<h3 class="anchored" data-anchor-id="ista-podjela-na-našem-primjeru">⏱ 12:00 — „Ista podjela na našem primjeru”</h3>
+<p><strong>POKAŽI</strong> Tablica četiri retka. <strong>NAPRAVI</strong> Prva dva retka brzo, treći i četvrti polako.</p>
+<p><strong>KAŽI</strong> — - „Spojiti dvije Eurostatove tablice. Provjerim brojem redaka na izlazu. Delegiram bez zadrške.” - „Nacrtati sliku po predlošku. Vidim je. Delegiram.” - „<strong>Odabrati koje su oznake zemlje.</strong> Ovo ne vidim. Panel izgleda jednako uredno i kad je točan i kad nije. To ne ide meni na provjeru nego u kod.” - „<strong>Fiksni učinci zemlje, ili zemlje i godine.</strong> Ovo mijenja pitanje na koje odgovaram, a ne odgovor. To ne delegiram uopće.”</p>
+<p><strong>KAŽI</strong> <em>(zatvaranje sekcije)</em> — „Treći redak je razlog zbog kojeg ova radionica postoji. Četvrti je razlog zbog kojeg ćete i dalje biti potrebni.”</p>
+<p><strong>→ prijelaz</strong> — „Sada pet minuta o tome od čega se agent zapravo sastoji, da znamo o čemu govorimo.” <em>(dalje)</em></p>
+<hr>
+</section>
+</section>
+<section id="od-čega-se-agent-sastoji-1400-2100" class="level1">
+<h1>2 · Od čega se agent sastoji · 14:00 – 21:00</h1>
+<section id="razdjelnik-2-od-čega-se-agent-sastoji" class="level3">
+<h3 class="anchored" data-anchor-id="razdjelnik-2-od-čega-se-agent-sastoji">⏱ 14:00 — Razdjelnik „2 · Od čega se agent sastoji”</h3>
+<hr>
+</section>
+<section id="četiri-pojma-i-gotovi-ste" class="level3">
+<h3 class="anchored" data-anchor-id="četiri-pojma-i-gotovi-ste">⏱ 14:20 — „Četiri pojma i gotovi ste”</h3>
+<p><strong>POKAŽI</strong> Tri kartice pa krupno o kontekstu. <strong>NAPRAVI</strong> Ovaj slajd držite lagano. Nije lekcija iz informatike nego demistifikacija.</p>
+<p><strong>KAŽI</strong> — - „<strong>Model</strong> predviđa sljedeću riječ. To je sve. Ništa ne zna o vašem projektu i ništa ne može učiniti.” - „<strong>Alati</strong> su ono što mu date. Pročitaj datoteku, pokreni naredbu, pretraži web. Tek time model postaje agent.” - „<strong>Ograda</strong> je program koji stoji između i odlučuje smije li se taj alat pozvati. To niste kupili, to pišete vi.”</p>
+<p><strong>KAŽI</strong> <em>(krupno, polako)</em> — „A <strong>kontekst</strong> je sve što model u tom trenutku vidi. Sustavska uputa, vaša poruka, sadržaj datoteka, ispis naredbi. <strong>Ako nešto nije u kontekstu, za model ne postoji.</strong> Nema pamćenja, nema intuicije o vašem projektu, nema ničega osim toga.”</p>
+<p><strong>→ prijelaz</strong> — „I sad pogledajte što iz toga slijedi.” <em>(dalje)</em></p>
+<hr>
+</section>
+<section id="iz-toga-slijedi-cijela-radionica" class="level3">
+<h3 class="anchored" data-anchor-id="iz-toga-slijedi-cijela-radionica">⏱ 17:00 — „Iz toga slijedi cijela radionica”</h3>
+<p><strong>POKAŽI</strong> Dvije kartice. <strong>NAPRAVI</strong> Ovo je zglob cijelog izlaganja. Stanite na njemu.</p>
+<p><strong>KAŽI</strong> — - „Ako je sve što agent zna kontekst, a sve što smije ograda, onda odlučujete o <strong>točno dvije stvari</strong>. Trećega nema.” - „Prva odluka je kontekst. Umjesto da ga svaki put ponavljate u razgovoru, <strong>zapišete ga u datoteku</strong> koja putuje s projektom.” - „Druga odluka su dopuštenja. Umjesto da se pouzdate u dobru namjeru, <strong>popišete što agent smije</strong>, što vas mora pitati i što mu je zabranjeno.”</p>
+<p><strong>KAŽI</strong> <em>(naglasak)</em> — „To su prve dvije od četiri datoteke koje ću vam pokazati. I sad je važno da vidite da to <strong>nisu konvencija koju je netko izmislio</strong>. To su jedine dvije odluke koje uopće postoje.”</p>
+<p><strong>→ prijelaz</strong> — „Ostaje pitanje koje svi postavljaju, a to je koji alat.” <em>(dalje)</em></p>
+<hr>
+</section>
+<section id="ne-birajte-alat-birajte-način" class="level3">
+<h3 class="anchored" data-anchor-id="ne-birajte-alat-birajte-način">⏱ 19:00 — „Ne birajte alat, birajte način”</h3>
+<p><strong>POKAŽI</strong> Tablica tri načina. <strong>NAPRAVI</strong> Ovo riješite brzo, sedamdeset sekundi, jer je slajd koji sprječava krivo pitanje.</p>
+<p><strong>KAŽI</strong> — - „U pregledniku vidite samo odgovor. Dobro za pitanja, ideje i tekst.” - „U uređivaču koda vidite svaku promjenu dok nastaje. Kao da sjedite pokraj.” - „U terminalu vidite sažetak na kraju. Kao da ste asistentu poslali mail.”</p>
+<p><strong>KAŽI</strong> <em>(naglasak)</em> — „Primijetite da ovo <strong>nije ljestvica napretka</strong>. To su tri razine nadzora, a način birate prema gornjoj tablici. Skupa provjera znači da sjedite pokraj. Jeftina provjera znači da pošaljete mail.”</p>
+<p><strong>KAŽI</strong> <em>(kratko, da se skine s dnevnog reda)</em> — „I molim vas, ne trošite tjedne na izbor alata. To je kao pitati je li iPhone 17 ili 18. <strong>Bitno je sjedite li pokraj i po čemu ćete znati da je krivo.</strong>”</p>
+<p><strong>→ prijelaz</strong> — „Dosta okvira. Da vidimo kako to izgleda u repozitoriju.” <em>(dalje)</em></p>
+<hr>
+</section>
+</section>
+<section id="ai-sloj-2100-2800" class="level1">
+<h1>3 · AI sloj · 21:00 – 28:00</h1>
+<section id="razdjelnik-3-ai-sloj" class="level3">
+<h3 class="anchored" data-anchor-id="razdjelnik-3-ai-sloj">⏱ 21:00 — Razdjelnik „3 · AI sloj”</h3>
+<hr>
+</section>
+<section id="projekt-koji-ćemo-gledati" class="level3">
+<h3 class="anchored" data-anchor-id="projekt-koji-ćemo-gledati">⏱ 21:20 — „Projekt koji ćemo gledati”</h3>
+<p><strong>POKAŽI</strong> Dijagram lanca. <strong>NAPRAVI</strong> Pratite ga prstom odozgo prema dolje, jednom.</p>
+<p><strong>KAŽI</strong> — - „Phillipsova krivulja u dvadeset zemalja europodručja, od 2014. do 2024. Dvije javne Eurostatove tablice, inflacija i nezaposlenost. <strong>Namjerno najobičniji mogući primjer</strong>, jer radionica nije o nalazu nego o tome kako je nalaz nastao.” - „Gore ulaze dvije sirove tablice. <code>R/zemlje.R</code> odlučuje što je zemlja. <code>R/podaci.R</code> ih spaja u panel. Modeli daju procjene. Procjene idu u jednu JSON datoteku. Tekst čita tu datoteku.”</p>
+<p><strong>KAŽI</strong> <em>(naglasak)</em> — „Označio sam jedan korak, <code>R/zemlje.R</code>, <strong>mjerni sloj</strong>. Zapamtite ga, vratit će nam se na demonstraciji i to bolno.”</p>
+<p><strong>→ prijelaz</strong> — „A sada četiri datoteke zbog kojih smo ovdje.” <em>(dalje)</em></p>
+<hr>
+</section>
+<section id="četiri-datoteke-i-kvar-koji-svaka-sprječava" class="level3">
+<h3 class="anchored" data-anchor-id="četiri-datoteke-i-kvar-koji-svaka-sprječava">⏱ 23:30 — „Četiri datoteke i kvar koji svaka sprječava”</h3>
+<p><strong>POKAŽI</strong> Tablica pa krupno petlja. <strong>NAPRAVI</strong> Prijeđite tablicu redak po redak, pa petlju prstom slijeva nadesno.</p>
+<p><strong>KAŽI</strong> — - „<code>CLAUDE.md</code> je kontekst. Sprječava da se agent vrati na opće pretpostavke o tome kako se radi ekonomija.” - „<code>settings.json</code> su ograde. Sprječavaju da samostalan proces dira što god želi.” - „<code>rules/provjera.md</code> je pravilo uz svaku izmjenu koda. Sprječava da posao bude proglašen gotovim bez gradnje.” - „<code>tests/checks.R</code> su provjere. Sprječavaju da uvjerljiva besmislica uđe u tekst.”</p>
+<p><strong>KAŽI</strong> — „Peta je git, ali git već imate.”</p>
+<p><strong>KAŽI</strong> <em>(petlja)</em> — „Opišem što treba. Agent napravi plan. <strong>Ja odobrim</strong>, i to je trenutak delegiranja. Agent izvrši. Sustav provjeri. <strong>Ja commitam.</strong>”</p>
+<p><strong>→ prijelaz</strong> — „Jednu od te četiri vrijedi vidjeti izbliza.” <em>(dalje)</em></p>
+<hr>
+</section>
+<section id="ograde-su-datoteka-ne-obećanje" class="level3">
+<h3 class="anchored" data-anchor-id="ograde-su-datoteka-ne-obećanje">⏱ 25:30 — „Ograde su datoteka, ne obećanje”</h3>
+<p><strong>POKAŽI</strong> Isječak <code>settings.json</code>. <strong>NAPRAVI</strong> Pokažite tri retka redom, pa se vratite na drugi.</p>
+<p><strong>KAŽI</strong> — - „Dopušteno, <code>Rscript</code>, <code>quarto render</code>, <code>git diff</code>. Pita, <code>git commit</code>. Zabranjeno, čitanje <code>data/restricted/</code> i <code>git push</code>.” - „Agent orkestrira analizu čije osjetljive ulaze <strong>nikada ne vidi</strong>. To nije politika napisana u priručniku koji nitko ne čita. To je datoteka koju alat provodi.”</p>
+<p><strong>NAPRAVI</strong> Vratite se prstom na drugi redak.</p>
+<p><strong>KAŽI</strong> <em>(naglasak, ovo je fini detalj koji publika voli)</em> — „Pogledajte što je još u <code>ask</code>. <strong><code>R/zemlje.R</code></strong>, dakle mjerni sloj. Nije zabranjen, jer ga ponekad treba mijenjati. Ali <strong>me mora pitati.</strong> Sjećate se donjeg desnog kvadranta? Ovako on izgleda kad ga zapišete.”</p>
+<p><strong>→ prijelaz</strong> — „I zadnja od četiri, ona zbog koje ostale tri vrijede.” <em>(dalje)</em></p>
+<hr>
+</section>
+<section id="provjera-je-mjesto-gdje-se-dug-plaća" class="level3">
+<h3 class="anchored" data-anchor-id="provjera-je-mjesto-gdje-se-dug-plaća">⏱ 27:00 — „Provjera je mjesto gdje se dug plaća”</h3>
+<p><strong>POKAŽI</strong> Tablica triju provjera. <strong>NAPRAVI</strong> Imenujte sve tri.</p>
+<p><strong>KAŽI</strong> — - „<strong>Ograda</strong> traži ograničen sadržaj u bilo kojem izlazu projekta.” - „<strong>Pokrivenost</strong> uspoređuje veličinu uzorka s brojem koji sam unaprijed zapisao.” - „<strong>Provenijencija</strong> traži broj upisan rukom u odjeljku Rezultati.”</p>
+<p><strong>KAŽI</strong> <em>(naglasak, ovo je teza cijele radionice)</em> — „I sad ono bitno. <strong>Ne provjeravam ja svaki put. Provjerava repozitorij, svaki put.</strong> Tu se dug provjere prestaje nakupljati, i to ne zato što sam ja discipliniran, nego zato što gradnja pukne ako nisam.”</p>
+<p><strong>⏱ 27:45 — podmetnite greške</strong> <em>(dok govorite zadnju rečenicu ili odmah nakon)</em></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> demo/podmetni.R</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>→ prijelaz</strong> — „Dosta o strojarnici. Da vidimo hoće li izdržati.” <em>(dalje)</em></p>
+<hr>
+</section>
+</section>
+<section id="demonstracija-2800-4500" class="level1">
+<h1>4 · Demonstracija · 28:00 – 45:00</h1>
+<blockquote class="blockquote">
+<p><strong>Od ove točke vlast ima <a href="RUNBOOK.md"><code>RUNBOOK.md</code></a>.</strong> Ovdje je samo kičma.</p>
+</blockquote>
+<section id="razdjelnik-4-demonstracija" class="level3">
+<h3 class="anchored" data-anchor-id="razdjelnik-4-demonstracija">⏱ 28:00 — Razdjelnik „4 · Demonstracija”</h3>
+<hr>
+</section>
+<section id="što-gledati-u-sljedećih-sedamnaest-minuta" class="level3">
+<h3 class="anchored" data-anchor-id="što-gledati-u-sljedećih-sedamnaest-minuta">⏱ 28:20 — „Što gledati u sljedećih sedamnaest minuta”</h3>
+<p><strong>POKAŽI</strong> Dvije kartice pa tablica triju grešaka. <strong>NAPRAVI</strong> Najavite oba dijela prije nego otvorite terminal. Publika mora znati što lovi.</p>
+<p><strong>KAŽI</strong> — - „Demonstracija ima dva dijela i redoslijed je namjeran. <strong>Prvo korist, pa onda šteta.</strong>” - „U prvom dijelu agent dobiva stvaran zadatak i radi ga dobro. Od plana do gotove slike i osvježenog teksta.” - „U drugom dijelu u projektu su tri tihe greške. <strong>Nijedna ne ruši program i sve tri bi prošle recenziju.</strong>”</p>
+<p><strong>KAŽI</strong> <em>(imenujte tri)</em> — „Curenje, dakle ograničen sadržaj završi u tekstu. Odstupanje, dakle koeficijent upisan rukom više ne odgovara procjeni. Pokrivenost, dakle Grčka postane <code>GR</code> umjesto <code>EL</code>.”</p>
+<p><strong>→ prijelaz</strong> — „Idemo u terminal.” <em>(dalje na crni slajd)</em></p>
+<hr>
+</section>
+<section id="terminal" class="level3">
+<h3 class="anchored" data-anchor-id="terminal">⏱ 30:00 – 43:00 — Terminal</h3>
+<p>Redoslijed taktova, puni detalji u <a href="RUNBOOK.md"><code>RUNBOOK.md</code></a>:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Minuta</th>
+<th>Na ekranu</th>
+<th>Što radite i govorite</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>30–32</td>
+<td><code>CLAUDE.md</code> otvoren</td>
+<td>„Ustav projekta. Kratak, čitljiv. Ovo je sve što agent zna.”</td>
+</tr>
+<tr class="even">
+<td>32–34</td>
+<td><strong>Prvi dio.</strong> Zahtjev na hrvatskom, agent ulazi u plan</td>
+<td>„Jedna rečenica. Primijetite da još nije dirnuo nijednu datoteku.”</td>
+</tr>
+<tr class="odd">
+<td>34–35</td>
+<td>Plan naglas → <strong>odobrenje</strong></td>
+<td>„Ovo odobrenje je trenutak delegiranja.”</td>
+</tr>
+<tr class="even">
+<td>35–38</td>
+<td>Izvršavanje pod ogradama, pa čist prolaz</td>
+<td>„Radi. Slika je nova, brojka u tekstu se sama pomaknula.”</td>
+</tr>
+<tr class="odd">
+<td>38–40</td>
+<td><strong>Drugi dio.</strong> <code>Rscript analysis/run.R</code> — tri greške u jednom ispisu</td>
+<td>„Tri greške, jedan prolaz, prije nego išta ode van.”</td>
+</tr>
+<tr class="even">
+<td>40–42</td>
+<td>Zadržite se na <code>EL</code> i <code>GR</code></td>
+<td>Vidi sljedeći slajd, ovo je vrhunac.</td>
+</tr>
+<tr class="odd">
+<td>42–43</td>
+<td><code>vrati.R</code> → zeleno → <code>git diff</code> → commit</td>
+<td>„Malo, pregledno, povratno. To je cijela petlja.”</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ako bilo što stoji dulje od 60 sekundi, prijeđite na snimku bez isprike i nastavite pripovijedati.</strong></p>
+<hr>
+</section>
+<section id="treća-greška-pobliže" class="level3">
+<h3 class="anchored" data-anchor-id="treća-greška-pobliže">⏱ 43:00 — „Treća greška, pobliže”</h3>
+<p><strong>POKAŽI</strong> Dvije kartice. <strong>NAPRAVI</strong> Ovo je slajd zbog kojeg će vas pamtiti. Nemojte žuriti.</p>
+<p><strong>KAŽI</strong> — - „Eurostat Grčku označava kao <strong><code>EL</code></strong>. Cijeli ostatak svijeta, uključujući ISO standard i vjerojatno vaš kod, piše <strong><code>GR</code></strong>.” - „Tko filtrira po <code>GR</code>, tiho izgubi cijelu zemlju. Panel padne s 220 na 209 opažanja. Nagib se pomakne s nula zarez šezdeset jedan na nula zarez šezdeset devet.”</p>
+<p><strong>NAPRAVI</strong> Stanka.</p>
+<p><strong>KAŽI</strong> <em>(naglasak)</em> — „I sada ono bitno. <strong>Ništa ne pukne.</strong> Kod se izvrši, slike se nacrtaju, tekst se sastavi, gradnja prođe do kraja. Jedna zemlja tiho nestane i <strong>nitko ne dobije poruku o grešci.</strong>”</p>
+<p><strong>KAŽI</strong> <em>(prizemljenje)</em> — „Ovo nije izmišljena opasnost. Ovo je jedna od najčešćih tihih grešaka u radu s europskim podacima i <strong>dogodila se meni</strong>.”</p>
+<p><strong>→ prijelaz</strong> — „Da sažmemo što smo vidjeli.” <em>(dalje)</em></p>
+<hr>
+</section>
+<section id="što-smo-upravo-vidjeli" class="level3">
+<h3 class="anchored" data-anchor-id="što-smo-upravo-vidjeli">⏱ 44:00 — „Što smo upravo vidjeli”</h3>
+<p><strong>POKAŽI</strong> Tri kartice. <strong>NAPRAVI</strong> Poklopite ih s tri greške koje ste najavili.</p>
+<p><strong>KAŽI</strong> — - „Plan prije rada. Ograda koja drži. Provjera koja hvata.” - „<strong>I ovo je poanta. Sve tri greške su tihe.</strong> Nijedna ne ruši kod. Sve tri bi prošle recenziju. Sve tri promakle bi umornom čovjeku pred rok, uključujući mene.”</p>
+<p><strong>→ prijelaz</strong> — „Sad tri granice, pošteno.” <em>(dalje)</em></p>
+<hr>
+</section>
+</section>
+<section id="granice-4500-5300" class="level1">
+<h1>5 · Granice · 45:00 – 53:00</h1>
+<section id="razdjelnik-5-granice" class="level3">
+<h3 class="anchored" data-anchor-id="razdjelnik-5-granice">⏱ 45:00 — Razdjelnik „5 · Granice”</h3>
+<hr>
+</section>
+<section id="ako-podaci-ne-smiju-izaći" class="level3">
+<h3 class="anchored" data-anchor-id="ako-podaci-ne-smiju-izaći">⏱ 45:20 — „Ako podaci ne smiju izaći”</h3>
+<p><strong>POKAŽI</strong> Tri kartice. <strong>NAPRAVI</strong> Ovo je pitanje koje su vam htjeli postaviti, pa im odgovorite prije nego stignu.</p>
+<p><strong>KAŽI</strong> — - „Ovo je pitanje koje sam dobio na svakom razgovoru o ovoj temi, i pošteno je da na njega odgovorim prije pitanja.” - „Prvo, <strong>ograda</strong>. Kako je ovdje postavljeno, agent orkestrira analizu čije ulaze ne čita. Zabrana je u datoteci, a provjera je dokazuje.” - „Drugo, <strong>uvjeti</strong>. Pretplata i plaćanje po upotrebi nemaju iste uvjete o tome što se smije s vašim podacima. Pročitajte ih prije nego uvedete alat u instituciju.” - „Treće, <strong>lokalno</strong>. Za podatke koji ne smiju napustiti zgradu postoje modeli s otvorenim težinama koji rade na vašem računalu. Slabiji su, ali za označavanje i čišćenje su sasvim dovoljni.”</p>
+<p><strong>KAŽI</strong> <em>(naglasak)</em> — „Primijetite da su druga i treća stavka <strong>nabava, a ne alat</strong>. Riješite to prije projekta, ne usred njega.”</p>
+<p><strong>→ prijelaz</strong> — „I posljednja granica, podjela rada.” <em>(dalje)</em></p>
+<hr>
+</section>
+<section id="što-ne-delegirati" class="level3">
+<h3 class="anchored" data-anchor-id="što-ne-delegirati">⏱ 49:00 — „Što ne delegirati”</h3>
+<p><strong>POKAŽI</strong> Dvije kartice. <strong>NAPRAVI</strong> Lijevu pročitajte brzo, desnu polako.</p>
+<p><strong>KAŽI</strong> — - „Delegirajte čišćenje podataka, spajanje tablica, slike po predlošku, refaktoriranje, dokumentaciju, testove, ponovne procjene, robusnost.” - „Ne delegirajte istraživačko pitanje, izbor specifikacije, tumačenje nalaza, <strong>snagu tvrdnje</strong>, odluku o objavi.”</p>
+<p><strong>KAŽI</strong> <em>(naglasak, ovo vraća cijelu radionicu u jednu točku)</em> — „I sad primijetite da desni stupac <strong>nije stvar ukusa</strong>. To nije popis stvari koje su meni drage. To su redci iz <strong>gornje polovice one tablice</strong>, oni koje ne biste primijetili da su krivi. Cijela podjela rada ispada iz jedne osi.”</p>
+<p><strong>KAŽI</strong> <em>(zatvaranje sekcije)</em> — „Postoji empirijski nalaz koji ovo lijepo sažima. Alat <strong>podiže pod, ne strop</strong>. Najviše dobivaju početnici, iskusni gotovo ništa. Što znači da iskusna prosudba postaje <strong>rjeđi</strong>, a ne suvišniji ulaz.”</p>
+<p><strong>→ prijelaz</strong> — „Sažmimo radionicu u pet redaka.” <em>(dalje)</em></p>
+<hr>
+</section>
+</section>
+<section id="zaključak-5300-5900" class="level1">
+<h1>6 · Zaključak · 53:00 – 59:00</h1>
+<section id="pet-redaka-za-ponijeti" class="level3">
+<h3 class="anchored" data-anchor-id="pet-redaka-za-ponijeti">⏱ 53:00 — „Pet redaka za ponijeti”</h3>
+<p><strong>POKAŽI</strong> Tablica pet redaka. <strong>NAPRAVI</strong> Pročitajte ih naglas, sve. Traje dvadeset sekundi.</p>
+<p><strong>KAŽI</strong> — „Jedan pojam, dug provjere, i raste dok ga ne pogledate. Dvije odluke, kontekst i ograda, trećega nema. Četiri datoteke, ustav, ograde, pravilo, provjere. Jedna petlja, opiši, plan, odobri, izvrši, <strong>provjeri</strong>, commit. I jedno pitanje, <strong>biste li primijetili da je ovo krivo</strong>.”</p>
+<hr>
+</section>
+<section id="jedan-zadatak-ovaj-tjedan" class="level3">
+<h3 class="anchored" data-anchor-id="jedan-zadatak-ovaj-tjedan">⏱ 55:00 — „Jedan zadatak, ovaj tjedan”</h3>
+<p><strong>POKAŽI</strong> Zadnja krupna tvrdnja. <strong>NAPRAVI</strong> Stanite mirno. Ovo je zadnja stvar koju pamte.</p>
+<p><strong>KAŽI</strong> — - „Ne tražim od vas da preuredite način rada. Tražim jedno. <strong>Klonirajte repozitorij, uzmite jedan svoj projekt i napišite mu <code>CLAUDE.md</code>.</strong>” - „Dvadeset redaka. Što je projekt, gdje što stoji, što se nikad ne dira. <strong>Bez ijednog retka novog istraživanja.</strong>” - „Sljedeći tjedan dodajte jednu provjeru. I to ne bilo koju, nego onu koja hvata grešku koja vam se <strong>već jednom dogodila.</strong> Svatko ima takvu grešku.”</p>
+<p><strong>KAŽI</strong> <em>(zadnja rečenica, polako)</em> — „Jer ako je proizvodnja rezultata postala gotovo besplatna, onda je jedino što još razlikuje istraživanje od teksta <strong>to što se može provjeriti, i to bez vas.</strong>”</p>
+<hr>
+</section>
+<section id="materijali" class="level3">
+<h3 class="anchored" data-anchor-id="materijali">⏱ 57:30 — „Materijali”</h3>
+<p><strong>POKAŽI</strong> Poveznice. <strong>NAPRAVI</strong> Recite gdje je repozitorij i otvorite pitanja.</p>
+<p><strong>KAŽI</strong> — „Sve je gore. Slajdovi, repozitorij, rukovanje demonstracijom, upute za prijenos na vlastiti projekt, pojmovnik i literatura. Kod pod MIT-om, tekst pod CC BY. Podaci su stvarni i javni, dvije Eurostatove tablice. Izvolite pitanja.”</p>
+<hr>
+</section>
+<section id="pripremljeni-odgovori" class="level2">
+<h2 class="anchored" data-anchor-id="pripremljeni-odgovori">Pripremljeni odgovori</h2>
+<p><strong>„Nije li ovo previše režije za jedan rad?“</strong> Četiri datoteke i jedna naredba. Prve tri su obični tekst i pišu se popodne. Režija je jednokratna, a plaća se pri prvom koautorstvu, prvoj recenziji i prvom povratku na projekt nakon šest mjeseci.</p>
+<p><strong>„Mi radimo u Stati ili Excelu.”</strong> Prve tri datoteke su obični tekst i ne ovise ni o čemu. Mijenja se samo četvrta i naredba kojom se pokreće. U Stati je to master do-datoteka koja na kraju pokreće nekoliko <code>assert</code> naredbi. U Excelu ovo ne radi i to je jedini stvarni razlog da se iz Excela izađe.</p>
+<p><strong>„Smijemo li uopće koristiti AI na osjetljivim podacima?“</strong> Kako je postavljeno, agent nikad ne vidi ograničene podatke, nego orkestrira analizu čije ulaze ne čita. Ali komercijalne uvjete i verziju alata provjerite prije institucionalne primjene. To nije stvar alata nego nabave.</p>
+<p><strong>„Koliko to košta?“</strong> Manje od jedne studentske pomoći po istraživaču mjesečno, ali cijene se mijenjaju. Provjerite ih u tjednu izlaganja umjesto da vjerujete slajdu.</p>
+<p><strong>„Zar agent ne može sam napisati te provjere?“</strong> Može, i to je dobar prvi zadatak. Ali provjeru koja hvata <strong>vašu</strong> tipičnu grešku morate opisati vi, jer agent ne zna što vam se već dogodilo. Zato je zadatak za ovaj tjedan <code>CLAUDE.md</code>, a ne provjere.</p>
+<p><strong>„Što ako se model promijeni pa se ponašanje promijeni usred projekta?“</strong> Zato su provjere u repozitoriju, a ne u glavi. Promjena modela ne može promijeniti to da gradnja pukne na broju upisanom rukom. Za institucionalni rad dodatno zaključajte verziju alata u zajedničkoj konfiguraciji.</p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
