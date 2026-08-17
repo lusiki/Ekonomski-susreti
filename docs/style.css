@@ -250,6 +250,8 @@ h3 {
   line-height: 1;
   letter-spacing: -0.02em;
 }
+/* Razlomak treba zraka oko kose crte, pa se skupljanje slova poništava. */
+.figure-xl.razlomak { letter-spacing: 0; }
 .pillar .n { letter-spacing: -0.02em; }
 
 .numbers {

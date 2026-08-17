@@ -1,4 +1,4 @@
-# Pojmovnik — hrvatski i engleski
+# Pojmovnik, hrvatski i engleski
 
 Nazivlje oko rada s AI agentima u hrvatskom još nije ustaljeno, a dio se
 pojmova u praksi uopće ne prevodi. Ovdje su izrazi kojima se služimo na
@@ -15,17 +15,17 @@ Gdje postoji više uvriježenih prijevoda, naveden je i drugi oblik.
 | ograda | harness | program koji odlučuje smije li se alat pozvati |
 | kontekst | context | sve što model u tom trenutku vidi, ništa više |
 | kontekstni prozor | context window | koliko toga u kontekst uopće stane |
-| sustavska uputa | system prompt | uputa koju alat sam dodaje prije vaše poruke |
+| sustavna uputa | system prompt | uputa koju alat sam dodaje prije vaše poruke |
 | lanac razmišljanja | chain of thought, reasoning | tekst koji model piše sebi prije odgovora |
 | model s otvorenim težinama | open weight model | model koji možete pokrenuti na svom računalu |
-| plaćanje po upotrebi | per token, API pricing | drukčiji uvjeti o podacima nego pretplata |
+| plaćanje po upotrebi | per token, API pricing | drukčiji uvjeti korištenja podataka nego kod pretplate |
 
 ## AI sloj u projektu
 
 | Hrvatski | Engleski | Napomena |
 |---|---|---|
 | ustav projekta | project constitution | `CLAUDE.md`, kontekst koji agent čita svaku sesiju |
-| ograde, dopuštenja | permissions, guardrails | `settings.json`, popis dopuštenog, upitnog i zabranjenog |
+| dopuštenja | permissions, guardrails | `settings.json`, popis dopuštenog, upitnog i zabranjenog |
 | pravilo | rule | uputa koja se učitava uz određenu vrstu izmjene |
 | plan prije rada | plan first, plan gate | agent planira, čovjek odobrava, tek onda mijenja |
 | trenutak delegiranja | approval, handoff | odobrenje plana, jedina točka u kojoj predajete kontrolu |
@@ -58,7 +58,7 @@ prvom spominjanju. U kodu, nazivima datoteka i konfiguraciji držimo se
 engleskog jer se tako podudaraju s dokumentacijom alata. Jedina su iznimka
 komentari i poruke provjera, koji su na hrvatskom.
 
-Dvije riječi vrijedi izgovarati pažljivo. **Ograda** je u ovoj radionici
+Dvije riječi vrijedi upotrebljavati pažljivo. **Ograda** je u ovoj radionici
 program koji stoji između modela i vašeg računala, dakle ono što se u
 engleskom zove harness. Kada govorimo o popisu dopuštenog i zabranjenog,
 kažemo **dopuštenja**. U svakodnevnom razgovoru te se dvije stvari često

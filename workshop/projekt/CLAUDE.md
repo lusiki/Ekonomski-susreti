@@ -1,7 +1,7 @@
 # Ustav projekta
 
 Ovo je prva od cetiri datoteke koje cine AI sloj. Agent je cita na pocetku
-svake sesije. Neka ostane kratka, jer duga se ne cita ni od koga.
+svake sesije. Neka ostane kratka, jer dugu nitko ne cita.
 
 Projekt gleda Phillipsovu krivulju u dvadeset zemalja europodrucja na
 Eurostatovim podacima. Cilj nije doprinos literaturi nego pokazni primjer
@@ -18,9 +18,9 @@ Odobrenje plana je trenutak delegiranja. Sve prije toga je razgovor.
 | Datoteka | Sto je | Sprjecava |
 |---|---|---|
 | `CLAUDE.md` | kontekst, ova datoteka | da se vratis na opce pretpostavke |
-| `.claude/settings.json` | ograde, popis dopustenog | da samostalan proces dira sto god zeli |
+| `.claude/settings.json` | dopustenja, popis dopustenog | da samostalan proces dira sto god zeli |
 | `.claude/rules/provjera.md` | pravilo uz svaku izmjenu koda | da se posao proglasi gotovim bez gradnje |
-| `tests/checks.R` | provjere koje rusi gradnju | da uvjerljiva besmislica ude u tekst |
+| `tests/checks.R` | provjere koje ruse gradnju | da uvjerljiva besmislica ude u tekst |
 
 Peta je git, ali git vec imate.
 
@@ -37,7 +37,7 @@ Peta je git, ali git vec imate.
   zabranjuju, a provjera to dokazuje.
 - `results/` `procjene.json` i slike. Generirano, ne uredivati rucno.
 - `paper/nalaz.qmd` rukopis. Samo **cita** brojeve iz `results/procjene.json`.
-- `tests/checks.R` tri provjere: ograda, pokrivenost, provenijencija.
+- `tests/checks.R` tri provjere, ograda, pokrivenost i provenijencija.
 - `demo/` skripte za podmetanje i vracanje gresaka na radionici.
 
 ## Naredbe

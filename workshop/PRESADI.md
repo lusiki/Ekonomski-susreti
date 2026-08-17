@@ -1,19 +1,19 @@
-# Presađivanje AI sloja na vlastiti projekt
+# Prijenos AI sloja na vlastiti projekt
 
 Mapa [`projekt/`](projekt/) je pokazni primjer i vrijedi ga jednom pokrenuti
-da vidite kako se ponaša. Ali svrha radionice nije da radite Phillipsovu
-krivulju nego da isti sloj stavite na projekt koji već imate.
+da vidite kako se ponaša. Ali svrha radionice nije da procjenjujete
+Phillipsovu krivulju nego da isti sloj postavite na projekt koji već imate.
 
-Ovo su upute za to. Traju popodne, a ne tjedan.
+Ovo su upute za to. Posao traje jedno popodne, a ne tjedan.
 
-## Što se presađuje
+## Što se prenosi
 
 Četiri datoteke i jedna mapa. Ništa od toga ne ovisi o R-u, o Quartu ni o
 ovom primjeru.
 
 ```
 CLAUDE.md                    kontekst
-.claude/settings.json        ograde
+.claude/settings.json        dopuštenja
 .claude/rules/provjera.md    pravilo uz izmjene koda
 tests/checks.R               provjere
 ```
@@ -24,7 +24,7 @@ naredba kojom se pokreće. Prve tri su običan tekst.
 ## Korak prvi, napišite kontekst
 
 Otvorite `CLAUDE.md` iz primjera i prepišite ga za svoj projekt. Neka ostane
-kratak. Duga se datoteka ne čita ni od koga, pa ni od agenta.
+kratak, jer dugu datoteku nitko ne čita, pa ni agent.
 
 Treba sadržavati četiri stvari.
 
@@ -37,12 +37,12 @@ rade i koje biste rekli novom asistentu prvi dan.
 Test je jednostavan. Ako biste to rekli čovjeku koji prvi put sjeda za vaš
 projekt, ide u `CLAUDE.md`. Ako ne biste, ne ide.
 
-## Korak drugi, postavite ogradu
+## Korak drugi, popišite dopuštenja
 
 `.claude/settings.json` ima tri popisa i svaki odgovara na drugo pitanje.
 
-U `allow` idu naredbe koje smiju teći bez pitanja jer im vidite ishod i lako
-ga vratite. Pokretanje analize, gradnja dokumenta, čitanje koda, `git diff`.
+U `allow` idu naredbe koje se smiju izvršiti bez pitanja jer im vidite ishod
+i lako ga vratite. Pokretanje analize, gradnja dokumenta, čitanje koda, `git diff`.
 
 U `ask` ide ono što smije, ali vas mora pitati. Zapisivanje promjena u
 povijest, pisanje po podacima i, ovo je važno, **datoteka u kojoj nastaje
@@ -58,7 +58,7 @@ otišlo krivo, to ne ide u `allow`.
 
 ## Korak treći, napišite jednu provjeru
 
-Ovo je korak koji ljudi preskaču i zbog kojeg ostala tri ne vrijede.
+Ovo je korak koji se najčešće preskače i bez kojeg ostala tri ne vrijede.
 
 Ne pišite skup testova. Napišite **jednu** provjeru, i to onu koja hvata
 grešku koja vam se već jednom dogodila. Svatko ima takvu grešku. Uzorak koji
@@ -92,14 +92,14 @@ primjeru je to `results/procjene.json`. Tekst tu datoteku čita i nigdje ne
 sadrži broj. Provjera odbija tekst u kojem se pojavi decimalni broj koji
 nije došao iz te datoteke.
 
-U Stati je to `estout` ili `putexcel` u jednu datoteku pa `#delimit` unos u
-tekst. U Pythonu je to isti JSON. U Wordu ovo ne radi i to je jedini stvarni
+U Stati isti posao rade `estout` ili `putexcel`, koji procjene zapišu u jednu
+datoteku iz koje ih tekst poslije čita. U Pythonu je to isti JSON. U Wordu ovo ne radi i to je jedini stvarni
 razlog da se odustane od Worda.
 
 ## Redoslijed koji preporučam
 
 Ne radite sve odjednom. Prvi tjedan napišite samo `CLAUDE.md`, dvadesetak
-redaka, i radite s time. Drugi tjedan dodajte ogradu, jer ćete do tada znati
+redaka, i radite s time. Drugi tjedan popišite dopuštenja, jer ćete do tada znati
 što vas je zasmetalo. Treći tjedan dodajte jednu provjeru.
 
 Ako ste nakon tri tjedna na tri datoteke, dobili ste gotovo sve. Četvrta
@@ -111,5 +111,5 @@ Postoji jedan test i nije tehnički. Obrišite radnu kopiju, klonirajte
 repozitorij iznova, pokrenite jednu naredbu i pogledajte dobijete li iste
 brojke.
 
-Ako da, više ne morate pamtiti kako ste do njih došli. To je cijela poanta,
-i vrijedi jednako za agenta i za vas same za godinu dana.
+Ako da, više ne morate pamtiti kako ste do njih došli. To je cijela poanta i
+vrijedi jednako za agenta i za vas nakon godinu dana.

@@ -5,7 +5,7 @@ repozitorij, a ne u prozor preglednika.
 
 [**Slajdovi**](https://lusiki.github.io/Ekonomski-susreti/workshop/slides/) ·
 [rukovanje demonstracijom](RUNBOOK.md) ·
-[presađivanje na vaš projekt](PRESADI.md) · [repozitorij](projekt/) ·
+[prijenos na vaš projekt](PRESADI.md) · [repozitorij](projekt/) ·
 [pojmovnik](GLOSSARY.md) · [literatura](READING.md)
 
 ## Ideja
@@ -37,7 +37,7 @@ dug naplaćuju pri svakom pokretanju.
 | | |
 |---|---|
 | **Jedan pojam** | dug provjere, i nakuplja se dok ga ne podmirite |
-| **Dvije odluke** | kontekst i ograda, trećega nema |
+| **Dvije odluke** | kontekst i dopuštenja, trećega nema |
 | **Četiri datoteke** | ustav, ograde, pravilo, provjere |
 | **Jedna petlja** | opiši, isplaniraj, odobri, izvrši, **provjeri**, zapiši |
 | **Jedno pitanje** | biste li primijetili da je ovo krivo? |
@@ -49,7 +49,7 @@ Cijela je poanta da ih ima malo i da stanu na jedan ekran.
 | Datoteka | Što je | Sprječava |
 |---|---|---|
 | `CLAUDE.md` | kontekst koji agent čita svaku sesiju | povratak na opće pretpostavke |
-| `.claude/settings.json` | ograde, popis dopuštenog i zabranjenog | da samostalan proces dira što god želi |
+| `.claude/settings.json` | dopuštenja, popis dopuštenog i zabranjenog | da samostalan proces dira što god želi |
 | `.claude/rules/provjera.md` | pravilo koje se učitava uz izmjenu koda | da se posao proglasi gotovim bez gradnje |
 | `tests/checks.R` | provjere koje ruše gradnju | da uvjerljiva besmislica uđe u tekst |
 
@@ -89,7 +89,7 @@ nalazu nego o tome kako je nalaz nastao.
 |---|---|
 | [`slides/slides.qmd`](slides/slides.qmd) | prezentacija, Quarto i reveal.js, na hrvatskom |
 | [`RUNBOOK.md`](RUNBOOK.md) | rukovanje demonstracijom, tri podmetnute greške |
-| [`PRESADI.md`](PRESADI.md) | kako AI sloj staviti na vlastiti projekt |
+| [`PRESADI.md`](PRESADI.md) | kako AI sloj prenijeti na vlastiti projekt |
 | [`handout.html`](handout.html) | jedna stranica za tisak, A4 obostrano |
 | [`GLOSSARY.md`](GLOSSARY.md) | hrvatsko i englesko nazivlje |
 | [`READING.md`](READING.md) | dvanaest naslova u tri skupine |

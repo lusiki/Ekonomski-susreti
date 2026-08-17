@@ -6,7 +6,7 @@ koje čine AI sloj, dakle sve što treba da agent može raditi unutar projekta
 umjesto pokraj njega.
 
 Ovo je pokazni objekt radionice [AI u ekonomskim istraživanjima](../).
-Klonirajte ga, pokrenite i onda presadite AI sloj na vlastiti projekt.
+Klonirajte ga, pokrenite i onda prenesite AI sloj na vlastiti projekt.
 Upute za presađivanje su u [`../PRESADI.md`](../PRESADI.md).
 
 ## Pokretanje
@@ -22,7 +22,8 @@ novije. Bez GPU-a i bez interneta, jer su podaci zapisani u repozitoriju.
 
 ## Pitanje
 
-Phillipsova krivulja tvrdi da idu zajedno niža nezaposlenost i viša inflacija.
+Phillipsova krivulja tvrdi da su niža nezaposlenost i viša inflacija dvije
+strane istog stanja gospodarstva.
 Projekt to gleda na dvadeset zemalja europodručja od 2014. do 2024. godine i
 pita vrijedi li ista veza prije i poslije inflacijskog vala.
 
@@ -56,7 +57,7 @@ Svaki izložak ima funkciju koja ga proizvodi.
 | Datoteka | Što je | Sprječava |
 |---|---|---|
 | [`CLAUDE.md`](CLAUDE.md) | kontekst koji agent čita svaku sesiju | povratak na opće pretpostavke |
-| [`.claude/settings.json`](.claude/settings.json) | ograde, popis dopuštenog i zabranjenog | da samostalan proces dira što god želi |
+| [`.claude/settings.json`](.claude/settings.json) | dopuštenja, popis dopuštenog i zabranjenog | da samostalan proces dira što god želi |
 | [`.claude/rules/provjera.md`](.claude/rules/provjera.md) | pravilo koje se učitava uz izmjenu koda | da se posao proglasi gotovim bez gradnje |
 | [`tests/checks.R`](tests/checks.R) | provjere koje ruše gradnju | da uvjerljiva besmislica uđe u tekst |
 

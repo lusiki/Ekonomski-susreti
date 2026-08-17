@@ -8,7 +8,7 @@ U ovom pokaznom projektu ovdje je izmišljena datoteka koja glumi izvadak iz
 mikropodataka o dohotku i uvjetima života kućanstava. Takvi se podaci u
 stvarnosti dobivaju od Eurostata na temelju istraživačkog ugovora, koriste se
 pod imenom i prezimenom istraživača i ne smiju se dijeliti dalje ni u kojem
-obliku. Isto vrijedi za porezne registre, bolničke podatke i sve što nosi
+obliku. Isto vrijedi za porezne registre, bolničke podatke i sve što sadrži
 osobne podatke.
 
 Datoteka u ovoj mapi nije stvarna. Svaki redak nosi oznaku

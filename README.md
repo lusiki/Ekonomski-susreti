@@ -50,7 +50,7 @@ Uz izlaganje se drži šezdesetominutna radionica **[AI u ekonomskim istraživan
 
 Cijeli sat drži jedno preseljenje. Većina istraživača AI koristi u prozoru preglednika, dakle izvan vlastitog projekta, gdje alat ne zna ništa o projektu, ne može ništa pokrenuti i ne može biti provjeren. Radionica pokazuje što se dogodi kada ga preselite u sam repozitorij i zašto to nije stvar udobnosti.
 
-Polazište je da je izvršavanje pojeftinilo, a provjera nije. Ta se razlika nakuplja kao **dug provjere**, a odgovor na nju je AI sloj od četiri datoteke koji taj dug naplaćuje pri svakom pokretanju. Sudionici odnose repozitorij koji se klonira i pokreće jednom naredbom te upute za presađivanje istog sloja na vlastiti projekt.
+Polazište je da je izvršavanje pojeftinilo, a provjera nije. Ta se razlika nakuplja kao **dug provjere**, a odgovor na nju je AI sloj od četiri datoteke koji taj dug naplaćuje pri svakom pokretanju. Sudionici odnose repozitorij koji se klonira i pokreće jednom naredbom te upute za prijenos istog sloja na vlastiti projekt.
 
 Pokazni primjer je Phillipsova krivulja u dvadeset zemalja europodručja na dvije javne Eurostatove tablice, a u njega su podmetnute tri tihe greške koje projekt sam otkriva. Prva je curenje ograničenih podataka u javni tekst, druga je koeficijent upisan rukom koji više ne odgovara procjeni, a treća je oznaka zemlje, jer Eurostat Grčku bilježi kao EL, a ostatak svijeta piše GR.
 

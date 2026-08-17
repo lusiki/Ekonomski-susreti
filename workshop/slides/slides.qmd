@@ -53,7 +53,7 @@ Dug provjere. Zašto raste i tko ga plaća.
 :::
 ::: {}
 **Jedan repozitorij**
-Klonirate ga danas i presadite na svoj projekt.
+Klonirate ga danas i prenesete na svoj projekt.
 :::
 :::
 
@@ -172,14 +172,14 @@ Kontekst je sve što model u tom trenutku vidi.
 :::
 
 ::: {.tiho}
-Sustavska uputa, vaša poruka, sadržaj datoteka, ispis naredbi. Ništa više.
+Sustavna uputa, vaša poruka, sadržaj datoteka, ispis naredbi. Ništa više.
 Ako nešto nije u kontekstu, za model ne postoji.
 :::
 
 ## Iz toga slijedi cijela radionica
 
-Ako je sve što agent zna **kontekst**, a sve što smije **ograda**, onda
-istraživač odlučuje o točno dvije stvari.
+Ako je sve što agent zna **kontekst**, a sve što smije određuju **dopuštenja**,
+onda istraživač odlučuje o točno dvije stvari.
 
 ::: {.kartice}
 ::: {}
@@ -188,7 +188,7 @@ Umjesto da ga svaki put ponavljate u razgovoru, zapisujete ga u datoteku
 koja putuje s projektom.
 :::
 ::: {}
-**Ogradu pišete sami**
+**Dopuštenja pišete sami**
 Umjesto da se pouzdate u dobru namjeru, popisujete što agent smije, što vas
 mora pitati i što mu je zabranjeno.
 :::
@@ -262,7 +262,7 @@ Peta je git, ali git već imate.
 opiši → plan → **odobrim** → izvrši → **provjeri** → commitam
 :::
 
-## Ograde su datoteka, ne obećanje
+## Dopuštenja su datoteka, a ne obećanje
 
 ```json
 "allow": ["Bash(Rscript:*)", "Bash(quarto render:*)", "Bash(git diff:*)"],
@@ -450,7 +450,7 @@ suvišniji ulaz u istraživanje.
 | | |
 |---|---|
 | **Jedan pojam** | dug provjere, i nakuplja se dok ga ne podmirite |
-| **Dvije odluke** | kontekst i ograda, trećega nema |
+| **Dvije odluke** | kontekst i dopuštenja, trećega nema |
 | **Četiri datoteke** | ustav, ograde, pravilo, provjere |
 | **Jedna petlja** | opiši → plan → odobri → izvrši → **provjeri** → commit |
 | **Jedno pitanje** | biste li primijetili da je ovo krivo? |
@@ -475,7 +475,7 @@ već jednom dogodila.
 
 - **Radionica i slajdovi** na `lusiki.github.io/Ekonomski-susreti/workshop/`
 - **Repozitorij za kloniranje** u `workshop/projekt/`
-- **Presađivanje na vaš projekt** u `PRESADI.md`
+- **Prijenos na vaš projekt** u `PRESADI.md`
 - **Rukovanje** u `RUNBOOK.md` · **pojmovnik** u `GLOSSARY.md` · **literatura** u `READING.md`
 
 ::: {.tiho}

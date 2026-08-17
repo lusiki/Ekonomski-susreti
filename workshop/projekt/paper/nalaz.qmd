@@ -42,8 +42,8 @@ Kada se dodaju i fiksni učinci godine, koeficijent pada na
 `r hr(abs(p$beta_oba), 2)` i prestaje biti razlučiv od nule uz p vrijednost
 `r hr(p$p_oba, 2)`. To nije proturječje nego odgovor na drugo pitanje. Godišnji
 učinci uklanjaju sve što je u nekoj godini zajedničko svim zemljama, a upravo
-je takav bio energetski šok. Ono što je ostalo je usporedba zemalja unutar iste
-godine, i tu veze gotovo nema.
+je takav bio energetski šok. Ostaje usporedba zemalja unutar iste
+godine i tu veze gotovo nema.
 
 Podjela uzorka pokazuje odakle to dolazi. U razdoblju do `r p$prije_do`. godine
 jedan postotni bod nezaposlenosti prati pad inflacije od
@@ -68,10 +68,10 @@ knitr::include_graphics("../results/slike/slika2-phillips.png")
 ## Ograničenja
 
 Ovo je opisni nalaz, a ne procjena uzročnog učinka. Nezaposlenost nije
-slučajno dodijeljena i obje se veličine kreću zajedno s trećim stvarima, od
+slučajno dodijeljena i obje se veličine kreću zajedno s trećim čimbenicima, od
 cijena energije do tečaja. Strmiji nagib poslije `r p$poslije_od`. godine ne
-znači da je Phillipsova veza ojačala nego da su u tom razdoblju zemlje s
-različitim tržištima rada različito primile isti vanjski šok.
+znači da je Phillipsova veza ojačala nego da je isti vanjski šok različito
+pogodio zemlje s različitim tržištima rada.
 
 Uzorak je namjerno malen i uravnotežen. Svrha ovog nalaza nije doprinos
 literaturi nego pokazni primjer za radionicu. Svaki broj u odjeljku Rezultati

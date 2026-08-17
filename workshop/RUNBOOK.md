@@ -1,4 +1,4 @@
-# Rukovanje demonstracijom (minute 28–45)
+# Vođenje demonstracije (minute 28–45)
 
 Demonstracija je **zaštićeni blok**. Ako ranije sekcije odu u prekovrijeme,
 režite slajdove iz sekcije 5, nikad demonstraciju. Ovo je scenarij, sigurnosna
@@ -7,7 +7,7 @@ mreža i proba.
 Sve naredbe pokreću se iz [`projekt/`](projekt/).
 
 **Redoslijed je namjeran. Prvo korist, pa onda šteta.** Stara verzija ove
-radionice pokazivala je samo kako se agent uhvati u grešci, pa je publika
+radionice pokazivala je samo kako provjera uhvati agentovu pogrešku, pa je publika
 izlazila uvjerena u provjere, a ne u AI. Prvi dio to ispravlja.
 
 ---
@@ -42,7 +42,7 @@ Ispisuje što je točno promijenjeno. Sve promjene zapisane su u `demo/.backup/`
 i vraćaju se s `Rscript demo/vrati.R`.
 
 > **Zašto se greške podmeću prije prvog dijela.** Prvi dio je zadatak koji ne
-> dira ništa od troje pokvarenog, pa agent radi normalno i gradnja u prvom
+> dira nijednu od tri podmetnute greške, pa agent radi normalno i gradnja u prvom
 > dijelu **ipak pukne na kraju**. To je dobro i planirano. Ako želite da prvi
 > dio prođe potpuno čisto, podmetnite greške tek na minuti 38, između dva
 > dijela. Odlučite prije izlaganja i držite se toga.
@@ -77,7 +77,7 @@ europodručja, kao treća slika i kao rečenica u tekstu.
 **Ono što treba pokazati na kraju prvog dijela.** Otvorite `paper/nalaz.qmd` i
 pokažite da nova rečenica sadrži `` `r hr(p$hr_vrh, 1)` ``, a ne broj.
 
-**KAŽI** — „Pogledajte što je napisao. **Nije upisao brojku.** Napisao je
+**KAŽI** „Pogledajte što je napisao. **Nije upisao brojku.** Napisao je
 referencu na procjenu. Nije mogao drukčije, jer bi gradnja pukla. To nije
 pristojnost agenta nego pravilo iz `CLAUDE.md` koje provjera provodi."
 
@@ -130,13 +130,13 @@ Zadržite se na zadnjem retku. **Rukopis se ne gradi**, to je cijela poanta.
 
 Prijeđite gore na redak `Nedostaje: GR` i zaustavite se.
 
-**KAŽI** — „Eurostat Grčku označava kao **EL**. Vi ste, kao i cijeli ostatak
+**KAŽI** „Eurostat Grčku označava kao **EL**. Vi ste, kao i cijeli ostatak
 svijeta, napisali **GR**. Panel je izgubio jednu zemlju i jedanaest redaka."
 
 **NAPRAVI** Pokažite gornji redak ispisa gradnje, `podaci: 209 opazanja, 19
 zemalja`, koji je prošao **prije** provjera i nikoga nije uznemirio.
 
-**KAŽI** — „I evo gdje je to bilo napisano cijelo vrijeme. Prošlo je pokraj
+**KAŽI** „I evo gdje je to bilo napisano cijelo vrijeme. Prošlo je pokraj
 mene. **Ništa nije puklo.** Da nema donjeg dijela ispisa, ovaj bi rad izašao
 van s devetnaest zemalja i s krivim koeficijentom."
 
@@ -148,7 +148,7 @@ Rscript analysis/run.R    # sve zeleno
 git diff
 ```
 
-**KAŽI** — „Malo, pregledno, povratno. To je cijela petlja."
+**KAŽI** „Malo, pregledno, i sve se može poništiti. To je cijela petlja."
 
 ---
 
@@ -158,7 +158,7 @@ git diff
 - **Referenca umjesto broja** → korist, i to nevidljiva dok se ne pokvari.
 - **Ograda** → zabrana je datoteka, ne dobra namjera.
 - **Hvatanje** → poštenje. *Ovdje se skeptici obraćaju.*
-- **`git diff` i commit** → povratnost.
+- **`git diff` i commit** → sve se može poništiti.
 
 ---
 
@@ -167,7 +167,7 @@ git diff
 Ako bilo što stoji dulje od **60 sekundi**, dakle spor odgovor modela, mreža
 ili neočekivana greška, **prijeđite na snimku bez isprike i nastavite
 pripovijedati.** Ne otklanjajte kvarove uživo. Snimka pokazuje iste taktove,
-a vaša naracija je ono što nosi.
+a sve počiva na vašoj naraciji.
 
 Pripremljeno, po redoslijedu:
 
@@ -185,7 +185,7 @@ git checkout -- .         # ako je prvi dio ostavio izmjene koje ne zelite
 Rscript analysis/run.R    # potvrdi da je sve zeleno
 ```
 
-Napravite to prije nego što nešto pushate ili prije sljedeće probe, da
+Napravite to prije nego što išta objavite na udaljeni repozitorij ili prije sljedeće probe, da
 repozitorij koji ljudi kloniraju bude u čistom stanju.
 
 > Prvi dio demonstracije mijenja `R/slike.R`, `analysis/run.R`,
