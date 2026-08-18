@@ -54,7 +54,7 @@ Umjetna inteligencija može vrlo brzo napisati mnogo koda. Provjera tog koda i d
 
 U pokaznom primjeru procjenjujemo Phillipsovu krivulju za dvadeset zemalja europodručja s pomoću dviju javnih Eurostatovih tablica. U projekt namjerno unosimo tri greške koje automatske provjere pronalaze. U prvoj podaci s ograničenim pristupom završe u javnom tekstu. U drugoj ručno upisan koeficijent više ne odgovara procjeni. Treća izostavlja cijelu zemlju zbog pogrešne oznake. Eurostat za Grčku koristi EL, a većina drugih izvora GR.
 
-Materijali se nalaze u mapi [`workshop/`](workshop/) i obuhvaćaju [slajdove](workshop/slides/slides.qmd), [upute za demonstraciju](workshop/RUNBOOK.md), [upute za primjenu](workshop/PRESADI.md), [jednu stranicu za tisak](workshop/handout.html), [pojmovnik](workshop/GLOSSARY.md), [literaturu](workshop/READING.md) i [sam repozitorij](workshop/projekt/).
+Materijali se nalaze u mapi [`workshop/`](workshop/) i obuhvaćaju [slajdove](workshop/slides/slides.qmd), [upute za primjenu](workshop/PRESADI.md), [jednu stranicu za tisak](workshop/handout.html), [pojmovnik](workshop/GLOSSARY.md), [literaturu](workshop/READING.md) i [sam repozitorij](workshop/projekt/).
 
 ## Glavni nalazi
 

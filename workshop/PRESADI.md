@@ -72,11 +72,11 @@ rečenicom.
 
 U primjeru su tri provjere i vrijedi ih pogledati kao obrasce.
 
-| Provjera | Obrazac koji vrijedi posuditi |
-|---|---|
-| **ograda** | pretraži svaki izlaz projekta i traži oznaku koja tamo ne smije biti |
-| **pokrivenost** | usporedi veličinu uzorka s brojem koji si unaprijed zapisao |
-| **provenijencija** | traži broj upisan rukom u odjeljku u kojem svi brojevi moraju doći iz koda |
+| Provjera | Što radi | Greška koju zaustavlja |
+|---|---|---|
+| **povjerljivi sadržaj** | provjerava pojavljuje li se oznaka ograničenih podataka u izlaznim datotekama | povjerljiv podatak završio je u javnom rezultatu |
+| **cjelovitost uzorka** | uspoređuje broj jedinica i opažanja s očekivanim brojem | jedinica ili razdoblje neprimjetno je ispalo iz uzorka |
+| **izvor rezultata** | traži decimalne brojeve upisane izravno u odjeljak *Rezultati* | ručno prepisan broj više se ne podudara s analizom |
 
 Provjera pokrivenosti je najkorisnija i najlakša. Zapišite koliko opažanja,
 jedinica i razdoblja vaš uzorak ima kad je ispravan, pa neka gradnja pukne
@@ -87,10 +87,11 @@ kad to više nije točno.
 Ovo nije dio AI sloja nego uvjet da on uopće ima smisla. Ako su brojevi u
 tekstu upisani rukom, nijedna provjera ne može znati jesu li točni.
 
-Postupak je uvijek isti. Analiza zapiše sve brojke u jednu datoteku, u
-primjeru je to `results/procjene.json`. Tekst tu datoteku čita i nigdje ne
-sadrži broj. Provjera odbija tekst u kojem se pojavi decimalni broj koji
-nije došao iz te datoteke.
+Postupak je uvijek isti. Analiza zapiše sve rezultate u jednu datoteku, u
+primjeru je to `results/procjene.json`. Rukopis pri svakoj gradnji iz te
+datoteke umeće aktualne vrijednosti umjesto ručno prepisanih rezultata.
+Provjera zaustavlja gradnju ako u odjeljku *Rezultati* pronađe decimalni broj
+upisan izravno u tekst.
 
 U Stati isti posao rade `estout` ili `putexcel`, koji procjene zapišu u jednu
 datoteku iz koje ih tekst poslije čita. U Pythonu je to isti JSON. U Wordu ovo ne radi i to je jedini stvarni
@@ -98,12 +99,15 @@ razlog da se odustane od Worda.
 
 ## Redoslijed koji preporučam
 
-Ne radite sve odjednom. Prvi tjedan napišite samo `CLAUDE.md`, dvadesetak
-redaka, i radite s time. Drugi tjedan popišite dopuštenja, jer ćete do tada znati
-što vas je zasmetalo. Treći tjedan dodajte jednu provjeru.
+Ne morate sve napraviti odjednom. Uvedite sloj ovim redom:
 
-Ako ste nakon tri tjedna na tri datoteke, dobili ste gotovo sve. Četvrta
-dolazi sama kad prva provjera jednom uhvati nešto stvarno.
+- napišite `CLAUDE.md` u dvadesetak redaka i kratko radite s tim opisom
+- popišite što agent smije učiniti sam, za što vas mora pitati i što mu je
+  zabranjeno
+- dodajte jednu automatsku provjeru za grešku koja vam se već dogodila
+
+S te tri datoteke dobili ste gotovo sve. Pravilo uz izmjene koda dodajte kada
+prva provjera pokaže što u vašem projektu treba obvezno provjeravati.
 
 ## Kako znati da je uspjelo
 

@@ -161,37 +161,36 @@ uvijek naplati, samo u najgorem trenutku.**"
 
 ---
 
-### ⏱ 10:00 — „Gdje agenta pustiti, a gdje ne"
+### ⏱ 10:00 — „Što prepustiti agentu"
 
-**POKAŽI** Tablica dva puta dva. **NAPRAVI** Prstom po kvadrantima, redom
-lijevo gore, desno gore, lijevo dolje, desno dolje.
+**POKAŽI** Tablicu s tri načina provjere rezultata. **NAPRAVI** Prođite redom
+od zadatka koji se može odmah pregledati do zadatka bez jasnog testa.
 
 **KAŽI** —
-- „Vodoravno je koliko je teško **izvršiti**. Okomito je koliko je teško **provjeriti**. AI je pomaknuo samo vodoravnu os."
-- „Lako izvršiti i lako provjeriti, delegirajte bez zadrške. Teško izvršiti a lako provjeriti, **tu je dobitak najveći** i tu je AI stvarno promijenio posao."
-- „Donji red je opasan. Teško provjeriti znači da nećete vidjeti da je krivo."
+- „Ako rezultat mogu odmah pregledati, poput slike prema predlošku, agent može raditi samostalno."
+- „Ako rezultat može provjeriti jasno pravilo, agent može obaviti posao, a provjera potvrđuje ishod."
+- „Ako nema jasnog testa, agent može predlagati, ali odluku donosim ja."
 
-**KAŽI** *(naglasak)* — „I zato pitanje nije *je li ovaj zadatak težak*. Pitanje
-je **biste li primijetili da je odgovor kriv**. To je jedina os koja vas
-zanima."
+**KAŽI** *(naglasak)* — „Pitanje nije koliko je zadatak težak. Pitanje je
+**kako ćete otkriti pogrešan rezultat**."
 
-**→ prijelaz** — „Da to ne ostane apstraktno, evo ista tablica na primjeru s kojim ćemo raditi." *(dalje)*
+**→ prijelaz** — „Pogledajmo četiri konkretna zadatka iz projekta." *(dalje)*
 
 ---
 
-### ⏱ 12:00 — „Ista podjela na našem primjeru"
+### ⏱ 12:00 — „Četiri primjera iz projekta"
 
 **POKAŽI** Tablica četiri retka. **NAPRAVI** Prva dva retka brzo, treći i
 četvrti polako.
 
 **KAŽI** —
-- „Spojiti dvije Eurostatove tablice. Provjerim brojem redaka na izlazu. Delegiram bez zadrške."
-- „Nacrtati sliku po predlošku. Vidim je. Delegiram."
-- „**Odabrati koje su oznake zemlje.** Ovo ne vidim. Panel izgleda jednako uredno i kad je točan i kad nije. To ne ide meni na provjeru nego u kod."
-- „**Fiksni učinci zemlje, ili zemlje i godine.** Ovo mijenja pitanje na koje odgovaram, a ne odgovor. To ne delegiram uopće."
+- „Sliku prema predlošku mogu pregledati izravno. Agent je može izraditi samostalno."
+- „Spajanje tablica potvrđuje provjera broja redaka. Agent radi, a provjera potvrđuje rezultat."
+- „Oznake zemalja provjerava kod koji potvrđuje da je uzorak cjelovit."
+- „Izbor fiksnih učinaka mijenja istraživačko pitanje i zato o njemu odlučuje istraživač."
 
-**KAŽI** *(zatvaranje sekcije)* — „Treći redak je razlog zbog kojeg ova
-radionica postoji. Četvrti je razlog zbog kojeg ćete i dalje biti potrebni."
+**KAŽI** *(zatvaranje sekcije)* — „Prva tri zadatka imaju provjerljiv rezultat.
+Posljednji traži istraživačku prosudbu."
 
 **→ prijelaz** — „Sada pet minuta o tome od čega se agent zapravo sastoji, da znamo o čemu govorimo." *(dalje)*
 
@@ -203,38 +202,36 @@ radionica postoji. Četvrti je razlog zbog kojeg ćete i dalje biti potrebni."
 
 ---
 
-### ⏱ 14:20 — „Četiri pojma i gotovi ste"
+### ⏱ 14:20 — „Četiri pojma, jednostavno objašnjena"
 
 **POKAŽI** Tri kartice pa krupno o kontekstu. **NAPRAVI** Ovaj slajd držite
 lagano. Nije lekcija iz informatike nego demistifikacija.
 
 **KAŽI** —
-- „**Model** predviđa sljedeću riječ. To je sve. Ništa ne zna o vašem projektu i ništa ne može učiniti."
-- „**Alati** su ono što mu date. Pročitaj datoteku, pokreni naredbu, pretraži web. Tek time model postaje agent."
-- „**Ograda** je program koji stoji između i odlučuje smije li se taj alat pozvati. To niste kupili, to pišete vi."
+- „**Model** na temelju uputa predlaže tekst ili kod. Sam ne može otvoriti datoteku ni pokrenuti analizu."
+- „**Alati** su pojedinačne radnje koje su mu na raspolaganju, poput čitanja datoteke, pokretanja naredbe ili pretraživanja interneta."
+- „**Pravila pristupa** određuju što agent smije učiniti sam, za što mora pitati i što mu je zabranjeno. Ta se pravila ponekad nazivaju ogradom."
 
-**KAŽI** *(krupno, polako)* — „A **kontekst** je sve što model u tom trenutku
-vidi. Sustavska uputa, vaša poruka, sadržaj datoteka, ispis naredbi. **Ako
-nešto nije u kontekstu, za model ne postoji.** Nema pamćenja, nema intuicije o
-vašem projektu, nema ničega osim toga."
+**KAŽI** *(krupno, polako)* — „**Kontekst** je radni materijal koji model
+trenutačno ima pred sobom. To su upute, poruke, otvorene datoteke i ispisi
+naredbi. Ostatak projekta ne vidi automatski."
 
 **→ prijelaz** — „I sad pogledajte što iz toga slijedi." *(dalje)*
 
 ---
 
-### ⏱ 17:00 — „Iz toga slijedi cijela radionica"
+### ⏱ 17:00 — „Što vi određujete"
 
 **POKAŽI** Dvije kartice. **NAPRAVI** Ovo je zglob cijelog izlaganja. Stanite
 na njemu.
 
 **KAŽI** —
-- „Ako je sve što agent zna kontekst, a sve što smije ograda, onda odlučujete o **točno dvije stvari**. Trećega nema."
-- „Prva odluka je kontekst. Umjesto da ga svaki put ponavljate u razgovoru, **zapišete ga u datoteku** koja putuje s projektom."
-- „Druga odluka su dopuštenja. Umjesto da se pouzdate u dobru namjeru, **popišete što agent smije**, što vas mora pitati i što mu je zabranjeno."
+- „Određujete koji će radni materijal agent dobiti i koje će radnje smjeti izvršiti."
+- „Opis projekta zapisujete u datoteku koja putuje s projektom, pa ga ne morate ponavljati u svakom razgovoru."
+- „U drugoj datoteci popisujete što agent smije učiniti sam, za što vas mora pitati i što mu je zabranjeno."
 
-**KAŽI** *(naglasak)* — „To su prve dvije od četiri datoteke koje ću vam
-pokazati. I sad je važno da vidite da to **nisu konvencija koju je netko
-izmislio**. To su jedine dvije odluke koje uopće postoje."
+**KAŽI** *(naglasak)* — „Te dvije odluke zapisujemo u prve dvije datoteke
+projektnog AI sloja."
 
 **→ prijelaz** — „Ostaje pitanje koje svi postavljaju, a to je koji alat." *(dalje)*
 
@@ -317,21 +314,21 @@ se vratite na drugi.
 
 **KAŽI** *(naglasak, ovo je fini detalj koji publika voli)* — „Pogledajte što
 je još u `ask`. **`R/zemlje.R`**, dakle mjerni sloj. Nije zabranjen, jer ga
-ponekad treba mijenjati. Ali **me mora pitati.** Sjećate se donjeg desnog
-kvadranta? Ovako on izgleda kad ga zapišete."
+ponekad treba mijenjati. Ali **me mora pitati.** To je konkretan primjer
+zadatka čiji rezultat mora potvrditi automatska provjera."
 
 **→ prijelaz** — „I zadnja od četiri, ona zbog koje ostale tri vrijede." *(dalje)*
 
 ---
 
-### ⏱ 27:00 — „Provjera je mjesto gdje se dug plaća"
+### ⏱ 27:00 — „Tri automatske provjere"
 
 **POKAŽI** Tablica triju provjera. **NAPRAVI** Imenujte sve tri.
 
 **KAŽI** —
-- „**Ograda** traži ograničen sadržaj u bilo kojem izlazu projekta."
-- „**Pokrivenost** uspoređuje veličinu uzorka s brojem koji sam unaprijed zapisao."
-- „**Provenijencija** traži broj upisan rukom u odjeljku Rezultati."
+- „Provjera povjerljivog sadržaja traži oznaku ograničenih podataka u izlaznim datotekama."
+- „Provjera cjelovitosti uzorka uspoređuje broj zemalja i opažanja s očekivanim brojem."
+- „Provjera izvora rezultata traži decimalni broj upisan izravno u odjeljak Rezultati."
 
 **KAŽI** *(naglasak, ovo je teza cijele radionice)* — „I sad ono bitno. **Ne
 provjeravam ja svaki put. Provjerava repozitorij, svaki put.** Tu se dug
@@ -364,11 +361,11 @@ dijela prije nego otvorite terminal. Publika mora znati što lovi.
 **KAŽI** —
 - „Demonstracija ima dva dijela i redoslijed je namjeran. **Prvo korist, pa onda šteta.**"
 - „U prvom dijelu agent dobiva stvaran zadatak i radi ga dobro. Od plana do gotove slike i osvježenog teksta."
-- „U drugom dijelu u projektu su tri tihe greške. **Nijedna ne ruši program i sve tri bi prošle recenziju.**"
+- „U drugom dijelu dodajemo tri namjerne greške. Analiza se nakon svake i dalje izvršava, pa ih moraju zaustaviti posebne provjere."
 
-**KAŽI** *(imenujte tri)* — „Curenje, dakle ograničen sadržaj završi u tekstu.
-Odstupanje, dakle koeficijent upisan rukom više ne odgovara procjeni.
-Pokrivenost, dakle Grčka postane `GR` umjesto `EL`."
+**KAŽI** *(imenujte tri)* — „Ograničen sadržaj završi u javnom tekstu. Ručno
+upisan koeficijent više ne odgovara analizi. Grčka dobije oznaku `GR` umjesto
+Eurostatove oznake `EL`."
 
 **→ prijelaz** — „Idemo u terminal." *(dalje na crni slajd)*
 
@@ -421,8 +418,8 @@ najčešćih tihih grešaka u radu s europskim podacima i **dogodila se meni**."
 najavili.
 
 **KAŽI** —
-- „Plan prije rada. Ograda koja drži. Provjera koja hvata."
-- „**I ovo je poanta. Sve tri greške su tihe.** Nijedna ne ruši kod. Sve tri bi prošle recenziju. Sve tri promakle bi umornom čovjeku pred rok, uključujući mene."
+- „Plan je odobren prije rada. Pravila pristupa zaustavila su zabranjenu radnju. Automatske provjere pronašle su tri greške."
+- „Analiza bi bez tih provjera završila i proizvela uvjerljiv rezultat. Upravo zato provjera mora biti dio gradnje."
 
 **→ prijelaz** — „Sad tri granice, pošteno." *(dalje)*
 
@@ -482,14 +479,14 @@ ulaz."
 dvadeset sekundi.
 
 **KAŽI** — „Jedan pojam, dug provjere, i raste dok ga ne pogledate. Dvije
-odluke, kontekst i ograda, trećega nema. Četiri datoteke, ustav,
-ograde, pravilo, provjere. Jedna petlja, opiši, plan, odobri, izvrši,
+odluke, što agent vidi i što smije učiniti. Četiri datoteke, opis projekta,
+pravila pristupa, pravilo za rad i provjere. Jedna petlja, opiši, plan, odobri, izvrši,
 **provjeri**, commit. I jedno pitanje, **biste li primijetili da je ovo
 krivo**."
 
 ---
 
-### ⏱ 55:00 — „Jedan zadatak, ovaj tjedan"
+### ⏱ 55:00 — „Zadatak za početak"
 
 **POKAŽI** Zadnja krupna tvrdnja. **NAPRAVI** Stanite mirno. Ovo je zadnja
 stvar koju pamte.
@@ -497,7 +494,7 @@ stvar koju pamte.
 **KAŽI** —
 - „Ne tražim od vas da preuredite način rada. Tražim jedno. **Klonirajte repozitorij, uzmite jedan svoj projekt i napišite mu `CLAUDE.md`.**"
 - „Dvadeset redaka. Što je projekt, gdje što stoji, što se nikad ne dira. **Bez ijednog retka novog istraživanja.**"
-- „Sljedeći tjedan dodajte jednu provjeru. I to ne bilo koju, nego onu koja hvata grešku koja vam se **već jednom dogodila.** Svatko ima takvu grešku."
+- „Kada je opis gotov, dodajte jednu automatsku provjeru. Odaberite onu koja hvata grešku koja vam se **već jednom dogodila.** Svatko ima takvu grešku."
 
 **KAŽI** *(zadnja rečenica, polako)* — „Jer ako je proizvodnja rezultata
 postala gotovo besplatna, onda je jedino što još razlikuje istraživanje od
@@ -510,8 +507,8 @@ teksta **to što se može provjeriti, i to bez vas.**"
 **POKAŽI** Poveznice. **NAPRAVI** Recite gdje je repozitorij i otvorite
 pitanja.
 
-**KAŽI** — „Sve je gore. Slajdovi, repozitorij, rukovanje demonstracijom,
-upute za prijenos na vlastiti projekt, pojmovnik i literatura. Kod pod
+**KAŽI** — „Sve je gore. Slajdovi, repozitorij, upute za prijenos na vlastiti
+projekt, pojmovnik i literatura. Kod pod
 MIT-om, tekst pod CC BY. Podaci su stvarni i javni, dvije Eurostatove tablice.
 Izvolite pitanja."
 
@@ -542,7 +539,7 @@ mijenjaju. Provjerite ih u tjednu izlaganja umjesto da vjerujete slajdu.
 **„Zar agent ne može sam napisati te provjere?"**
 Može, i to je dobar prvi zadatak. Ali provjeru koja hvata **vašu** tipičnu
 grešku morate opisati vi, jer agent ne zna što vam se već dogodilo. Zato je
-zadatak za ovaj tjedan `CLAUDE.md`, a ne provjere.
+prvi zadatak opis projekta u datoteci `CLAUDE.md`, a zatim slijedi provjera.
 
 **„Što ako se model promijeni pa se ponašanje promijeni usred projekta?"**
 Zato su provjere u repozitoriju, a ne u glavi. Promjena modela ne može

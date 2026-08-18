@@ -21,7 +21,7 @@ Svaka sekcija odgovara na jedno pitanje i postavlja sljedeće.
 | 21–28 | AI sloj | Kako to izgleda u repozitoriju | Četiri datoteke, kontekst, dopuštenja, pravilo i provjere |
 | 28–45 | Demonstracija | Radi li to stvarno | Prvo korist, pa tri tihe greške koje zaustave gradnju |
 | 45–53 | Granice | Gdje ovo ne pomaže | Osjetljivi podaci, nabava, i odluke koje ostaju vaše |
-| 53–59 | Zaključak | Što radim u ponedjeljak | Jedan `CLAUDE.md` ovaj tjedan, jedna provjera sljedeći |
+| 53–59 | Zaključak | Od čega početi | Opisati projekt u `CLAUDE.md`, a zatim dodati jednu automatsku provjeru |
 
 ## Zašto baš tim redom
 
@@ -30,14 +30,14 @@ anketa nego postavljanje problema, jer sve poslije objašnjava zašto se isplati
 premjestiti se u projekt.
 
 Prva sekcija daje razlog. Izvršavanje je pojeftinilo, provjera nije, i ta se
-razlika nakuplja kao dug. Tablica dva puta dva pretvara taj problem u jednu
-upotrebljivu os, a to je koliko lako biste prepoznali pogrešan rezultat.
+razlika nakuplja kao dug. Tablica s tri konkretna slučaja pokazuje kada agent
+može raditi samostalno, kada ga mora pratiti automatska provjera i kada odluku
+mora donijeti istraživač.
 
-Druga sekcija skida mistiku. Agent je model, alati, ograda i kontekst. Iz toga
-slijedi da odlučujete o točno dvije stvari, a to su kontekst koji agent vidi i
-dopuštenja koja mu dajete. Ovo je zglob cijelog izlaganja jer četiri datoteke iz
-sljedeće sekcije više ne izgledaju kao nečija konvencija nego kao jedini mogući
-zapis tih dviju odluka.
+Druga sekcija skida mistiku. Agent se sastoji od modela, alata, pravila pristupa
+i konteksta. Istraživač određuje koji radni materijal agent dobiva i koje radnje
+smije izvršiti. Te se dvije odluke zapisuju u prve dvije datoteke projektnog AI
+sloja.
 
 Treća sekcija pokazuje kako te odluke izgledaju kao datoteke i imenuje tri
 provjere. Ovdje se pojavljuje `R/zemlje.R` kao mjerni sloj, i to je namjerno
@@ -81,7 +81,7 @@ njega.
 
 | Minuta | Oblik u kojem se pojavljuje |
 |---|---|
-| 10 | Tablica dva puta dva, okomita os je koliko lako biste prepoznali grešku |
+| 10 | Tri konkretna slučaja, od izravnog pregleda do odluke bez jasnog testa |
 | 25 | `R/zemlje.R` je u `ask` jer je to korak koji ne biste primijetili |
 | 43 | Grčka tiho nestane i nitko ne dobije poruku o grešci |
 | 49 | Ne delegira se ono što ne biste primijetili da je krivo |

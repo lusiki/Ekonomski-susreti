@@ -1,6 +1,6 @@
 ---
 title: "Phillipsova krivulja u europodručju"
-subtitle: "Kratki nalaz u kojem nijedan broj nije upisan rukom"
+subtitle: "Primjer teksta u kojem se rezultati umeću izravno iz analize"
 lang: hr
 format:
   html:
@@ -21,44 +21,52 @@ p <- ucitaj_procjene()
 
 ## Pitanje
 
-Phillipsova krivulja tvrdi da su niža nezaposlenost i viša inflacija dvije strane
-istog stanja gospodarstva. Ovdje se ta tvrdnja gleda na `r p$n_zemalja` zemalja
-europodručja u razdoblju od `r p$god_od` do `r p$god_do` godine, dakle na
-`r p$n_opazanja` opažanja, i pita se vrijedi li jednako prije i poslije
-inflacijskog vala.
+Phillipsova krivulja opisuje povezanost nezaposlenosti i inflacije. Niža
+nezaposlenost često se pojavljuje zajedno s višom inflacijom. U ovom primjeru
+provjeravamo vidi li se ta povezanost u `r p$n_zemalja` zemalja europodručja od
+`r p$god_od`. do `r p$god_do`. godine i razlikuje li se prije i poslije
+inflacijskog vala. Uzorak sadrži `r p$n_opazanja` opažanja po zemljama i
+godinama.
 
-Podaci su dvije javne Eurostatove tablice. Prva je harmonizirani indeks
-potrošačkih cijena, a druga je stopa nezaposlenosti. Obje se preuzimaju
-skriptom `data/preuzmi.R` i nijedan broj u ovom tekstu nije upisan rukom.
+Koristimo dvije javne Eurostatove tablice. Jedna sadrži harmonizirani indeks
+potrošačkih cijena, a druga stopu nezaposlenosti. Skripta `data/preuzmi.R`
+preuzima obje tablice. Procijenjene vrijednosti u nastavku ne prepisuju se
+ručno, nego ih rukopis pri gradnji preuzima iz rezultata analize.
 
 ## Rezultati
 
-U specifikaciji s fiksnim učincima zemlje veza je negativna i jasna. Rast
-stope nezaposlenosti za jedan postotni bod prati pad inflacije za
-`r hr(abs(p$beta), 2)` postotna boda uz standardnu pogrešku `r hr(p$se, 2)`.
-Krivulja dakle postoji i u ovom uzorku.
+Prvi model uspoređuje promjene unutar svake zemlje. Time uklanja trajne razlike
+među zemljama koje se tijekom promatranog razdoblja ne mijenjaju. Kada je stopa
+nezaposlenosti viša za jedan postotni bod, procijenjena inflacija niža je za
+`r hr(abs(p$beta), 2)` postotna boda. Standardna pogreška procjene iznosi
+`r hr(p$se, 2)`. U tom modelu podaci pokazuju jasnu negativnu povezanost.
 
-Kada se dodaju i fiksni učinci godine, koeficijent pada na
-`r hr(abs(p$beta_oba), 2)` i prestaje biti razlučiv od nule uz p vrijednost
-`r hr(p$p_oba, 2)`. To nije proturječje nego odgovor na drugo pitanje. Godišnji
-učinci uklanjaju sve što je u nekoj godini zajedničko svim zemljama, a upravo
-je takav bio energetski šok. Ostaje usporedba zemalja unutar iste
-godine i tu veze gotovo nema.
+Drugi model dodatno uklanja promjene koje su u pojedinoj godini zajedničke
+svim zemljama, primjerice zajednički energetski šok. Procijenjeni koeficijent
+tada pada na `r hr(abs(p$beta_oba), 2)`, a p-vrijednost iznosi
+`r hr(p$p_oba, 2)`. Nakon uklanjanja zajedničkih godišnjih promjena podaci više
+ne pokazuju jasnu povezanost nezaposlenosti i inflacije.
 
-Podjela uzorka pokazuje odakle to dolazi. U razdoblju do `r p$prije_do`. godine
-jedan postotni bod nezaposlenosti prati pad inflacije od
-`r hr(abs(p$beta_prije), 2)` postotna boda, na `r p$n_prije` opažanja. Od
-`r p$poslije_od`. godine nadalje isti pad iznosi `r hr(abs(p$beta_posl), 2)`
-postotna boda, na `r p$n_posl` opažanja, dakle nekoliko puta strmije.
-Prosječna inflacija u europodručju dosegla je vrhunac od
-`r hr(p$infl_vrh, 1)` posto u `r p$infl_vrh_god`. godini, dok je prosječna
-nezaposlenost u istom razdoblju pala s `r hr(p$nezap_pocetak, 1)` na
-`r hr(p$nezap_kraj, 1)` posto.
+Razlika se vidi i kada uzorak podijelimo na dva razdoblja. Do
+`r p$prije_do`. godine jedan postotni bod više nezaposlenosti povezan je s
+`r hr(abs(p$beta_prije), 2)` postotna boda nižom inflacijom. Procjena se temelji
+na `r p$n_prije` opažanja. Od `r p$poslije_od`. godine ta razlika iznosi
+`r hr(abs(p$beta_posl), 2)` postotna boda na `r p$n_posl` opažanja.
+
+Prosječna inflacija u europodručju dosegnula je
+`r hr(p$infl_vrh, 1)` posto u `r p$infl_vrh_god`. godini. U promatranom se
+razdoblju prosječna nezaposlenost smanjila s `r hr(p$nezap_pocetak, 1)` na
+`r hr(p$nezap_kraj, 1)` posto. Prva slika prikazuje kako su se obje stope
+mijenjale tijekom vremena.
 
 ```{r}
 #| fig-cap: "Inflacija i nezaposlenost u europodručju"
 knitr::include_graphics("../results/slike/slika1-vrijeme.png")
 ```
+
+Druga slika prikazuje odnos nezaposlenosti i inflacije odvojeno za dva
+razdoblja. Svaka točka predstavlja jednu zemlju u jednoj godini, a crte
+sažimaju procijenjenu povezanost unutar pojedinog razdoblja.
 
 ```{r}
 #| fig-cap: "Phillipsova krivulja u dva razdoblja"
@@ -67,13 +75,14 @@ knitr::include_graphics("../results/slike/slika2-phillips.png")
 
 ## Ograničenja
 
-Ovo je opisni nalaz, a ne procjena uzročnog učinka. Nezaposlenost nije
-slučajno dodijeljena i obje se veličine kreću zajedno s trećim čimbenicima, od
-cijena energije do tečaja. Strmiji nagib poslije `r p$poslije_od`. godine ne
-znači da je Phillipsova veza ojačala nego da je isti vanjski šok različito
-pogodio zemlje s različitim tržištima rada.
+Ova analiza pokazuje povezanost, ali ne dokazuje da promjena nezaposlenosti
+uzrokuje promjenu inflacije. Na obje veličine mogu istodobno djelovati drugi
+čimbenici, poput cijena energije ili tečaja. Strmiji nagib poslije
+`r p$poslije_od`. godine zato ne znači da je Phillipsova veza uzročno ojačala.
+Može značiti da je isti vanjski šok različito pogodio zemlje s različitim
+tržištima rada.
 
-Uzorak je namjerno malen i uravnotežen. Svrha ovog nalaza nije doprinos
-literaturi nego pokazni primjer za radionicu. Svaki broj u odjeljku Rezultati
-dolazi iz `results/procjene.json`, a taj se zapis gradi iz koda pri svakom
-pokretanju.
+Uzorak je namjerno malen i uravnotežen jer je ovo pokazni primjer za radionicu,
+a ne novi doprinos literaturi. Svaki broj u odjeljku Rezultati dolazi iz
+datoteke `results/procjene.json`. Analiza tu datoteku ponovno izrađuje pri
+svakom pokretanju.

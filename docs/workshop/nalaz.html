@@ -2173,7 +2173,7 @@ vertical-align: -.125em;
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Phillipsova krivulja u europodručju</h1>
-<p class="subtitle lead">Kratki nalaz u kojem nijedan broj nije upisan rukom</p>
+<p class="subtitle lead">Primjer teksta u kojem se rezultati umeću izravno iz analize</p>
 </div>
 
 
@@ -2192,14 +2192,15 @@ vertical-align: -.125em;
 
 <section id="pitanje" class="level2">
 <h2 class="anchored" data-anchor-id="pitanje">Pitanje</h2>
-<p>Phillipsova krivulja tvrdi da su niža nezaposlenost i viša inflacija dvije strane istog stanja gospodarstva. Ovdje se ta tvrdnja gleda na 20 zemalja europodručja u razdoblju od 2014 do 2024 godine, dakle na 220 opažanja, i pita se vrijedi li jednako prije i poslije inflacijskog vala.</p>
-<p>Podaci su dvije javne Eurostatove tablice. Prva je harmonizirani indeks potrošačkih cijena, a druga je stopa nezaposlenosti. Obje se preuzimaju skriptom <code>data/preuzmi.R</code> i nijedan broj u ovom tekstu nije upisan rukom.</p>
+<p>Phillipsova krivulja opisuje povezanost nezaposlenosti i inflacije. Niža nezaposlenost često se pojavljuje zajedno s višom inflacijom. U ovom primjeru provjeravamo vidi li se ta povezanost u 20 zemalja europodručja od 2014. do 2024. godine i razlikuje li se prije i poslije inflacijskog vala. Uzorak sadrži 220 opažanja po zemljama i godinama.</p>
+<p>Koristimo dvije javne Eurostatove tablice. Jedna sadrži harmonizirani indeks potrošačkih cijena, a druga stopu nezaposlenosti. Skripta <code>data/preuzmi.R</code> preuzima obje tablice. Procijenjene vrijednosti u nastavku ne prepisuju se ručno, nego ih rukopis pri gradnji preuzima iz rezultata analize.</p>
 </section>
 <section id="rezultati" class="level2">
 <h2 class="anchored" data-anchor-id="rezultati">Rezultati</h2>
-<p>U specifikaciji s fiksnim učincima zemlje veza je negativna i jasna. Rast stope nezaposlenosti za jedan postotni bod prati pad inflacije za 0,61 postotna boda uz standardnu pogrešku 0,08. Krivulja dakle postoji i u ovom uzorku.</p>
-<p>Kada se dodaju i fiksni učinci godine, koeficijent pada na 0,04 i prestaje biti razlučiv od nule uz p vrijednost 0,50. To nije proturječje nego odgovor na drugo pitanje. Godišnji učinci uklanjaju sve što je u nekoj godini zajedničko svim zemljama, a upravo je takav bio energetski šok. Ostaje usporedba zemalja unutar iste godine i tu veze gotovo nema.</p>
-<p>Podjela uzorka pokazuje odakle to dolazi. U razdoblju do 2019. godine jedan postotni bod nezaposlenosti prati pad inflacije od 0,27 postotna boda, na 120 opažanja. Od 2021. godine nadalje isti pad iznosi 1,39 postotna boda, na 80 opažanja, dakle nekoliko puta strmije. Prosječna inflacija u europodručju dosegla je vrhunac od 10,2 posto u 2022. godini, dok je prosječna nezaposlenost u istom razdoblju pala s 11,7 na 6,1 posto.</p>
+<p>Prvi model uspoređuje promjene unutar svake zemlje. Time uklanja trajne razlike među zemljama koje se tijekom promatranog razdoblja ne mijenjaju. Kada je stopa nezaposlenosti viša za jedan postotni bod, procijenjena inflacija niža je za 0,61 postotna boda. Standardna pogreška procjene iznosi 0,08. U tom modelu podaci pokazuju jasnu negativnu povezanost.</p>
+<p>Drugi model dodatno uklanja promjene koje su u pojedinoj godini zajedničke svim zemljama, primjerice zajednički energetski šok. Procijenjeni koeficijent tada pada na 0,04, a p-vrijednost iznosi 0,50. Nakon uklanjanja zajedničkih godišnjih promjena podaci više ne pokazuju jasnu povezanost nezaposlenosti i inflacije.</p>
+<p>Razlika se vidi i kada uzorak podijelimo na dva razdoblja. Do 2019. godine jedan postotni bod više nezaposlenosti povezan je s 0,27 postotna boda nižom inflacijom. Procjena se temelji na 120 opažanja. Od 2021. godine ta razlika iznosi 1,39 postotna boda na 80 opažanja.</p>
+<p>Prosječna inflacija u europodručju dosegnula je 10,2 posto u 2022. godini. U promatranom se razdoblju prosječna nezaposlenost smanjila s 11,7 na 6,1 posto. Prva slika prikazuje kako su se obje stope mijenjale tijekom vremena.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -2210,6 +2211,7 @@ vertical-align: -.125em;
 </div>
 </div>
 </div>
+<p>Druga slika prikazuje odnos nezaposlenosti i inflacije odvojeno za dva razdoblja. Svaka točka predstavlja jednu zemlju u jednoj godini, a crte sažimaju procijenjenu povezanost unutar pojedinog razdoblja.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -2223,8 +2225,8 @@ vertical-align: -.125em;
 </section>
 <section id="ograničenja" class="level2">
 <h2 class="anchored" data-anchor-id="ograničenja">Ograničenja</h2>
-<p>Ovo je opisni nalaz, a ne procjena uzročnog učinka. Nezaposlenost nije slučajno dodijeljena i obje se veličine kreću zajedno s trećim čimbenicima, od cijena energije do tečaja. Strmiji nagib poslije 2021. godine ne znači da je Phillipsova veza ojačala nego da je isti vanjski šok različito pogodio zemlje s različitim tržištima rada.</p>
-<p>Uzorak je namjerno malen i uravnotežen. Svrha ovog nalaza nije doprinos literaturi nego pokazni primjer za radionicu. Svaki broj u odjeljku Rezultati dolazi iz <code>results/procjene.json</code>, a taj se zapis gradi iz koda pri svakom pokretanju.</p>
+<p>Ova analiza pokazuje povezanost, ali ne dokazuje da promjena nezaposlenosti uzrokuje promjenu inflacije. Na obje veličine mogu istodobno djelovati drugi čimbenici, poput cijena energije ili tečaja. Strmiji nagib poslije 2021. godine zato ne znači da je Phillipsova veza uzročno ojačala. Može značiti da je isti vanjski šok različito pogodio zemlje s različitim tržištima rada.</p>
+<p>Uzorak je namjerno malen i uravnotežen jer je ovo pokazni primjer za radionicu, a ne novi doprinos literaturi. Svaki broj u odjeljku Rezultati dolazi iz datoteke <code>results/procjene.json</code>. Analiza tu datoteku ponovno izrađuje pri svakom pokretanju.</p>
 </section>
 
 </main>

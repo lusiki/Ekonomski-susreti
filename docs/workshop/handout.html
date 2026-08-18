@@ -74,9 +74,15 @@
     color: var(--muted); font-size: 7pt; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
   }
   @media print {
-    body { background: var(--paper); font-size: 9.4pt; }
+    body { background: var(--paper); font-size: 8.8pt; line-height: 1.4; }
     .list { width: auto; min-height: 0; margin: 0; padding: 0; border: 0; page-break-after: always; }
     .list:last-child { page-break-after: auto; }
+    h2 { margin: 5.5mm 0 2mm; }
+    p, ul { margin-bottom: 2mm; }
+    li { margin-bottom: .8mm; }
+    th, td { padding: 1.4mm 2mm 1.4mm 0; }
+    .quote { font-size: 15pt; }
+    footer { margin-top: 4mm; }
   }
 </style>
 </head>
@@ -93,21 +99,27 @@
 
   <p><strong>Dug provjere</strong> je razlika između koda koji daje rezultat i koda za koji znate zašto ga daje. Taj se dug ne otpisuje sam od sebe nego dospijeva kasnije, u recenziji, u pitanju koautora o podrijetlu pojedinog broja i pri povratku na vlastiti projekt nakon dulje stanke.</p>
 
-  <h2>Gdje agenta pustiti, a gdje ne</h2>
+  <h2>Što prepustiti agentu</h2>
 
   <table>
-    <tr><th></th><th>lako izvršiti</th><th>teško izvršiti</th></tr>
-    <tr><td class="k">lako provjeriti</td><td>delegira se bez zadrške</td><td>ovdje je dobitak najveći</td></tr>
-    <tr><td class="k">teško provjeriti</td><td>uz nadzor, korak po korak</td><td>ovdje nastaju tihe greške</td></tr>
+    <tr><th>Kako se provjerava rezultat</th><th>Primjer</th><th>Što učiniti</th></tr>
+    <tr><td class="k">Možete ga odmah pregledati</td><td>oblikovati tablicu ili sliku prema predlošku</td><td>prepustite agentu</td></tr>
+    <tr><td class="k">Može se provjeriti automatski</td><td>spojiti dvije tablice uz provjeru broja redaka</td><td>prepustite agentu i pokrenite provjeru</td></tr>
+    <tr><td class="k">Ne postoji jasan test</td><td>odabrati uzorak, glavnu varijablu ili specifikaciju modela</td><td>odluku donesite sami; agent može predlagati</td></tr>
   </table>
 
-  <p>Mjerodavno pitanje nije koliko je zadatak zahtjevan nego biste li prepoznali pogrešan ishod. Umjetna inteligencija pomaknula je samo vodoravnu os ove tablice.</p>
+  <p>Jednostavno pravilo glasi: agent može biti samostalniji kada pogrešku možete brzo uočiti ili je automatska provjera može zaustaviti. Kada zadatak traži istraživačku prosudbu i nema jasnog testa, agent može pomoći, ali ne treba odlučivati.</p>
 
   <h2>Dvije odluke, i nema treće</h2>
 
-  <p>Model predviđa sljedeću riječ i sam po sebi ništa ne zna i ništa ne može učiniti. Alati mu daju sposobnost djelovanja, a ograda je program koji odlučuje smije li se pojedini alat uopće pozvati. Kontekst je sve što model u tom trenutku vidi. Ako nešto nije u kontekstu, za model ne postoji.</p>
+  <ul>
+    <li><strong>Model</strong> predlaže tekst ili kod na temelju onoga što dobije. Sam ne može otvoriti datoteku ni pokrenuti analizu.</li>
+    <li><strong>Alati</strong> su pojedinačne radnje koje su mu na raspolaganju, primjerice čitanje datoteke, pokretanje naredbe ili pretraživanje interneta.</li>
+    <li><strong>Pravila pristupa, odnosno ograda,</strong> određuju koje radnje agent smije izvršiti sam, za koje vas mora pitati i koje su mu zabranjene.</li>
+    <li><strong>Kontekst</strong> je radni materijal koji model trenutačno ima pred sobom: upute, poruke, sadržaj otvorenih datoteka i ispisi naredbi. Ostatak projekta ne vidi automatski.</li>
+  </ul>
 
-  <p>Iz toga slijedi da istraživač odlučuje o samo dvije stvari. Prva je kontekst, koji zapisujete u datoteku umjesto da ga ponavljate u razgovoru. Druga su dopuštenja, koja popisujete sami, dakle što agent smije učiniti, što vas mora pitati i što mu je zabranjeno.</p>
+  <p>Istraživač zato uređuje dvije stvari: što će agent dobiti kao kontekst i koje će mu radnje dopustiti.</p>
 
   <h2>AI sloj, četiri datoteke</h2>
 
@@ -141,26 +153,26 @@ data/derived/panel.csv         220 opažanja, 20 zemalja
 results/procjene.json          svi brojevi na jednom mjestu
     ↓  paper/nalaz.qmd          tekst koji samo čita procjene.json</code></pre>
 
-  <h2>Tri provjere i tri tihe greške</h2>
+  <h2>Tri automatske provjere</h2>
 
   <table>
-    <tr><th>Provjera</th><th>Hvata</th></tr>
-    <tr><td class="k">ograda</td><td>ograničen sadržaj u bilo kojem izlazu</td></tr>
-    <tr><td class="k">pokrivenost</td><td>mjerni sloj koji je promijenio uzorak</td></tr>
-    <tr><td class="k">provenijencija</td><td>broj upisan rukom u odjeljku Rezultati</td></tr>
+    <tr><th>Provjera</th><th>Što provjerava</th><th>Greška koju zaustavlja</th></tr>
+    <tr><td class="k">Povjerljivi sadržaj</td><td>traži oznaku ograničenih podataka u svim izlaznim datotekama</td><td>povjerljiv podatak završio je u javnom rezultatu</td></tr>
+    <tr><td class="k">Cjelovitost uzorka</td><td>uspoređuje broj zemalja i opažanja s očekivanim brojem</td><td>zemlja ili razdoblje neprimjetno je ispalo iz uzorka</td></tr>
+    <tr><td class="k">Izvor rezultata</td><td>traži decimalne brojeve upisane izravno u odjeljak Rezultati</td><td>ručno prepisan broj više se ne podudara s analizom</td></tr>
   </table>
 
-  <p>Na demonstraciji su u projekt podmetnute tri greške. Nijedna ne ruši program i sve tri bi prošle recenziju. Najtiša je treća. Eurostat Grčku označava kao <code>EL</code>, a ostatak svijeta piše <code>GR</code>. Tko filtrira po <code>GR</code> tiho izgubi cijelu zemlju, panel padne s 220 na 209 opažanja, nagib se pomakne s 0,61 na 0,69, a ništa ne pukne.</p>
+  <p>U demonstraciji su tri namjerne greške. Analiza se nakon svake i dalje izvršava i daje uvjerljiv rezultat, pa ih moraju zaustaviti posebne provjere. Primjerice, Eurostat Grčku označava kao <code>EL</code>, a mnogi drugi izvori kao <code>GR</code>. Filtriranje po oznaci <code>GR</code> zato neprimjetno izostavlja cijelu zemlju: panel pada s 220 na 209 opažanja, a procijenjeni nagib pomiče se s 0,61 na 0,69.</p>
 
   <h2>Prijenos na vlastiti projekt</h2>
 
   <ul>
-    <li><strong>Prvi tjedan.</strong> Napišite <code>CLAUDE.md</code>, dvadesetak redaka. Što je projekt, gdje što stoji, koje su naredbe, što se nikad ne dira. Test je jednostavan, dakle ako biste to rekli čovjeku koji prvi put sjeda za vaš projekt, ide unutra.</li>
-    <li><strong>Drugi tjedan.</strong> Postavite ogradu. Ono čemu ne biste primijetili da je otišlo krivo ne ide u dopušteno. Datoteka u kojoj nastaje vaša glavna varijabla ide u ono što vas mora pitati.</li>
-    <li><strong>Treći tjedan.</strong> Napišite jednu provjeru, i to onu koja hvata grešku koja vam se već jednom dogodila. Mora se izvršavati pri gradnji, mora rušiti gradnju kad padne i mora reći što je krivo brojkom.</li>
+    <li><strong>Opišite projekt.</strong> U datoteku <code>CLAUDE.md</code> u dvadesetak redaka zapišite čemu projekt služi, gdje se što nalazi, kako se pokreće i što se nikada ne dira. Uključite ono što biste objasnili osobi koja prvi put radi na projektu.</li>
+    <li><strong>Postavite pravila pristupa.</strong> Popišite što agent smije učiniti sam, za što vas mora pitati i što mu je zabranjeno. Pristup osjetljivim podacima zabranite, a za izmjenu datoteke u kojoj nastaje glavna varijabla tražite svoje odobrenje.</li>
+    <li><strong>Dodajte jednu automatsku provjeru.</strong> Odaberite grešku koja vam se već dogodila. Provjera se mora pokrenuti pri svakoj gradnji, zaustaviti je kada pronađe problem i jasno navesti što nije u redu.</li>
   </ul>
 
-  <p>Uvjet da sve to ima smisla je da brojevi u tekstu dolaze iz koda. Analiza zapisuje sve procjene u jednu datoteku, rukopis ih odande čita i sam ne sadrži nijedan broj, a provjera odbija tekst u kojem se pojavi broj koji odande nije došao.</p>
+  <p>Ovaj postupak ima smisla samo ako se rezultati ne prepisuju ručno. Analiza ih zapisuje u jednu datoteku, a rukopis pri svakoj gradnji iz nje umeće aktualne vrijednosti. Posebna provjera zaustavlja gradnju ako u odjeljku Rezultati pronađe decimalni broj upisan izravno u tekst.</p>
 
   <h2>Što ne delegirati</h2>
 
@@ -173,13 +185,13 @@ results/procjene.json          svi brojevi na jednom mjestu
     </div>
   </div>
 
-  <p>Desni stupac nije stvar ukusa nego popis onoga čiju pogrešnost ne biste prepoznali, dakle donjeg reda tablice s prve stranice.</p>
+  <p>Poslove u desnom stupcu ne prepuštamo agentu jer traže istraživačku prosudbu i nemaju jednostavnu automatsku provjeru.</p>
 
-  <h2>Zadatak za ovaj tjedan</h2>
+  <h2>Zadatak za početak</h2>
 
   <p class="quote">Uzmite jedan svoj projekt i napišite mu CLAUDE.md.</p>
 
-  <p>Dvadeset redaka, bez ijednog retka novog istraživanja. Sljedeći tjedan dodajte jednu provjeru.</p>
+  <p>Dvadeset redaka, bez ijednog retka novog istraživanja. Kada je opis gotov, dodajte jednu provjeru za grešku koja vam se već dogodila.</p>
 
   <p class="muted">Kod pod licencom MIT, tekst pod licencom CC BY 4.0. Podaci su stvarni i javni, iz Eurostatovih tablica prc_hicp_aind i une_rt_a.</p>
 

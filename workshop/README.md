@@ -4,7 +4,6 @@
 istraživačkom repozitoriju.
 
 [**Slajdovi**](https://lusiki.github.io/Ekonomski-susreti/workshop/slides/) ·
-[upute za demonstraciju](RUNBOOK.md) ·
 [primjena u vašem projektu](PRESADI.md) · [repozitorij](projekt/) ·
 [pojmovnik](GLOSSARY.md) · [literatura](READING.md)
 
@@ -60,10 +59,11 @@ Uz te četiri datoteke Git bilježi sve izmjene projekta.
 Zadatke dijelimo prema tome koliko lako možemo prepoznati pogrešan rezultat.
 Težina izvršenja pritom je manje važna.
 
-|  | lako izvršiti | teško izvršiti |
+| Kako se provjerava rezultat | Primjer | Što učiniti |
 |---|---|---|
-| **lako provjeriti** | agentu se može prepustiti cijeli zadatak | ovdje je ušteda vremena najveća |
-| **teško provjeriti** | radi se uz nadzor, korak po korak | potrebna je provjera zapisana u kodu |
+| **Možete ga odmah pregledati** | oblikovati sliku prema predlošku | prepustite agentu |
+| **Može se provjeriti automatski** | spojiti tablice uz provjeru broja redaka | prepustite agentu i pokrenite provjeru |
+| **Ne postoji jasan test** | odabrati uzorak ili specifikaciju modela | odluku donesite sami |
 
 U radionici agent spaja dvije Eurostatove tablice. Unaprijed znamo koliko redaka
 rezultat treba imati, pa ga možemo brzo provjeriti. Pri spajanju tablica po
@@ -90,7 +90,6 @@ možemo usredotočiti na postupak kojim nastaje nalaz.
 | [`slides/slides.qmd`](slides/slides.qmd) | izvor prezentacije na hrvatskom u formatu Quarto |
 | [`TIJEK.md`](TIJEK.md) | tijek izlaganja na jednoj stranici |
 | [`SCRIPT.md`](SCRIPT.md) | govorni scenarij, slajd po slajd |
-| [`RUNBOOK.md`](RUNBOOK.md) | upute za demonstraciju i tri podmetnute greške |
 | [`PRESADI.md`](PRESADI.md) | upute za primjenu istog načina rada u vlastitom projektu |
 | [`handout.html`](handout.html) | materijal za obostrani ispis na jednom listu formata A4 |
 | [`GLOSSARY.md`](GLOSSARY.md) | hrvatsko i englesko nazivlje |
