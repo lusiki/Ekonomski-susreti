@@ -89,7 +89,6 @@ Tko filtrira po `GR`, tiho izgubi cijelu zemlju. Panel padne s 220 na 209
 opažanja, nagib se pomakne s 0,61 na 0,69, a ništa ne pukne. Kod se izvrši,
 slike se nacrtaju, tekst se sastavi. Samo je rezultat drugi.
 
-Detaljan scenarij je u [`../RUNBOOK.md`](../RUNBOOK.md).
 
 ## Osvježavanje podataka
 

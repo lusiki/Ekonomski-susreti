@@ -88,8 +88,6 @@ možemo usredotočiti na postupak kojim nastaje nalaz.
 | Datoteka | Što je |
 |---|---|
 | [`slides/slides.qmd`](slides/slides.qmd) | izvor prezentacije na hrvatskom u formatu Quarto |
-| [`TIJEK.md`](TIJEK.md) | tijek izlaganja na jednoj stranici |
-| [`SCRIPT.md`](SCRIPT.md) | govorni scenarij, slajd po slajd |
 | [`PRESADI.md`](PRESADI.md) | upute za primjenu istog načina rada u vlastitom projektu |
 | [`handout.html`](handout.html) | materijal za obostrani ispis na jednom listu formata A4 |
 | [`GLOSSARY.md`](GLOSSARY.md) | hrvatsko i englesko nazivlje |

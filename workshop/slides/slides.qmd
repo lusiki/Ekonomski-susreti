@@ -225,12 +225,59 @@ da je ishod ispravan.
 
 
 ::: {.divider background-color="#000000"}
-## 3 · AI sloj
+## 3 · Projekt
 
-Četiri datoteke u vašem repozitoriju.
+Prvo ono što nastaje, pa onda kako.
 :::
 
-## Projekt koji ćemo gledati
+## Gotov rad {background-color="#000000"}
+
+::: {.krupno style="color:white"}
+paper/nalaz.html
+:::
+
+::: {style="color:rgba(255,255,255,0.8)"}
+Dvije stranice. Pitanje, rezultati, dvije slike, ograničenja.
+:::
+
+## Ista rečenica, dva puta
+
+**Ovako stoji u gotovom radu**
+
+> Rast stope nezaposlenosti za jedan postotni bod prati pad inflacije za
+> **0,61** postotna boda.
+
+**Ovako stoji u izvoru istoga rada**
+
+```markdown
+... prati pad inflacije za `r hr(abs(p$beta), 2)` postotna boda.
+```
+
+. . .
+
+::: {.krupno}
+U izvoru nema brojke. Ima uputa gdje je potražiti.
+:::
+
+## Gdje ti brojevi žive
+
+```json
+{
+  "n_opazanja": 220,
+  "n_zemalja": 20,
+  "beta": -0.61305394,
+  "se": 0.08477567,
+  "infl_vrh_god": 2022,
+  "infl_vrh": 10.24
+}
+```
+
+::: {.tiho}
+`results/procjene.json`, dvadeset i osam brojeva. Analiza ovamo piše, a tekst
+odavde čita. Ta dva koraka nikad ne razgovaraju izravno.
+:::
+
+## Cijeli put, od tablice do rečenice
 
 ```
 data/raw/hicp.csv              Eurostat, 45 oznaka
@@ -245,8 +292,32 @@ results/procjene.json          svi brojevi na jednom mjestu
 ```
 
 ::: {.tiho}
-Phillipsova krivulja u europodručju, 2014. do 2024. Dvije javne tablice,
-jedna naredba, nijedan broj upisan rukom.
+Cijeli ovaj put prolazi jedna naredba, `Rscript analysis/run.R`.
+:::
+
+## Kako izgleda kad je sve u redu
+
+```
+== Gradnja =================================================
+  podaci: 220 opazanja, 20 zemalja, 2014 do 2024
+  procjene: nagib = -0.613 | uz fiksne ucinke godine = -0.0423
+  slike: 2 zapisane u results/slike
+  brojevi: results/procjene.json
+== Provjere ================================================
+  [ok]     ograda
+  [ok]     pokrivenost/zemlje
+  [ok]     pokrivenost/agregati
+  [ok]     pokrivenost/uravnotezen
+  [ok]     shema/varijable
+  [ok]     shema/raspon
+  [ok]     provenijencija
+== Rukopis =================================================
+  rukopis: paper/nalaz.html
+== OK: sve izgradeno i provjereno ==========================
+```
+
+::: {.tiho}
+Zapamtite drugi redak. Vratit će nam se za deset minuta.
 :::
 
 ## Četiri datoteke i kvar koji svaka sprječava
@@ -282,26 +353,6 @@ Agent orkestrira analizu čije osjetljive ulaze **nikada ne vidi**.
 Primijetite drugi redak. Mjerni sloj je u `ask`, ne u `allow`. Nije zabranjen,
 ali me mora pitati.
 :::
-
-## Tri automatske provjere
-
-| Provjera | Što provjerava | Greška koju zaustavlja |
-|---|---|---|
-| **Povjerljivi sadržaj** | traži oznaku ograničenih podataka u izlaznim datotekama | povjerljiv podatak završio je u javnom rezultatu |
-| **Cjelovitost uzorka** | uspoređuje broj zemalja i opažanja s očekivanim brojem | zemlja ili razdoblje ispalo je iz uzorka |
-| **Izvor rezultata** | traži decimalne brojeve upisane izravno u odjeljak Rezultati | ručno prepisan broj ne podudara se s analizom |
-
-. . .
-
-::: {.krupno}
-Ne provjeravam ja svaki put. Provjerava repozitorij, svaki put.
-:::
-
-::: {.tiho}
-Tu se dug provjere prestaje nakupljati. Ne zato što ste disciplinirani, nego
-zato što gradnja pukne ako niste.
-:::
-
 
 ::: {.divider background-color="#000000"}
 ## 4 · Demonstracija
@@ -345,6 +396,11 @@ Terminal
 ## Treća greška, pobliže
 
 Eurostat Grčku označava kao `EL`. Mnogi drugi izvori koriste oznaku `GR`.
+
+```
+prije:   podaci: 220 opazanja, 20 zemalja, 2014 do 2024
+sada:    podaci: 209 opazanja, 19 zemalja, 2014 do 2024
+```
 
 ::: {.kartice}
 ::: {}
