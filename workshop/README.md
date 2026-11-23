@@ -96,6 +96,16 @@ možemo usredotočiti na postupak kojim nastaje nalaz.
 
 ## Izrada materijala
 
+Samo slajdovi, bez pokretanja pokazne analize, izrađuju se iz korijena repozitorija:
+
+```bash
+python scripts/build-workshop-slides.py
+```
+
+Naredba ažurira `docs/workshop/slides/index.html`. Slajdovi koriste isti format
+1280 × 720 i statička pisma Roboto kao istraživačka prezentacija. Pisma,
+stilovi i navigacija ugrađeni su u HTML pa se datoteka može otvoriti i bez mreže.
+
 Sljedeća naredba izrađuje sve materijale.
 
 ```bash

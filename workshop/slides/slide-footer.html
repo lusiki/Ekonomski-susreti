@@ -1,0 +1,22 @@
+<script>
+// Keep the footer inside the scaled slide, including standalone/print views.
+function addWorkshopFooters() {
+  const slides = Reveal.getSlides();
+  slides.forEach((slide, index) => {
+    if (slide.querySelector('.workshop-footer')) return;
+    const footer = document.createElement('footer');
+    footer.className = 'workshop-footer';
+    const author = document.createElement('span');
+    author.textContent = 'LUKA SIKIĆ';
+    const number = document.createElement('span');
+    number.textContent = `${String(index + 1).padStart(2, '0')} / ${slides.length}`;
+    footer.append(author, number);
+    slide.append(footer);
+  });
+}
+if (typeof Reveal !== 'undefined' && Reveal.isReady()) addWorkshopFooters();
+else window.addEventListener('load', () => {
+  if (Reveal.isReady()) addWorkshopFooters();
+  else Reveal.on('ready', addWorkshopFooters);
+}, { once: true });
+</script>

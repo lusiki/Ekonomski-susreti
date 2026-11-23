@@ -6,13 +6,18 @@ lang: hr
 format:
   revealjs:
     theme: [default, theme.scss]
+    css: ../../docs/slides/presentation-fonts.css
     embed-resources: true
+    html-math-method: plain
     slide-number: true
     progress: true
     history: false
     transition: none
     width: 1280
-    height: 760
+    height: 720
+    center: false
+    margin: 0
+    include-after-body: slide-footer.html
     footer: "AI u ekonomskim istraživanjima · Ekonomski susreti"
 ---
 

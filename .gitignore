@@ -22,3 +22,7 @@ design/uploads/
 # Izlaz kratkog pregleda (objavljena kopija je u docs/downloads/)
 materials/brief/pregled.pdf
 materials/brief/pregled.typ
+
+# Intermediate Quarto workshop output; published standalone copy is in docs/.
+workshop/slides/slides.html
+workshop/slides/slides_files/
