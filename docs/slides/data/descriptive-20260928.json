@@ -1,0 +1,66 @@
+{
+  "paper_edition": "2026-09-28",
+  "repository_revision": "b2187d34159b5d40caeecb2694640331e4aeae71",
+  "source_url": "https://raw.githubusercontent.com/lusiki/HNB_Media_Attention/b2187d34159b5d40caeecb2694640331e4aeae71/media-hub/public/downloads/PAPER_EXT.html",
+  "source_sha256": "abe93a6b34b90c5e75a8aa7439c52e4e69abec396c5506afa1a264f8c50f403b",
+  "public_paper_url": "https://lusiki.github.io/HNB_Media_Attention/media/downloads/PAPER_EXT.html",
+  "period": "2021-01/2026-08",
+  "annual": [
+    {
+      "year": 2021,
+      "months": 12,
+      "institutional_posts": 20631,
+      "relevant_posts": 8419,
+      "weighted_share_pct": 6.12,
+      "mean_hicp_pct": 2.68
+    },
+    {
+      "year": 2022,
+      "months": 12,
+      "institutional_posts": 31269,
+      "relevant_posts": 17278,
+      "weighted_share_pct": 3.59,
+      "mean_hicp_pct": 10.65
+    },
+    {
+      "year": 2023,
+      "months": 12,
+      "institutional_posts": 21612,
+      "relevant_posts": 13365,
+      "weighted_share_pct": 4.67,
+      "mean_hicp_pct": 8.47
+    },
+    {
+      "year": 2024,
+      "months": 12,
+      "institutional_posts": 17665,
+      "relevant_posts": 9507,
+      "weighted_share_pct": 3.26,
+      "mean_hicp_pct": 4.04
+    },
+    {
+      "year": 2025,
+      "months": 12,
+      "institutional_posts": 19376,
+      "relevant_posts": 10151,
+      "weighted_share_pct": 3.17,
+      "mean_hicp_pct": 4.38
+    },
+    {
+      "year": 2026,
+      "months": 8,
+      "institutional_posts": 13610,
+      "relevant_posts": 6810,
+      "weighted_share_pct": 1.86,
+      "mean_hicp_pct": 4.24
+    }
+  ],
+  "annual_share_definition": "Ratio of annual sums of weighted institutional numerator and inflation denominator, not an unweighted mean of monthly shares. Values published to two decimals.",
+  "corpus": "Broad institutional corpus: HNB names/acronym OR generic central-bank terms. Retained digital sources can include social posts and comments. Relevant means matching the paper's inflation definition.",
+  "partial_year": "2026 covers January-August. Counts are not annualised; the same-month prior-year comparison is unavailable in Table 1.",
+  "monthly_data": "Figures 1 and 3 are reproduced from the latest manuscript, not reconstructed from the older public CSV. No monthly observations are digitised or estimated.",
+  "figure_sha256": {
+    "paper-figure-1.png": "67b8a6e2727fad7ca8d3c2405132bad1fb468686e317d179510e1c717b8f8975",
+    "paper-figure-3.png": "e17174cd48d798dec9eae5cded217fcdb65a6710244b4ec7400cdb7bd4df8eeb"
+  }
+}

@@ -15,6 +15,12 @@ Skenirajte QR kod mobitelom kako biste otvorili stranicu projekta sa sažecima, 
 
 ## Materijali
 
+Slajdovi u pregledniku i njihov PDF osvježeni su prema radu od 28. rujna 2026.
+Donose deskriptivni prikaz od siječnja 2021. do kolovoza 2026., bez ekonometrijskih
+postupaka. [Izvori i obuhvat osvježavanja](docs/slides/README.md) dokumentiraju
+grafikone i razlike u odnosu na raniju verziju. PowerPoint, sažeci, petostrani pregled
+i raniji prikaz nalaza niže na ovoj stranici zadržavaju prethodno izdanje istraživanja.
+
 | Sadržaj | Pregled | Preuzimanje |
 |---|---|---|
 | Sažetak izlaganja | [Kada inflacija istisne glas središnje banke](https://lusiki.github.io/Ekonomski-susreti/abstracts/#izlaganje) | [tekst](materials/abstract-presentation.md) |
