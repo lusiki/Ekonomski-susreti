@@ -1,0 +1,2 @@
+# Generated PDFs must not undergo text diffing or line-ending conversion.
+*.pdf binary

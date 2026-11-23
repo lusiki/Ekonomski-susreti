@@ -3,55 +3,82 @@ lang: hr
 format:
   typst:
     papersize: a4
-    fontsize: 10pt
+    fontsize: 10.25pt
     mainfont: "Roboto"
     font-paths: ["../../fonts"]
     margin:
       x: 2.5cm
-      y: 2.2cm
+      top: 2.5cm
+      bottom: 2.3cm
     section-numbering: ""
     toc: false
 ---
 
 ```{=typst}
-// Bauhaus, crno-bijelo, prozračno. Hijerarhiju nosi samo tipografija.
+// Isti Roboto, papir, tinta i tanke linije kao u konferencijskoj prezentaciji.
+#set document(
+  title: "Kada inflacija istisne glas središnje banke — sažeti prikaz istraživanja",
+  author: ("Petra Palić", "Luka Sikić"),
+)
+#set text(font: "Roboto", size: 10.25pt, weight: "regular", fill: black, hyphenate: false)
+#set par(justify: false, leading: 0.64em, spacing: 0.9em, first-line-indent: 0pt)
 
-#set text(font: "Roboto", size: 10pt, weight: "regular", fill: black)
-#set par(justify: true, leading: 0.74em, first-line-indent: 0pt)
-#show par: set block(spacing: 1.15em)
+#set page(
+  numbering: none,
+  header: context if counter(page).get().at(0) > 1 [
+    #set text(size: 7pt, weight: 500, tracking: 0.06em, fill: rgb("#555555"))
+    #grid(columns: (1fr, auto),
+      [KADA INFLACIJA ISTISNE GLAS SREDIŠNJE BANKE],
+      [SAŽETI PRIKAZ ISTRAŽIVANJA],
+    )
+    #v(5pt)
+    #line(length: 100%, stroke: 0.4pt + rgb("#d9d9d9"))
+  ],
+  footer: context [
+    #line(length: 100%, stroke: 0.4pt + rgb("#d9d9d9"))
+    #v(6pt)
+    #set text(size: 7.2pt, weight: 500, tracking: 0.1em, fill: rgb("#555555"))
+    #grid(columns: (1fr, auto),
+      [PALIĆ · SIKIĆ],
+      [#counter(page).display("01") / #numbering("01", counter(page).final().at(0))],
+    )
+  ],
+)
 
-#show heading: it => block(width: 100%, above: 1.55em, below: 0.8em)[
-  #line(length: 100%, stroke: 0.5pt + black)
-  #v(0.5em, weak: true)
-  #text(size: 7.6pt, weight: 700, tracking: 0.2em)[#upper(it.body)]
+#show heading: it => block(width: 100%, above: 1.4em, below: 0.7em, sticky: true)[
+  #line(length: 100%, stroke: 0.4pt + black)
+  #v(0.55em, weak: true)
+  #text(size: 8pt, weight: 700, tracking: 0.13em)[#upper(it.body)]
 ]
 
-#show figure: set block(above: 1.5em, below: 1.5em)
+#set figure(gap: 0.6em)
+#show figure: set block(width: 100%, above: 1.1em, below: 1.1em)
 #show figure.caption: it => align(left)[
-  #v(0.2em)
-  #text(size: 7.6pt, weight: "regular", fill: luma(85))[#it.body]
+  #set par(leading: 0.45em)
+  #text(size: 8.3pt, weight: "regular", fill: rgb("#555555"))[#it.body]
 ]
 
-#block(width: 100%, below: 2.4em)[
-  #text(size: 7.4pt, weight: 700, tracking: 0.2em)[EKONOMSKI SUSRETI]
-  #v(0.6em)
+#block(width: 100%, below: 1.8em)[
   #line(length: 100%, stroke: 0.5pt + black)
+  #v(0.6em)
+  #text(size: 7.6pt, weight: 700, tracking: 0.16em)[EKONOMSKI SUSRETI 2026]
   #v(1.5em)
   #block(width: 100%)[
-    #set par(leading: 0.36em)
-    #text(size: 31pt, weight: 200, tracking: -0.31pt)[
+    #set par(leading: 0.32em)
+    #text(size: 31pt, weight: 300, tracking: -0.31pt)[
       Kada inflacija istisne#linebreak()glas središnje banke
     ]
   ]
-  #v(1em)
-  #text(size: 11pt, weight: "regular")[
+  #v(0.9em)
+  #text(size: 10.8pt, weight: 300)[
     Sažeti prikaz istraživanja o institucionalnom jazu u pažnji
   ]
-  #v(1.5em)
-  #text(size: 7.4pt, weight: 700, tracking: 0.16em, fill: luma(85))[
-    PETRA PALIĆ I LUKA SIKIĆ #h(1em) HRVATSKO KATOLIČKO SVEUČILIŠTE
-  ]
+  #v(1.2em)
+  #text(size: 9pt, weight: 500)[Petra Palić · Luka Sikić]
+  #linebreak()
+  #text(size: 8.5pt, fill: rgb("#555555"))[Hrvatsko katoličko sveučilište]
 ]
+
 ```
 
 ## Pitanje
@@ -90,6 +117,10 @@ Prednost takve mjere je u tome što ne ovisi o tome koliko se piše o cijenama o
 banku sa samom sobom u razdoblju kada je pažnja bila neopterećena krizom, pa razdvaja porast
 ukupnog razgovora o cijenama od pomaka u tome tko u tom razgovoru dobiva riječ.
 
+```{=typst}
+#pagebreak()
+```
+
 ![Institucionalni jaz u pažnji i inflacija, siječanj 2021. do siječnja 2024. Osjenčano područje označava razdoblje nakon uvođenja eura.](slike/jaz-i-inflacija.png){width=100%}
 
 Analiza obuhvaća cijeli hrvatski digitalni medijski prostor u tom razdoblju, dakle više od 19
@@ -121,7 +152,11 @@ Podaci su ovdje jasni. Udio objava o HNB-u u razgovoru o cijenama snažno pada k
 Doseg prosječne objave pritom ostaje praktički nepromijenjen. Istiskivanje se dakle događa u
 uredničkoj odluci koliko će se članaka uopće napisati, a ne u tome gdje ti članci završe.
 
-![Dvije margine vidljivosti. Lijevo udio objava o HNB-u u razgovoru o cijenama, desno prosječan doseg pojedine objave, oboje u odnosu na inflaciju. Svaka točka je jedan mjesec.](slike/dvije-margine.png){width=100%}
+```{=typst}
+#pagebreak()
+```
+
+![Dvije margine vidljivosti. Lijevo udio objava o HNB-u u razgovoru o cijenama, desno prosječan doseg pojedine objave, oboje u odnosu na inflaciju. Svaka točka je jedan mjesec.](slike/dvije-margine.png){width=79%}
 
 ## Veza s očekivanjima kućanstava
 
@@ -136,12 +171,24 @@ je da tu vezu nosi upravo broj objava, dok mjera zasnovana na dosegu ne pokazuje
 je u skladu s idejom da za kućanstva vrijedi učestalost susreta s informacijom, a ne dubina
 pojedinog susreta.
 
-![Promjena bilance inflacijskih očekivanja kućanstava nakon pomaka u vidljivosti HNB-a, po tjednima nakon pomaka. Osjenčano područje prikazuje 95 postotni interval pouzdanosti.](slike/ocekivanja.png){width=92%}
+![Promjena bilance inflacijskih očekivanja kućanstava nakon pomaka u vidljivosti HNB-a, po tjednima nakon pomaka. Osjenčano područje prikazuje 95 postotni interval pouzdanosti.](slike/ocekivanja.png){width=79%}
+
+```{=typst}
+#block(breakable: false)[
+```
 
 Ovaj dio nalaza treba čitati kao prediktivnu vezu, a ne kao potpuno identificiran uzročni učinak.
 Podaci pokazuju da vidljivost prethodi očekivanjima i da je smjer stabilan, ali za čvrstu tvrdnju o
 uzroku trebali bi dulji vremenski nizovi ili istraživački dizajn koji bi izloženost medijskom
 sadržaju mijenjao neovisno o ostalim uvjetima.
+
+```{=typst}
+]
+```
+
+```{=typst}
+#pagebreak()
+```
 
 ## Nije riječ o šutnji banke
 
@@ -165,6 +212,10 @@ donosi Europska središnja banka, pa se medijsko praćenje monetarne politike di
 prema njoj. HNB pritom nije smanjio vlastitu komunikaciju, nego se promijenio filtar kroz koji ta
 komunikacija prolazi. U takvim uvjetima negativan ton izvještavanja o cijenama ne može se
 neutralizirati signalom o kamatnoj stopi jer tog signala više nema.
+
+```{=typst}
+#pagebreak()
+```
 
 ## Koliko je nalaz pouzdan
 
@@ -208,6 +259,11 @@ pogrešku, premda nalaz opstaje uz oba načina prevođenja. Klasifikator tona ni
 na hrvatskim ekonomskim tekstovima. Naposljetku, uzročna tvrdnja najjača je za učinak inflacije na
 vidljivost, dok je veza vidljivosti s očekivanjima dokumentirana prediktivno. Prirodan nastavak je
 usporedba s drugim malim ekonomijama europodručja koje su prošle sličan prijelaz.
+
+```{=typst}
+#set text(size: 9.5pt)
+#set par(leading: 0.62em, spacing: 0.9em)
+```
 
 ## O ovom prikazu
 
