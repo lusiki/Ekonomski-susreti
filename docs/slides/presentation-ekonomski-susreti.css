@@ -1,256 +1,38 @@
-/*
-  Bauhaus, crno-bijelo, prozračno.
-  Hijerarhiju nosi samo tipografija, dakle veličina i debljina slova.
-*/
-
-@import url("../fonts/roboto.css");
+/* The browser deck and print edition share one typographic layout. */
+@import url("presentation-layout.css");
 
 :root {
-  --ink: #000;
-  --paper: #fff;
-  --muted: #555555;
-  --hair: #d9d9d9;
-
   --r-background-color: #fff;
   --r-main-color: #000;
   --r-heading-color: #000;
   --r-link-color: #000;
-  --r-link-color-dark: #000;
-  --r-link-color-hover: #000;
+  --r-link-color-hover: #c8102e;
   --r-selection-background-color: #000;
   --r-selection-color: #fff;
-  --r-main-font: Roboto, "Helvetica Neue", Arial, sans-serif;
-  --r-heading-font: Roboto, "Helvetica Neue", Arial, sans-serif;
-  --r-heading-font-weight: 200;
-  --r-heading-text-transform: none;
-  --r-code-font: "Roboto Mono", Consolas, monospace;
 }
-
-.reveal {
-  background: var(--paper);
-  color: var(--ink);
-  font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 36px;
-  letter-spacing: 0.004em;
-}
-
-.reveal-viewport { background: var(--paper); }
-
-.reveal h1,
-.reveal h2,
-.reveal h3 {
-  color: var(--ink);
-  font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-weight: 200;
-  letter-spacing: -0.01em;
-  line-height: 1.06;
-  text-transform: none;
-  text-shadow: none;
-}
-
-.reveal h2 {
-  padding-bottom: 0.18em;
-  margin-bottom: 0.72em;
-  border-bottom: 1px solid var(--ink);
-  font-size: 1.5em;
-}
-
-.reveal a { color: var(--ink); text-decoration: underline; text-underline-offset: 0.18em; }
-.reveal strong { font-weight: 700; }
-.reveal em { font-style: italic; }
-
-/* ---------- popisi ---------- */
-
-.reveal ul { list-style: none; margin-left: 0; padding-left: 0; }
-.reveal ol { margin-left: 1.1em; padding-left: 0; }
-.reveal li { position: relative; margin-bottom: 0.4em; padding-left: 1.15em; }
-.reveal ul li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.62em;
-  width: 0.42em;
-  height: 1px;
-  background: var(--ink);
-}
-.reveal ol li { padding-left: 0.2em; }
-.reveal ol li::before { content: none; }
-
-/* ---------- citat ---------- */
-
-.reveal blockquote {
-  width: 92%;
-  margin: 0.3em 0 0.9em 0;
-  padding: 0 0 0 0.6em;
-  border-left: 1px solid var(--ink);
-  background: none;
-  color: var(--ink);
-  font-size: 1.15em;
-  font-weight: 200;
-  font-style: normal;
-  line-height: 1.16;
-  letter-spacing: -0.01em;
-  box-shadow: none;
-}
-
-/* ---------- tablice ---------- */
-
-.reveal table { font-size: 0.66em; border-collapse: collapse; }
-.reveal table th {
-  color: var(--ink);
-  background: none;
-  border-bottom: 1px solid var(--ink);
-  text-align: left;
-  font-size: 0.84em;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-.reveal table td { border-bottom: 1px solid var(--hair); background: none; }
-.reveal table tr.odd, .reveal table tr.even { background: none; }
-.reveal table td, .reveal table th { padding: 0.5em 0.9em 0.5em 0; }
-
-/* ---------- brojevi i nalazi ---------- */
-
-.reveal .metric,
-.reveal .result {
-  margin: 0.5em 0;
-  padding: 0 0 0 0.7em;
-  border: 0;
-  border-left: 1px solid var(--ink);
-  border-radius: 0;
-  background: none;
-  color: var(--ink);
-  line-height: 1.2;
-}
-
-.reveal .metric span,
-.reveal .result span,
-.reveal .metric strong,
-.reveal .result strong {
-  display: block;
-  color: var(--ink);
-  font-size: 1.6em;
-  font-weight: 100;
-  letter-spacing: -0.02em;
-}
-
-.reveal .metric.accent span,
-.reveal .result.accent span,
-.reveal .metric.accent strong,
-.reveal .result.accent strong { color: var(--ink); font-weight: 500; }
-
-.reveal .result.compact { font-size: 0.84em; }
-
-.reveal .result.neutral span,
-.reveal .result.neutral strong { color: var(--ink); font-size: 1.1em; font-weight: 400; }
-
-.reveal .takeaway {
-  margin-top: 0.8em;
-  padding: 0.5em 0 0;
-  border: 0;
-  border-top: 1px solid var(--ink);
-  background: none;
-  font-size: 0.76em;
-  font-weight: 500;
-  line-height: 1.35;
-}
-
-.reveal .small {
-  margin-top: 0.7em;
-  color: var(--muted);
-  font-size: 0.66em;
-  line-height: 1.35;
-}
-
-/* ---------- tijek ---------- */
-
-.reveal .flow {
-  display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  gap: 0;
-  margin: 1.1em 0 0.9em 0;
-  border-left: 1px solid var(--ink);
-}
-
-.reveal .flow span {
-  flex: 1;
-  padding: 0.8em 0.5em;
-  border: 0;
-  border-right: 1px solid var(--ink);
-  border-radius: 0;
-  background: none;
-  text-align: left;
-  font-size: 0.72em;
-  font-weight: 400;
-}
-
-.reveal .flow b { display: block; color: var(--ink); font-size: 1.1em; font-weight: 700; }
-
-/* ---------- zaključak ---------- */
-
-.reveal .closing {
-  max-width: 100%;
-  margin: 0.9em 0;
-  padding: 0;
-  border-radius: 0;
-  background: none;
-  color: var(--ink);
-  font-size: 1.5em;
-  font-weight: 200;
-  letter-spacing: -0.01em;
-  line-height: 1.1;
+body.reveal-viewport { background: #fff; }
+.reveal { color: #000; font-family: Roboto, sans-serif; font-size: 27px; font-weight: 400; }
+.reveal .slides { text-align: left; }
+.reveal .slides > section.page {
+  box-sizing: border-box;
+  width: 1280px;
+  height: 720px;
+  padding: 44px 72px 60px;
+  margin: 0;
   text-align: left;
 }
+.reveal .slides section .notes { display: none; }
+.reveal .slides .page .column { overflow: visible; }
+.reveal .progress { color: #000; height: 1px; }
+.reveal .controls { color: #000; }
+.reveal a { color: #000; }
+.reveal a:hover { color: #c8102e; }
+.reveal a:focus-visible { outline: 2px solid #c8102e; outline-offset: 5px; }
+.reveal .slide-menu-button { color: #000; }
+.reveal .slide-number { display: none; }
 
-/* ---------- naslovnica i podnožje ---------- */
+/* Keep slide defaults independent from Reveal reset and menu typography. */
+.reveal .slides > section.page { font-size: 16px; line-height: normal; }
+.reveal .slide-menu-button .fa-bars::before{background-image:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-list" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/></svg>')}
 
-.reveal .quarto-title-block,
-.reveal .quarto-title-block.center,
-.reveal .quarto-title-block.center .quarto-title-authors { text-align: left; }
-.reveal .quarto-title-block .date { display: none; }
-.reveal .quarto-title-block .title {
-  color: var(--ink);
-  font-size: 2.3em;
-  font-weight: 200;
-  letter-spacing: -0.01em;
-  line-height: 1.06;
-}
-.reveal .quarto-title-block .subtitle {
-  margin-top: 0.5em;
-  color: var(--ink);
-  font-size: 0.9em;
-  font-weight: 400;
-}
-.reveal .quarto-title-authors { justify-content: flex-start; }
-.reveal .quarto-title-author-name,
-.reveal .quarto-title-affiliation {
-  color: var(--muted);
-  font-size: 0.6em;
-  font-weight: 500;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
-.reveal .slide-footer,
-.reveal .footer {
-  color: var(--muted);
-  font-size: 0.52em;
-  font-weight: 500;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
-.reveal .slide-number { background: none; color: var(--muted); font-size: 0.5em; font-weight: 500; }
-.reveal .progress { color: var(--ink); height: 1px; }
-
-.reveal pre { box-shadow: none; }
-.reveal pre code {
-  padding: 0.7em 0.9em;
-  border-left: 1px solid var(--ink);
-  background: none;
-  font-size: 0.76em;
-  line-height: 1.38;
-}
+.slide-menu:not(.active) { visibility: hidden; }
