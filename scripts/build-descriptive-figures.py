@@ -61,7 +61,7 @@ metadata = {
     "annual_share_definition": "Ratio of annual sums of weighted institutional numerator and inflation denominator, not an unweighted mean of monthly shares. Values published to two decimals.",
     "corpus": "Broad institutional corpus: HNB names/acronym OR generic central-bank terms. Retained digital sources can include social posts and comments. Relevant means matching the paper's inflation definition.",
     "partial_year": "2026 covers January-August. Counts are not annualised; the same-month prior-year comparison is unavailable in Table 1.",
-    "monthly_data": "Figures 1 and 3 are reproduced from the latest manuscript, not reconstructed from the older public CSV. No monthly observations are digitised or estimated.",
+    "monthly_data": "Monthly bar charts use the verified saved analysis panel from 28 September 2026; see monthly-20260928.json. Original Figures 1 and 3 remain reference assets. No digitisation, interpolation, or splice with older public CSV.",
     "figure_sha256": figure_hashes,
 }
 (DATA / "descriptive-20260928.json").write_text(json.dumps(metadata, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

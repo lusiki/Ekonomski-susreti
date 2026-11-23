@@ -15,9 +15,11 @@ Skenirajte QR kod mobitelom kako biste otvorili stranicu projekta sa sažecima, 
 
 ## Materijali
 
-Slajdovi u pregledniku i njihov PDF osvježeni su prema radu od 28. rujna 2026.
-Donose deskriptivni prikaz od siječnja 2021. do kolovoza 2026., bez ekonometrijskih
-postupaka. [Izvori i obuhvat osvježavanja](docs/slides/README.md) dokumentiraju
+Slajdovi u pregledniku i njihov PDF spajaju deskriptivni prikaz od siječnja 2021.
+do kolovoza 2026. s ekonometrijskim rezultatima početnog rada za 2021.–2023.
+Mjesečne serije prikazane su stupcima. Uzorci su jasno označeni, a raniji nalaz o
+očekivanjima nije predstavljen kao stabilno potvrđen u duljem razdoblju.
+[Izvori i obuhvat osvježavanja](docs/slides/README.md) dokumentiraju
 grafikone i razlike u odnosu na raniju verziju. PowerPoint, sažeci, petostrani pregled
 i raniji prikaz nalaza niže na ovoj stranici zadržavaju prethodno izdanje istraživanja.
 
@@ -90,18 +92,19 @@ Nakon ulaska Hrvatske u europodručje ključnu kamatnu stopu određuje Europska 
 
 ## Sadržaj prezentacije
 
-Konferencijsko izlaganje traje dvadeset minuta i prati deset koraka.
+Konferencijsko izlaganje ima 24 slajda. Za dvadeset minuta uvodni i metodološki
+slajdovi prolaze se kratko; za dulju raspravu prikladno je 25 minuta.
 
-1. paradoks medijske vidljivosti HNB-a
-2. način na koji mediji prenose poruke središnje banke
-3. istraživačka pitanja i doprinos rada
-4. podaci korišteni u analizi
-5. institucionalni jaz u pažnji, broj objava i njihov doseg
-6. način procjene i granice zaključaka
-7. tri glavna nalaza
-8. provjera vlastite komunikacijske aktivnosti HNB-a
-9. promjene nakon uvođenja eura
-10. provjere pouzdanosti, ograničenja i preporuke za komunikacijsku politiku
+1. broj objava i relativni prostor u raspravi
+2. razlika između ažurirane deskriptive i izvornog uzorka
+3. korpus i ponderiranje dosega i istaknutosti
+4. mjesečni stupci inflacije, udjela, broja objava, učestalosti i dosega
+5. godišnji sažetak cijelog razdoblja
+6. izvorni institucionalni jaz i ekonometrijska strategija
+7. izvorni rezultati o inflaciji, marginama i očekivanjima
+8. izvorni test promjene oko eura i provjere osjetljivosti
+9. granice prijenosa ranijih rezultata na dulji niz
+10. praćenje komunikacije, ograničenja i rasprava
 
 ## Ponovljivost analize i podaci
 
