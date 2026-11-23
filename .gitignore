@@ -26,3 +26,6 @@ materials/brief/pregled.typ
 # Intermediate Quarto workshop output; published standalone copy is in docs/.
 workshop/slides/slides.html
 workshop/slides/slides_files/
+
+# Speaking-guide thumbnails and layout audit are rebuilt from the lecture PDF.
+/work/speaking-guide/

@@ -15,13 +15,14 @@ Skenirajte QR kod mobitelom kako biste otvorili stranicu projekta sa sažecima, 
 
 ## Materijali
 
-Slajdovi u pregledniku i njihov PDF spajaju deskriptivni prikaz od siječnja 2021.
-do kolovoza 2026. s ekonometrijskim rezultatima početnog rada za 2021.–2023.
-Mjesečne serije prikazane su stupcima. Uzorci su jasno označeni, a raniji nalaz o
-očekivanjima nije predstavljen kao stabilno potvrđen u duljem razdoblju.
-[Izvori i obuhvat osvježavanja](docs/slides/README.md) dokumentiraju
-grafikone i razlike u odnosu na raniju verziju. PowerPoint, sažeci, petostrani pregled
-i raniji prikaz nalaza niže na ovoj stranici zadržavaju prethodno izdanje istraživanja.
+Izlaganje povezuje medijsku zastupljenost, inflaciju i očekivanja kućanstava.
+Mjesečni stupčasti grafikoni prikazuju siječanj 2021. do kolovoza 2026.
+Regresijske procjene odnose se na 2021.–2023., uz 36 mjesečnih i 157 tjednih
+opažanja u osnovnim modelima. [Dokumentacija slajdova](docs/slides/README.md)
+navodi izvore podataka, definicije i postupak izrade.
+
+Govorni vodič prati svih 24 slajda, s minijaturama, tekstom za izlaganje,
+prijelazima i kratkim odgovorima za raspravu.
 
 | Sadržaj | Pregled | Preuzimanje |
 |---|---|---|
@@ -29,6 +30,7 @@ i raniji prikaz nalaza niže na ovoj stranici zadržavaju prethodno izdanje istr
 | Sažetak radionice | [Umjetna inteligencija u ekonomskim istraživanjima](https://lusiki.github.io/Ekonomski-susreti/abstracts/#radionica) | [tekst](materials/abstract-workshop.md) |
 | Sažeti prikaz istraživanja | Pet stranica s glavnim nalazima i grafikonima | [PDF](https://lusiki.github.io/Ekonomski-susreti/downloads/Pregled-istrazivanja.pdf) · [izvor](materials/brief/pregled.qmd) |
 | Konferencijska prezentacija | [Otvori slajdove u pregledniku](https://lusiki.github.io/Ekonomski-susreti/slides/) | [PDF](https://lusiki.github.io/Ekonomski-susreti/downloads/Ekonomski-susreti.pdf) · [PowerPoint](https://lusiki.github.io/Ekonomski-susreti/downloads/Ekonomski-susreti.pptx) |
+| Govorni vodič za izlaganje | Govorna osnova uz svih 24 slajda | [PDF](https://lusiki.github.io/Ekonomski-susreti/downloads/Govorni-vodic-izlaganje.pdf) · [izvor](materials/speaking-guide/) |
 | Materijali radionice | [Rad u repozitoriju i demonstracija](https://lusiki.github.io/Ekonomski-susreti/workshop/) | [slajdovi](https://lusiki.github.io/Ekonomski-susreti/workshop/slides/) · [jedna stranica](https://lusiki.github.io/Ekonomski-susreti/workshop/handout.html) |
 
 ## Sadržaj
@@ -68,21 +70,31 @@ Materijali se nalaze u mapi [`workshop/`](workshop/) i obuhvaćaju [slajdove](wo
 
 - Viša inflacija povezana je s većim institucionalnim jazom u pažnji. Kad je inflacija viša za jedan postotni bod, procijenjeni jaz veći je za približno **0,0021 jedinicu**.
 - Kad raste broj vijesti o cijenama, udio članaka u kojima se spominje HNB smanjuje se. Za prosječan doseg objave ne nalazimo jednako jasnu promjenu.
-- Manji udio članaka o HNB-u pomaže predvidjeti pesimističnija očekivanja kućanstava **2 do 12 tjedana** poslije. To ne znači da medijska izloženost uzrokuje promjenu očekivanja.
+- Manji udio članaka o HNB-u pomaže predvidjeti pesimističnija očekivanja kućanstava na testiranim horizontima **2 do 12 tjedana**, uz linearno mapiranje mjesečnih očekivanja u tjedne. Pri stepenastom mapiranju 10. i 12. tjedan ne prolaze korekciju za višestruko testiranje. Veza je prediktivna, a ne dokaz uzročnog učinka medijske izloženosti.
 - HNB je tijekom inflacijskog vala objavljivao više vlastitih sadržaja. Njegov se udio u vijestima o cijenama ipak smanjio.
 - Nakon uvođenja eura 1. siječnja 2023. veza između inflacije i jaza slabi. Ton medijskog izvještavanja postaje važniji.
 
 ## Podaci i metode
 
-Analiza obuhvaća hrvatske digitalne medije od siječnja 2021. do siječnja 2024.
+Deskriptivni prikaz obuhvaća 68 potpunih mjeseci od siječnja 2021. do kolovoza 2026.
 
-- više od **19 milijuna** dostupnih digitalnih objava
-- **58.448** objava o HNB-u
-- **263.601** objava o inflaciji
-- **1.239** medijskih izvora
-- 36 mjesečnih opažanja i 157 tjednih opažanja u glavnoj analizi
+- **124.163** institucionalne objave
+- **65.530** objava relevantnih za inflacijski diskurs
+- HNB i generički izrazi za središnje banke u promatranim digitalnim izvorima
+- mjesečni stupci inflacije, ponderiranog udjela, broja objava, učestalosti i dosega
+- 2026. obuhvaća osam mjeseci, bez preračunavanja na cijelu godinu
 
-Glavna procjena povezuje jaz s inflacijom i uključuje kontrolne varijable. Instrumentalnim varijablama provjeravamo može li smjer veze biti obrnut. Kao vanjske izvore promjena hrvatske inflacije koristimo cijene hrane i energije u europodručju. Razdoblja prije i nakon uvođenja eura uspoređujemo metodom razlike u razlikama. Vezu s očekivanjima pratimo lokalnim projekcijama. Pouzdanost rezultata provjeravamo specifikacijskim krivuljama, permutacijskim testovima i usporedbom s HANFA-om, institucijom koja nema mandat za stabilnost cijena.
+Ponderirani udio kombinira potencijalni doseg i istaknutost institucije. Godišnji
+udio računa se iz zbrojeva brojnika i nazivnika. Potencijalni doseg nije stvarna
+čitanost.
+
+Ekonometrijski uzorak obuhvaća 2021.–2023., uz 36 mjesečnih i 157 tjednih
+opažanja u osnovnim modelima. Glavna procjena povezuje jaz s inflacijom i uključuje
+kontrolne varijable te Newey–West standardne pogreške. Instrumentalne varijable
+koriste eurozonsku hranu i energiju, uz potrebne pretpostavke isključenja drugih
+kanala. Lokalne projekcije ispituju prediktivnu vezu s očekivanjima. Chowov test i
+interakcije ispituju promjenu odnosa oko uvođenja eura. Dodatne provjere obuhvaćaju
+specifikacije, permutacije, HANFA-u te vladinu i vlastitu komunikaciju.
 
 ## Zašto je rezultat važan
 
@@ -96,21 +108,21 @@ Konferencijsko izlaganje ima 24 slajda. Za dvadeset minuta uvodni i metodološki
 slajdovi prolaze se kratko; za dulju raspravu prikladno je 25 minuta.
 
 1. broj objava i relativni prostor u raspravi
-2. razlika između ažurirane deskriptive i izvornog uzorka
+2. tri istraživačka pitanja
 3. korpus i ponderiranje dosega i istaknutosti
 4. mjesečni stupci inflacije, udjela, broja objava, učestalosti i dosega
 5. godišnji sažetak cijelog razdoblja
-6. izvorni institucionalni jaz i ekonometrijska strategija
-7. izvorni rezultati o inflaciji, marginama i očekivanjima
-8. izvorni test promjene oko eura i provjere osjetljivosti
-9. granice prijenosa ranijih rezultata na dulji niz
+6. institucionalni jaz i ekonometrijska strategija
+7. rezultati o inflaciji, marginama i očekivanjima
+8. promjena oko eura i provjere osjetljivosti
+9. tumačenje relativnog prostora u raspravi
 10. praćenje komunikacije, ograničenja i rasprava
 
 ## Ponovljivost analize i podaci
 
 U ovom su repozitoriju javno dostupni materijali projekta: sažeci izlaganja i radionice, pregled istraživanja na pet stranica, konferencijska prezentacija i svi materijali radionice.
 
-Cjeloviti rad još je u radnoj verziji i dostupan je na upit autorima. Izvorna baza medijskog praćenja i izvedeni podaci o pojedinim objavama nisu objavljeni zbog uvjeta pristupa izvornom sustavu i mogućeg sadržaja trećih strana. Zato se iz ovih materijala ne može u cijelosti ponoviti analiza. Rezultati u prezentaciji dolaze iz analitičkog projekta autora. U radu i slajdovima jasno navodimo govori li pojedini rezultat o uzročnoj vezi ili samo pomaže u predviđanju.
+Cjeloviti [radni tekst istraživanja](https://lusiki.github.io/HNB_Media_Attention/media/downloads/PAPER_EXT.html) dostupan je na stranici projekta. Izvorna baza medijskog praćenja i izvedeni podaci o pojedinim objavama nisu objavljeni zbog uvjeta pristupa izvornom sustavu i mogućeg sadržaja trećih strana. Zato se iz ovih materijala ne može u cijelosti ponoviti analiza. Rezultati u prezentaciji dolaze iz analitičkog projekta autora. U radu i slajdovima jasno navodimo govori li pojedini rezultat o uzročnoj vezi ili samo pomaže u predviđanju.
 
 ## Oblikovanje
 
