@@ -69,6 +69,9 @@ dodati stepenasto mapiranje iz iste Tablice 7a.
 Tipke 1 do 5 dodaju ili uklanjaju serije redom kojim stoje u traci, `I` uključuje
 indeks, a `0` vraća izvorni prikaz. PNG, SVG i CSV preuzimaju trenutačni prikaz.
 Popis `FIGURES` na vrhu `live-charts.js` određuje koje su slike žive.
+Oznaka `data-live-chart` na slici čuva vezu s grafikonom i pri izvozu samostalnog
+HTML-a s ugrađenim slikama. Govorni vodič na drugoj stranici sažima kontrole za
+izlaganje. Prije obnove HTML-a pokrenuti `python scripts/build-live-data.py`.
 
 ## Deskriptivne serije
 

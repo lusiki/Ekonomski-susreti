@@ -139,6 +139,7 @@ y=D.block('Tri mjesta za stanku','Na slajdu 2 nakon više objava i manjeg udjela
 y=D.block('Brojke za pamćenje','68 mjeseci, 124.163 institucionalne i 65.530 relevantnih objava. Tjedni model daje 0,00213 jedinica jaza po bodu inflacije, uz kontrolu obujma. Relativna učestalost niža je za oko 0,47 postotnih bodova.',y)
 y=D.block('Ritam izvedbe','Kartice daju sažetu 20-minutnu putanju. Za mirnije objašnjenje modela i dodatna pitanja predvidite 25 minuta. Metodološku tablicu i provjere prođite kratko. Ne ubrzavajte objašnjenje osi.',y)
 y=D.block('Jedinice i razdoblja','Svaki deskriptivni stupac je mjesec, od siječnja 2021. do kolovoza 2026. Procjene modela obuhvaćaju 2021.–2023. Os grafa očekivanja prikazuje horizonte u tjednima.',y)
+y=D.block('Živi grafikoni u pregledniku','Na slajdovima 7-12 i 17 pokazivačem otkrijte vrijednosti. Tipke 1-5 dodaju serije prema redoslijedu u traci, I uključuje indeks gdje je dostupan, a 0 vraća početni prikaz. PNG, SVG i CSV preuzimaju prikaz. Nakon kratke usporedbe vratite početni graf. PDF zadržava statične slike.',y,style='small')
 D.finish()
 for e in T:card(D,e,TM,'talk')
 y=D.start('Nakon posljednjeg slajda','Kratki odgovori za raspravu','questions')

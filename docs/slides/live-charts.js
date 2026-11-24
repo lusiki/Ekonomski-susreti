@@ -546,7 +546,7 @@
     var names = [];
     opt._plan.panels.forEach(function (p) { keysOf(p).forEach(function (k) { names.push(S[k].name); }); });
     exportTitles(opt, this.section, names.join(' · ') + ' · siječanj 2021. do kolovoza 2026.',
-      'Mjesečni agregati, izdanje rada od 28. rujna 2026. *2026. ima osam mjeseci.');
+      'Mjesečni agregati. *2026. ima osam mjeseci.');
     return { opt: opt, W: W, H: 118 + bh + 112 };
   };
   Monthly.prototype.csv = function () {
@@ -635,7 +635,7 @@
   Annual.prototype.fileName = function (ext) { return 'ekonomski-susreti-godisnji-udio.' + ext; };
   Annual.prototype.exportSpec = function () {
     var opt = annualOption({ x: 44, y: 110, W: 1192, H: 383 }, { still: true });
-    exportTitles(opt, this.section, 'Omjer godišnjih zbrojeva, ne prosjek mjesečnih udjela', 'Tablica 1, izdanje rada od 28. rujna 2026. *2026. je siječanj do kolovoza.');
+    exportTitles(opt, this.section, 'Omjer godišnjih zbrojeva, ne prosjek mjesečnih udjela', 'Tablica 1. *2026. je siječanj do kolovoza.');
     return { opt: opt, W: 1280, H: 610 };
   };
   Annual.prototype.csv = function () {
@@ -772,7 +772,7 @@
   Coef.prototype.fileName = function (ext) { return 'ekonomski-susreti-ocekivanja' + (this.st.step ? '-linearno-stepenasto' : '-linearno') + '.' + ext; };
   Coef.prototype.exportSpec = function () {
     var opt = coefOption(this.st, { x: 44, y: 104, W: 860, H: 528 }, { still: true });
-    exportTitles(opt, this.section, 'Intervali β ± 1,96 SE, tjedni podaci 2021. do 2023.', 'Tablica 7a izvornog rada. Prediktivna veza, bez identificiranog uzročnog učinka.');
+    exportTitles(opt, this.section, 'Intervali β ± 1,96 SE, tjedni podaci 2021. do 2023.', 'Tablica 7a. Prediktivna veza, bez identificiranog uzročnog učinka.');
     return { opt: opt, W: 960, H: 740 };
   };
   Coef.prototype.csv = function () {
@@ -799,7 +799,9 @@
 
   function boot() {
     Array.prototype.forEach.call(document.querySelectorAll('figure > img'), function (img) {
-      var m = /([^\/]+)\.svg$/.exec(img.getAttribute('src') || ''), cfg = m && FIGURES[m[1]];
+      /* The explicit key survives standalone HTML exports that embed image data. */
+      var m = /([^\/]+)\.svg$/.exec(img.getAttribute('src') || '');
+      var key = img.getAttribute('data-live-chart') || (m && m[1]), cfg = key && FIGURES[key];
       if (!cfg) return;
       if (cfg.kind === 'monthly' && N) new Monthly(img, cfg);
       else if (cfg.kind === 'annual' && ANNUAL && ANNUAL.annual) new Annual(img, cfg);
