@@ -6,7 +6,8 @@ odgovara jednom slajdu. Tekst vodi od mjesečnih putanja do procjena odnosa,
 tumačenja i praktičnih pitanja o komunikaciji.
 
 Objavljeni dokument je `docs/downloads/Govorni-vodic-izlaganje.pdf`. Ima
-naslovnicu, pregled izlaganja, po jednu stranicu za svaki slajd i odgovore za
+naslovnicu, pregled izlaganja, stranicu s niti koja povezuje izlaganje, po jednu
+stranicu za svaki slajd i odgovore za
 raspravu. Minijature vode na odgovarajući slajd u pregledniku.
 
 ## Izrada

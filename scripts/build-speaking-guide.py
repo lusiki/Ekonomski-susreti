@@ -128,18 +128,31 @@ def card(d,entry,meta,prefix):
  d.finish()
 
 
-D=PDF(args.output,1,'Govorni vodič · Kada inflacija istisne glas središnje banke',len(T)+3)
-cover(D,'Kada inflacija istisne\nglas središnje banke','Istraživačko izlaganje · 22-25 minuta · 27 slajdova',P/'previews/talk-01.png',
+D=PDF(args.output,1,'Govorni vodič · Kada inflacija istisne glas središnje banke',len(T)+4)
+cover(D,'Kada inflacija istisne\nglas središnje banke','Istraživačko izlaganje · 23-25 minuta · 27 slajdova',P/'previews/talk-01.png',
  'Vodič prati put od mjesečnih grafikona medijske zastupljenosti preko odnosa inflacije, jaza i očekivanja do praktičnih pitanja o komunikaciji. Svaki slajd ima govornu osnovu i prijelaz na sljedeću temu.',
  'https://lusiki.github.io/Ekonomski-susreti/slides/')
 y=D.start('Prije izlaska pred publiku','Cijela priča na jednoj stranici','route')
 y=D.para('Više objava ne mora značiti veći dio razgovora.',M,y,style='h3')-22
-y=rows(D,[('00-04:40','Slajdovi 1-7','Motivacija, pitanja, korpus, medijska slika i mjera.'),('04:40-09:20','Slajdovi 8-14','Mjesečne putanje, godišnji pregled i najveći mjeseci.'),('09:20-15:45','Slajdovi 15-21','Jaz, metode, nalazi i provjere.'),('15:45-20:05','Slajdovi 22-26','Vladine mjere, tumačenje, komunikacija i otvorena pitanja.'),('20:05-22:15','Slajd 27','Zatvaranje i početak rasprave.')],y)
+y=rows(D,[('00-05:00','Slajdovi 1-7','Motivacija, pitanja, korpus, medijska slika i mjera.'),('05:00-10:00','Slajdovi 8-14','Mjesečne putanje, godišnji pregled i najveći mjeseci.'),('10:00-16:35','Slajdovi 15-21','Jaz, metode, nalazi i provjere.'),('16:35-21:25','Slajdovi 22-26','Vladine mjere, tumačenje, komunikacija i otvorena pitanja.'),('21:25-23:35','Slajd 27','Zatvaranje i početak rasprave.')],y)
 y=D.block('Tri mjesta za stanku','Na slajdu 2 nakon više objava i manjeg udjela. Na slajdu 15 objasnite zašto manji udio znači veći jaz. Na slajdu 19 odvojite predviđanje od uzročnog zaključka.',y)
-y=D.block('Brojke za pamćenje','68 mjeseci, 124.163 institucionalne i 65.530 relevantnih objava. Tjedni model daje 0,00213 jedinica jaza po bodu inflacije, uz kontrolu obujma. Relativna učestalost niža je za oko 0,47 postotnih bodova.',y)
-y=D.block('Ritam izvedbe','Kartice daju putanju od oko 22 minute. Za mirnije objašnjenje modela i dodatna pitanja predvidite 25 minuta. Za strogih 20 minuta slajdove 6, 14 i 22 prođite jednom rečenicom. Metodološku tablicu i provjere prođite kratko. Ne ubrzavajte objašnjenje osi.',y)
+y=D.block('Brojke za pamćenje','68 mjeseci, 124.163 institucionalne i 65.530 relevantnih objava. Tjedni model daje 0,00213 jedinica jaza po bodu inflacije, uz kontrolu obujma. Relativna učestalost niža je za oko 0,47 postotnih bodova. Razgovor o inflaciji ima oko 480 tisuća objava, približno 230 na dan. Udio rasprave o vladinim mjerama raste s 2,8 na 7,7 posto. Riječi o cijenama nalaze se u trećini objava koje izričito spominju HNB.',y)
+y=D.block('Ritam izvedbe','Kartice daju putanju od oko 23 i pol minute. Za mirnije objašnjenje modela i dodatna pitanja predvidite 25 minuta. Za strogih 20 minuta slajdove 6, 14 i 22 prođite jednom rečenicom. Metodološku tablicu i provjere prođite kratko. Ne ubrzavajte objašnjenje osi.',y)
 y=D.block('Jedinice i razdoblja','Svaki deskriptivni stupac je mjesec, od siječnja 2021. do kolovoza 2026. Procjene modela obuhvaćaju 2021.–2023. Os grafa očekivanja prikazuje horizonte u tjednima.',y)
 y=D.block('Živi grafikoni u pregledniku','Na slajdovima 6, 8-14, 19 i 22 pokazivačem otkrijte vrijednosti. Tipke 1-5 dodaju serije prema redoslijedu u traci, I uključuje indeks gdje je dostupan, a 0 vraća početni prikaz. PNG, SVG i CSV preuzimaju prikaz. Nakon kratke usporedbe vratite početni graf. PDF zadržava statične slike.',y,style='small')
+D.finish()
+# The connecting story on its own page, so the speaker can keep one picture in mind.
+y=D.start('Prije izlaska pred publiku','Nit koja povezuje izlaganje','thread')
+y=D.para('Razgovor o cijenama je prostorija. Pratimo koliko mjesta u njoj ima središnja banka i tko zauzima ostatak.',M,y,style='h3')-22
+y=rows(D,[('Mirno polazište','Slajd 10','Godine 2021. institucija drži oko šest posto razgovora o cijenama.'),
+ ('Prostor se širi','Slajdovi 5 i 8','Objava o inflaciji 2022. je više nego triput više nego 2021. Prostorija se puni.'),
+ ('Institucija ne utihne','Slajdovi 2 i 11','Relevantnih je objava dvostruko više, a udio pada na 3,6 posto.'),
+ ('Prostor pune drugi','Slajdovi 14 i 22','Udio rasprave o vladinim mjerama gotovo se utrostruči. Najveći mjeseci HNB-a nose upravljanje, euro i gotovinu.'),
+ ('Važan je ritam','Slajdovi 18 i 19','Viša inflacija povezana je s rjeđim pojavljivanjem. Rjeđe pojavljivanje prethodi lošijim očekivanjima, u prediktivnom smislu.'),
+ ('Paradoks traje','Slajd 26','Inflacija se uz HNB spominje češće nego 2024., a udio u raspravi najniži je u nizu.')],y,widths=(128,104,271))
+y=D.block('Rečenica za kraj','Institucija je nastavila govoriti, prostor razgovora se proširio, a ispunile su ga druge teme i drugi glasovi.',y)
+y=D.block('Gdje sliku izgovoriti','Uvedite je na slajdu 1 i postavite pitanje na slajdu 2. Vratite joj se na slajdu 8, popunite je na slajdu 23 i zatvorite na slajdu 26.',y)
+y=D.block('Što slika ne tvrdi','Podaci opisuju nizove i povezanosti. Ne dokazuju da je jedna rasprava istisnula drugu, niti da je zastupljenost uzrokovala promjenu očekivanja. Tu granicu zadržite i kada govorite slikovito.',y,style='small')
 D.finish()
 for e in T:card(D,e,TM,'talk')
 y=D.start('Nakon posljednjeg slajda','Kratki odgovori za raspravu','questions')
@@ -149,10 +162,12 @@ for q,a in [
  ('Zašto više objava može značiti manji udio?','Ako se ukupna rasprava širi brže od institucionalnog sadržaja, broj relevantnih objava može rasti dok njihov udio pada. Potencijalni doseg pritom nije stvarna čitanost.'),
  ('Što znači 0,0021?','Zaokruženi tjedni koeficijent 0,00213 uz kontrolu obujma. Jedan postotni bod viša inflacija povezana je s oko 0,21 postotnim bodom većeg jaza. Procjena se odnosi na 2021.–2023. i 157 opažanja.'),
  ('Kako čitati nalaz o očekivanjima?','To je prediktivna veza u promatranom uzorku. Linearno mapiranje prolazi Bonferronijevu korekciju na testiranim horizontima od 2. do 12. tjedna. Stepenasto ne prolazi na 10. i 12. tjednu, pa nalaz ovisi o načinu mapiranja.'),
+ ('Tko je zauzeo prostor?','Jedan je kandidat rasprava o vladinim mjerama, čiji je udio 2022. gotovo trostruko veći nego 2021. Najveći medijski mjeseci HNB-a pritom nose teme upravljanja, eura i gotovine. To su opisi nizova i ne dokazuju da je jedna rasprava istisnula drugu.'),
+ ('Zašto dva skupa objava?','Institucionalni korpus uključuje i generičke izraze za središnje banke i služi za udio i modele. Uži skup od 33.235 objava izričito spominje HNB i služi za teme i najveće mjesece. Brojke iz dvaju skupova ne zbrajamo.'),
  ('Je li rezultat uzročan?','Osnovni modeli opisuju uvjetnu povezanost. IV tumačenje ovisi o pretpostavci da instrumenti ne djeluju na jaz drugim kanalima. Chowov test pokazuje promjenu odnosa oko određenog datuma, a sam ne identificira učinak eura.')]:
     y=D.para(q,M,y,style='h3')-5;y=D.para(a,M,y,style='small')-14
 y=D.link('Slajdovi i materijali izlaganja','https://lusiki.github.io/Ekonomski-susreti/',y-4)
 y=D.para('Vodič prati 27 slajdova. Minijature i naslovi preuzimaju se iz prezentacije pri izradi dokumenta. Govorna osnova može se prilagoditi tempu izlaganja.',M,y,style='small')
 D.finish()
 (P/'layout-audit.json').write_text(json.dumps(D.save(),indent=2),encoding='utf-8')
-print(f'Saved {len(T)+3}-page speaking guide: {args.output}')
+print(f'Saved {len(T)+4}-page speaking guide: {args.output}')

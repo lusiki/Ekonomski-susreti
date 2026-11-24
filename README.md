@@ -104,7 +104,7 @@ Nakon ulaska Hrvatske u europodručje ključnu kamatnu stopu određuje Europska 
 
 ## Sadržaj prezentacije
 
-Konferencijsko izlaganje ima 27 slajdova i traje oko 22 minute. Za dvadeset minuta
+Konferencijsko izlaganje ima 27 slajdova i traje oko 23 minute. Za dvadeset minuta
 uvodni, metodološki i tri slajda šireg medijskog konteksta prolaze se kratko; za
 dulju raspravu prikladno je 25 minuta.
 
