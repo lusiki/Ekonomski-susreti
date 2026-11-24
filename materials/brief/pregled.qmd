@@ -81,198 +81,100 @@ format:
 
 ```
 
-## Pitanje
+## Više objava, manji dio rasprave
 
-Između 2021. i 2024. godine inflacija u Hrvatskoj dosegnula je najviše stope u Europskoj uniji.
-U istom razdoblju udio Hrvatske narodne banke u medijskom razgovoru o cijenama sustavno je padao.
-Institucija čiji je zadatak stabilnost cijena bila je sve rjeđe prisutna u vijestima upravo onda
-kada su cijene postale najveća tema.
+Institucija može biti prisutna u više objava, a zauzimati manji dio razgovora o inflaciji. U 2021. zabilježeno je 8.419 relevantnih institucionalnih objava, a u 2025. njih 10.151. Ponderirani udio u raspravi o cijenama istodobno je pao sa 6,12 % na 3,17 %. U prvih osam mjeseci 2026. iznosi 1,86 %. Putanja uključuje djelomičan oporavak 2023., pa ne govorimo o neprekidnom padu.
 
-Taj obrazac nije samo zanimljivost. Komunikacija središnje banke može djelovati na očekivanja
-jedino ako do javnosti uopće dođe. Ako signal ne prođe kroz medije, kanal očekivanja slabi bez
-obzira na to koliko je poruka jasna i koliko je institucija vjerodostojna. Ovaj rad zato pita gubi
-li banka vidljivost onda kada je njezina komunikacija najvažnija i je li taj gubitak povezan s time
-što kućanstva očekuju o budućim cijenama.
+Poruka središnje banke mora biti dostupna da bi je javnost mogla uzeti u obzir. Ovaj rad mjeri mjesto institucije u medijskom prostoru. Ne mjeri tko je pojedinu poruku pročitao, razumio ili upotrijebio pri oblikovanju očekivanja. Potencijalni doseg objave nije stvarna čitanost.
 
-Razdoblje je za takvo pitanje neobično pogodno. Harmonizirani indeks potrošačkih cijena porastao je
-s 2,7 posto u 2021. na 10,7 posto u 2022. i zadržao se na 8,4 posto u 2023. Istodobno je Hrvatska
-1. siječnja 2023. uvela euro, pa HNB više nije samostalno određivao kamatnu stopu. U tom je
-razdoblju komunikacija bila praktički jedini instrument kojim je banka mogla djelovati na
-očekivanja javnosti.
+## Tri istraživačka pitanja
 
-## Što je institucionalni jaz u pažnji
+Kako se institucionalni udio mijenja kroz vrijeme? Je li viša inflacija povezana s većim jazom u pažnji? Pomaže li učestalost objava predvidjeti očekivanja kućanstava? Na prvo pitanje odgovaraju deskriptivni podaci od siječnja 2021. do kolovoza 2026. Procjene odnosa i prediktivne veze odnose se na kraći uzorak od 2021. do 2023.
 
-Središnji pojam rada jednostavniji je nego što zvuči. Institucionalni jaz u pažnji mjeri koliko je
-banka manje vidljiva u vijestima o cijenama nego što bi se prema njezinoj ulozi očekivalo.
+## Kako se mjeri zastupljenost
 
-Mjera se gradi u tri koraka. Najprije se iz svih objava o cijenama izdvoji onaj dio u kojem se
-spominje HNB, pa se dobije udio banke u ukupnom razgovoru o cijenama. Zatim se uzme referentna
-razina tog udjela iz prve polovice 2021. godine, dok je inflacija još bila niska i dok kriza nije
-iskrivljavala uredničke odluke. Na kraju se jaz izračuna kao razlika između te referentne razine i
-stvarnog udjela u pojedinom tjednu. Kada je jaz pozitivan, banka dobiva manje prostora nego u
-mirnom razdoblju. Što je jaz veći, to je glas banke rjeđi u trenutku kada javnost o cijenama
-najviše čita.
+Ponderirani udio uspoređuje institucionalni doseg s ukupnim dosegom inflacijskog diskursa. Veću težinu dobiva objava s većim potencijalnim dosegom i istaknutijom ulogom institucije. Nazivniku se dodaje jedan radi stabilizacije. Udio može pasti i kada relevantnih objava ima više, ako ostatak rasprave raste brže.
 
-Prednost takve mjere je u tome što ne ovisi o tome koliko se piše o cijenama općenito. Ona uspoređuje
-banku sa samom sobom u razdoblju kada je pažnja bila neopterećena krizom, pa razdvaja porast
-ukupnog razgovora o cijenama od pomaka u tome tko u tom razgovoru dobiva riječ.
+Institucionalni jaz u pažnji jednak je prosječnom udjelu iz prve polovice 2021. umanjenom za udio u promatranom razdoblju. Pozitivan jaz znači nižu zastupljenost od početne reference. Ta referenca služi usporedbi i nije optimalan cilj komunikacije. Učestalost objava i potencijalni doseg pojedine objave prate se zasebno.
 
 ```{=typst}
 #pagebreak()
 ```
 
-![Institucionalni jaz u pažnji i inflacija, siječanj 2021. do siječnja 2024. Osjenčano područje označava razdoblje nakon uvođenja eura.](slike/jaz-i-inflacija.png){width=100%}
+## Podaci i dulja putanja
 
-Analiza obuhvaća cijeli hrvatski digitalni medijski prostor u tom razdoblju, dakle više od 19
-milijuna objava iz 1.239 izvora. Iz te je populacije izdvojeno 58.448 objava koje govore o HNB-u i
-263.601 objava koja govori o inflaciji i cijenama. Podaci o inflaciji preuzeti su iz Eurostata, a
-podaci o očekivanjima kućanstava iz Ankete Europske komisije o potrošačima. Glavna procjena radi se
-na tjednim podacima, dakle na 157 opažanja.
+Deskriptivni prikaz obuhvaća 68 potpunih mjeseci, od siječnja 2021. do kolovoza 2026. U tom je prozoru 124.163 institucionalne objave, od kojih je 65.530 relevantno za inflacijski diskurs. Korpus o inflaciji sadrži 480.221 objavu. Institucionalni korpus uključuje HNB i generičke izraze za središnje banke te dio društvenih objava i komentara. Ne predstavlja samo izričita spominjanja HNB-a ni vlastita priopćenja banke.
 
-## Nalaz
+Godišnji pregled pokazuje pad udjela 2022., djelomičan oporavak 2023. i ponovno niže vrijednosti u kasnijim godinama. Godišnji udjeli računaju se iz zbrojeva brojnika i nazivnika, a ne kao prosjek mjesečnih postotaka. Godina 2026. obuhvaća osam mjeseci i nije preračunata na cijelu godinu.
 
-Viša inflacija sustavno širi jaz. Porast inflacije za jedan postotni bod povezan je s proširenjem
-jaza za 0,00201 jedinica. Da bi ta brojka dobila smisao, korisno je prevesti je u ono što se
-stvarno dogodilo. Rast inflacije s dva na deset postotnih bodova, kakav je Hrvatska prošla između
-siječnja 2021. i lipnja 2022., prema procjeni objašnjava oko trećine ukupne varijacije jaza u
-promatranom razdoblju.
+![Ponderirani institucionalni udio u inflacijskom diskursu. Podaci i grafikon preuzeti su iz aktualne prezentacije. Šrafirani stupac za 2026. obuhvaća siječanj do kolovoza.](slike/annual-share.svg){width=100%}
 
-Otprilike polovica tog učinka ide neizravno, preko toga što se u vrijeme visoke inflacije ukupno
-mnogo više piše o cijenama, pa se udio banke smanjuje već samim rastom konkurentskog sadržaja.
-Druga polovica je izravna preraspodjela prostora, dakle uredničko premještanje objava o banci prema
-portalima s manjim auditorijem.
+## Širi medijski kontekst
 
-## Mehanizam se vidi u broju objava, a ne u dosegu
+Zaseban, uži skup sadrži 33.235 objava koje izričito spominju HNB u 281 izvoru. Riječi o cijenama i inflaciji pojavljuju se u približno trećini tih objava. Češće su riječi o kreditima i potrošačima, euru te plaćanjima i gotovini. Područja se preklapaju i temelje na popisima riječi bez neovisne provjere. Pokazuju prisutnost riječi, a ne glavnu temu objave. Taj se skup ne zbraja s institucionalnim korpusom.
 
-Vidljivost se može izgubiti na dva načina. Može se pisati rjeđe o banci, što je pitanje broja
-objava, ili se o njoj može pisati na mjestima koja doseže manje ljudi, što je pitanje dosega
-pojedine objave. Razlika između ta dva puta je važna jer vodi različitim preporukama.
-
-Podaci su ovdje jasni. Udio objava o HNB-u u razgovoru o cijenama snažno pada kako inflacija raste.
-Doseg prosječne objave pritom ostaje praktički nepromijenjen. Istiskivanje se dakle događa u
-uredničkoj odluci koliko će se članaka uopće napisati, a ne u tome gdje ti članci završe.
+Mjesečni grafikoni u prezentaciji odvojeno prikazuju godišnju stopu HICP inflacije, ponderirani udio, broj relevantnih objava, relativnu učestalost i omjer potencijalnog dosega. Povremeni skokovi i različite putanje pokazuju zašto broj objava i relativni prostor treba pratiti zajedno.
 
 ```{=typst}
 #pagebreak()
 ```
 
-![Dvije margine vidljivosti. Lijevo udio objava o HNB-u u razgovoru o cijenama, desno prosječan doseg pojedine objave, oboje u odnosu na inflaciju. Svaka točka je jedan mjesec.](slike/dvije-margine.png){width=79%}
+## Inflacija i jaz u pažnji
 
-## Veza s očekivanjima kućanstava
+Ekonometrijske procjene odnose se na 2021. do 2023., uz 36 mjesečnih i 157 tjednih opažanja u osnovnim modelima. Inflacija dolazi iz Eurostata, a očekivanja kućanstava iz Ankete Europske komisije o potrošačima. Modeli uključuju kontrole i Newey–West standardne pogreške.
 
-Ako medijska pažnja doista sudjeluje u prijenosu monetarne politike, onda bi tjedni u kojima je
-banka rjeđe prisutna trebali prethoditi pesimističnijim očekivanjima kućanstava o cijenama. Rad tu
-vezu ispituje tako da promatra što se s očekivanjima događa u tjednima nakon zabilježenog pomaka u
-vidljivosti.
+U tjednom modelu s kontrolom obujma jedan postotni bod više inflacije povezan je s 0,00213 jedinica većim jazom, zaokruženo 0,0021. Vrijednost p iznosi 0,0002. To je uvjetna povezanost. Skok inflacije s 2 % na 10 % odgovara približno 12,9 % opaženog raspona jaza, bez tumačenja te razlike kao učinka intervencije.
 
-Veza postoji i ide u očekivanom smjeru. Manji udio objava o HNB-u prethodi pesimističnijim
-očekivanjima potrošača, a odnos je najjasniji na horizontima od dva do dvanaest tjedana. Zanimljivo
-je da tu vezu nosi upravo broj objava, dok mjera zasnovana na dosegu ne pokazuje ništa slično. To
-je u skladu s idejom da za kućanstva vrijedi učestalost susreta s informacijom, a ne dubina
-pojedinog susreta.
+Mjesečni modeli daju jasniji nalaz za relativnu učestalost. Jedan postotni bod više inflacije povezan je s približno 0,47 postotnih bodova manjim udjelom relevantnih objava, uz p = 0,0124. Za doseg po objavi nema statistički jasne veze, uz p = 0,3457. Margine opisuju različite ishode, a njihov umnožak nije točna računovodstvena dekompozicija.
 
-![Promjena bilance inflacijskih očekivanja kućanstava nakon pomaka u vidljivosti HNB-a, po tjednima nakon pomaka. Osjenčano područje prikazuje 95 postotni interval pouzdanosti.](slike/ocekivanja.png){width=79%}
+## Učestalost i buduća očekivanja
 
-```{=typst}
-#block(breakable: false)[
-```
+Lokalne projekcije ispituju pomaže li učestalost predvidjeti kasnija očekivanja. Veći udio relevantnih objava povezan je s nižom budućom bilancom očekivanja cijena. Graf prikazuje procjenu za jedan postotni bod veći udio objava.
 
-Ovaj dio nalaza treba čitati kao prediktivnu vezu, a ne kao potpuno identificiran uzročni učinak.
-Podaci pokazuju da vidljivost prethodi očekivanjima i da je smjer stabilan, ali za čvrstu tvrdnju o
-uzroku trebali bi dulji vremenski nizovi ili istraživački dizajn koji bi izloženost medijskom
-sadržaju mijenjao neovisno o ostalim uvjetima.
+![Veza udjela objava i buduće bilance očekivanja. Tablica 7a, linearno mapiranje mjesečnih očekivanja u tjedne. Intervali su β ± 1,96 SE. Ispunjene točke označavaju značajnost nakon Bonferronijeve korekcije.](slike/expectations.svg){width=90%}
 
-```{=typst}
-]
-```
+Uz linearno mapiranje značajni su testirani horizonti 2, 3, 4, 6, 8, 10 i 12 tjedana. Uz stepenasto mapiranje 10. i 12. tjedan ne prolaze korekciju za višestruko testiranje. Nalaz je prediktivan i ovisi o mapiranju i uzorku. Ne identificira uzročni učinak medijske izloženosti.
 
 ```{=typst}
 #pagebreak()
 ```
 
-## Nije riječ o šutnji banke
+## Vlastita komunikacija i vladine mjere
 
-Najočitije alternativno objašnjenje jest da je banka jednostavno manje komunicirala. Podaci to
-isključuju. Broj vlastitih objava i priopćenja HNB-a raste kada inflacija raste, a nakon uvođenja
-eura ne pada. Banka je, drugim riječima, govorila više nego prije, ali je njezin glas činio manji
-dio onoga što je javnost čitala.
+Zabilježene vlastite objave HNB-a rastu s približno 23 mjesečno u 2021. na 35 u 2022. Riječ je o stavkama koje je zabilježio sustav praćenja, a ne potpunom popisu službenih dokumenata. Nalazi ne podupiru objašnjenje jednostavnim smanjenjem komunikacije banke.
 
-![Vlastita komunikacijska aktivnost HNB-a i inflacija, standardizirane vrijednosti. Isprekidana linija označava uvođenje eura.](slike/komunikacija.png){width=100%}
+Udio rasprave o vladinim mjerama raste s prosječnih 2,8 % u 2021. na 7,7 % u 2022., a u 2023. iznosi 3,1 %. Uključuje rasprave o zamrzavanju cijena, subvencijama energenata i paketima mjera. Graf uspoređuje smjer dvaju nizova koji imaju zasebne ljestvice i različito su izvedeni.
 
-Prostor koji je banka izgubila popunili su drugi sadržaji o cijenama. To su prije svega pritužbe na
-zaokruživanje cijena pri prelasku na euro, rasprave o cijenama energenata, vladini paketi mjera
-protiv inflacije i političke optužbe o neadekvatnoj reakciji na krizu. Ti sadržaji nisu bili
-informacijski zamjena za tumačenje središnje banke, ali su zauzimali isti prostor.
+![Rasprava o vladinim mjerama i ponderirani institucionalni udio. Gornji panel završava u svibnju 2026. Siva podloga označava mjesece bez podataka. Donji panel koristi deskriptivni niz do kolovoza 2026. Razine panela nisu izravno usporedive.](slike/government-share.svg){width=100%}
 
-## Što se promijenilo s uvođenjem eura
+Ovaj prikaz ne dokazuje da je jedna rasprava istisnula drugu. U regresijskoj provjeri koja uključuje vladinu komunikaciju tjedni koeficijent inflacije manji je približno za trećinu. To upozorava na važnost drugih sadržaja koji se natječu za isti tematski prostor.
 
-Nakon 1. siječnja 2023. mehanizam se mijenja. Sama razina inflacije postaje slabiji pokretač jaza,
-a ton medijskog izvještavanja postaje jači. Objašnjenje je institucionalno. Odluke o kamatnoj stopi
-donosi Europska središnja banka, pa se medijsko praćenje monetarne politike dijelom preusmjerilo
-prema njoj. HNB pritom nije smanjio vlastitu komunikaciju, nego se promijenio filtar kroz koji ta
-komunikacija prolazi. U takvim uvjetima negativan ton izvještavanja o cijenama ne može se
-neutralizirati signalom o kamatnoj stopi jer tog signala više nema.
+## Promjena odnosa oko uvođenja eura
+
+Chowov test pokazuje promjenu odnosa oko siječnja 2023., uz F = 9,43 i p < 0,001. Inflacija je nakon tog datuma slabiji prediktor jaza, a koeficijent sentimenta približno 3,3 puta snažniji. Promjena odnosa nije dokaz da ju je uzrokovalo samo uvođenje eura. Veća važnost domaćih objašnjenja cijena u europodručju moguća je institucionalna interpretacija.
 
 ```{=typst}
 #pagebreak()
 ```
 
-## Koliko je nalaz pouzdan
+## Provjere i ograničenja
 
-Glavna prijetnja svakom ovakvom nalazu jest mogućnost da veza ide u suprotnom smjeru ili da je
-posljedica nečega trećeg. Rad zato provodi nekoliko neovisnih provjera.
+Provjere instrumentalnim varijablama koriste eurozonsku hranu i energiju te daju sličan smjer koeficijenta. Uzročno tumačenje ovisi o pretpostavci da instrumenti ne djeluju drugim kanalima na jaz. Usporedba s HANFA-om ima ograničenu snagu testa. Dodatne specifikacije i permutacije podupiru tjedni rezultat, ali ne uklanjaju sva alternativna objašnjenja.
 
-Prva se oslanja na instrumentalne varijable. Umjesto ukupne inflacije koristi se samo onaj njezin
-dio koji dolazi izvana, dakle cijene hrane i energije u europodručju, na koje hrvatski urednici ne
-mogu utjecati. Rezultat ostaje gotovo isti, što govori da obrnuta uzročnost ne može objasniti
-nalaz. Druga se provjera oslanja na uvođenje eura kao na prijelomni trenutak i uspoređuje razdoblje
-prije i poslije njega, opet uz konzistentan rezultat.
+Deskriptivni niz seže do kolovoza 2026., dok procjene odnosa ostaju vezane uz 2021. do 2023. i jednu zemlju. Kasniji niži udjeli sami po sebi ne dokazuju trajan učinak inflacije ni učinak uvođenja eura. Potrebno je razdvojiti izričita spominjanja HNB-a od generičkih izraza za središnje banke i provjeriti doprinos promjena izvora i sastava korpusa.
 
-Treća je provjera usporedba s drugom institucijom. HANFA je financijski regulator bez mandata za
-stabilnost cijena, pa kod nje ne bi trebalo biti sličnog obrasca. Njezina vidljivost doista ne
-prati inflaciju na način na koji to čini vidljivost HNB-a, iako je taj test ograničen malim brojem
-opažanja. Uz to, veza nestaje kada se umjesto tekuće inflacije uzme inflacija od prije dva ili tri
-mjeseca, što isključuje mogućnost da je riječ o zajedničkom trendu.
+Potencijalni doseg ne mjeri stvarnu izloženost ni razumijevanje publike. Klasifikator tona nije posebno provjeren na hrvatskim ekonomskim tekstovima. Mjesečna očekivanja prenose se na tjednu frekvenciju, a izbor mapiranja utječe na dulje prediktivne horizonte. Izvorna baza i podaci o pojedinim objavama nisu javno dostupni zbog uvjeta pristupa i sadržaja trećih strana, pa javni materijali ne omogućuju potpunu replikaciju.
 
-Najozbiljniji preostali prigovor jest fiskalna komunikacija Vlade, koja raste s inflacijom i
-natječe se za isti medijski prostor. Kada se i ona uključi u model, procijenjeni učinak inflacije
-slabi za otprilike trećinu, ali ostaje prisutan i statistički pouzdan na tjednim podacima.
+## Što pratiti u komunikaciji
 
-## Što iz toga slijedi
+Broj vlastitih objava opisuje samo dio komunikacijskog puta. Uz priopćenja, analize i objašnjenja institucije treba pratiti koliko ih mediji prenose, koliki prostor zauzimaju i kakav sadržaj dolazi do publike. Zasebno treba mjeriti stvarnu izloženost, razumijevanje i korisnost poruke.
 
-Rasprava o komunikaciji središnjih banaka obično se vrti oko jasnoće i vjerodostojnosti poruke.
-Ovaj rad dodaje treći uvjet, a to je dostupnost signala. Poruka koja je jasna i vjerodostojna, ali
-do javnosti stiže prerijetko, ne može ukotviti očekivanja.
+Glavni nalaz povezuje višu inflaciju s većim jazom i manjom relativnom učestalošću. Učestalost i potencijalni doseg imaju različite putanje. Veza s očekivanjima prediktivna je i osjetljiva na specifikaciju. Ti nalazi daju okvir za praćenje komunikacije, ali sami ne dokazuju uspješnost pojedine komunikacijske intervencije.
 
-Praktična posljedica proizlazi izravno iz mehanizma. Budući da se vidljivost gubi na broju objava,
-a ne na njihovu dosegu, odgovor nije u većem broju vlastitih priopćenja nego u većem broju
-neovisnih medijskih kontakata s institucionalnim tumačenjem cijena. To znači suradnju s ekonomskim
-urednicima, dostupnost stručnjaka za komentar i kratke, razumljive prikaze vlastitih analiza. Nakon
-ulaska u europodručje ta uloga postaje još važnija jer HNB više ne odlučuje o kamatnoj stopi, ali
-zadržava prednost u objašnjavanju domaćih kretanja cijena i odluka Europske središnje banke.
+## Izvori i materijali
 
-## Ograničenja
+Prikaz je usklađen s 27 slajdova aktualne [konferencijske prezentacije](https://lusiki.github.io/Ekonomski-susreti/slides/). Deskriptiva koristi spremljene agregate izdanja rada od 28. rujna 2026. Ekonometrijski nalazi preuzeti su iz tablica 4, 6 i 7a izvornog rada, a širi kontekst iz zasebnih agregata dokumentiranih uz slajdove.
 
-Uzorak pokriva tri godine i jednu zemlju, pa je vanjska valjanost nalaza ograničena. Očekivanja
-kućanstava mjere se mjesečno i moraju se prevesti na tjednu frekvenciju, što unosi mjernu
-pogrešku, premda nalaz opstaje uz oba načina prevođenja. Klasifikator tona nije posebno provjeren
-na hrvatskim ekonomskim tekstovima. Naposljetku, uzročna tvrdnja najjača je za učinak inflacije na
-vidljivost, dok je veza vidljivosti s očekivanjima dokumentirana prediktivno. Prirodan nastavak je
-usporedba s drugim malim ekonomijama europodručja koje su prošle sličan prijelaz.
+[Cjeloviti rad](https://lusiki.github.io/HNB_Media_Attention/media/downloads/PAPER_EXT.html) i [materijali izlaganja i radionice](https://lusiki.github.io/Ekonomski-susreti/) dostupni su na mreži. Predloženo citiranje glasi Palić, P. i Sikić, L. (2026). *Pasivno zamijenjena. Cijena inflacije koju ne mjeri indeks potrošačkih cijena*. Radni materijal, Hrvatsko katoličko sveučilište.
 
-```{=typst}
-#set text(size: 9.5pt)
-#set par(leading: 0.62em, spacing: 0.9em)
-```
-
-## O ovom prikazu
-
-Ovo je skraćena verzija radnog članka *Pasivno zamijenjena. Cijena inflacije koju ne mjeri indeks
-potrošačkih cijena*. Puni tekst sa svim tablicama, provjerama robusnosti i dodacima dostupan je na
-upit autorima. Prezentacija, sažetci i materijali radionice objavljeni su na stranici projekta.
-
-Predloženo citiranje glasi Palić, P. i Sikić, L. (2026). *Pasivno zamijenjena. Cijena inflacije
-koju ne mjeri indeks potrošačkih cijena*. Radni materijal, Hrvatsko katoličko sveučilište.
-
-Stavovi izneseni u radu isključivo su stavovi autora i ne odražavaju nužno stavove Hrvatskog
-katoličkog sveučilišta.
+Stavovi izneseni u radu isključivo su stavovi autora i ne odražavaju nužno stavove Hrvatskog katoličkog sveučilišta.
