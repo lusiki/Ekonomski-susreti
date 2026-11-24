@@ -18,7 +18,7 @@ from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parents[1]
 parser = argparse.ArgumentParser(description='Build the Day 1 speaking guide from the current lecture PDF and speaking cards.')
-parser.add_argument('--output', type=Path, default=ROOT/'docs/downloads/Govorni-vodic-izlaganje.pdf')
+parser.add_argument('--output', type=Path, default=ROOT/'materials/speaking-guide/Govorni-vodic-izlaganje.pdf')
 parser.add_argument('--work-dir', type=Path, default=ROOT/'work/speaking-guide')
 args = parser.parse_args()
 P = args.work_dir.resolve()

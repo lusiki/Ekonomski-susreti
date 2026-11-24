@@ -21,16 +21,12 @@ Regresijske procjene odnose se na 2021.–2023., uz 36 mjesečnih i 157 tjednih
 opažanja u osnovnim modelima. [Dokumentacija slajdova](docs/slides/README.md)
 navodi izvore podataka, definicije i postupak izrade.
 
-Govorni vodič prati svih 27 slajdova, s minijaturama, tekstom za izlaganje,
-prijelazima i kratkim odgovorima za raspravu.
-
 | Sadržaj | Pregled | Preuzimanje |
 |---|---|---|
 | Sažetak izlaganja | [Kada inflacija istisne glas središnje banke](https://lusiki.github.io/Ekonomski-susreti/abstracts/#izlaganje) | [tekst](materials/abstract-presentation.md) |
 | Sažetak radionice | [Umjetna inteligencija u ekonomskim istraživanjima](https://lusiki.github.io/Ekonomski-susreti/abstracts/#radionica) | [tekst](materials/abstract-workshop.md) |
 | Sažeti prikaz istraživanja | Pet stranica s glavnim nalazima i grafikonima | [PDF](https://lusiki.github.io/Ekonomski-susreti/downloads/Pregled-istrazivanja.pdf) · [izvor](materials/brief/pregled.qmd) |
 | Konferencijska prezentacija | [Otvori slajdove u pregledniku](https://lusiki.github.io/Ekonomski-susreti/slides/) | [PDF](https://lusiki.github.io/Ekonomski-susreti/downloads/Ekonomski-susreti.pdf) · [PowerPoint](https://lusiki.github.io/Ekonomski-susreti/downloads/Ekonomski-susreti.pptx) |
-| Govorni vodič za izlaganje | Govorna osnova uz svih 27 slajdova | [PDF](https://lusiki.github.io/Ekonomski-susreti/downloads/Govorni-vodic-izlaganje.pdf) · [izvor](materials/speaking-guide/) |
 | Materijali radionice | [Rad u repozitoriju i demonstracija](https://lusiki.github.io/Ekonomski-susreti/workshop/) | [slajdovi](https://lusiki.github.io/Ekonomski-susreti/workshop/slides/) · [jedna stranica](https://lusiki.github.io/Ekonomski-susreti/workshop/handout.html) |
 
 ## Sadržaj
@@ -149,3 +145,10 @@ Strojno čitljivi metapodaci dostupni su u datoteci [`CITATION.cff`](CITATION.cf
 ---
 
 Materijali su radna verzija istraživanja. Stavovi izneseni u radu isključivo su stavovi autora i ne odražavaju nužno stavove Hrvatskog katoličkog sveučilišta.
+
+<details>
+<summary>Priprema</summary>
+
+[Izlaganje · PDF](materials/speaking-guide/Govorni-vodic-izlaganje.pdf) · [Radionica · PDF](materials/speaking-guide/Vodic-za-izlagaca-radionica.pdf)
+
+</details>

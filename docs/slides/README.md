@@ -13,7 +13,8 @@ odnosa i posljedice za praćenje komunikacije.
 
 Govorni vodič prati isti redoslijed i preuzima naslove i minijature iz slajdova.
 Izvor govorne osnove je `materials/speaking-guide/lecture.json`, a objavljeni
-PDF je `docs/downloads/Govorni-vodic-izlaganje.pdf`.
+PDF je `materials/speaking-guide/Govorni-vodic-izlaganje.pdf`, dostupan iz
+odjeljka „Priprema” pri dnu glavnog README-a, izvan stranice s materijalima.
 
 ## Izgled i obnova PDF-a
 
