@@ -36,6 +36,40 @@ provjerava dodire sadržaja s podnožjem i sprema `docs/downloads/Ekonomski-susr
 Nakon obnove treba pregledati sve stranice. `?print-pdf` otvara zajednički ispis.
 Strelice mijenjaju slajdove, `o` otvara pregled, a `s` bilješke izlagača.
 
+## Živi grafikoni
+
+Slajdovi 7 do 12 i slajd 17 u pregledniku zamjenjuju sliku živim grafikonom iz
+istih provjerenih podataka. Početni prikaz odgovara slici. Pokazivač otkriva
+vrijednosti, a traka iznad naslova dodaje i uklanja serije. PDF i `print.html`
+i dalje koriste statične slike, pa se njihov izgled ne mijenja. Slajdovi 15 i
+16 ostaju slike jer njihove točke nisu u repozitoriju.
+
+- `live-charts.js` i `live-charts.css` sadrže cijeli sloj. Bez redaka na kraju
+  `index.html` slajdovi ostaju statični.
+- `vendor/echarts.min.js` je Apache ECharts 6.1.0 pod licencom Apache 2.0.
+  Pohranjen je lokalno kako bi izlaganje radilo bez mreže.
+- `data/*.js` nastaju naredbom `python scripts/build-live-data.py` iz triju
+  JSON datoteka u istoj mapi. Tako grafikoni rade i kada se `index.html`
+  otvori s diska.
+
+Serija koja pripada slajdu ostaje u tinti, kao na slici. Boju dobivaju samo
+dodane serije. Inflacija je narančasta (`#eb6834`), ponderirani udio plav
+(`#2a78d6`), a relativna učestalost tirkizna (`#1baf7a`). Taj je skup provjeren
+za sve parove, i za uobičajeni vid i za poremećaje raspoznavanja boja. Doseg i
+brojevi objava ostaju crni i sivi. Vrsta linije i oznaka uz kraj linije nose
+isto značenje kao boja, pa prikaz ostaje čitljiv i u crno-bijelom ispisu.
+
+Svaki panel ima jednu ljestvicu. Serije u istoj jedinici dijele os. Serije u
+različitim jedinicama prikazuju se kao indeks u kojem prva polovica 2021. iznosi
+100, što je referenca institucionalnog jaza. Inflacija se ne indeksira. Kada
+ne može dijeliti os u postocima, dobiva vlastiti poravnati panel. Na slajdu 10
+dodana serija ulazi u panel svoje jedinice. Na slajdu 17 uz linearno se može
+dodati stepenasto mapiranje iz iste Tablice 7a.
+
+Tipke 1 do 5 dodaju ili uklanjaju serije redom kojim stoje u traci, `I` uključuje
+indeks, a `0` vraća izvorni prikaz. PNG, SVG i CSV preuzimaju trenutačni prikaz.
+Popis `FIGURES` na vrhu `live-charts.js` određuje koje su slike žive.
+
 ## Deskriptivne serije
 
 Izvor je [rad od 28. rujna 2026.](https://lusiki.github.io/HNB_Media_Attention/media/downloads/PAPER_EXT.html),
