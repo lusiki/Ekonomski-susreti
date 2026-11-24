@@ -69,6 +69,11 @@ petnaest alata, nego najmanji skup dijelova koji istraživanje čini
 provjerljivim.
 
 
+::: {.file-links}
+[Projekt na GitHubu](https://github.com/lusiki/Ekonomski-susreti/tree/main/workshop/projekt/){target="_blank" rel="noopener noreferrer"}
+:::
+
+
 ::: {.divider background-color="#000000"}
 ## 1 · Dug provjere
 
@@ -147,6 +152,11 @@ ali ne treba odlučivati.
 
 Prva tri zadatka imaju provjerljiv rezultat. Posljednji traži istraživačku
 prosudbu i ostaje odgovornost istraživača.
+
+
+::: {.file-links}
+[Slike](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/R/slike.R){target="_blank" rel="noopener noreferrer"} · [Spajanje podataka](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/R/podaci.R){target="_blank" rel="noopener noreferrer"} · [Oznake zemalja](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/R/zemlje.R){target="_blank" rel="noopener noreferrer"} · [Modeli](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/R/modeli.R){target="_blank" rel="noopener noreferrer"}
+:::
 
 
 ::: {.divider background-color="#000000"}
@@ -238,11 +248,15 @@ Prvo ono što nastaje, pa onda kako.
 ## Gotov rad {background-color="#000000"}
 
 ::: {.krupno style="color:white"}
-paper/nalaz.html
+[paper/nalaz.html](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/paper/nalaz.html){target="_blank" rel="noopener noreferrer"}
 :::
 
 ::: {style="color:rgba(255,255,255,0.8)"}
 Dvije stranice. Pitanje, rezultati, dvije slike, ograničenja.
+:::
+
+::: {.file-links}
+[Otvori gotov rad](https://lusiki.github.io/Ekonomski-susreti/workshop/nalaz.html){target="_blank" rel="noopener noreferrer"} · [Izvor rada · nalaz.qmd](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/paper/nalaz.qmd){target="_blank" rel="noopener noreferrer"}
 :::
 
 ## Ista rečenica, dva puta
@@ -264,6 +278,10 @@ Dvije stranice. Pitanje, rezultati, dvije slike, ograničenja.
 U izvoru nema brojke. Ima uputa gdje je potražiti.
 :::
 
+::: {.file-links}
+[Izvor rečenice · redak 41](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/paper/nalaz.qmd#L38-L42){target="_blank" rel="noopener noreferrer"} · [Vrijednost beta · redak 9](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/results/procjene.json#L9){target="_blank" rel="noopener noreferrer"} · [Oblikovanje broja · hr()](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/R/provenijencija.R#L55-L57){target="_blank" rel="noopener noreferrer"}
+:::
+
 ## Gdje ti brojevi žive
 
 ```json
@@ -278,8 +296,12 @@ U izvoru nema brojke. Ima uputa gdje je potražiti.
 ```
 
 ::: {.tiho}
-`results/procjene.json`, dvadeset i osam brojeva. Analiza ovamo piše, a tekst
+[`results/procjene.json`](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/results/procjene.json){target="_blank" rel="noopener noreferrer"}, dvadeset i osam brojeva. Analiza ovamo piše, a tekst
 odavde čita. Ta dva koraka nikad ne razgovaraju izravno.
+:::
+
+::: {.file-links}
+[Zapisivanje i čitanje rezultata](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/R/provenijencija.R){target="_blank" rel="noopener noreferrer"}
 :::
 
 ## Cijeli put, od tablice do rečenice
@@ -297,7 +319,11 @@ results/procjene.json          svi brojevi na jednom mjestu
 ```
 
 ::: {.tiho}
-Cijeli ovaj put prolazi jedna naredba, `Rscript analysis/run.R`.
+Cijeli ovaj put prolazi jedna naredba, [`Rscript analysis/run.R`](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/analysis/run.R){target="_blank" rel="noopener noreferrer"}.
+:::
+
+::: {.file-links}
+[Ulazni podaci](https://github.com/lusiki/Ekonomski-susreti/tree/main/workshop/projekt/data/raw/){target="_blank" rel="noopener noreferrer"} · [Zemlje](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/R/zemlje.R){target="_blank" rel="noopener noreferrer"} · [Panel](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/R/podaci.R){target="_blank" rel="noopener noreferrer"} · [Modeli](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/R/modeli.R){target="_blank" rel="noopener noreferrer"} · [Slike](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/R/slike.R){target="_blank" rel="noopener noreferrer"} · [Rezultati](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/results/procjene.json){target="_blank" rel="noopener noreferrer"} · [Tekst](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/paper/nalaz.qmd){target="_blank" rel="noopener noreferrer"}
 :::
 
 ## Kako izgleda kad je sve u redu
@@ -325,14 +351,18 @@ Cijeli ovaj put prolazi jedna naredba, `Rscript analysis/run.R`.
 Zapamtite drugi redak. Vratit će nam se za deset minuta.
 :::
 
+::: {.file-links}
+[Pokretanje · run.R](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/analysis/run.R){target="_blank" rel="noopener noreferrer"} · [Provjere · checks.R](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/tests/checks.R){target="_blank" rel="noopener noreferrer"} · [Gotov izvještaj](https://lusiki.github.io/Ekonomski-susreti/workshop/nalaz.html){target="_blank" rel="noopener noreferrer"}
+:::
+
 ## Četiri datoteke i kvar koji svaka sprječava
 
 | Datoteka | Sprječava |
 |---|---|
-| `CLAUDE.md` | povratak na opće pretpostavke |
-| `.claude/settings.json` | da samostalan proces dira što god želi |
-| `.claude/rules/provjera.md` | da se posao proglasi gotovim bez gradnje |
-| `tests/checks.R` | da uvjerljiva besmislica uđe u tekst |
+| [`CLAUDE.md`](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/CLAUDE.md){target="_blank" rel="noopener noreferrer"} | povratak na opće pretpostavke |
+| [`.claude/settings.json`](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/.claude/settings.json){target="_blank" rel="noopener noreferrer"} | da samostalan proces dira što god želi |
+| [`.claude/rules/provjera.md`](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/.claude/rules/provjera.md){target="_blank" rel="noopener noreferrer"} | da se posao proglasi gotovim bez gradnje |
+| [`tests/checks.R`](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/tests/checks.R){target="_blank" rel="noopener noreferrer"} | da uvjerljiva besmislica uđe u tekst |
 
 . . .
 
@@ -358,6 +388,11 @@ Agent orkestrira analizu čije osjetljive ulaze **nikada ne vidi**.
 Primijetite drugi redak. Mjerni sloj je u `ask`, ne u `allow`. Nije zabranjen,
 ali me mora pitati.
 :::
+
+::: {.file-links}
+[Dopuštenja · settings.json](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/.claude/settings.json){target="_blank" rel="noopener noreferrer"} · [Mjerni sloj · zemlje.R](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/R/zemlje.R){target="_blank" rel="noopener noreferrer"}
+:::
+
 
 ::: {.divider background-color="#000000"}
 ## 4 · Demonstracija
@@ -388,6 +423,10 @@ izvršava, pa ih moraju zaustaviti posebne provjere.
 | ručno upisan koeficijent više ne odgovara analizi | provjera izvora rezultata |
 | Grčka je označena kao `GR` umjesto `EL` | provjera cjelovitosti uzorka |
 
+::: {.file-links}
+[Scenarij demonstracije](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/RUNBOOK.md){target="_blank" rel="noopener noreferrer"} · [Automatske provjere](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/tests/checks.R){target="_blank" rel="noopener noreferrer"}
+:::
+
 ## Demonstracija {background-color="#000000"}
 
 ::: {.krupno style="color:white"}
@@ -395,7 +434,11 @@ Terminal
 :::
 
 ::: {style="color:rgba(255,255,255,0.8)"}
-`Rscript demo/podmetni.R` → `Rscript analysis/run.R`
+`Rscript demo/podmetni.R` → [`Rscript analysis/run.R`](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/analysis/run.R){target="_blank" rel="noopener noreferrer"}
+:::
+
+::: {.file-links}
+[Upute agentu](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/CLAUDE.md){target="_blank" rel="noopener noreferrer"} · [Podmetni greške](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/demo/podmetni.R){target="_blank" rel="noopener noreferrer"} · [Pokreni analizu](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/analysis/run.R){target="_blank" rel="noopener noreferrer"} · [Vrati datoteke](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/demo/vrati.R){target="_blank" rel="noopener noreferrer"} · [Scenarij](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/RUNBOOK.md){target="_blank" rel="noopener noreferrer"}
 :::
 
 ## Treća greška, pobliže
@@ -422,6 +465,10 @@ Ništa. Kod se izvrši, slike se nacrtaju, tekst se sastavi, gradnja prođe.
 
 ::: {.krupno}
 Jedna zemlja tiho nestane i nitko ne dobije poruku o grešci.
+:::
+
+::: {.file-links}
+[Oznake zemalja · zemlje.R](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/R/zemlje.R){target="_blank" rel="noopener noreferrer"} · [Provjera pokrivenosti](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/tests/checks.R){target="_blank" rel="noopener noreferrer"}
 :::
 
 ## Što smo upravo vidjeli
@@ -480,6 +527,10 @@ težinama koji rade na vašem računalu.
 Ovo je nabava, a ne alat. Riješite to prije projekta, ne usred njega.
 :::
 
+::: {.file-links}
+[Primjer dopuštenja](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/.claude/settings.json){target="_blank" rel="noopener noreferrer"} · [Provjera izlaza](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/tests/checks.R){target="_blank" rel="noopener noreferrer"}
+:::
+
 ## Što ne delegirati
 
 ::: {.kartice}
@@ -523,7 +574,7 @@ suvišniji ulaz u istraživanje.
 ## Zadatak za početak
 
 ::: {.krupno}
-Klonirajte repozitorij, uzmite jedan svoj projekt i napišite mu `CLAUDE.md`.
+Klonirajte repozitorij, uzmite jedan svoj projekt i napišite mu [`CLAUDE.md`](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/CLAUDE.md){target="_blank" rel="noopener noreferrer"}.
 :::
 
 . . .
@@ -536,13 +587,17 @@ Kada je opis projekta gotov, dodajte jednu automatsku provjeru za grešku koja
 vam se već dogodila.
 :::
 
+::: {.file-links}
+[Upute za vlastiti projekt · PRESADI.md](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/PRESADI.md){target="_blank" rel="noopener noreferrer"}
+:::
+
 ## Materijali
 
-- **Radionica i slajdovi** na `lusiki.github.io/Ekonomski-susreti/workshop/`
-- **Repozitorij za kloniranje** u `workshop/projekt/`
-- **Prijenos na vaš projekt** u `PRESADI.md`
-- **Pojmovnik** u `GLOSSARY.md`
-- **Literatura** u `READING.md`
+- **Radionica i slajdovi** na [stranici radionice](https://lusiki.github.io/Ekonomski-susreti/workshop/){target="_blank" rel="noopener noreferrer"}
+- **Repozitorij za kloniranje** u [`workshop/projekt/`](https://github.com/lusiki/Ekonomski-susreti/tree/main/workshop/projekt/){target="_blank" rel="noopener noreferrer"}
+- **Prijenos na vaš projekt** u [`PRESADI.md`](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/PRESADI.md){target="_blank" rel="noopener noreferrer"}
+- **Pojmovnik** u [`GLOSSARY.md`](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/GLOSSARY.md){target="_blank" rel="noopener noreferrer"}
+- **Literatura** u [`READING.md`](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/READING.md){target="_blank" rel="noopener noreferrer"}
 
 ::: {.tiho}
 Kod MIT, tekst CC BY 4.0. Podaci su stvarni i javni, iz Eurostatovih tablica

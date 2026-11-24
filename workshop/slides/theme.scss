@@ -79,7 +79,7 @@ $code-block-bg: #fff;
 
 // Only genuinely dense examples need compact type.
 .reveal #cijeli-put-od-tablice-do-rečenice pre { font-size: 22px; }
-.reveal #kako-izgleda-kad-je-sve-u-redu pre { font-size: 20px; line-height: 1.22; margin: 16px 0; }
+.reveal #kako-izgleda-kad-je-sve-u-redu pre { font-size: 18px; line-height: 1.22; margin: 16px 0; }
 .reveal #kako-izgleda-kad-je-sve-u-redu pre code { padding-top: 12px; padding-bottom: 12px; }
 .reveal #kako-izgleda-kad-je-sve-u-redu .tiho { margin-top: 14px; }
 .reveal #četiri-datoteke-i-kvar-koji-svaka-sprječava table { font-size: 23px; }
@@ -93,6 +93,11 @@ $code-block-bg: #fff;
 .reveal #materijali code { font-size: 20px; }
 
 .reveal .workshop-footer { position: absolute; bottom: 26px; left: 72px; right: 72px; display: flex; justify-content: space-between; border-top: 1px solid #d9d9d9; padding-top: 12px; color: #555; font: 500 12px/1.2 Roboto, sans-serif; letter-spacing: 1.6px; }
+.reveal .file-links { position: absolute; bottom: 76px; left: 72px; right: 72px; font: 400 18px/1.5 Roboto, sans-serif; color: #555; }
+.reveal .file-links p { margin: 0; }
+.reveal .has-dark-background .file-links { color: #fff; }
+.reveal #gotov-rad > .file-links:last-of-type, .reveal #demonstracija-1 > .file-links:last-of-type { font-size: 18px; }
+.reveal .slides section.has-dark-background a { color: inherit; }
 .reveal .has-dark-background .workshop-footer { color: #bdbdbd; border-color: #555; }
 .reveal .footer, .reveal .slide-number { display: none !important; }
 .reveal .progress { height: 1px; color: #000; }
