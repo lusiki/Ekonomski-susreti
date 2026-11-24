@@ -14,6 +14,7 @@ for stem, name, check in [
     ('monthly-20260928', 'ES_MONTHLY', lambda d: len(d['monthly']) == 68),
     ('descriptive-20260928', 'ES_ANNUAL', lambda d: len(d['annual']) == 6),
     ('original-results', 'ES_ORIGINAL', lambda d: len(d['expectations_table_7a']) == 18),
+    ('media-context-20260921', 'ES_MEDIA', lambda d: len(d['monthly']) == 68 and len(d['themes']) == 8),
 ]:
     data = json.loads((DATA / f'{stem}.json').read_text(encoding='utf-8'))
     assert check(data), stem

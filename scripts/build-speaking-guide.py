@@ -129,17 +129,17 @@ def card(d,entry,meta,prefix):
 
 
 D=PDF(args.output,1,'Govorni vodič · Kada inflacija istisne glas središnje banke',len(T)+3)
-cover(D,'Kada inflacija istisne\nglas središnje banke','Istraživačko izlaganje · 20-25 minuta · 24 slajda',P/'previews/talk-01.png',
+cover(D,'Kada inflacija istisne\nglas središnje banke','Istraživačko izlaganje · 22-25 minuta · 27 slajdova',P/'previews/talk-01.png',
  'Vodič prati put od mjesečnih grafikona medijske zastupljenosti preko odnosa inflacije, jaza i očekivanja do praktičnih pitanja o komunikaciji. Svaki slajd ima govornu osnovu i prijelaz na sljedeću temu.',
  'https://lusiki.github.io/Ekonomski-susreti/slides/')
 y=D.start('Prije izlaska pred publiku','Cijela priča na jednoj stranici','route')
 y=D.para('Više objava ne mora značiti veći dio razgovora.',M,y,style='h3')-22
-y=rows(D,[('00-04','Slajdovi 1-6','Motivacija, pitanja, korpus i mjera.'),('04-07:55','Slajdovi 7-12','Mjesečne putanje i godišnji pregled.'),('07:55-14:20','Slajdovi 13-19','Jaz, metode, nalazi i provjere.'),('14:20-17:50','Slajdovi 20-23','Tumačenje, komunikacija i otvorena pitanja.'),('17:50-20','Slajd 24','Zatvaranje i početak rasprave.')],y)
-y=D.block('Tri mjesta za stanku','Na slajdu 2 nakon više objava i manjeg udjela. Na slajdu 13 objasnite zašto manji udio znači veći jaz. Na slajdu 17 odvojite predviđanje od uzročnog zaključka.',y)
+y=rows(D,[('00-04:40','Slajdovi 1-7','Motivacija, pitanja, korpus, medijska slika i mjera.'),('04:40-09:20','Slajdovi 8-14','Mjesečne putanje, godišnji pregled i najveći mjeseci.'),('09:20-15:45','Slajdovi 15-21','Jaz, metode, nalazi i provjere.'),('15:45-20:05','Slajdovi 22-26','Vladine mjere, tumačenje, komunikacija i otvorena pitanja.'),('20:05-22:15','Slajd 27','Zatvaranje i početak rasprave.')],y)
+y=D.block('Tri mjesta za stanku','Na slajdu 2 nakon više objava i manjeg udjela. Na slajdu 15 objasnite zašto manji udio znači veći jaz. Na slajdu 19 odvojite predviđanje od uzročnog zaključka.',y)
 y=D.block('Brojke za pamćenje','68 mjeseci, 124.163 institucionalne i 65.530 relevantnih objava. Tjedni model daje 0,00213 jedinica jaza po bodu inflacije, uz kontrolu obujma. Relativna učestalost niža je za oko 0,47 postotnih bodova.',y)
-y=D.block('Ritam izvedbe','Kartice daju sažetu 20-minutnu putanju. Za mirnije objašnjenje modela i dodatna pitanja predvidite 25 minuta. Metodološku tablicu i provjere prođite kratko. Ne ubrzavajte objašnjenje osi.',y)
+y=D.block('Ritam izvedbe','Kartice daju putanju od oko 22 minute. Za mirnije objašnjenje modela i dodatna pitanja predvidite 25 minuta. Za strogih 20 minuta slajdove 6, 14 i 22 prođite jednom rečenicom. Metodološku tablicu i provjere prođite kratko. Ne ubrzavajte objašnjenje osi.',y)
 y=D.block('Jedinice i razdoblja','Svaki deskriptivni stupac je mjesec, od siječnja 2021. do kolovoza 2026. Procjene modela obuhvaćaju 2021.–2023. Os grafa očekivanja prikazuje horizonte u tjednima.',y)
-y=D.block('Živi grafikoni u pregledniku','Na slajdovima 7-12 i 17 pokazivačem otkrijte vrijednosti. Tipke 1-5 dodaju serije prema redoslijedu u traci, I uključuje indeks gdje je dostupan, a 0 vraća početni prikaz. PNG, SVG i CSV preuzimaju prikaz. Nakon kratke usporedbe vratite početni graf. PDF zadržava statične slike.',y,style='small')
+y=D.block('Živi grafikoni u pregledniku','Na slajdovima 6, 8-14, 19 i 22 pokazivačem otkrijte vrijednosti. Tipke 1-5 dodaju serije prema redoslijedu u traci, I uključuje indeks gdje je dostupan, a 0 vraća početni prikaz. PNG, SVG i CSV preuzimaju prikaz. Nakon kratke usporedbe vratite početni graf. PDF zadržava statične slike.',y,style='small')
 D.finish()
 for e in T:card(D,e,TM,'talk')
 y=D.start('Nakon posljednjeg slajda','Kratki odgovori za raspravu','questions')
@@ -152,7 +152,7 @@ for q,a in [
  ('Je li rezultat uzročan?','Osnovni modeli opisuju uvjetnu povezanost. IV tumačenje ovisi o pretpostavci da instrumenti ne djeluju na jaz drugim kanalima. Chowov test pokazuje promjenu odnosa oko određenog datuma, a sam ne identificira učinak eura.')]:
     y=D.para(q,M,y,style='h3')-5;y=D.para(a,M,y,style='small')-14
 y=D.link('Slajdovi i materijali izlaganja','https://lusiki.github.io/Ekonomski-susreti/',y-4)
-y=D.para('Vodič prati 24 slajda. Minijature i naslovi preuzimaju se iz prezentacije pri izradi dokumenta. Govorna osnova može se prilagoditi tempu izlaganja.',M,y,style='small')
+y=D.para('Vodič prati 27 slajdova. Minijature i naslovi preuzimaju se iz prezentacije pri izradi dokumenta. Govorna osnova može se prilagoditi tempu izlaganja.',M,y,style='small')
 D.finish()
 (P/'layout-audit.json').write_text(json.dumps(D.save(),indent=2),encoding='utf-8')
 print(f'Saved {len(T)+3}-page speaking guide: {args.output}')

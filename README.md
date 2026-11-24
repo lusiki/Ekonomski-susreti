@@ -21,7 +21,7 @@ Regresijske procjene odnose se na 2021.–2023., uz 36 mjesečnih i 157 tjednih
 opažanja u osnovnim modelima. [Dokumentacija slajdova](docs/slides/README.md)
 navodi izvore podataka, definicije i postupak izrade.
 
-Govorni vodič prati svih 24 slajda, s minijaturama, tekstom za izlaganje,
+Govorni vodič prati svih 27 slajdova, s minijaturama, tekstom za izlaganje,
 prijelazima i kratkim odgovorima za raspravu.
 
 | Sadržaj | Pregled | Preuzimanje |
@@ -30,7 +30,7 @@ prijelazima i kratkim odgovorima za raspravu.
 | Sažetak radionice | [Umjetna inteligencija u ekonomskim istraživanjima](https://lusiki.github.io/Ekonomski-susreti/abstracts/#radionica) | [tekst](materials/abstract-workshop.md) |
 | Sažeti prikaz istraživanja | Pet stranica s glavnim nalazima i grafikonima | [PDF](https://lusiki.github.io/Ekonomski-susreti/downloads/Pregled-istrazivanja.pdf) · [izvor](materials/brief/pregled.qmd) |
 | Konferencijska prezentacija | [Otvori slajdove u pregledniku](https://lusiki.github.io/Ekonomski-susreti/slides/) | [PDF](https://lusiki.github.io/Ekonomski-susreti/downloads/Ekonomski-susreti.pdf) · [PowerPoint](https://lusiki.github.io/Ekonomski-susreti/downloads/Ekonomski-susreti.pptx) |
-| Govorni vodič za izlaganje | Govorna osnova uz svih 24 slajda | [PDF](https://lusiki.github.io/Ekonomski-susreti/downloads/Govorni-vodic-izlaganje.pdf) · [izvor](materials/speaking-guide/) |
+| Govorni vodič za izlaganje | Govorna osnova uz svih 27 slajdova | [PDF](https://lusiki.github.io/Ekonomski-susreti/downloads/Govorni-vodic-izlaganje.pdf) · [izvor](materials/speaking-guide/) |
 | Materijali radionice | [Rad u repozitoriju i demonstracija](https://lusiki.github.io/Ekonomski-susreti/workshop/) | [slajdovi](https://lusiki.github.io/Ekonomski-susreti/workshop/slides/) · [jedna stranica](https://lusiki.github.io/Ekonomski-susreti/workshop/handout.html) |
 
 ## Sadržaj
@@ -104,18 +104,19 @@ Nakon ulaska Hrvatske u europodručje ključnu kamatnu stopu određuje Europska 
 
 ## Sadržaj prezentacije
 
-Konferencijsko izlaganje ima 24 slajda. Za dvadeset minuta uvodni i metodološki
-slajdovi prolaze se kratko; za dulju raspravu prikladno je 25 minuta.
+Konferencijsko izlaganje ima 27 slajdova i traje oko 22 minute. Za dvadeset minuta
+uvodni, metodološki i tri slajda šireg medijskog konteksta prolaze se kratko; za
+dulju raspravu prikladno je 25 minuta.
 
 1. broj objava i relativni prostor u raspravi
 2. tri istraživačka pitanja
-3. korpus i ponderiranje dosega i istaknutosti
-4. mjesečni stupci inflacije, udjela, broja objava, učestalosti i dosega
+3. korpus, tematska područja uz HNB i ponderiranje dosega i istaknutosti
+4. mjesečni stupci inflacije, udjela, broja objava, učestalosti i dosega te najveći medijski mjeseci
 5. godišnji sažetak cijelog razdoblja
 6. institucionalni jaz i ekonometrijska strategija
 7. rezultati o inflaciji, marginama i očekivanjima
 8. promjena oko eura i provjere osjetljivosti
-9. tumačenje relativnog prostora u raspravi
+9. rasprava o vladinim mjerama i tumačenje relativnog prostora u raspravi
 10. praćenje komunikacije, ograničenja i rasprava
 
 ## Ponovljivost analize i podaci

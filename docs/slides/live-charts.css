@@ -43,6 +43,9 @@
 .lc-tip-val i { font-style:normal; color:#8a8a8a; margin-left:8px; font-size:13px; }
 .lc-tip-sub { font-size:12px; color:#8a8a8a; font-variant-numeric:tabular-nums; margin:0 0 5px 30px; }
 .lc-tip-sub:last-child { margin-bottom:0; }
+.lc-tip-head { margin-top:7px; font-size:10px; font-weight:700; letter-spacing:1.3px; text-transform:uppercase; color:#555; }
+.lc-tip-row + .lc-tip-head { border-top:1px solid #e3e3e3; padding-top:7px; }
+.lc-flat .lc-tip-sub { margin-left:0; }
 
 @media (prefers-reduced-motion: reduce) { .lc-tip, .lc-tools, .lc-chip { transition:none; } }
 @media print {

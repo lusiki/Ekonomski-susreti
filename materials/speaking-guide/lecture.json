@@ -48,17 +48,28 @@
       5
     ],
     "time": "02:25 - 03:10",
-    "show": "68 potpunih mjeseci, 124.163 institucionalne i 65.530 relevantnih objava. Desno je definicija korpusa.",
-    "say": "Prikazujemo 68 potpunih mjeseci, od siječnja 2021. do kolovoza 2026. U tom se prozoru nalazi oko 124 tisuće institucionalnih objava. Od njih je oko 65 i pol tisuća relevantno za inflacijski diskurs.\n\nRiječ institucionalni ovdje je važna. Pretraga obuhvaća naziv i kraticu HNB-a, ali i generičke izraze poput središnje banke. Zato ovo ne treba predstavljati kao zbirku isključivo izričitih spominjanja HNB-a. U zadržanim digitalnim izvorima mogu biti i društvene objave i komentari.\n\nZa 2026. imamo osam mjeseci. Rujan je u arhivu nepotpun pa ga iz ovog prikaza izostavljamo.",
+    "show": "68 potpunih mjeseci, 124.163 institucionalne i 65.530 relevantnih objava te 480.221 objava o inflaciji. Desno je definicija korpusa.",
+    "say": "Prikazujemo 68 potpunih mjeseci, od siječnja 2021. do kolovoza 2026. U tom se prozoru nalazi oko 124 tisuće institucionalnih objava. Od njih je oko 65 i pol tisuća relevantno za inflacijski diskurs. Cijeli razgovor o inflaciji u istom razdoblju ima oko 480 tisuća objava, približno 230 na dan.\n\nRiječ institucionalni ovdje je važna. Pretraga obuhvaća naziv i kraticu HNB-a, ali i generičke izraze poput središnje banke. Zato ovo ne treba predstavljati kao zbirku isključivo izričitih spominjanja HNB-a. U zadržanim digitalnim izvorima mogu biti i društvene objave i komentari.\n\nZa 2026. imamo osam mjeseci. Rujan je u arhivu nepotpun pa ga iz ovog prikaza izostavljamo.",
     "action": "Na velikom broju 68 ostanite kratko. Više vremena posvetite objašnjenju što ulazi u korpus.",
-    "bridge": "Sada možemo objasniti što znači udio koji ćemo gledati.",
+    "bridge": "Prije mjere pogledajmo uz koje se teme HNB uopće pojavljuje.",
     "care": "Korpus uključuje HNB i generičke izraze za središnje banke. Za 2026. prikazano je osam potpunih mjeseci."
   },
   {
     "slides": [
       6
     ],
-    "time": "03:10 - 04:00",
+    "time": "03:10 - 03:50",
+    "show": "Osam vodoravnih stupaca tematskih područja u objavama koje izričito spominju HNB. Stupac cijena i inflacije je crn.",
+    "say": "Prije nego što definiramo mjeru, vrijedi vidjeti uz što se HNB u medijima uopće pojavljuje. Ovdje gledamo uži skup, 33.235 objava koje izričito spominju HNB.\n\nNajčešće ga prate riječi o kreditima i potrošačima, zatim o euru te o plaćanjima i gotovini. Riječi o cijenama i inflaciji nalaze se u približno trećini objava.\n\nZa medije je HNB velikim dijelom institucija kredita, eura i gotovine. Inflacija je jedna od tema uz koje se pojavljuje.",
+    "action": "Pokažite prva tri stupca, zatim crni stupac cijena i inflacije. Recite da se područja preklapaju.",
+    "bridge": "Sada možemo objasniti što znači udio koji ćemo gledati.",
+    "care": "Ovo je uži skup od institucionalnog korpusa. Područja počivaju na popisima riječi bez neovisne provjere i ne označavaju glavnu temu objave."
+  },
+  {
+    "slides": [
+      7
+    ],
+    "time": "03:50 - 04:40",
     "show": "Intuitivan omjer institucionalnog dosega i dosega inflacijskog diskursa.",
     "say": "Najjednostavnije je zamisliti ukupni razgovor o inflaciji kao prostor koji se mijenja iz mjeseca u mjesec. Pitamo koliko tog prostora zauzima institucionalno relevantan sadržaj.\n\nNe brojimo sve objave jednako. Uvažavamo potencijalni doseg i to koliko je institucija u tekstu istaknuta. Nije jednako je li u naslovu i nosi objašnjenje ili se pojavljuje usput.\n\nUdio može pasti i kada broj relevantnih objava raste, jer se mijenja i ostatak razgovora. Na grafikonima gledamo sam udio. Prije modela uvest ćemo jaz, koji taj udio uspoređuje s početnom referencom.",
     "action": "Pokažite najprije brojnik pa nazivnik. Ne ulazite u težine pojedinih sastavnica formule.",
@@ -67,9 +78,9 @@
   },
   {
     "slides": [
-      7
+      8
     ],
-    "time": "04:00 - 04:35",
+    "time": "04:40 - 05:15",
     "show": "68 mjesečnih stupaca godišnje HICP inflacije u Hrvatskoj.",
     "say": "Svaki stupac je jedan mjesec, ali vrijednost na njemu je godišnja stopa inflacije. Vidimo snažan rast, vrhunac i zatim spuštanje.\n\nNiža inflacija ne znači da su se cijene vratile na staro. Znači da rastu sporije. Za našu je priču važno da sada vidimo i nekoliko godina nakon vrhunca.",
     "action": "Pokažite skup visokih stupaca oko vrhunca, zatim desni kraj. Ne čitajte svih 68 mjeseci.",
@@ -78,9 +89,9 @@
   },
   {
     "slides": [
-      8
+      9
     ],
-    "time": "04:35 - 05:15",
+    "time": "05:15 - 05:55",
     "show": "Mjesečni stupci ponderiranoga institucionalnog udjela.",
     "say": "Sada zadržavamo istu vremensku os, ali gledamo udio institucije u razgovoru o inflaciji. Povremeno vidimo vrlo visok stupac. To je važno jer priča nije neprekidan pad.\n\nIpak, kasniji stupci većinom su niži. Smirivanje inflacije ne prati jednostavan povratak institucionalnog udjela na početnu razinu. To je opis podataka. Sam graf još ne govori što je uzrok.",
     "action": "Pokažite visoke stupce 2023., zatim nižu skupinu na kraju. Naglasite da svaki stupac ima isti mjesečni korak.",
@@ -89,9 +100,9 @@
   },
   {
     "slides": [
-      9
+      10
     ],
-    "time": "05:15 - 06:00",
+    "time": "05:55 - 06:40",
     "show": "Šest godišnjih udjela. Posljednji stupac ima šrafuru jer je 2026. nepotpuna.",
     "say": "Ovo je možda graf koji je najlakše ponijeti iz dvorane. Godine 2021. udio je 6,12 posto. U 2022. pada na 3,59, a 2023. djelomično se oporavlja na 4,67 posto. Dakle, ne govorimo o neprekinutom padu.\n\nNakon toga slijede 3,26 posto, 3,17 posto i 1,86 posto u prvih osam mjeseci 2026. Kasniji udjeli ostaju ispod razine iz 2021.\n\nPosljednji stupac namjerno je drukčije označen. To nije prognoza cijele godine. I još jedna važna sitnica: godišnji udio računamo iz godišnjih zbrojeva, a ne kao običan prosjek dvanaest mjesečnih postotaka.",
     "action": "Pokažite oporavak 2023. kako ne bi izgledalo da prešućujete iznimku. Na šrafuri izgovorite: prvih osam mjeseci.",
@@ -100,9 +111,9 @@
   },
   {
     "slides": [
-      10
+      11
     ],
-    "time": "06:00 - 06:45",
+    "time": "06:40 - 07:25",
     "show": "Dva panela mjesečnih stupaca za cijeli niz: broj relevantnih objava i ponderirani udio.",
     "say": "Gore brojimo koliko je relevantnih objava. Dolje gledamo koliko ponderiranog prostora one zauzimaju. Datumi su poravnati pa možemo pratiti isti mjesec u oba panela.\n\nPogledajte 2022.: broj objava je visok, ali udio ne prati isti obrazac. A 2023. ima nekoliko izrazitih skokova udjela. Te dvije putanje odgovaraju na različita pitanja.\n\nZato izvještaj o komunikaciji koji prati samo broj spominjanja može propustiti važnu promjenu.",
     "action": "Krenite gornjim panelom, pa donjim. Uspoređujte datume i putanje, a ne fizičke visine stupaca na različitim ljestvicama.",
@@ -111,9 +122,9 @@
   },
   {
     "slides": [
-      11
+      12
     ],
-    "time": "06:45 - 07:20",
+    "time": "07:25 - 08:00",
     "show": "Mjesečni stupci relativne učestalosti relevantnih institucionalnih objava.",
     "say": "Ovdje privremeno ostavljamo ponderiranje po strani. Pitamo koliko relevantnih institucionalnih objava dolazi u odnosu na broj objava cijelog inflacijskog korpusa. To je mjera relativne učestalosti.\n\nVidimo oscilacije, relativno visoke vrijednosti na početku i niže vrijednosti pri kraju razdoblja. To nam govori nešto drugo od apsolutnog broja objava. Institucija se može pojavljivati često, a ipak zauzimati malen dio snažnog tematskog toka.\n\nAli učestalost nije jedina dimenzija. Jedna objava može imati vrlo malen, a druga vrlo velik potencijalni doseg. Zato je sljedeći panel koristan.",
     "action": "Pokažite više stupce na početku i niže pri kraju. Recite relativna učestalost, pa tek onda ekstenzivna margina.",
@@ -122,97 +133,119 @@
   },
   {
     "slides": [
-      12
+      13
     ],
-    "time": "07:20 - 07:55",
+    "time": "08:00 - 08:35",
     "show": "Mjesečni stupci relativnoga potencijalnog dosega po objavi, na skali omjera.",
     "say": "Sada pitamo kakav potencijalni doseg ima relevantna institucionalna objava u usporedbi s objavom u inflacijskom korpusu. Vidimo da nekoliko mjeseci može znatno odskakati. Takvi skokovi mogu pojačati ukupni ponderirani udio.\n\nPoanta je da učestalost i doseg ne trebamo spajati u jednu neodređenu tvrdnju o tome da je institucija prisutna ili odsutna. Svaka veličina govori nešto svoje.\n\nPritom i dalje govorimo o potencijalnom dosegu. Još ne znamo tko je tekst stvarno pročitao, razumio i upotrijebio.",
     "action": "Pokažite nekoliko najviših stupaca. Naglasite da ova os nije u postotku čitatelja.",
-    "bridge": "Sada znamo kako izgledaju putanje. Pogledajmo kako mjerimo jaz i njegov odnos s inflacijom.",
+    "bridge": "Prije mjere jaza pogledajmo kada je HNB uopće najviše u medijima.",
     "care": "Osa je omjer, ne postotak čitatelja. Umnožak dviju margina nije točna računovodstvena dekompozicija jaza."
   },
   {
     "slides": [
-      13
+      14
+    ],
+    "time": "08:35 - 09:20",
+    "show": "68 mjesečnih stupaca broja objava koje izričito spominju HNB, s oznakama triju skupina najvećih mjeseci.",
+    "say": "Ovdje brojimo sve objave koje izričito spominju HNB, neovisno o temi. Pet najvećih mjeseci su veljača i siječanj 2022., siječanj 2023., prosinac 2022. i siječanj 2026.\n\nU tim mjesecima vode riječi o upravljanju, o plaćanjima i gotovini te o euru. Riječi o cijenama nalaze se u 22 do 31 posto objava. Najveća medijska prisutnost HNB-a ne pada u mjesece u kojima je on najviše vezan uz cijene.\n\nTo je opis. Oznake govore koje su riječi tih mjeseci najčešće i ne utvrđuju zašto je objava bilo više.",
+    "action": "Pokažite tri oznake slijeva nadesno. U pregledniku pokazivačem otkrijte vodeća područja pojedinog mjeseca.",
+    "bridge": "Sada znamo kako izgledaju putanje. Pogledajmo kako mjerimo jaz i njegov odnos s inflacijom.",
+    "care": "Siječanj i veljača 2022. vrijeme su objava o trgovanju vrijednosnim papirima zaposlenika i o izboru izgleda eurokovanica. Siječanj 2026. vrijeme je prijedloga guvernera za potpredsjednika ESB-a. To je naše tumačenje, a ne nalaz iz podataka."
+  },
+  {
+    "slides": [
+      15
     ],
     "show": "Definicija jaza i uzorak za procjenu. 36 mjeseci i 157 tjednih opažanja.",
     "say": "Ovdje nam treba još jedan pojam. Jaz je početni udio minus udio koji opažamo. Ako institucija zauzima manje prostora nego u prvoj polovici 2021., jaz je pozitivan.\n\nTo nam daje jednostavan način da pitamo je li viša inflacija povezana s većim odmakom od početne zastupljenosti. Modele procjenjujemo na razdoblju 2021.–2023., s 36 mjesečnih i 157 tjednih opažanja u osnovnim specifikacijama.",
     "action": "Na izrazu pokažite kako manji udio daje veći jaz. Kratko navedite razdoblje i broj opažanja.",
     "bridge": "Pogledajmo ukratko kojim smo postupkom odgovorili na svako pitanje.",
     "care": "Početna referenca služi za usporedbu. Nije optimalan cilj komunikacije.",
-    "time": "07:55 - 08:35"
+    "time": "09:20 - 10:00"
   },
   {
     "slides": [
-      14
+      16
     ],
     "show": "Četiri pitanja, odgovarajući postupci i granice tumačenja.",
     "say": "Prvo povezujemo inflaciju s jazom uz kontrole i standardne pogreške koje uzimaju u obzir vremensku zavisnost. Zatim razdvajamo učestalost od dosega.\n\nZa očekivanja gledamo što slijedi nakon promjene zastupljenosti. To je prediktivni dio. Oko uvođenja eura testiramo mijenja li se odnos među varijablama.\n\nInstrumentalne varijable daju dodatnu provjeru, ali kauzalni zaključak ovisi o njihovim pretpostavkama. Ne želimo da naziv metode zamijeni objašnjenje što je zapravo identificirano.",
     "action": "Prođite četiri retka u manje od minute. Zadržite se na riječima prediktivna veza i pretpostavke.",
     "bridge": "Prvi rezultat povezuje višu inflaciju sa širim jazom.",
     "care": "",
-    "time": "08:35 - 09:20"
+    "time": "10:00 - 10:45"
   },
   {
     "slides": [
-      15
+      17
     ],
     "show": "Obrazac po kvintilima inflacije i tjedni koeficijent 0,0021, uz kontrolu obujma.",
     "say": "Na lijevoj strani najviši kvintil inflacije ima najširi prosječni jaz. Srednji kvintili nisu poredani savršeno, pa ne tvrdimo da je svaki korak monoton.\n\nDesno je model. Jedan postotni bod više inflacije povezan je s oko 0,0021 jedinicom većeg jaza, odnosno oko 0,21 postotnim bodom. U ovom modelu kontroliramo obujam.\n\nZa osjećaj veličine, razlika između inflacije od dva i deset posto odgovara približno 13 posto opaženog raspona jaza u promatranom uzorku.",
     "action": "Najprije objasnite graf, tek zatim koeficijent. Jedinicu 0,0021 prevedite u 0,21 postotni bod.",
     "bridge": "Kroz koju dimenziju zastupljenosti prolazi taj odnos?",
     "care": "Tablica 4: 0,00213; N = 157. Ne nazivati ukupnim učinkom. Prikaz scenarija nije prognoza niti procjena intervencije.",
-    "time": "09:20 - 10:20"
+    "time": "10:45 - 11:45"
   },
   {
     "slides": [
-      16
+      18
     ],
     "show": "Dva mjesečna regresijska odnosa. Učestalost i doseg po objavi.",
     "say": "Kad razdvojimo dvije margine, rezultat je jasniji za učestalost. Jedan postotni bod više inflacije povezan je s oko 0,47 postotnih bodova manjim udjelom relevantnih objava.\n\nZa doseg pojedine objave ne dobivamo statistički jasan učinak. To ne znači da je učinak točno nula, nego da ga ovim modelom ne možemo pouzdano razlikovati od nule.\n\nZato vrijedi pratiti i koliko često institucija ulazi u temu i koliki doseg imaju pojedine objave.",
     "action": "Na slajdu razlikujte lijevi odnos od gotovo ravnog desnog. Navedite da se procjene temelje na 36 mjesečnih opažanja.",
     "bridge": "Sljedeće pitanje je prati li tu učestalost nešto u očekivanjima kućanstava.",
     "care": "Tablica 6, N = 36, razdoblje 2021.–2023. Statistički neznačajan nalaz za doseg ne znači da je učinak točno nula.",
-    "time": "10:20 - 11:20"
+    "time": "11:45 - 12:45"
   },
   {
     "slides": [
-      17
+      19
     ],
     "show": "Točke i intervali za buduća očekivanja. Desno su razlike između načina mapiranja i granice tumačenja.",
     "say": "Ovdje os više nije kalendarsko vrijeme, nego broj tjedana nakon opažene promjene udjela. Jedan postotni bod veći udio relevantnih objava povezan je s nižom budućom bilancom očekivanja rasta cijena.\n\nCrne točke označavaju testirane horizonte koji prolaze Bonferronijevu korekciju. Kod linearnog mapiranja to su testirani horizonti od drugog do dvanaestog tjedna. Kada mjesečna očekivanja prenesemo u tjedne stepenasto, nalaz slabi na desetom i dvanaestom tjednu.\n\nUčestalost, dakle, nosi prediktivnu informaciju u ovom uzorku. Rezultat ovisi o načinu mapiranja, a predviđanje nije dokaz da je izloženost poruci uzrokovala promjenu očekivanja.",
     "action": "Najprije objasnite os. Pokažite crne i prazne točke. Zaključite razlikom između predviđanja i uzročnosti.",
     "bridge": "Važan je i institucionalni kontekst. Što se mijenja oko uvođenja eura?",
     "care": "Tablica 7a. Intervali su β ± 1,96 SE. Ispunjenost točke označava Bonferroni p, a ne pojedinačni interval. Testirani značajni horizonti su 2, 3, 4, 6, 8, 10 i 12.",
-    "time": "11:20 - 12:40"
+    "time": "12:45 - 14:05"
   },
   {
     "slides": [
-      18
+      20
     ],
     "show": "Chowov test i promjena relativne važnosti inflacije i sentimenta.",
     "say": "Oko siječnja 2023. vidimo promjenu odnosa. Inflacija nakon eura postaje slabiji prediktor jaza, a koeficijent sentimenta snažniji.\n\nTo ima zanimljivo institucionalno tumačenje. Domaća objašnjenja kretanja cijena ostaju važna dok se odluka o kamatnim stopama donosi na razini europodručja.\n\nTest promjene režima ipak ne kaže da je sam euro uzrokovao sve što se promijenilo oko tog datuma.",
     "action": "Test-statistiku navedite jednom. Više vremena posvetite značenju i granici zaključka.",
     "bridge": "Provjerili smo i nekoliko alternativnih objašnjenja.",
     "care": "",
-    "time": "12:40 - 13:30"
+    "time": "14:05 - 14:55"
   },
   {
     "slides": [
-      19
+      21
     ],
     "show": "Provjere specifikacije i alternativnih objašnjenja, uključujući vladinu i vlastitu komunikaciju.",
     "say": "Neću prolaziti svaku provjeru zasebno. Pitali smo koliko rezultat ovisi o specifikaciji, drugim institucijama i konkurentskoj komunikaciji.\n\nKada uključimo vladinu komunikaciju, tjedni koeficijent manji je približno za trećinu. Vlastite objave HNB-a ne podupiru jednostavno objašnjenje da je banka samo počela manje govoriti.\n\nTo pomaže razumjeti rezultat. Valjanost instrumenata i ograničena snaga institucionalne usporedbe i dalje određuju koliko daleko možemo ići s uzročnim zaključkom.",
     "action": "Naglasite dva primjera, Vladu i vlastitu komunikaciju. Ostale provjere ostavite za pitanja.",
-    "bridge": "Vratimo se sada početnom paradoksu. Kako veća aktivnost može ići zajedno s manjim udjelom?",
+    "bridge": "Jednu od tih provjera vrijedi pogledati izravno.",
     "care": "",
-    "time": "13:30 - 14:20"
+    "time": "14:55 - 15:45"
   },
   {
     "slides": [
-      20
+      22
     ],
-    "time": "14:20 - 15:20",
+    "time": "15:45 - 16:35",
+    "show": "Dva poravnata panela. Gore udio rasprave o vladinim mjerama u objavama o inflaciji, dolje ponderirani institucionalni udio.",
+    "say": "Među provjerama smo spomenuli vladinu komunikaciju. Ovdje je vidimo izravno. Gornji panel prati koliki dio objava o inflaciji govori o vladinim mjerama, poput zamrzavanja cijena i paketa mjera.\n\nTaj je udio 2021. u prosjeku 2,8 posto, a 2022. iznosi 7,7 posto, gotovo trostruko više. Iste je godine ponderirani institucionalni udio na donjem panelu niži. Zabilježene vlastite objave HNB-a pritom ne opadaju.\n\nDva niza imaju zasebne ljestvice i različito su izvedena. Zato govorimo o smjeru i ne uspoređujemo visine stupaca.",
+    "action": "Pokažite gornji panel 2022., zatim isti dio donjeg panela. Spomenite sivu podlogu za mjesece bez podataka.",
+    "bridge": "Vratimo se sada početnom paradoksu. Kako veća aktivnost može ići zajedno s manjim udjelom?",
+    "care": "Gornji niz dolazi iz ranijeg izdanja panela, od 17. rujna 2026., i završava u svibnju 2026. Ovo je opis dvaju nizova i ne dokazuje da je jedna rasprava istisnula drugu."
+  },
+  {
+    "slides": [
+      23
+    ],
+    "time": "16:35 - 17:35",
     "show": "Širenje inflacijske rasprave i prisutnost institucije, uz objašnjenje relativnog udjela.",
     "say": "Zamislite razgovor u kojem institucija govori češće nego prije, ali svi ostali počnu govoriti još mnogo više. Aktivnost institucije raste, a njezin dio razgovora pada.\n\nU medijima to može značiti više vijesti o cijenama, više osobnih iskustava i više konkurentskih objašnjenja. Broj relevantnih institucionalnih objava zato sam ne govori koliko je institucija zastupljena u cjelini.\n\nTo je smisao relativne mjere. Ona nas tjera da uz ono što institucija radi pogledamo i prostor u kojem pokušava doći do publike.",
     "action": "Pokažite prvo širenje rasprave, zatim prisutnost institucije. Vratite se usmeno na početnu usporedbu broja objava i udjela.",
@@ -221,20 +254,20 @@
   },
   {
     "slides": [
-      21
+      24
     ],
-    "time": "15:20 - 16:10",
+    "time": "17:35 - 18:25",
     "show": "Tri odvojene skupine pokazatelja za komunikaciju.",
-    "say": "Za praktičnu primjenu predložio bih tri pitanja. Prvo, što institucija sama objavljuje. Drugo, što mediji od toga prenesu i koliko prostora institucionalni sadržaj zauzme. Treće, što publika stvarno razumije.\n\nDobar broj priopćenja ne mora značiti velik medijski udio, a velik udio ne mora značiti dobro razumijevanje. Naši podaci i modeli daju kontekst drugom dijelu tog puta.\n\nZa konkretnu komunikacijsku intervenciju još treba provjeriti djeluje li na publiku.",
+    "say": "Za praktičnu primjenu predložio bih tri pitanja. Prvo, što institucija sama objavljuje. Drugo, što mediji od toga prenesu i koliko prostora institucionalni sadržaj zauzme. Treće, što publika stvarno razumije.\n\nDobar broj priopćenja ne mora značiti velik medijski udio, a velik udio ne mora značiti dobro razumijevanje. Naši podaci i modeli daju kontekst drugom dijelu tog puta. Prijenos se pritom razlikuje po kanalima. U arhivu je HNB mnogo prisutniji na portalima nego na društvenim mrežama.\n\nZa konkretnu komunikacijsku intervenciju još treba provjeriti djeluje li na publiku.",
     "action": "Prođite tri stupca slijeva nadesno i na srednjem se kratko zaustavite.",
     "bridge": "Za nastavak istraživanja ostaju tri vrlo konkretna posla.",
-    "care": "Preporuka je pratiti tri skupine pokazatelja. Uspješnost pojedine komunikacijske intervencije zahtijeva zasebnu provjeru."
+    "care": "Preporuka je pratiti tri skupine pokazatelja. Uspješnost pojedine komunikacijske intervencije zahtijeva zasebnu provjeru. Brojke o kanalima dolaze iz razvojnog pregleda arhiva bez neovisne provjere i ne mjere čitanost."
   },
   {
     "slides": [
-      22
+      25
     ],
-    "time": "16:10 - 17:00",
+    "time": "18:25 - 19:15",
     "show": "Tri otvorena pitanja i granica uzročnog tumačenja.",
     "say": "Prvi je posao preciznije razlikovati izričite navode HNB-a od generičkog spominjanja središnjih banaka. Drugi je razumjeti koliko na vremensku putanju utječe sastav izvora koje pratimo. Treći je povezati zastupljenost s kvalitetom prenesenog objašnjenja i stvarnom izloženošću publike.\n\nVažno je i kako imenujemo kasniji pad. Niži udio nakon inflacijskog vrhunca sam po sebi ne dokazuje trajan učinak inflacije. Jednako tako, datum uvođenja eura nije dovoljan da promjenu pripišemo euru.",
     "action": "Odaberite jedan primjer za objašnjenje, ostala dva samo imenujte. Ostavite vrijeme za završetak.",
@@ -243,20 +276,20 @@
   },
   {
     "slides": [
-      23
+      26
     ],
-    "time": "17:00 - 17:50",
+    "time": "19:15 - 20:05",
     "show": "Glavna poruka i četiri kratka zaključka.",
     "say": "Broj objava i prostor koji institucija zauzima u raspravi dvije su različite stvari. Kasniji udjeli ostaju niži, uz oporavke i pojedine snažne mjesece.\n\nViša inflacija povezana je s većim jazom i nižom relativnom učestalošću. Učestalost i doseg imaju različite uloge, a vezu s očekivanjima treba čitati prediktivno i uz ograničenja modela.\n\nAko ostane jedna praktična ideja, neka bude ova. Uz broj objava pratimo i relativni prostor koji institucija zauzima u razgovoru.",
     "action": "Prestanite pokazivati grafikone. Gledajte publiku i ostavite stanku nakon prve rečenice.",
     "bridge": "Hvala. Rado bih čuo kako biste vi pratili taj medijski prostor.",
-    "care": "Koeficijenti opisuju odnose u označenom uzorku. Prediktivni nalaz o očekivanjima ne identificira uzročni učinak komunikacije."
+    "care": "Koeficijenti opisuju odnose u označenom uzorku. Prediktivni nalaz o očekivanjima ne identificira uzročni učinak komunikacije. Redak o novijem stanju spaja dva skupa. Udio riječi inflacija dolazi iz izričitih spominjanja HNB-a, a ponderirani udio iz institucionalnog korpusa."
   },
   {
     "slides": [
-      24
+      27
     ],
-    "time": "17:50 - 20:00",
+    "time": "20:05 - 22:15",
     "show": "Završni slajd s poveznicama na rad i konferencijske materijale.",
     "say": "Hvala vam. Na poveznicama su rad, slajdovi i ostali materijali.\n\nZa raspravu bih ostavio jedno pitanje. Kada biste pratili komunikaciju središnje banke, koji biste pokazatelj stavili uz broj objava da ne izgubite ovu relativnu dimenziju?",
     "action": "Ostanite na završnom slajdu. Za pitanja o vrijednostima vratite se na odgovarajući graf ili tablicu.",

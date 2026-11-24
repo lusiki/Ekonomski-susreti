@@ -1,6 +1,6 @@
 # Konferencijska prezentacija
 
-`index.html` je izvor za 24 slajda u pregledniku, bilješke izlagača i PDF.
+`index.html` je izvor za 27 slajdova u pregledniku, bilješke izlagača i PDF.
 Izlaganje prati istraživačko pitanje, podatke, deskriptivne putanje, procjene
 odnosa i posljedice za praćenje komunikacije.
 
@@ -25,6 +25,7 @@ Iz korijena repozitorija:
 ```sh
 python scripts/build-monthly-figures.py
 python scripts/build-original-figures.py
+python scripts/build-media-context-figures.py
 python scripts/build-presentation-print.py
 node scripts/export-presentation.cjs
 python scripts/build-speaking-guide.py
@@ -38,17 +39,17 @@ Strelice mijenjaju slajdove, `o` otvara pregled, a `s` bilješke izlagača.
 
 ## Živi grafikoni
 
-Slajdovi 7 do 12 i slajd 17 u pregledniku zamjenjuju sliku živim grafikonom iz
+Slajdovi 6, 8 do 14, 19 i 22 u pregledniku zamjenjuju sliku živim grafikonom iz
 istih provjerenih podataka. Početni prikaz odgovara slici. Pokazivač otkriva
 vrijednosti, a traka iznad naslova dodaje i uklanja serije. PDF i `print.html`
-i dalje koriste statične slike, pa se njihov izgled ne mijenja. Slajdovi 15 i
-16 ostaju slike jer njihove točke nisu u repozitoriju.
+i dalje koriste statične slike, pa se njihov izgled ne mijenja. Slajdovi 17 i
+18 ostaju slike jer njihove točke nisu u repozitoriju.
 
 - `live-charts.js` i `live-charts.css` sadrže cijeli sloj. Bez redaka na kraju
   `index.html` slajdovi ostaju statični.
 - `vendor/echarts.min.js` je Apache ECharts 6.1.0 pod licencom Apache 2.0.
   Pohranjen je lokalno kako bi izlaganje radilo bez mreže.
-- `data/*.js` nastaju naredbom `python scripts/build-live-data.py` iz triju
+- `data/*.js` nastaju naredbom `python scripts/build-live-data.py` iz četiriju
   JSON datoteka u istoj mapi. Tako grafikoni rade i kada se `index.html`
   otvori s diska.
 
@@ -62,9 +63,10 @@ isto značenje kao boja, pa prikaz ostaje čitljiv i u crno-bijelom ispisu.
 Svaki panel ima jednu ljestvicu. Serije u istoj jedinici dijele os. Serije u
 različitim jedinicama prikazuju se kao indeks u kojem prva polovica 2021. iznosi
 100, što je referenca institucionalnog jaza. Inflacija se ne indeksira. Kada
-ne može dijeliti os u postocima, dobiva vlastiti poravnati panel. Na slajdu 10
-dodana serija ulazi u panel svoje jedinice. Na slajdu 17 uz linearno se može
-dodati stepenasto mapiranje iz iste Tablice 7a.
+ne može dijeliti os u postocima, dobiva vlastiti poravnati panel. Na slajdu 11
+dodana serija ulazi u panel svoje jedinice. Na slajdu 19 uz linearno se može
+dodati stepenasto mapiranje iz iste Tablice 7a. Slajdovi 6, 14 i 22 pripadaju
+širem medijskom kontekstu i opisani su u nastavku.
 
 Tipke 1 do 5 dodaju ili uklanjaju serije redom kojim stoje u traci, `I` uključuje
 indeks, a `0` vraća izvorni prikaz. PNG, SVG i CSV preuzimaju trenutačni prikaz.
@@ -72,6 +74,39 @@ Popis `FIGURES` na vrhu `live-charts.js` određuje koje su slike žive.
 Oznaka `data-live-chart` na slici čuva vezu s grafikonom i pri izvozu samostalnog
 HTML-a s ugrađenim slikama. Govorni vodič na drugoj stranici sažima kontrole za
 izlaganje. Prije obnove HTML-a pokrenuti `python scripts/build-live-data.py`.
+
+## Širi medijski kontekst
+
+Slajdovi 6, 14 i 22 koriste javne agregate iz repozitorija
+`lusiki/HNB_Media_Attention`, revizija `b2187d34159b5d40caeecb2694640331e4aeae71`,
+mapa `media-hub/public/data`. Odabrane vrijednosti i SHA-256 svake izvorne
+datoteke spremljeni su u `data/media-context-20260921.json`. Obnova iz lokalne
+kopije tog repozitorija:
+
+```sh
+python scripts/build-media-context.py --source ../HNB_Media_Attention
+python scripts/build-media-context-figures.py
+python scripts/build-live-data.py
+```
+
+- Slajdovi 6 i 14 opisuju 33.235 objava koje izričito spominju HNB u 281 izvoru,
+  izdanje podataka 2026-09-21.1. Taj je skup uži od institucionalnog korpusa
+  ostalih slajdova i ne smije se s njim zbrajati ni dijeliti os bez oznake.
+- Tematska područja su preklapajući popisi riječi bez neovisne provjere. Pokazuju
+  prisutnost riječi u objavi, a ne njezinu glavnu temu.
+- Oznake na slajdu 14 navode područja čije su riječi u tim mjesecima najčešće.
+  Povezivanje s događajima u bilješkama izlagača autorsko je tumačenje.
+- Gornji panel slajda 22 dolazi iz zamrznutog panela studije od 17. rujna 2026.
+  Nema opažanja za siječanj do ožujka 2024. i završava u svibnju 2026. Donji
+  panel je isti ponderirani udio kao na slajdu 9, iz izdanja od 28. rujna 2026.
+  Paneli imaju zasebne ljestvice i različito su izvedeni, pa slajd opisuje smjer
+  i ne uspoređuje razine.
+- Zabilježene vlastite objave HNB-a su stavke iz kanala HNB-a koje je zabilježio
+  sustav praćenja, a ne potpuni popis službenih dokumenata.
+- Redak o kanalima na slajdu 24 dolazi iz razvojnog pregleda arhiva bez neovisne
+  provjere. Redak o riječi inflacija na slajdu 26 odnosi se na potpuna tromjesečja.
+- Broj od 480.221 objave o inflaciji na slajdu 5 zbroj je mjesečnih vrijednosti
+  `inflation_posts` iz `data/monthly-20260928.json`.
 
 ## Deskriptivne serije
 

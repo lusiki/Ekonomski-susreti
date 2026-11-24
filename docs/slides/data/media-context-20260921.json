@@ -1,0 +1,1590 @@
+{
+  "source_repository": "lusiki/HNB_Media_Attention",
+  "source_revision": "b2187d34159b5d40caeecb2694640331e4aeae71",
+  "source_folder": "media-hub/public/data",
+  "source_sha256": {
+    "legacy-context.csv": "07902c97112416d4d541702be64dd46e55477a755f8695b97c2f8b40986e4897",
+    "media/media-lexical-quarterly.csv": "09151497b091777bc3af7eb88371c5f319724352e081b0f03d35fe805157146d",
+    "media/media-monthly.csv": "d3421e92d189bfd8d8af221cfc89310107710c1cc3c8f0a83ca05d007e3681c8",
+    "media/media-source-concentration.csv": "4dccdb135448be029953264d8d8f8bfdf4417e00eaa2d74d125b3a9422858c62",
+    "media/media-subjects.csv": "fce2032df0e95323c6cfd2a52ac34f9047ab523c54c4da4800a6e3650e769cb9",
+    "media/platform-audit.csv": "dd18bc985aa5a2b09ca0bf35d4a95288f8ba3cb94d230937bb73fc0c84eb85a9",
+    "media/summary.json": "7caae0d9dc11ff7316fd028472d09d92a2a3e59873f4fe42a8272364527848bc"
+  },
+  "data_version": "2026-09-21.1",
+  "review_status": "Public research draft, author review pending. Theme screens are overlapping exploratory lexical screens without independent validation. Capture is not readership.",
+  "corpus": {
+    "definition": "Captured web publications with an explicit HNB mention. Narrower than the institutional corpus of the inflation study, which also includes generic central-bank terms.",
+    "period": "2021-01/2026-08",
+    "months": 68,
+    "hnb_publications": 33235,
+    "outlets_with_hnb": 281,
+    "outlets_observed": 416,
+    "title_mentions": 5222
+  },
+  "themes": [
+    {
+      "id": "lending",
+      "label": "Kreditiranje i potrošači",
+      "publications": 14762,
+      "share_pct": 44.4,
+      "share_pct_by_year": {
+        "2021": 54.5,
+        "2022": 38.9,
+        "2023": 44.7,
+        "2024": 39.6,
+        "2025": 48.5,
+        "2026": 42.4
+      }
+    },
+    {
+      "id": "currency",
+      "label": "Euro i valute",
+      "publications": 12601,
+      "share_pct": 37.9,
+      "share_pct_by_year": {
+        "2021": 35.5,
+        "2022": 49.8,
+        "2023": 49.7,
+        "2024": 25.7,
+        "2025": 24.9,
+        "2026": 26.8
+      }
+    },
+    {
+      "id": "payments",
+      "label": "Plaćanja i gotovina",
+      "publications": 11340,
+      "share_pct": 34.1,
+      "share_pct_by_year": {
+        "2021": 28.0,
+        "2022": 37.8,
+        "2023": 36.5,
+        "2024": 31.3,
+        "2025": 40.5,
+        "2026": 24.7
+      }
+    },
+    {
+      "id": "prices",
+      "label": "Cijene i inflacija",
+      "publications": 11142,
+      "share_pct": 33.5,
+      "share_pct_by_year": {
+        "2021": 23.7,
+        "2022": 30.7,
+        "2023": 39.5,
+        "2024": 29.2,
+        "2025": 42.9,
+        "2026": 37.4
+      }
+    },
+    {
+      "id": "rates",
+      "label": "Monetarna politika i kamate",
+      "publications": 7960,
+      "share_pct": 24.0,
+      "share_pct_by_year": {
+        "2021": 32.1,
+        "2022": 23.1,
+        "2023": 25.7,
+        "2024": 22.4,
+        "2025": 18.9,
+        "2026": 20.7
+      }
+    },
+    {
+      "id": "governance",
+      "label": "Upravljanje i odgovornost",
+      "publications": 7308,
+      "share_pct": 22.0,
+      "share_pct_by_year": {
+        "2021": 19.5,
+        "2022": 23.4,
+        "2023": 15.6,
+        "2024": 21.7,
+        "2025": 19.5,
+        "2026": 35.2
+      }
+    },
+    {
+      "id": "forecasts",
+      "label": "Prognoze i statistika",
+      "publications": 6434,
+      "share_pct": 19.4,
+      "share_pct_by_year": {
+        "2021": 20.5,
+        "2022": 15.2,
+        "2023": 23.4,
+        "2024": 21.5,
+        "2025": 19.7,
+        "2026": 19.1
+      }
+    },
+    {
+      "id": "stability",
+      "label": "Stabilnost i nadzor banaka",
+      "publications": 2360,
+      "share_pct": 7.1,
+      "share_pct_by_year": {
+        "2021": 7.1,
+        "2022": 6.1,
+        "2023": 6.5,
+        "2024": 6.3,
+        "2025": 8.3,
+        "2026": 9.5
+      }
+    }
+  ],
+  "monthly": [
+    {
+      "month": "2021-01",
+      "hnb_publications": 310,
+      "theme_share_pct": {
+        "lending": 62.3,
+        "currency": 36.5,
+        "payments": 29.4,
+        "prices": 15.2,
+        "rates": 31.0,
+        "governance": 15.8,
+        "forecasts": 15.8,
+        "stability": 8.1
+      }
+    },
+    {
+      "month": "2021-02",
+      "hnb_publications": 280,
+      "theme_share_pct": {
+        "lending": 36.1,
+        "currency": 15.7,
+        "payments": 19.6,
+        "prices": 9.6,
+        "rates": 13.9,
+        "governance": 29.6,
+        "forecasts": 21.4,
+        "stability": 6.8
+      }
+    },
+    {
+      "month": "2021-03",
+      "hnb_publications": 326,
+      "theme_share_pct": {
+        "lending": 60.4,
+        "currency": 21.8,
+        "payments": 34.4,
+        "prices": 4.6,
+        "rates": 16.6,
+        "governance": 29.8,
+        "forecasts": 20.2,
+        "stability": 12.6
+      }
+    },
+    {
+      "month": "2021-04",
+      "hnb_publications": 368,
+      "theme_share_pct": {
+        "lending": 47.8,
+        "currency": 25.5,
+        "payments": 26.4,
+        "prices": 14.1,
+        "rates": 17.4,
+        "governance": 31.0,
+        "forecasts": 29.1,
+        "stability": 12.5
+      }
+    },
+    {
+      "month": "2021-05",
+      "hnb_publications": 218,
+      "theme_share_pct": {
+        "lending": 55.5,
+        "currency": 18.3,
+        "payments": 26.6,
+        "prices": 23.9,
+        "rates": 28.4,
+        "governance": 28.0,
+        "forecasts": 28.9,
+        "stability": 8.7
+      }
+    },
+    {
+      "month": "2021-06",
+      "hnb_publications": 244,
+      "theme_share_pct": {
+        "lending": 45.9,
+        "currency": 33.2,
+        "payments": 29.1,
+        "prices": 23.8,
+        "rates": 24.2,
+        "governance": 13.5,
+        "forecasts": 23.8,
+        "stability": 13.1
+      }
+    },
+    {
+      "month": "2021-07",
+      "hnb_publications": 615,
+      "theme_share_pct": {
+        "lending": 36.1,
+        "currency": 62.3,
+        "payments": 57.9,
+        "prices": 14.5,
+        "rates": 24.2,
+        "governance": 11.9,
+        "forecasts": 16.7,
+        "stability": 2.6
+      }
+    },
+    {
+      "month": "2021-08",
+      "hnb_publications": 476,
+      "theme_share_pct": {
+        "lending": 60.1,
+        "currency": 25.4,
+        "payments": 24.8,
+        "prices": 13.4,
+        "rates": 42.4,
+        "governance": 16.4,
+        "forecasts": 8.2,
+        "stability": 5.5
+      }
+    },
+    {
+      "month": "2021-09",
+      "hnb_publications": 867,
+      "theme_share_pct": {
+        "lending": 64.5,
+        "currency": 36.7,
+        "payments": 21.8,
+        "prices": 27.0,
+        "rates": 42.7,
+        "governance": 20.9,
+        "forecasts": 16.7,
+        "stability": 6.0
+      }
+    },
+    {
+      "month": "2021-10",
+      "hnb_publications": 813,
+      "theme_share_pct": {
+        "lending": 66.3,
+        "currency": 39.5,
+        "payments": 20.8,
+        "prices": 41.9,
+        "rates": 49.3,
+        "governance": 18.5,
+        "forecasts": 20.4,
+        "stability": 5.3
+      }
+    },
+    {
+      "month": "2021-11",
+      "hnb_publications": 429,
+      "theme_share_pct": {
+        "lending": 56.9,
+        "currency": 35.9,
+        "payments": 22.1,
+        "prices": 26.8,
+        "rates": 28.0,
+        "governance": 20.5,
+        "forecasts": 25.9,
+        "stability": 5.4
+      }
+    },
+    {
+      "month": "2021-12",
+      "hnb_publications": 473,
+      "theme_share_pct": {
+        "lending": 42.7,
+        "currency": 39.3,
+        "payments": 23.0,
+        "prices": 40.0,
+        "rates": 26.0,
+        "governance": 11.0,
+        "forecasts": 30.9,
+        "stability": 9.5
+      }
+    },
+    {
+      "month": "2022-01",
+      "hnb_publications": 1351,
+      "theme_share_pct": {
+        "lending": 30.8,
+        "currency": 43.3,
+        "payments": 21.4,
+        "prices": 27.1,
+        "rates": 14.0,
+        "governance": 44.4,
+        "forecasts": 14.7,
+        "stability": 4.7
+      }
+    },
+    {
+      "month": "2022-02",
+      "hnb_publications": 1512,
+      "theme_share_pct": {
+        "lending": 37.7,
+        "currency": 28.3,
+        "payments": 50.5,
+        "prices": 22.4,
+        "rates": 11.4,
+        "governance": 28.2,
+        "forecasts": 7.2,
+        "stability": 8.3
+      }
+    },
+    {
+      "month": "2022-03",
+      "hnb_publications": 710,
+      "theme_share_pct": {
+        "lending": 38.7,
+        "currency": 46.9,
+        "payments": 32.7,
+        "prices": 26.9,
+        "rates": 17.7,
+        "governance": 20.0,
+        "forecasts": 17.0,
+        "stability": 18.2
+      }
+    },
+    {
+      "month": "2022-04",
+      "hnb_publications": 490,
+      "theme_share_pct": {
+        "lending": 33.3,
+        "currency": 33.9,
+        "payments": 21.2,
+        "prices": 28.8,
+        "rates": 26.1,
+        "governance": 31.6,
+        "forecasts": 12.7,
+        "stability": 9.4
+      }
+    },
+    {
+      "month": "2022-05",
+      "hnb_publications": 611,
+      "theme_share_pct": {
+        "lending": 42.9,
+        "currency": 61.0,
+        "payments": 35.5,
+        "prices": 41.2,
+        "rates": 32.4,
+        "governance": 22.9,
+        "forecasts": 17.0,
+        "stability": 7.9
+      }
+    },
+    {
+      "month": "2022-06",
+      "hnb_publications": 535,
+      "theme_share_pct": {
+        "lending": 43.0,
+        "currency": 60.4,
+        "payments": 22.8,
+        "prices": 50.7,
+        "rates": 34.6,
+        "governance": 20.4,
+        "forecasts": 15.1,
+        "stability": 3.6
+      }
+    },
+    {
+      "month": "2022-07",
+      "hnb_publications": 876,
+      "theme_share_pct": {
+        "lending": 39.7,
+        "currency": 53.1,
+        "payments": 42.0,
+        "prices": 34.8,
+        "rates": 31.7,
+        "governance": 16.0,
+        "forecasts": 19.3,
+        "stability": 3.4
+      }
+    },
+    {
+      "month": "2022-08",
+      "hnb_publications": 484,
+      "theme_share_pct": {
+        "lending": 42.4,
+        "currency": 40.3,
+        "payments": 25.2,
+        "prices": 23.3,
+        "rates": 27.5,
+        "governance": 13.8,
+        "forecasts": 16.3,
+        "stability": 2.1
+      }
+    },
+    {
+      "month": "2022-09",
+      "hnb_publications": 358,
+      "theme_share_pct": {
+        "lending": 52.5,
+        "currency": 50.8,
+        "payments": 28.5,
+        "prices": 36.6,
+        "rates": 24.3,
+        "governance": 12.6,
+        "forecasts": 21.8,
+        "stability": 2.8
+      }
+    },
+    {
+      "month": "2022-10",
+      "hnb_publications": 646,
+      "theme_share_pct": {
+        "lending": 44.7,
+        "currency": 66.7,
+        "payments": 42.1,
+        "prices": 38.1,
+        "rates": 33.4,
+        "governance": 14.7,
+        "forecasts": 20.9,
+        "stability": 7.3
+      }
+    },
+    {
+      "month": "2022-11",
+      "hnb_publications": 497,
+      "theme_share_pct": {
+        "lending": 39.2,
+        "currency": 59.4,
+        "payments": 54.5,
+        "prices": 28.8,
+        "rates": 29.8,
+        "governance": 18.7,
+        "forecasts": 16.7,
+        "stability": 2.4
+      }
+    },
+    {
+      "month": "2022-12",
+      "hnb_publications": 1047,
+      "theme_share_pct": {
+        "lending": 39.1,
+        "currency": 72.6,
+        "payments": 55.9,
+        "prices": 29.0,
+        "rates": 23.0,
+        "governance": 11.6,
+        "forecasts": 15.8,
+        "stability": 1.5
+      }
+    },
+    {
+      "month": "2023-01",
+      "hnb_publications": 1227,
+      "theme_share_pct": {
+        "lending": 34.6,
+        "currency": 71.8,
+        "payments": 65.4,
+        "prices": 30.7,
+        "rates": 11.2,
+        "governance": 10.5,
+        "forecasts": 9.6,
+        "stability": 1.5
+      }
+    },
+    {
+      "month": "2023-02",
+      "hnb_publications": 438,
+      "theme_share_pct": {
+        "lending": 48.6,
+        "currency": 53.2,
+        "payments": 38.6,
+        "prices": 40.6,
+        "rates": 24.9,
+        "governance": 14.6,
+        "forecasts": 26.0,
+        "stability": 9.1
+      }
+    },
+    {
+      "month": "2023-03",
+      "hnb_publications": 404,
+      "theme_share_pct": {
+        "lending": 62.4,
+        "currency": 43.6,
+        "payments": 23.8,
+        "prices": 35.6,
+        "rates": 34.7,
+        "governance": 22.8,
+        "forecasts": 20.8,
+        "stability": 7.2
+      }
+    },
+    {
+      "month": "2023-04",
+      "hnb_publications": 480,
+      "theme_share_pct": {
+        "lending": 52.1,
+        "currency": 43.8,
+        "payments": 25.4,
+        "prices": 51.5,
+        "rates": 40.4,
+        "governance": 16.5,
+        "forecasts": 23.5,
+        "stability": 11.7
+      }
+    },
+    {
+      "month": "2023-05",
+      "hnb_publications": 366,
+      "theme_share_pct": {
+        "lending": 43.4,
+        "currency": 44.8,
+        "payments": 21.9,
+        "prices": 38.3,
+        "rates": 23.8,
+        "governance": 17.2,
+        "forecasts": 23.0,
+        "stability": 9.8
+      }
+    },
+    {
+      "month": "2023-06",
+      "hnb_publications": 379,
+      "theme_share_pct": {
+        "lending": 61.7,
+        "currency": 51.5,
+        "payments": 21.1,
+        "prices": 48.3,
+        "rates": 34.8,
+        "governance": 16.4,
+        "forecasts": 39.1,
+        "stability": 5.5
+      }
+    },
+    {
+      "month": "2023-07",
+      "hnb_publications": 346,
+      "theme_share_pct": {
+        "lending": 43.1,
+        "currency": 29.2,
+        "payments": 32.1,
+        "prices": 28.3,
+        "rates": 26.6,
+        "governance": 15.3,
+        "forecasts": 23.7,
+        "stability": 4.9
+      }
+    },
+    {
+      "month": "2023-08",
+      "hnb_publications": 339,
+      "theme_share_pct": {
+        "lending": 53.7,
+        "currency": 44.5,
+        "payments": 28.0,
+        "prices": 49.3,
+        "rates": 31.3,
+        "governance": 12.1,
+        "forecasts": 32.4,
+        "stability": 8.8
+      }
+    },
+    {
+      "month": "2023-09",
+      "hnb_publications": 486,
+      "theme_share_pct": {
+        "lending": 34.2,
+        "currency": 38.1,
+        "payments": 19.1,
+        "prices": 52.7,
+        "rates": 26.7,
+        "governance": 17.1,
+        "forecasts": 26.3,
+        "stability": 6.0
+      }
+    },
+    {
+      "month": "2023-10",
+      "hnb_publications": 277,
+      "theme_share_pct": {
+        "lending": 48.4,
+        "currency": 30.0,
+        "payments": 29.6,
+        "prices": 31.0,
+        "rates": 37.5,
+        "governance": 20.9,
+        "forecasts": 26.4,
+        "stability": 15.9
+      }
+    },
+    {
+      "month": "2023-11",
+      "hnb_publications": 382,
+      "theme_share_pct": {
+        "lending": 35.9,
+        "currency": 43.2,
+        "payments": 36.6,
+        "prices": 33.0,
+        "rates": 21.2,
+        "governance": 16.5,
+        "forecasts": 21.5,
+        "stability": 7.6
+      }
+    },
+    {
+      "month": "2023-12",
+      "hnb_publications": 445,
+      "theme_share_pct": {
+        "lending": 42.9,
+        "currency": 50.1,
+        "payments": 36.4,
+        "prices": 44.0,
+        "rates": 26.1,
+        "governance": 18.9,
+        "forecasts": 37.3,
+        "stability": 3.1
+      }
+    },
+    {
+      "month": "2024-01",
+      "hnb_publications": 430,
+      "theme_share_pct": {
+        "lending": 27.7,
+        "currency": 32.8,
+        "payments": 36.7,
+        "prices": 30.2,
+        "rates": 20.5,
+        "governance": 20.5,
+        "forecasts": 23.0,
+        "stability": 1.6
+      }
+    },
+    {
+      "month": "2024-02",
+      "hnb_publications": 261,
+      "theme_share_pct": {
+        "lending": 53.6,
+        "currency": 30.7,
+        "payments": 28.0,
+        "prices": 34.5,
+        "rates": 35.2,
+        "governance": 18.0,
+        "forecasts": 33.7,
+        "stability": 7.7
+      }
+    },
+    {
+      "month": "2024-03",
+      "hnb_publications": 352,
+      "theme_share_pct": {
+        "lending": 40.9,
+        "currency": 27.3,
+        "payments": 41.5,
+        "prices": 32.4,
+        "rates": 27.3,
+        "governance": 13.4,
+        "forecasts": 14.8,
+        "stability": 7.4
+      }
+    },
+    {
+      "month": "2024-04",
+      "hnb_publications": 266,
+      "theme_share_pct": {
+        "lending": 36.5,
+        "currency": 38.3,
+        "payments": 27.8,
+        "prices": 34.6,
+        "rates": 15.4,
+        "governance": 31.6,
+        "forecasts": 30.5,
+        "stability": 4.1
+      }
+    },
+    {
+      "month": "2024-05",
+      "hnb_publications": 270,
+      "theme_share_pct": {
+        "lending": 51.1,
+        "currency": 24.1,
+        "payments": 26.7,
+        "prices": 28.1,
+        "rates": 37.4,
+        "governance": 21.1,
+        "forecasts": 24.1,
+        "stability": 1.9
+      }
+    },
+    {
+      "month": "2024-06",
+      "hnb_publications": 632,
+      "theme_share_pct": {
+        "lending": 43.0,
+        "currency": 17.1,
+        "payments": 27.8,
+        "prices": 18.0,
+        "rates": 27.2,
+        "governance": 22.2,
+        "forecasts": 14.2,
+        "stability": 11.9
+      }
+    },
+    {
+      "month": "2024-07",
+      "hnb_publications": 508,
+      "theme_share_pct": {
+        "lending": 31.1,
+        "currency": 22.8,
+        "payments": 19.7,
+        "prices": 17.9,
+        "rates": 18.3,
+        "governance": 42.9,
+        "forecasts": 14.2,
+        "stability": 9.1
+      }
+    },
+    {
+      "month": "2024-08",
+      "hnb_publications": 150,
+      "theme_share_pct": {
+        "lending": 43.3,
+        "currency": 11.3,
+        "payments": 30.7,
+        "prices": 20.7,
+        "rates": 7.3,
+        "governance": 10.7,
+        "forecasts": 19.3,
+        "stability": 12.0
+      }
+    },
+    {
+      "month": "2024-09",
+      "hnb_publications": 248,
+      "theme_share_pct": {
+        "lending": 27.8,
+        "currency": 20.6,
+        "payments": 32.3,
+        "prices": 39.9,
+        "rates": 12.5,
+        "governance": 10.5,
+        "forecasts": 28.6,
+        "stability": 2.0
+      }
+    },
+    {
+      "month": "2024-10",
+      "hnb_publications": 323,
+      "theme_share_pct": {
+        "lending": 42.1,
+        "currency": 20.4,
+        "payments": 37.8,
+        "prices": 32.8,
+        "rates": 23.8,
+        "governance": 15.8,
+        "forecasts": 18.3,
+        "stability": 6.2
+      }
+    },
+    {
+      "month": "2024-11",
+      "hnb_publications": 280,
+      "theme_share_pct": {
+        "lending": 52.9,
+        "currency": 29.3,
+        "payments": 32.5,
+        "prices": 34.3,
+        "rates": 23.2,
+        "governance": 17.1,
+        "forecasts": 17.1,
+        "stability": 4.6
+      }
+    },
+    {
+      "month": "2024-12",
+      "hnb_publications": 389,
+      "theme_share_pct": {
+        "lending": 36.2,
+        "currency": 33.4,
+        "payments": 38.0,
+        "prices": 40.9,
+        "rates": 13.4,
+        "governance": 17.7,
+        "forecasts": 32.9,
+        "stability": 2.8
+      }
+    },
+    {
+      "month": "2025-01",
+      "hnb_publications": 751,
+      "theme_share_pct": {
+        "lending": 56.5,
+        "currency": 26.4,
+        "payments": 29.8,
+        "prices": 58.5,
+        "rates": 20.5,
+        "governance": 24.9,
+        "forecasts": 16.8,
+        "stability": 10.9
+      }
+    },
+    {
+      "month": "2025-02",
+      "hnb_publications": 808,
+      "theme_share_pct": {
+        "lending": 57.8,
+        "currency": 22.4,
+        "payments": 39.0,
+        "prices": 49.8,
+        "rates": 15.6,
+        "governance": 20.3,
+        "forecasts": 9.8,
+        "stability": 6.6
+      }
+    },
+    {
+      "month": "2025-03",
+      "hnb_publications": 468,
+      "theme_share_pct": {
+        "lending": 59.8,
+        "currency": 22.6,
+        "payments": 44.2,
+        "prices": 41.0,
+        "rates": 31.8,
+        "governance": 11.5,
+        "forecasts": 17.9,
+        "stability": 7.9
+      }
+    },
+    {
+      "month": "2025-04",
+      "hnb_publications": 290,
+      "theme_share_pct": {
+        "lending": 37.6,
+        "currency": 19.7,
+        "payments": 49.3,
+        "prices": 43.4,
+        "rates": 19.3,
+        "governance": 12.1,
+        "forecasts": 14.8,
+        "stability": 2.1
+      }
+    },
+    {
+      "month": "2025-05",
+      "hnb_publications": 304,
+      "theme_share_pct": {
+        "lending": 51.6,
+        "currency": 21.4,
+        "payments": 52.6,
+        "prices": 25.7,
+        "rates": 14.1,
+        "governance": 11.5,
+        "forecasts": 18.8,
+        "stability": 3.0
+      }
+    },
+    {
+      "month": "2025-06",
+      "hnb_publications": 355,
+      "theme_share_pct": {
+        "lending": 46.8,
+        "currency": 14.9,
+        "payments": 34.1,
+        "prices": 35.5,
+        "rates": 22.0,
+        "governance": 20.6,
+        "forecasts": 28.5,
+        "stability": 10.4
+      }
+    },
+    {
+      "month": "2025-07",
+      "hnb_publications": 424,
+      "theme_share_pct": {
+        "lending": 48.3,
+        "currency": 18.2,
+        "payments": 45.0,
+        "prices": 36.3,
+        "rates": 22.9,
+        "governance": 18.4,
+        "forecasts": 18.2,
+        "stability": 12.3
+      }
+    },
+    {
+      "month": "2025-08",
+      "hnb_publications": 208,
+      "theme_share_pct": {
+        "lending": 56.7,
+        "currency": 41.3,
+        "payments": 52.4,
+        "prices": 30.3,
+        "rates": 18.8,
+        "governance": 4.8,
+        "forecasts": 30.8,
+        "stability": 13.5
+      }
+    },
+    {
+      "month": "2025-09",
+      "hnb_publications": 410,
+      "theme_share_pct": {
+        "lending": 34.4,
+        "currency": 17.1,
+        "payments": 32.4,
+        "prices": 45.6,
+        "rates": 11.5,
+        "governance": 8.3,
+        "forecasts": 28.5,
+        "stability": 4.9
+      }
+    },
+    {
+      "month": "2025-10",
+      "hnb_publications": 464,
+      "theme_share_pct": {
+        "lending": 45.9,
+        "currency": 30.6,
+        "payments": 39.4,
+        "prices": 43.5,
+        "rates": 16.8,
+        "governance": 32.8,
+        "forecasts": 18.8,
+        "stability": 6.7
+      }
+    },
+    {
+      "month": "2025-11",
+      "hnb_publications": 276,
+      "theme_share_pct": {
+        "lending": 34.4,
+        "currency": 36.6,
+        "payments": 37.7,
+        "prices": 27.2,
+        "rates": 26.8,
+        "governance": 31.2,
+        "forecasts": 19.2,
+        "stability": 11.6
+      }
+    },
+    {
+      "month": "2025-12",
+      "hnb_publications": 465,
+      "theme_share_pct": {
+        "lending": 33.5,
+        "currency": 35.7,
+        "payments": 48.4,
+        "prices": 42.4,
+        "rates": 9.7,
+        "governance": 23.2,
+        "forecasts": 29.9,
+        "stability": 10.1
+      }
+    },
+    {
+      "month": "2026-01",
+      "hnb_publications": 997,
+      "theme_share_pct": {
+        "lending": 31.1,
+        "currency": 28.8,
+        "payments": 23.5,
+        "prices": 26.4,
+        "rates": 20.9,
+        "governance": 42.0,
+        "forecasts": 8.5,
+        "stability": 9.2
+      }
+    },
+    {
+      "month": "2026-02",
+      "hnb_publications": 275,
+      "theme_share_pct": {
+        "lending": 47.6,
+        "currency": 27.3,
+        "payments": 25.8,
+        "prices": 31.6,
+        "rates": 29.8,
+        "governance": 32.4,
+        "forecasts": 24.7,
+        "stability": 9.5
+      }
+    },
+    {
+      "month": "2026-03",
+      "hnb_publications": 479,
+      "theme_share_pct": {
+        "lending": 48.2,
+        "currency": 32.8,
+        "payments": 24.8,
+        "prices": 45.5,
+        "rates": 28.8,
+        "governance": 40.7,
+        "forecasts": 34.9,
+        "stability": 5.6
+      }
+    },
+    {
+      "month": "2026-04",
+      "hnb_publications": 235,
+      "theme_share_pct": {
+        "lending": 43.0,
+        "currency": 37.9,
+        "payments": 24.3,
+        "prices": 44.7,
+        "rates": 14.9,
+        "governance": 12.3,
+        "forecasts": 34.9,
+        "stability": 7.2
+      }
+    },
+    {
+      "month": "2026-05",
+      "hnb_publications": 638,
+      "theme_share_pct": {
+        "lending": 38.9,
+        "currency": 25.1,
+        "payments": 17.4,
+        "prices": 49.1,
+        "rates": 17.1,
+        "governance": 43.9,
+        "forecasts": 15.5,
+        "stability": 7.5
+      }
+    },
+    {
+      "month": "2026-06",
+      "hnb_publications": 520,
+      "theme_share_pct": {
+        "lending": 45.6,
+        "currency": 25.8,
+        "payments": 21.7,
+        "prices": 46.5,
+        "rates": 11.5,
+        "governance": 36.3,
+        "forecasts": 17.5,
+        "stability": 17.1
+      }
+    },
+    {
+      "month": "2026-07",
+      "hnb_publications": 454,
+      "theme_share_pct": {
+        "lending": 49.8,
+        "currency": 17.8,
+        "payments": 33.3,
+        "prices": 31.7,
+        "rates": 27.3,
+        "governance": 25.6,
+        "forecasts": 22.0,
+        "stability": 12.6
+      }
+    },
+    {
+      "month": "2026-08",
+      "hnb_publications": 200,
+      "theme_share_pct": {
+        "lending": 63.0,
+        "currency": 16.5,
+        "payments": 42.0,
+        "prices": 24.0,
+        "rates": 14.5,
+        "governance": 10.0,
+        "forecasts": 17.0,
+        "stability": 3.0
+      }
+    }
+  ],
+  "government": {
+    "edition": "Frozen inflation-study panel, extended manuscript of 17 September 2026. Earlier than the 28 September edition used for the weighted share on the slides.",
+    "definition": "government_share is the share of monitored inflation records that carry discourse on government price measures. hnb_own_items are vendor-captured candidates from HNB channels, not a complete inventory of official documents.",
+    "gap": "No media observations for January to March 2024. Series ends in May 2026.",
+    "monthly": [
+      {
+        "month": "2021-01",
+        "government_share": 0.0504060848266082,
+        "hnb_own_items": 42
+      },
+      {
+        "month": "2021-02",
+        "government_share": 0.023001594169893,
+        "hnb_own_items": 20
+      },
+      {
+        "month": "2021-03",
+        "government_share": 0.0131004366812227,
+        "hnb_own_items": 25
+      },
+      {
+        "month": "2021-04",
+        "government_share": 0.013771657041315,
+        "hnb_own_items": 21
+      },
+      {
+        "month": "2021-05",
+        "government_share": 0.0104903635032935,
+        "hnb_own_items": 17
+      },
+      {
+        "month": "2021-06",
+        "government_share": 0.00957734749115136,
+        "hnb_own_items": 23
+      },
+      {
+        "month": "2021-07",
+        "government_share": 0.0170265051781639,
+        "hnb_own_items": 23
+      },
+      {
+        "month": "2021-08",
+        "government_share": 0.00722752240531946,
+        "hnb_own_items": 14
+      },
+      {
+        "month": "2021-09",
+        "government_share": 0.0319301032565528,
+        "hnb_own_items": 18
+      },
+      {
+        "month": "2021-10",
+        "government_share": 0.078732000414379,
+        "hnb_own_items": 23
+      },
+      {
+        "month": "2021-11",
+        "government_share": 0.0344413295955146,
+        "hnb_own_items": 28
+      },
+      {
+        "month": "2021-12",
+        "government_share": 0.0453172205438067,
+        "hnb_own_items": 23
+      },
+      {
+        "month": "2022-01",
+        "government_share": 0.0641465175027066,
+        "hnb_own_items": 20
+      },
+      {
+        "month": "2022-02",
+        "government_share": 0.130588235294118,
+        "hnb_own_items": 53
+      },
+      {
+        "month": "2022-03",
+        "government_share": 0.0826757659771096,
+        "hnb_own_items": 47
+      },
+      {
+        "month": "2022-04",
+        "government_share": 0.0467863894139887,
+        "hnb_own_items": 16
+      },
+      {
+        "month": "2022-05",
+        "government_share": 0.0594982078853047,
+        "hnb_own_items": 42
+      },
+      {
+        "month": "2022-06",
+        "government_share": 0.0937902187902188,
+        "hnb_own_items": 33
+      },
+      {
+        "month": "2022-07",
+        "government_share": 0.0776322173702086,
+        "hnb_own_items": 45
+      },
+      {
+        "month": "2022-08",
+        "government_share": 0.0574121679520137,
+        "hnb_own_items": 5
+      },
+      {
+        "month": "2022-09",
+        "government_share": 0.139918592818724,
+        "hnb_own_items": 28
+      },
+      {
+        "month": "2022-10",
+        "government_share": 0.077816158127039,
+        "hnb_own_items": 35
+      },
+      {
+        "month": "2022-11",
+        "government_share": 0.0479755018713848,
+        "hnb_own_items": 35
+      },
+      {
+        "month": "2022-12",
+        "government_share": 0.0479685723146904,
+        "hnb_own_items": 56
+      },
+      {
+        "month": "2023-01",
+        "government_share": 0.0433966690124326,
+        "hnb_own_items": 37
+      },
+      {
+        "month": "2023-02",
+        "government_share": 0.0217331750525066,
+        "hnb_own_items": 13
+      },
+      {
+        "month": "2023-03",
+        "government_share": 0.0677001569858713,
+        "hnb_own_items": 40
+      },
+      {
+        "month": "2023-04",
+        "government_share": 0.0167332899507298,
+        "hnb_own_items": 20
+      },
+      {
+        "month": "2023-05",
+        "government_share": 0.0206762344928241,
+        "hnb_own_items": 29
+      },
+      {
+        "month": "2023-06",
+        "government_share": 0.019809035200228,
+        "hnb_own_items": 25
+      },
+      {
+        "month": "2023-07",
+        "government_share": 0.0387752689443197,
+        "hnb_own_items": 22
+      },
+      {
+        "month": "2023-08",
+        "government_share": 0.0214161921267641,
+        "hnb_own_items": 12
+      },
+      {
+        "month": "2023-09",
+        "government_share": 0.0745028198278421,
+        "hnb_own_items": 21
+      },
+      {
+        "month": "2023-10",
+        "government_share": 0.0248559077809798,
+        "hnb_own_items": 27
+      },
+      {
+        "month": "2023-11",
+        "government_share": 0.0117126807696905,
+        "hnb_own_items": 15
+      },
+      {
+        "month": "2023-12",
+        "government_share": 0.0160171522260058,
+        "hnb_own_items": 34
+      },
+      {
+        "month": "2024-01",
+        "government_share": null,
+        "hnb_own_items": null
+      },
+      {
+        "month": "2024-02",
+        "government_share": null,
+        "hnb_own_items": null
+      },
+      {
+        "month": "2024-03",
+        "government_share": null,
+        "hnb_own_items": null
+      },
+      {
+        "month": "2024-04",
+        "government_share": 0.0188189487345879,
+        "hnb_own_items": 17
+      },
+      {
+        "month": "2024-05",
+        "government_share": 0.0135859587280605,
+        "hnb_own_items": 18
+      },
+      {
+        "month": "2024-06",
+        "government_share": 0.0137925126359976,
+        "hnb_own_items": 32
+      },
+      {
+        "month": "2024-07",
+        "government_share": 0.0160487883164821,
+        "hnb_own_items": 16
+      },
+      {
+        "month": "2024-08",
+        "government_share": 0.0231975967957276,
+        "hnb_own_items": 19
+      },
+      {
+        "month": "2024-09",
+        "government_share": 0.0369584727094721,
+        "hnb_own_items": 22
+      },
+      {
+        "month": "2024-10",
+        "government_share": 0.0110799438990182,
+        "hnb_own_items": 37
+      },
+      {
+        "month": "2024-11",
+        "government_share": 0.00871237156762603,
+        "hnb_own_items": 26
+      },
+      {
+        "month": "2024-12",
+        "government_share": 0.0135400446821475,
+        "hnb_own_items": 17
+      },
+      {
+        "month": "2025-01",
+        "government_share": 0.0360148827800455,
+        "hnb_own_items": 25
+      },
+      {
+        "month": "2025-02",
+        "government_share": 0.015963978714695,
+        "hnb_own_items": 22
+      },
+      {
+        "month": "2025-03",
+        "government_share": 0.0142435519055563,
+        "hnb_own_items": 40
+      },
+      {
+        "month": "2025-04",
+        "government_share": 0.00617403048427552,
+        "hnb_own_items": 24
+      },
+      {
+        "month": "2025-05",
+        "government_share": 0.00569654920576958,
+        "hnb_own_items": 25
+      },
+      {
+        "month": "2025-06",
+        "government_share": 0.0134828706257278,
+        "hnb_own_items": 36
+      },
+      {
+        "month": "2025-07",
+        "government_share": 0.0237462636997675,
+        "hnb_own_items": 31
+      },
+      {
+        "month": "2025-08",
+        "government_share": 0.0114905498281787,
+        "hnb_own_items": 13
+      },
+      {
+        "month": "2025-09",
+        "government_share": 0.0247380565117071,
+        "hnb_own_items": 28
+      },
+      {
+        "month": "2025-10",
+        "government_share": 0.0175269851448114,
+        "hnb_own_items": 35
+      },
+      {
+        "month": "2025-11",
+        "government_share": 0.0189942507823303,
+        "hnb_own_items": 33
+      },
+      {
+        "month": "2025-12",
+        "government_share": 0.0139378491241391,
+        "hnb_own_items": 27
+      },
+      {
+        "month": "2026-01",
+        "government_share": 0.0111804222648752,
+        "hnb_own_items": 25
+      },
+      {
+        "month": "2026-02",
+        "government_share": 0.00949927547898889,
+        "hnb_own_items": 28
+      },
+      {
+        "month": "2026-03",
+        "government_share": 0.068331780055918,
+        "hnb_own_items": 29
+      },
+      {
+        "month": "2026-04",
+        "government_share": 0.0498962224989622,
+        "hnb_own_items": 34
+      },
+      {
+        "month": "2026-05",
+        "government_share": 0.0569777416587656,
+        "hnb_own_items": 39
+      }
+    ],
+    "annual_government_share": {
+      "2021": {
+        "months": 12,
+        "mean": 0.0279
+      },
+      "2022": {
+        "months": 12,
+        "mean": 0.0772
+      },
+      "2023": {
+        "months": 12,
+        "mean": 0.0314
+      },
+      "2024": {
+        "months": 9,
+        "mean": 0.0173
+      },
+      "2025": {
+        "months": 12,
+        "mean": 0.0168
+      },
+      "2026": {
+        "months": 5,
+        "mean": 0.0392
+      }
+    },
+    "annual_hnb_own_items": {
+      "2021": {
+        "months": 12,
+        "mean": 23.1
+      },
+      "2022": {
+        "months": 12,
+        "mean": 34.6
+      },
+      "2023": {
+        "months": 12,
+        "mean": 24.6
+      },
+      "2024": {
+        "months": 9,
+        "mean": 22.7
+      },
+      "2025": {
+        "months": 12,
+        "mean": 28.2
+      },
+      "2026": {
+        "months": 5,
+        "mean": 31.0
+      }
+    }
+  },
+  "word_inflacija_next_to_hnb": {
+    "2021": {
+      "texts": 4468,
+      "with_word": 418,
+      "quarters": 3,
+      "share_pct": 9.4
+    },
+    "2022": {
+      "texts": 9042,
+      "with_word": 967,
+      "quarters": 4,
+      "share_pct": 10.7
+    },
+    "2023": {
+      "texts": 5567,
+      "with_word": 977,
+      "quarters": 4,
+      "share_pct": 17.5
+    },
+    "2024": {
+      "texts": 4106,
+      "with_word": 455,
+      "quarters": 4,
+      "share_pct": 11.1
+    },
+    "2025": {
+      "texts": 5218,
+      "with_word": 1130,
+      "quarters": 4,
+      "share_pct": 21.7
+    },
+    "2026": {
+      "texts": 3143,
+      "with_word": 708,
+      "quarters": 2,
+      "share_pct": 22.5
+    }
+  },
+  "platform_audit": {
+    "status": "Development audit of archive captures. Independent validation pending. Batches differ in coverage.",
+    "platforms": {
+      "tv": {
+        "captures": 183347,
+        "explicit_hnb": 1739,
+        "per_10000": 94.8
+      },
+      "radio": {
+        "captures": 462146,
+        "explicit_hnb": 3213,
+        "per_10000": 69.5
+      },
+      "print": {
+        "captures": 427803,
+        "explicit_hnb": 2598,
+        "per_10000": 60.7
+      },
+      "web": {
+        "captures": 19631626,
+        "explicit_hnb": 57325,
+        "per_10000": 29.2
+      },
+      "twitter": {
+        "captures": 2705467,
+        "explicit_hnb": 1649,
+        "per_10000": 6.1
+      },
+      "bluesky": {
+        "captures": 33672,
+        "explicit_hnb": 16,
+        "per_10000": 4.8
+      },
+      "tiktok": {
+        "captures": 31444,
+        "explicit_hnb": 15,
+        "per_10000": 4.8
+      },
+      "facebook": {
+        "captures": 7270015,
+        "explicit_hnb": 3249,
+        "per_10000": 4.5
+      },
+      "forum": {
+        "captures": 2001652,
+        "explicit_hnb": 873,
+        "per_10000": 4.4
+      },
+      "youtube": {
+        "captures": 2734039,
+        "explicit_hnb": 821,
+        "per_10000": 3.0
+      },
+      "reddit": {
+        "captures": 3036596,
+        "explicit_hnb": 800,
+        "per_10000": 2.6
+      },
+      "comment": {
+        "captures": 3256908,
+        "explicit_hnb": 486,
+        "per_10000": 1.5
+      },
+      "instagram": {
+        "captures": 489877,
+        "explicit_hnb": 71,
+        "per_10000": 1.4
+      },
+      "threads": {
+        "captures": 2882,
+        "explicit_hnb": 0,
+        "per_10000": 0.0
+      }
+    }
+  }
+}

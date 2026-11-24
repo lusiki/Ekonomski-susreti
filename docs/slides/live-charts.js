@@ -21,7 +21,7 @@
 
   var E = window.echarts;
   if (!E) return;
-  var D = window.ES_MONTHLY, ANNUAL = window.ES_ANNUAL, ORIGINAL = window.ES_ORIGINAL;
+  var D = window.ES_MONTHLY, ANNUAL = window.ES_ANNUAL, ORIGINAL = window.ES_ORIGINAL, MEDIA = window.ES_MEDIA;
 
   /* Slike koje sloj oživljava. Ključ je naziv SVG datoteke. */
   var FIGURES = {
@@ -32,6 +32,19 @@
     'monthly-counts-share': { kind: 'monthly', bars: ['objave', 'udio'], natH: 380, left: 0.07, top: 0.10, bottom: 0.14, gap: 0.197, yearsEach: true,
                               labels: { objave: 'Broj relevantnih institucionalnih objava', udio: 'Ponderirani udio (%)' } },
     'annual-share':         { kind: 'annual' },
+    /* Širi medijski kontekst iz javnih agregata o izričitim spominjanjima HNB-a. Ove serije
+       pripadaju drugom korpusu, pa se ne nude kao dodatak na ostalim slajdovima. */
+    'themes':               { kind: 'themes' },
+    'monthly-mentions':     { kind: 'monthly', bars: ['spomeni'], addable: ['hicp'], index: false, themeTip: true,
+                              labels: { spomeni: 'Broj objava koje izričito spominju HNB' },
+                              notes: [['2022-02', -0.5, 'siječanj i veljača 2022.\nupravljanje, plaćanja i gotovina'],
+                                      ['2023-01', -0.5, 'prosinac 2022. i siječanj 2023.\neuro i valute'],
+                                      ['2026-01', 0, 'siječanj 2026.\nupravljanje']],
+                              exportNote: 'Javni agregati o izričitim spominjanjima HNB-a, izdanje 21. rujna 2026. *2026. ima osam mjeseci.' },
+    'government-share':     { kind: 'monthly', bars: ['vlada', 'udio'], natH: 380, left: 0.07, top: 0.10, bottom: 0.14, gap: 0.197, yearsEach: true,
+                              addable: ['hicp'],
+                              labels: { vlada: 'Rasprava o vladinim mjerama, udio u objavama o inflaciji (%)', udio: 'Ponderirani institucionalni udio (%)' },
+                              exportNote: 'Gornji panel: zamrznuti panel studije od 17. rujna 2026., bez siječnja do ožujka 2024. i nakon svibnja 2026. Paneli imaju zasebne ljestvice.' },
     'expectations':         { kind: 'coef' }
   };
 
@@ -285,7 +298,22 @@
     })();
   }
 
-  function withUnit(k, v) { return num(v, S[k].dec) + (S[k].unit === 'pct' ? ' %' : ''); }
+  /* Dvije serije iz šireg medijskog konteksta. Mjeseci bez opažanja ostaju prazni. */
+  if (N && MEDIA && MEDIA.monthly && MEDIA.monthly.length === N) {
+    var govByMonth = {};
+    MEDIA.government.monthly.forEach(function (g) { govByMonth[g.month] = g.government_share; });
+    S.spomeni = { unit: 'count', name: 'Objave koje spominju HNB', chip: 'Spomeni HNB-a', dec: 0, max: 1900, step: 500, w: 2, dash: null, color: INK,
+      key: 'hnb_publications', v: MEDIA.monthly.map(function (r) { return r.hnb_publications; }) };
+    S.vlada = { unit: 'pct', name: 'Rasprava o vladinim mjerama', chip: 'Vladine mjere', dec: 1, max: 16.5, step: 5, w: 2, dash: null, color: INK,
+      key: 'government_share_pct', v: ROWS.map(function (r) { var g = govByMonth[r.month]; return g == null ? null : g * 100; }) };
+    ['spomeni', 'vlada'].forEach(function (k) {
+      var s = S[k], first = s.v.filter(function (x) { return x != null; }).slice(0, 6);
+      s.base = first.reduce(function (a, b) { return a + b; }, 0) / first.length;
+      s.ix = s.v.map(function (x) { return x == null ? null : x / s.base * 100; });
+    });
+  }
+
+  function withUnit(k, v) { return v == null ? 'bez podatka' : num(v, S[k].dec) + (S[k].unit === 'pct' ? ' %' : ''); }
   function monthName(i) { var m = ROWS[i].month; return MONTHS[+m.slice(5) - 1] + ' ' + m.slice(0, 4) + '.'; }
   function tickText(unit, v) { return unit === 'ratio' ? num(v, 1) : num(v, 0); }
   function unitFont(u) { return '400 ' + (18 * u) + 'px ' + FONT; }
@@ -299,20 +327,24 @@
     var on = function (k) { return !!st.on[k]; };
     if (bars.length > 1) {
       /* Slajd s dva zadana panela. Dodana serija ulazi u panel svoje jedinice. */
+      var placed = {};
       bars.forEach(function (b) {
-        P.push({ unit: S[b].unit, bars: b, label: cfg.labels && cfg.labels[b],
-          lines: ORDER.filter(function (k) { return bars.indexOf(k) < 0 && on(k) && S[k].unit === S[b].unit; }) });
+        /* Kad dva panela dijele jedinicu, dodana serija ulazi samo u prvi. */
+        var lines = ORDER.filter(function (k) { return bars.indexOf(k) < 0 && on(k) && !placed[k] && S[k].unit === S[b].unit; });
+        lines.forEach(function (k) { placed[k] = true; });
+        P.push({ unit: S[b].unit, bars: b, label: cfg.labels && cfg.labels[b], lines: lines });
       });
       return { panels: P, index: false, forced: false, canIndex: false };
     }
     var primary = bars[0];
-    var att = ORDER.filter(function (k) { return k !== 'hicp' && (k === primary || on(k)); });
+    var att = (primary !== 'hicp' ? [primary] : []).concat(ORDER.filter(function (k) { return k !== 'hicp' && k !== primary && on(k); }));
     var units = [];
     att.forEach(function (k) { if (units.indexOf(S[k].unit) < 0) units.push(S[k].unit); });
     var forced = units.length > 1, index = att.length > 0 && (forced || !!st.index);
     var unit = index ? 'index' : units[0];
     if (primary !== 'hicp') {
-      var main = { unit: unit, bars: primary, lines: att.filter(function (k) { return k !== primary; }) };
+      var main = { unit: unit, bars: primary, lines: att.filter(function (k) { return k !== primary; }),
+        label: !index && cfg.labels ? cfg.labels[primary] : undefined };
       if (on('hicp')) {
         if (unit === 'pct') main.lines.unshift('hicp');
         else P.push({ strip: true, unit: 'pct', area: 'hicp', lines: [], label: 'Inflacija, %' });
@@ -392,9 +424,16 @@
           lineStyle: { color: INK3, width: 1, type: 'solid' }, data: show ? [{ yAxis: 100 }] : [] };
       };
       if (p.bars) {
+        /* Mjeseci bez opažanja ostaju prazni na svijetloj podlozi, kao na slici. */
+        var gaps = [], run = null;
+        vals(p.bars, p).forEach(function (v, j) {
+          if (v == null) { if (!run) { run = [j, j]; gaps.push(run); } else run[1] = j; } else run = null;
+        });
         series.push({ id: 'bars-' + p.bars, name: p.bars, type: 'bar', xAxisId: xid, yAxisId: yid, data: vals(p.bars, p),
           barWidth: '78%', z: 2, itemStyle: { color: soft ? BAR_SOFT : BAR },
-          emphasis: { itemStyle: { color: soft ? INK3 : INK } }, markLine: baseline() });
+          emphasis: { itemStyle: { color: soft ? INK3 : INK } }, markLine: baseline(),
+          markArea: { silent: true, animation: false, label: { show: false }, itemStyle: { color: '#f0f0f0' },
+            data: gaps.map(function (g) { return [{ xAxis: months[g[0]] }, { xAxis: months[g[1]] }]; }) } });
       }
       if (p.area) {
         var a = S[p.area];
@@ -434,6 +473,17 @@
         style: { text: p ? p.label : '', fill: INK2, font: unitFont(u) } });
     });
 
+    /* Oznake iznad najvećih mjeseci. Položaj se računa iz istih veličina kao na slici. */
+    (cfg.notes || []).forEach(function (note, j) {
+      var holder = null, at = months.indexOf(note[0]);
+      /* Uz dodani panel stupci su niski, pa oznake ustupaju mjesto. */
+      if (n === 1) P.forEach(function (p) { if (p.bars === cfg.bars[0] && p.unit !== 'index') holder = p; });
+      var v = holder && at >= 0 ? S[holder.bars].v[at] : null;
+      graphic.push({ type: 'text', id: 'note' + j, silent: true, z: 5, invisible: v == null,
+        x: axL + (at + 1 + note[1]) * unitW, y: v == null ? 0 : holder.top + holder.h * (1 - v / holder.max) - 6.9 * u,
+        style: { text: note[2], fill: INK, font: '400 ' + (16 * u) + 'px ' + FONT, lineHeight: 20 * u, align: 'center', verticalAlign: 'bottom' } });
+    });
+
     var anchor = 0;
     P.forEach(function (p, i) { if (p.h > P[anchor].h) anchor = i; });
     var opt = baseOption(extra);
@@ -451,9 +501,9 @@
   Monthly.prototype = Object.create(Live.prototype);
 
   Monthly.prototype.addable = function () {
-    var bars = this.cfg.bars;
+    var bars = this.cfg.bars, only = this.cfg.addable;
     return ORDER.filter(function (k) {
-      if (bars.indexOf(k) >= 0) return false;
+      if (bars.indexOf(k) >= 0 || (only && only.indexOf(k) < 0)) return false;
       return bars.length === 1 || bars.some(function (b) { return S[b].unit === S[k].unit; });
     });
   };
@@ -461,7 +511,7 @@
     return {
       own: this.cfg.bars.map(function (b) { return { glyph: { shape: 'bars', color: INK }, text: S[b].chip, title: S[b].name + ', stupci' }; }),
       chips: this.addable().map(function (k) { return { key: k, glyph: lineGlyph(k), text: S[k].chip, title: S[k].name }; }),
-      index: this.cfg.bars.length === 1
+      index: this.cfg.bars.length === 1 && this.cfg.index !== false
     };
   };
   Monthly.prototype.option = function (box, extra) { return monthlyOption(this.st, this.cfg, box, extra); };
@@ -510,12 +560,21 @@
       row.appendChild(glyph(k === v.panel.bars ? { shape: 'bars', color: INK } : lineGlyph(k)));
       row.appendChild(el('span', 'lc-tip-name', S[k].name));
       var val = el('span', 'lc-tip-val');
-      if (v.panel.unit === 'index') {
+      if (v.panel.unit === 'index' && S[k].v[i] != null) {
         val.appendChild(el('b', null, num(S[k].ix[i], 0)));
         val.appendChild(el('i', null, withUnit(k, S[k].v[i])));
       } else val.appendChild(el('b', null, withUnit(k, S[k].v[i])));
       row.appendChild(val); tip.appendChild(row);
     });
+    if (this.cfg.themeTip && MEDIA) {
+      /* Tri tematska područja čije se riječi tog mjeseca najčešće nalaze u objavama. */
+      var shares = MEDIA.monthly[i].theme_share_pct, labels = {};
+      MEDIA.themes.forEach(function (t) { labels[t.id] = t.label; });
+      tip.appendChild(el('div', 'lc-tip-sub lc-tip-head', 'Najzastupljenija područja'));
+      Object.keys(shares).sort(function (x, y) { return shares[y] - shares[x]; }).slice(0, 3).forEach(function (id) {
+        tip.appendChild(el('div', 'lc-tip-sub', labels[id] + ' · ' + num(shares[id], 0) + ' %'));
+      });
+    }
     tip.hidden = false;
     /* Okvir staje na onu stranu pokazivača gdje zaklanja niže vrijednosti. */
     var cx = this.chart.convertToPixel({ xAxisId: 'x0' }, i), w = tip.offsetWidth, gap = g.unitW * 0.5 + 12 * g.u;
@@ -546,7 +605,7 @@
     var names = [];
     opt._plan.panels.forEach(function (p) { keysOf(p).forEach(function (k) { names.push(S[k].name); }); });
     exportTitles(opt, this.section, names.join(' · ') + ' · siječanj 2021. do kolovoza 2026.',
-      'Mjesečni agregati. *2026. ima osam mjeseci.');
+      this.cfg.exportNote || 'Mjesečni agregati. *2026. ima osam mjeseci.');
     return { opt: opt, W: W, H: 118 + bh + 112 };
   };
   Monthly.prototype.csv = function () {
@@ -558,8 +617,8 @@
     return head.join(',') + '\n' + ROWS.map(function (row, i) {
       var out = [row.month];
       vis.forEach(function (v) {
-        var s = S[v.key]; out.push(+s.v[i].toFixed(6));
-        if (v.panel.unit === 'index') out.push(+s.ix[i].toFixed(3));
+        var s = S[v.key]; out.push(s.v[i] == null ? '' : +s.v[i].toFixed(6));
+        if (v.panel.unit === 'index') out.push(s.ix[i] == null ? '' : +s.ix[i].toFixed(3));
       });
       return out.join(',');
     }).join('\n') + '\n';
@@ -642,6 +701,83 @@
     return 'year,months,weighted_share_pct,mean_hicp_pct,relevant_posts,institutional_posts\n' + ANNUAL.annual.map(function (r) {
       return [r.year, r.months, r.weighted_share_pct, r.mean_hicp_pct, r.relevant_posts, r.institutional_posts].join(',');
     }).join('\n') + '\n';
+  };
+
+  /* ================================================================== */
+  /* Tematska područja uz HNB                                            */
+  /* ================================================================== */
+  function themesOption(box, extra) {
+    var T = MEDIA.themes, n = T.length, u = box.W / 1136;
+    var axL = box.x + 0.265 * box.W, w = 0.665 * box.W, top = box.y + 0.09 * box.H, h = 0.79 * box.H, band = h / (n + 0.1);
+    var opt = baseOption(extra);
+    opt.grid = [{ id: 'g', left: axL, top: top + 0.05 * band, width: w, height: n * band, outerBoundsMode: 'none', containLabel: false }];
+    opt.yAxis = [{ id: 'y', gridId: 'g', type: 'category', inverse: true, data: T.map(function (t) { return t.label; }),
+      axisLine: { show: false }, axisTick: { show: false }, splitLine: { show: false },
+      axisLabel: { color: INK, fontFamily: FONT, fontSize: 19.4 * u, margin: 13.9 * u, interval: 0 },
+      axisPointer: { show: true, triggerTooltip: false, type: 'shadow', shadowStyle: { color: 'rgba(0,0,0,0.06)' }, label: { show: false }, z: 0 } }];
+    opt.xAxis = [{ id: 'x', gridId: 'g', type: 'value', min: 0, max: 50, interval: 10,
+      axisLine: { show: false }, axisTick: { show: false }, axisPointer: { show: false },
+      splitLine: { show: true, lineStyle: { color: GRID, width: 1 } },
+      axisLabel: { color: INK2, fontFamily: FONT, fontSize: 19.4 * u, margin: 13.9 * u + 0.05 * band } }];
+    opt.series = [{ id: 'bars', type: 'bar', xAxisId: 'x', yAxisId: 'y', barWidth: '62%', z: 2, emphasis: { disabled: true },
+      label: { show: true, position: 'right', distance: 0.8 / 50 * w, color: INK, fontFamily: FONT, fontSize: 19.4 * u,
+        formatter: function (p) { return num(p.value, 1) + ' %'; } },
+      data: T.map(function (t) { return { value: t.share_pct, itemStyle: { color: t.id === 'prices' ? INK : INK3 } }; }) }];
+    opt.graphic = [{ type: 'text', id: 'unit', silent: true, left: axL, top: top - 0.035 * h - 15.5 * u,
+      style: { text: '% objava koje izričito spominju HNB', fill: INK2, font: unitFont(u) } }];
+    opt.axisPointer = { triggerOn: 'mousemove|click' };
+    opt._geo = { top: top, band: band, u: u, right: box.x + box.W };
+    return opt;
+  }
+
+  function Themes(img, cfg) { this.natW = 1136; this.natH = 365; this.setup(img, cfg); this.tip.classList.add('lc-flat'); }
+  Themes.prototype = Object.create(Live.prototype);
+  Themes.prototype.tools = function () { return { own: [], chips: [], index: false }; };
+  Themes.prototype.option = function (box, extra) { return themesOption(box, extra); };
+  Themes.prototype.bind = function () {
+    var self = this;
+    this.chart.on('updateAxisPointer', function (ev) {
+      var info = (ev.axesInfo || [])[0];
+      if (info && info.value != null) self.showTip(info.value); else self.hideTip();
+    });
+  };
+  Themes.prototype.sync = function () {
+    this.host.setAttribute('aria-label', this.img.getAttribute('alt') || 'Tematska područja u objavama koje spominju HNB.');
+  };
+  Themes.prototype.toggle = function () {};
+  Themes.prototype.reset = function () {};
+  Themes.prototype.showTip = function (i) {
+    var t = MEDIA.themes[i], g = this.opt._geo, tip = this.tip;
+    if (!t) return this.hideTip();
+    tip.textContent = '';
+    tip.appendChild(el('div', 'lc-tip-month', t.label));
+    [['Objave', num(t.publications, 0)], ['Udio u ' + num(MEDIA.corpus.hnb_publications, 0) + ' objava', num(t.share_pct, 1) + ' %']].forEach(function (p) {
+      var row = el('div', 'lc-tip-row');
+      row.appendChild(el('span', 'lc-tip-name', p[0]));
+      var val = el('span', 'lc-tip-val'); val.appendChild(el('b', null, p[1])); row.appendChild(val); tip.appendChild(row);
+    });
+    tip.appendChild(el('div', 'lc-tip-sub lc-tip-head', 'Udio po godinama, %'));
+    var years = Object.keys(t.share_pct_by_year).sort();
+    [years.slice(0, 3), years.slice(3)].forEach(function (part) {
+      tip.appendChild(el('div', 'lc-tip-sub', part.map(function (y) { return y + '. ' + num(t.share_pct_by_year[y], 1); }).join(' · ')));
+    });
+    tip.hidden = false;
+    /* Donji desni dio grafikona je prazan, pa okvir ondje ne prekriva nijedan stupac. */
+    this.placeTip(g.right - tip.offsetWidth - 4 * g.u, g.top + 4.25 * g.band);
+  };
+  Themes.prototype.fileName = function (ext) { return 'ekonomski-susreti-teme-uz-hnb.' + ext; };
+  Themes.prototype.exportSpec = function () {
+    var opt = themesOption({ x: 44, y: 110, W: 1192, H: 383 }, { still: true });
+    exportTitles(opt, this.section, num(MEDIA.corpus.hnb_publications, 0) + ' objava koje izričito spominju HNB · siječanj 2021. do kolovoza 2026.',
+      'Preklapajuća leksička područja, bez neovisne provjere. Javni agregati, izdanje 21. rujna 2026.');
+    return { opt: opt, W: 1280, H: 610 };
+  };
+  Themes.prototype.csv = function () {
+    var years = Object.keys(MEDIA.themes[0].share_pct_by_year).sort();
+    return ['theme', 'publications', 'share_pct'].concat(years.map(function (y) { return 'share_pct_' + y; })).join(',') + '\n' +
+      MEDIA.themes.map(function (t) {
+        return ['"' + t.label + '"', t.publications, t.share_pct].concat(years.map(function (y) { return t.share_pct_by_year[y]; })).join(',');
+      }).join('\n') + '\n';
   };
 
   /* ================================================================== */
@@ -803,7 +939,8 @@
       var m = /([^\/]+)\.svg$/.exec(img.getAttribute('src') || '');
       var key = img.getAttribute('data-live-chart') || (m && m[1]), cfg = key && FIGURES[key];
       if (!cfg) return;
-      if (cfg.kind === 'monthly' && N) new Monthly(img, cfg);
+      if (cfg.kind === 'monthly' && N && cfg.bars.every(function (b) { return S[b] && S[b].v; })) new Monthly(img, cfg);
+      else if (cfg.kind === 'themes' && MEDIA && MEDIA.themes) new Themes(img, cfg);
       else if (cfg.kind === 'annual' && ANNUAL && ANNUAL.annual) new Annual(img, cfg);
       else if (cfg.kind === 'coef' && SPEC.lin.rows && SPEC.lin.rows.length) new Coef(img, cfg);
     });
