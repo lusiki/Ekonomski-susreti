@@ -24,6 +24,6 @@ institucionalni jaz u pažnji, komunikacija središnje banke, medijska zastuplje
 
 ## Izlaganje
 
-Prezentacija ima 27 slajdova i traje oko 23 minute. Za dvadesetominutno izlaganje uvod, metode i širi medijski kontekst prolaze se kraće, uz 10 minuta rasprave.
+Prezentacija ima 22 slajda i šest rezervnih te traje oko 23 minute. Za dvadesetominutno izlaganje mjesečni prikaz, najveći medijski mjeseci i promjena oko eura prolaze se kraće, uz 10 minuta rasprave.
 
 [Cjeloviti rad](https://lusiki.github.io/HNB_Media_Attention/media/downloads/PAPER_EXT.html) · [Aktualni slajdovi](https://lusiki.github.io/Ekonomski-susreti/slides/)

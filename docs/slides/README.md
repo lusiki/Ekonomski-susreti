@@ -1,8 +1,12 @@
 # Konferencijska prezentacija
 
-`index.html` je izvor za 27 slajdova u pregledniku, bilješke izlagača i PDF.
-Izlaganje prati istraživačko pitanje, podatke, deskriptivne putanje, procjene
-odnosa i posljedice za praćenje komunikacije.
+`index.html` je izvor za 22 slajda i šest rezervnih u pregledniku, bilješke
+izlagača i PDF. Izlaganje ima četiri dijela. Slajdovi 1 do 6 postavljaju
+zagonetku, pitanja, korpus i mjeru. Slajdovi 7 do 12 opisuju prostor razgovora
+o inflaciji i tko ga ispunjava. Slajdovi 13 do 18 donose procjene odnosa, a
+slajdovi 19 do 22 tumačenje i posljedice za praćenje komunikacije. Rezervni
+slajdovi 23 do 28 slijede nakon završnog i u podnožju nose oznaku REZERVA.
+U pregledniku do njih vodi tipka `G` i broj slajda.
 
 - Deskriptivni grafikoni obuhvaćaju siječanj 2021. do kolovoza 2026., ukupno
   68 potpunih mjeseci. Svaki mjesečni stupac prikazuje stvarno opažanje.
@@ -10,6 +14,8 @@ odnosa i posljedice za praćenje komunikacije.
   opažanja u osnovnim modelima. Razdoblje je označeno uz rezultate.
 - Veza s očekivanjima tumači se prediktivno, uz osjetljivost na mapiranje
   mjesečnih očekivanja u tjedne. Promjena oko eura ne identificira njegov učinak.
+- Granica uzročnog tumačenja izgovara se na slajdovima 4 i 16. Na ostalim
+  slajdovima nose je bilješke na ekranu.
 
 Govorni vodič prati isti redoslijed i preuzima naslove i minijature iz slajdova.
 Izvor govorne osnove je `materials/speaking-guide/lecture.json`, a objavljeni
@@ -20,11 +26,15 @@ odjeljka „Priprema” pri dnu glavnog README-a, izvan stranice s materijalima.
 
 `presentation-layout.css` određuje zajednički izgled. Reveal.js prilagodbe su
 u `presentation-ekonomski-susreti.css`, a lokalni Roboto u `presentation-fonts.css`.
+Pravila izgleda vezana su uz imenovane klase slajdova, primjerice `title-page`
+ili `closing-page`, a ne uz redni broj. Slajd zato zadržava izgled i kada se
+redoslijed promijeni. Broj u podnožju upisan je u `index.html`.
 
 Iz korijena repozitorija:
 
 ```sh
 python scripts/build-monthly-figures.py
+python scripts/build-story-figures.py
 python scripts/build-original-figures.py
 python scripts/build-media-context-figures.py
 python scripts/build-presentation-print.py
@@ -40,11 +50,12 @@ Strelice mijenjaju slajdove, `o` otvara pregled, a `s` bilješke izlagača.
 
 ## Živi grafikoni
 
-Slajdovi 6, 8 do 14, 19 i 22 u pregledniku zamjenjuju sliku živim grafikonom iz
-istih provjerenih podataka. Početni prikaz odgovara slici. Pokazivač otkriva
+Slajdovi 8 do 12 i 16 te rezervni slajdovi 24 do 27 u pregledniku zamjenjuju
+sliku živim grafikonom iz istih provjerenih podataka. Početni prikaz odgovara slici. Pokazivač otkriva
 vrijednosti, a traka iznad naslova dodaje i uklanja serije. PDF i `print.html`
-i dalje koriste statične slike, pa se njihov izgled ne mijenja. Slajdovi 17 i
-18 ostaju slike jer njihove točke nisu u repozitoriju.
+i dalje koriste statične slike, pa se njihov izgled ne mijenja. Slajdovi 14 i
+15 ostaju slike jer njihove točke nisu u repozitoriju. Slajdovi 2, 7, 19 i 22
+nose statične slike prostorije i indeksa razgovora, opisane u nastavku.
 
 - `live-charts.js` i `live-charts.css` sadrže cijeli sloj. Bez redaka na kraju
   `index.html` slajdovi ostaju statični.
@@ -64,9 +75,9 @@ isto značenje kao boja, pa prikaz ostaje čitljiv i u crno-bijelom ispisu.
 Svaki panel ima jednu ljestvicu. Serije u istoj jedinici dijele os. Serije u
 različitim jedinicama prikazuju se kao indeks u kojem prva polovica 2021. iznosi
 100, što je referenca institucionalnog jaza. Inflacija se ne indeksira. Kada
-ne može dijeliti os u postocima, dobiva vlastiti poravnati panel. Na slajdu 11
-dodana serija ulazi u panel svoje jedinice. Na slajdu 19 uz linearno se može
-dodati stepenasto mapiranje iz iste Tablice 7a. Slajdovi 6, 14 i 22 pripadaju
+ne može dijeliti os u postocima, dobiva vlastiti poravnati panel. Na slajdu 9
+dodana serija ulazi u panel svoje jedinice. Na slajdu 16 uz linearno se može
+dodati stepenasto mapiranje iz iste Tablice 7a. Slajdovi 10, 11 i 12 pripadaju
 širem medijskom kontekstu i opisani su u nastavku.
 
 Tipke 1 do 5 dodaju ili uklanjaju serije redom kojim stoje u traci, `I` uključuje
@@ -78,7 +89,7 @@ izlaganje. Prije obnove HTML-a pokrenuti `python scripts/build-live-data.py`.
 
 ## Širi medijski kontekst
 
-Slajdovi 6, 14 i 22 koriste javne agregate iz repozitorija
+Slajdovi 10, 11 i 12 koriste javne agregate iz repozitorija
 `lusiki/HNB_Media_Attention`, revizija `b2187d34159b5d40caeecb2694640331e4aeae71`,
 mapa `media-hub/public/data`. Odabrane vrijednosti i SHA-256 svake izvorne
 datoteke spremljeni su u `data/media-context-20260921.json`. Obnova iz lokalne
@@ -90,24 +101,46 @@ python scripts/build-media-context-figures.py
 python scripts/build-live-data.py
 ```
 
-- Slajdovi 6 i 14 opisuju 33.235 objava koje izričito spominju HNB u 281 izvoru,
+- Slajdovi 11 i 12 opisuju 33.235 objava koje izričito spominju HNB u 281 izvoru,
   izdanje podataka 2026-09-21.1. Taj je skup uži od institucionalnog korpusa
   ostalih slajdova i ne smije se s njim zbrajati ni dijeliti os bez oznake.
 - Tematska područja su preklapajući popisi riječi bez neovisne provjere. Pokazuju
   prisutnost riječi u objavi, a ne njezinu glavnu temu.
-- Oznake na slajdu 14 navode područja čije su riječi u tim mjesecima najčešće.
+- Oznake na slajdu 12 navode područja čije su riječi u tim mjesecima najčešće.
   Povezivanje s događajima u bilješkama izlagača autorsko je tumačenje.
-- Gornji panel slajda 22 dolazi iz zamrznutog panela studije od 17. rujna 2026.
+- Gornji panel slajda 10 dolazi iz zamrznutog panela studije od 17. rujna 2026.
   Nema opažanja za siječanj do ožujka 2024. i završava u svibnju 2026. Donji
-  panel je isti ponderirani udio kao na slajdu 9, iz izdanja od 28. rujna 2026.
+  panel je isti ponderirani udio kao na slajdu 9 i rezervnom slajdu 26, iz izdanja
+  od 28. rujna 2026.
   Paneli imaju zasebne ljestvice i različito su izvedeni, pa slajd opisuje smjer
   i ne uspoređuje razine.
 - Zabilježene vlastite objave HNB-a su stavke iz kanala HNB-a koje je zabilježio
   sustav praćenja, a ne potpuni popis službenih dokumenata.
-- Redak o kanalima na slajdu 24 dolazi iz razvojnog pregleda arhiva bez neovisne
-  provjere. Redak o riječi inflacija na slajdu 26 odnosi se na potpuna tromjesečja.
+- Redak o kanalima na slajdu 20 dolazi iz razvojnog pregleda arhiva bez neovisne
+  provjere. Redak o riječi inflacija na slajdu 11 odnosi se na potpuna tromjesečja.
 - Broj od 480.221 objave o inflaciji na slajdu 5 zbroj je mjesečnih vrijednosti
   `inflation_posts` iz `data/monthly-20260928.json`.
+
+## Prostorija i indeks razgovora
+
+Slika prostorije prati izlaganje. `python scripts/build-story-figures.py` crta
+tri statične slike iz `data/monthly-20260928.json`, bez procjene i interpolacije.
+
+- `conversation-volume` na slajdu 7 prikazuje mjesečni broj svih objava o
+  inflaciji i broj relevantnih institucionalnih objava. Svaki je niz indeks u
+  kojem je prosjek 2021. jednak 100. Godišnji zbrojevi daju 129.932 prema 40.639
+  objava o inflaciji, 3,2 puta više, i 17.278 prema 8.419 relevantnih objava,
+  2,05 puta više. Skripta provjerava oba omjera.
+- `rooms` na slajdovima 19 i 22 te `rooms-pair` na slajdu 2 crtaju jedan kvadrat
+  po godini. Površina je prosječni mjesečni potencijalni doseg objava o
+  inflaciji, nazivnik ponderiranog udjela. Crni dio je ponderirani
+  institucionalni doseg, brojnik. Omjer crnog i cijelog kvadrata zato je jednak
+  godišnjem udjelu iz tablice 1, što skripta provjerava za svih šest godina.
+- Indeks na slajdu 7 broji objave, a kvadrati mjere potencijalni doseg. Prostor
+  razgovora 2022. veći je 3,2 puta po broju objava i 3,8 puta po dosegu.
+- Traka na slajdu 5 crtana je u CSS-u. Širine triju polja su 58.633
+  institucionalne objave izvan inflacijskog diskursa, 65.530 relevantnih objava
+  i 414.691 ostala objava o inflaciji.
 
 ## Deskriptivne serije
 
@@ -148,8 +181,8 @@ i izabrani rezultati nalaze se u `data/original-results.json`. Slike regresijski
 odnosa potječu iz revizije `21ed849073dcc13e48a16a2e5fcf5fcaecd59ddd`.
 Skripta za grafikone prikazuje spremljene procjene i ne procjenjuje modele.
 
-- Tablica 4: tjedni koeficijent 0,00213 (slajd 0,0021), s kontrolom obujma,
-  N = 157. Riječ je o uvjetnoj povezanosti uz kontrolu obujma.
+- Tablica 4: tjedni koeficijent 0,00213 u jedinicama udjela (na slajdu
+  0,21 postotni bod), s kontrolom obujma, N = 157. Riječ je o uvjetnoj povezanosti uz kontrolu obujma.
 - Tablica 6: mjesečni koeficijent ekstenzivne margine −0,00474, odnosno
   približno −0,47 postotnih bodova; p = 0,0124. Intenzivna margina p = 0,3457.
 - Tablica 7a: linearno mapiranje očekivanja daje Bonferroni-značajne testirane
@@ -165,4 +198,5 @@ zadržani, uz mjesečne stupce u deskriptivnom dijelu.
 
 HTML i PDF slajdovi nastaju iz istog izvora. Govorni vodič izrađuje se nakon
 PDF-a kako bi njegove minijature odgovarale prikazanoj prezentaciji. PowerPoint
-i petostrani pregled pohranjeni su kao zasebni materijali.
+i petostrani pregled pohranjeni su kao zasebni materijali. Oba još prate
+raniji raspored od 27 slajdova i ne obnavljaju se ovim postupkom.

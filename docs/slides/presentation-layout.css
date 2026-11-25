@@ -26,8 +26,8 @@ body { font-family: Roboto, sans-serif; font-weight:400; color:#000; background:
 .column p, .column li { font-size:25px; }
 .column h3, .three-columns h3 { border-top:1px solid #000; padding-top:17px; }
 :where(.page) footer { position:absolute; bottom:26px; left:72px; right:72px; display:flex; justify-content:space-between; border-top:1px solid #d9d9d9; padding-top:12px; color:#555; font-size:12px; letter-spacing:1.6px; font-weight:500; }
-.page-1 .slide-content { margin-top:65px; }
-.page-1 h1 { max-width:1100px; }
+.title-page .slide-content { margin-top:65px; }
+.title-page h1 { max-width:1100px; }
 .subtitle { font-size:29px; font-weight:300; line-height:1.4; margin-top:32px; max-width:1030px; }
 .byline { margin-top:48px; }
 .byline p { font-size:22px; }
@@ -40,8 +40,6 @@ body { font-family: Roboto, sans-serif; font-weight:400; color:#000; background:
 .metric { border-left:1px solid #000; padding-left:24px; margin:26px 0; }
 .metric p { font-size:21px; line-height:1.3; margin-top:10px; }
 .metric strong { font-size:43px; line-height:1.1; font-weight:300; display:block; letter-spacing:-.025em; }
-.page-5 .metric strong { font-size:65px; }
-.page-5 .column li { font-size:24px; }
 .small { font-size:18px !important; color:#555; line-height:1.35 !important; }
 .flow { display:flex; align-items:stretch; margin:60px 0 48px; gap:18px; }
 .flow span { flex:1; border-top:1px solid #bdbdbd; padding-top:24px; font-size:28px; font-weight:300; line-height:1.3; }
@@ -59,7 +57,7 @@ body { font-family: Roboto, sans-serif; font-weight:400; color:#000; background:
 .measurement { margin:30px 0 24px; }
 .measurement h3 { margin-bottom:12px; }
 .measurement p { font-size:23px; }
-.page-7 .slide-content>p:not(.small) { font-size:25px; }
+.measure-page .slide-content>p:not(.small) { font-size:25px; }
 .chart-slide h2 { margin-bottom:22px; }
 :where(.page) figure { margin:0; }
 :where(.page) figure img { display:block; width:100%; height:auto; }
@@ -70,8 +68,6 @@ body { font-family: Roboto, sans-serif; font-weight:400; color:#000; background:
    Dates below panels without their own x-axis use the original shared tick positions. */
 .paper-window { width:100%; overflow:hidden; position:relative; }
 .paper-window img { max-height:none; position:absolute; left:0; top:0; filter:grayscale(1); }
-.page-8 .paper-window, .page-9 .paper-window { width:1000px; margin:0 auto; }
-.page-8 .paper-years { width:1000px; margin:0 auto; }
 .hicp-panel { aspect-ratio:1400 / 460; }
 .hicp-panel img { transform:translateY(-1.2%); }
 .share-panel { aspect-ratio:1400 / 505; }
@@ -85,22 +81,11 @@ body { font-family: Roboto, sans-serif; font-weight:400; color:#000; background:
 .paper-years span:nth-child(1) { left:23.57%; }
 .paper-years span:nth-child(2) { left:54.64%; }
 .paper-years span:nth-child(3) { left:85.57%; }
-.page-13 .paper-years span:nth-child(1) { left:24.57%; }
-.page-13 .paper-years span:nth-child(2) { left:54.5%; }
-.page-13 .paper-years span:nth-child(3) { left:84.36%; }
-.page-15 .takeaway { font-size:29px; font-weight:300; }
 .three-columns { display:grid; grid-template-columns:1fr 1fr 1fr; gap:44px; margin:55px 0; }
 .three-columns p { font-size:27px; }
-.page-17 li { font-size:28px; padding-top:20px; padding-bottom:20px; }
-.page-17 li::before { top:24px; }
 .closing p { font-size:44px; line-height:1.25; font-weight:300; letter-spacing:-.015em; max-width:1080px; }
 .conclusions { margin-top:42px !important; display:grid; grid-template-columns:1fr 1fr; gap:16px 48px; }
 .conclusions li { font-size:25px; border-top:1px solid #d9d9d9; border-bottom:0; padding-top:16px; }
-.page-19 .slide-content { margin-top:46px; }
-.page-19 h1 { font-size:100px; margin-bottom:18px; }
-.page-19 h3 { font-size:32px; font-weight:300; margin-bottom:32px; }
-.page-19 .slide-content>p { max-width:1000px; font-size:23px; }
-.page-19 .slide-content>p+p { font-size:20px; color:#555; margin-top:18px; }
 .project-link { display:inline-block; color:#000; text-decoration:none; border-bottom:1px solid #c8102e; padding-bottom:4px; font-size:18px; margin-top:18px; }
 @media print { body { background:#fff; } .page { margin:0; } * { -webkit-print-color-adjust:exact; print-color-adjust:exact; } }
 
@@ -134,11 +119,47 @@ body { font-family: Roboto, sans-serif; font-weight:400; color:#000; background:
 .econ-slide .result-caveat { border-top:1px solid #000; padding-top:15px; margin-top:18px !important; font-size:20px !important; font-weight:500; }
 .econ-slide .original-lp figcaption { font-size:15px; line-height:1.3; color:#555; margin:14px 0 0 12%; }
 .econ-slide.checks-slide li { font-size:25px; padding:14px 0; }
-.page-23 .takeaway { font-size:28px; font-weight:300; }
-.page-25 li { font-size:28px; padding-top:20px; padding-bottom:20px; }
-.page-25 li::before { top:24px; }
-.page-27 .slide-content { margin-top:46px; }
-.page-27 h1 { font-size:100px; margin-bottom:18px; }
-.page-27 h3 { font-size:32px; font-weight:300; margin-bottom:32px; }
-.page-27 .slide-content>p { max-width:1000px; font-size:23px; }
-.page-27 .slide-content>p+p { font-size:20px; color:#555; margin-top:18px; }
+.open-page li { font-size:28px; padding-top:20px; padding-bottom:20px; }
+.open-page li::before { top:24px; }
+
+/* Named layouts. A slide keeps its layout when the running order changes,
+   so no rule here depends on the slide number. */
+.questions li small { display:block; font-size:12px; letter-spacing:1.4px; font-weight:700; color:#555; margin-top:6px; }
+.hook-page blockquote { margin-bottom:22px; }
+.rooms-pair img { width:auto; height:232px; }
+.rooms-pair figcaption { font-size:16px; line-height:1.35; color:#555; margin-top:8px; }
+/* Two overlapping sets drawn to scale. Column widths are the three post counts. */
+.corpus, .corpus-bar { display:grid; grid-template-columns:minmax(0,58633fr) minmax(0,65530fr) minmax(0,414691fr); }
+.corpus { margin:30px 0 26px; }
+.corpus-label { grid-column:1 / 4; font-size:26px; line-height:1.25; white-space:nowrap; }
+.corpus-label strong { font-size:34px; font-weight:300; letter-spacing:-.02em; margin-right:6px; }
+.corpus-label small { display:block; font-size:17px; color:#555; margin-top:3px; }
+.corpus-label.bottom { grid-column:2 / 4; }
+.corpus-tick { height:11px; border:1px solid #000; }
+.corpus-tick.top { grid-column:1 / 3; border-bottom:0; margin-top:12px; }
+.corpus-tick.bottom { grid-column:2 / 4; border-top:0; margin-bottom:12px; }
+.corpus-bar { grid-column:1 / 4; height:62px; margin:7px 0; }
+.corpus-bar .inst { background:#c9c9c9; }
+.corpus-bar .both { background:#000; color:#fff; font-size:22px; font-weight:500; display:flex; align-items:center; justify-content:center; }
+.corpus-bar .infl { background:#f1f1f1; box-shadow:inset 0 0 0 1px #bdbdbd; }
+.corpus-key { font-size:25px !important; }
+/* The room. One square per year, area is the conversation, black is the institution. */
+figure.rooms img { max-height:262px; object-fit:contain; }
+.space-page h2 { margin-bottom:20px; }
+.space-page .columns { margin-top:18px; }
+.space-page .column h3 { margin-bottom:10px; }
+.space-page .column p { font-size:24px; }
+.flow em { display:block; font-style:normal; font-size:19px; font-weight:400; line-height:1.35; color:#555; margin-top:14px; }
+.flow.track { margin:46px 0 36px; }
+.flow.track small { margin-top:16px; }
+.answers-page .closing p { font-size:38px; }
+.answers { margin-top:26px !important; }
+.answers li { font-size:24px; line-height:1.38; padding-top:13px; padding-bottom:13px; }
+.answers li::before { top:16px; }
+.closing-page h2 { margin-bottom:22px; }
+.closing-page .closing p { font-size:38px; }
+.closing-page figure.rooms { margin-top:24px; }
+.closing-page figure.rooms img { max-height:205px; }
+.discussion { font-size:25px !important; font-weight:500; margin-top:20px !important; }
+.closing-page .small { margin-top:12px !important; }
+.closing-page .project-link + .project-link { margin-left:36px; }

@@ -1,8 +1,9 @@
 # Govorni vodič za izlaganje
 
-`lecture.json` sadrži govornu osnovu za 27 slajdova, raspored vremena, upute za
-pokazivanje grafikona, prijelaze i kratke napomene za izlagača. Jedna kartica
-odgovara jednom slajdu. Tekst vodi od mjesečnih putanja do procjena odnosa,
+`lecture.json` sadrži govornu osnovu za 22 slajda i šest rezervnih, raspored
+vremena, upute za pokazivanje grafikona, prijelaze i kratke napomene za
+izlagača. Jedna kartica odgovara jednom slajdu. Kartice rezervnih slajdova nose
+`"backup": true` i slijede nakon završnog slajda. Tekst vodi od mjesečnih putanja do procjena odnosa,
 tumačenja i praktičnih pitanja o komunikaciji.
 
 Dokument je `materials/speaking-guide/Govorni-vodic-izlaganje.pdf`. Ima

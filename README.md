@@ -100,20 +100,20 @@ Nakon ulaska Hrvatske u europodručje ključnu kamatnu stopu određuje Europska 
 
 ## Sadržaj prezentacije
 
-Konferencijsko izlaganje ima 27 slajdova i traje oko 23 minute. Za dvadeset minuta
-uvodni, metodološki i tri slajda šireg medijskog konteksta prolaze se kratko; za
-dulju raspravu prikladno je 25 minuta.
+Konferencijsko izlaganje ima 22 slajda i traje oko 23 minute. Šest rezervnih
+slajdova slijedi nakon završnog i služi raspravi. Za dvadeset minuta slajdovi 9,
+12 i 17 prolaze se jednom rečenicom.
 
-1. broj objava i relativni prostor u raspravi
-2. tri istraživačka pitanja
-3. korpus, tematska područja uz HNB i ponderiranje dosega i istaknutosti
-4. mjesečni stupci inflacije, udjela, broja objava, učestalosti i dosega te najveći medijski mjeseci
-5. godišnji sažetak cijelog razdoblja
-6. institucionalni jaz i ekonometrijska strategija
-7. rezultati o inflaciji, marginama i očekivanjima
-8. promjena oko eura i provjere osjetljivosti
-9. rasprava o vladinim mjerama i tumačenje relativnog prostora u raspravi
-10. praćenje komunikacije, ograničenja i rasprava
+1. broj objava i relativni prostor u raspravi, ekonomski razlog i tri istraživačka pitanja
+2. korpus te ponderiranje dosega i istaknutosti
+3. razgovor o inflaciji i institucionalne objave u istom indeksu
+4. godišnji udio te mjesečni broj objava i udio
+5. rasprava o vladinim mjerama, tematska područja uz HNB i najveći medijski mjeseci
+6. institucionalni jaz te rezultati o inflaciji, marginama i očekivanjima
+7. promjena oko eura i provjere osjetljivosti
+8. relativni prostor po godinama i praćenje komunikacije
+9. odgovori na tri pitanja i rasprava
+10. rezervni slajdovi s postupcima, mjesečnim nizovima i otvorenim pitanjima
 
 ## Ponovljivost analize i podaci
 
