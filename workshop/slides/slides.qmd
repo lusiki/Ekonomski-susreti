@@ -1,6 +1,6 @@
 ---
-title: "AI u ekonomskim istraživanjima"
-subtitle: "Radionica · Ekonomski susreti"
+title: "Vodič kroz AI za ekonomiste"
+subtitle: "Istraživanje uz umjetnu inteligenciju u jednom satu"
 author: "Luka Sikić · Hrvatsko katoličko sveučilište"
 lang: hr
 format:
@@ -11,595 +11,408 @@ format:
     html-math-method: plain
     slide-number: true
     progress: true
-    history: false
+    history: true
     transition: none
     width: 1280
     height: 720
     center: false
+    auto-stretch: false
     margin: 0
     include-after-body: slide-footer.html
     footer: "AI u ekonomskim istraživanjima · Ekonomski susreti"
 ---
 
-## Tri pitanja, dignite ruku
+## Jedno pitanje za cijeli sat
+
+> Kako su se inflacija i očekivanja kretali u Hrvatskoj od 2015. do 2024. i je li njihova povezanost ista u različitim razdobljima?
 
 ::: {.kartice}
 ::: {}
-**Koristite li AI u istraživanju?**
-nikad · povremeno · svaki dan
+**0–23 min**
+
+Pitanje, izvori i plan analize
 :::
 ::: {}
-**Gdje ga pokrećete?**
-u pregledniku · u uređivaču koda · u terminalu
+**23–46 min**
+
+Podaci, grafovi i zaključak
 :::
 ::: {}
-**Što vas najviše koči?**
-povjerenje · povjerljivost podataka · ne znam odakle početi
+**46–60 min**
+
+Positron, objava i rasprava
 :::
 :::
 
-. . .
+[Tablica za rad](https://lusiki.github.io/Ekonomski-susreti/workshop/data/croatia_inflation.csv) · [Upiti za kopiranje](https://lusiki.github.io/Ekonomski-susreti/workshop/upiti.html)
+
+## 1.1 · Postavite istraživačko pitanje
 
 ::: {.tiho}
-Ako ste podigli ruku na preglednik, ova je radionica za vas. Alat ćemo
-premjestiti odande u sam projekt.
+3.–8. minuta · Razgovor
 :::
 
-## Šezdeset minuta, tri stvari koje odnosite
+> Što sve možemo pitati kad imamo samo dvije mjesečne serije za Hrvatsku?
 
-::: {.kartice}
-::: {}
-**Jedan pojam**
-Dug provjere. Zašto raste i tko ga plaća.
-:::
-::: {}
-**Jedan sloj**
-Četiri datoteke koje AI ugrađuju u repozitorij.
-:::
-::: {}
-**Jedan repozitorij**
-Klonirate ga danas i prenesete na svoj projekt.
-:::
+**Od teme do pitanja**
+
+Usporedba godišnjih prosjeka odgovara na pitanje koliko su se mjere promijenile. Mjesečni graf pokazuje kada se promjena dogodila.
+
+::: {.notes}
+Uz prvi graf napišite jednu jasnu rečenicu. Ako vam to ide sporije od izrade grafa, zastanite i razjasnite što nije jasno.
 :::
 
-. . .
+## Isprobajte · Postavite istraživačko pitanje
 
-Cijela radionica počiva na jednom načelu, a to je **najmanje moguće**. Ne
-petnaest alata, nego najmanji skup dijelova koji istraživanje čini
-provjerljivim.
+
+Odaberite jedno od tri pitanja koja vam predloži alat. Koji bi vam prikaz pomogao odgovoriti na njega?
+
+::: {.file-links}
+[Otvorite upit 1.1](https://lusiki.github.io/Ekonomski-susreti/workshop/upiti.html#korak-1-1) · Vodič, str. 3
+:::
+
+::: {.notes}
+Usporedba godišnjih prosjeka odgovara na pitanje koliko su se mjere promijenile. Mjesečni graf pokazuje kada se promjena dogodila.
+
+Odaberite jedno od tri pitanja koja vam predloži alat. Koji bi vam prikaz pomogao odgovoriti na njega?
+
+Uz prvi graf napišite jednu jasnu rečenicu. Ako vam to ide sporije od izrade grafa, zastanite i razjasnite što nije jasno.
+:::
+
+## 1.2 · Pronađite i provjerite izvore
+
+::: {.tiho}
+8.–13. minuta · Razgovor
+:::
+
+> Mijenja li definicija mjere ono što smijemo zaključiti kad uspoređujemo inflaciju i očekivanja?
+
+**Jedan mjesec, dva vremenska horizonta**
+
+Stopa inflacije za ožujak 2022. uspoređuje cijene s ožujkom 2021. Ispitanici u ožujku 2022. procjenjuju kretanje cijena tijekom sljedećih dvanaest mjeseci.
+
+::: {.notes}
+Saldo nije postotak. Prije svake usporedbe pročitajte službenu definiciju obiju mjera.
+:::
+
+## Isprobajte · Pronađite i provjerite izvore
+
+
+[Eurostat · HICP](https://ec.europa.eu/eurostat/web/hicp/information-data) · [DG ECFIN · metodologija](https://economy-finance.ec.europa.eu/economic-forecast-and-surveys/business-and-consumer-surveys/methodology-business-and-consumer-surveys/methodological-concepts_en)
+
+Otvorite obje metodologije. Koje biste jedinice napisali uz osi grafikona?
+
+::: {.file-links}
+[Otvorite upit 1.2](https://lusiki.github.io/Ekonomski-susreti/workshop/upiti.html#korak-1-2) · Vodič, str. 4
+:::
+
+::: {.notes}
+Stopa inflacije za ožujak 2022. uspoređuje cijene s ožujkom 2021. Ispitanici u ožujku 2022. procjenjuju kretanje cijena tijekom sljedećih dvanaest mjeseci.
+
+Otvorite obje metodologije. Koje biste jedinice napisali uz osi grafikona?
+
+Saldo nije postotak. Prije svake usporedbe pročitajte službenu definiciju obiju mjera.
+:::
+
+## 1.3 · Provjerite i uredite sažetak
+
+::: {.tiho}
+13.–19. minuta · Razgovor
+:::
+
+> Gdje se u kraćenju teksta izgubi ili promijeni značenje nalaza?
+
+**Četiri pogreške u jednoj tvrdnji**
+
+„Anketa je obuhvatila 120 hrvatskih kućanstava, koja su 2022. u prosjeku očekivala inflaciju od 46,62 %. Korelacija od oko 0,70 dokazuje da su točno predvidjeli buduće cijene. Tako je bilo u svakom razdoblju.“
+
+::: {.notes}
+Uz glavni nalaz uvijek napišite i ono što iz njega još ne znamo.
+:::
+
+## Isprobajte · Provjerite i uredite sažetak
+
+
+Provjerite četiri mjesta: jedinicu promatranja, mjernu jedinicu, vremenski odnos i izbor razdoblja.
+
+::: {.file-links}
+[Otvorite upit 1.3](https://lusiki.github.io/Ekonomski-susreti/workshop/upiti.html#korak-1-3) · Vodič, str. 5
+:::
+
+::: {.notes}
+„Anketa je obuhvatila 120 hrvatskih kućanstava, koja su 2022. u prosjeku očekivala inflaciju od 46,62 %. Korelacija od oko 0,70 dokazuje da su točno predvidjeli buduće cijene. Tako je bilo u svakom razdoblju.“
+
+Provjerite četiri mjesta: jedinicu promatranja, mjernu jedinicu, vremenski odnos i izbor razdoblja.
+
+Uz glavni nalaz uvijek napišite i ono što iz njega još ne znamo.
+:::
+
+## 1.4 · Pripremite plan analize
+
+::: {.tiho}
+19.–23. minuta · Razgovor
+:::
+
+> Koji nam prikaz i koja usporedba trebaju da bismo odgovorili baš na svoje pitanje?
+
+**Plan prije prvog izračuna**
+
+Provjerite mjesece i jedinice. Nacrtajte dvije serije. Izračunajte godišnje prosjeke. Usporedite korelacije u dva razdoblja. Objasnite što iz njih možete zaključiti.
+
+::: {.notes}
+Prije izračuna morate moći reći čemu svaki korak služi.
+:::
+
+## Isprobajte · Pripremite plan analize
+
+
+Jedan korak zadržite, a jedan promijenite. Objasnite kako izmjena pomaže odgovoriti na pitanje.
+
+::: {.file-links}
+[Otvorite upit 1.4](https://lusiki.github.io/Ekonomski-susreti/workshop/upiti.html#korak-1-4) · Vodič, str. 6
+:::
+
+::: {.notes}
+Provjerite mjesece i jedinice. Nacrtajte dvije serije. Izračunajte godišnje prosjeke. Usporedite korelacije u dva razdoblja. Objasnite što iz njih možete zaključiti.
+
+Jedan korak zadržite, a jedan promijenite. Objasnite kako izmjena pomaže odgovoriti na pitanje.
+
+Prije izračuna morate moći reći čemu svaki korak služi.
+:::
+
+## 2.1 · Upoznajte i provjerite podatke
+
+::: {.tiho}
+23.–28. minuta · Razgovor
+:::
+
+> Što je jedan redak u našoj tablici i što nam govore dva broja u njemu?
+
+**Što predstavlja prvi redak?**
+
+U siječnju 2015. godišnja stopa inflacije iznosi −0,6 %, a saldo očekivanja −4,2 boda. U zadnjem mjesecu, prosincu 2024., vrijednosti su 4,5 % i 20,8 bodova.
+
+::: {.notes}
+Prije zadatka predvidite dio rezultata. Ako se rezultat razlikuje od očekivanja, tražite objašnjenje prije nastavka.
+:::
+
+## Isprobajte · Upoznajte i provjerite podatke
+
+
+| Mjesec | HICP (%) | Saldo (bodovi) |
+|:---|---:|---:|
+| Siječanj 2015. | −0,6 | −4,2 |
+| Prosinac 2024. | 4,5 | 20,8 |
+
+Zatražite prva i zadnja tri retka. Postoji li točno jedan redak za svaki od 120 mjeseci?
+
+::: {.file-links}
+[Otvorite upit 2.1](https://lusiki.github.io/Ekonomski-susreti/workshop/upiti.html#korak-2-1) · Vodič, str. 7
+:::
+
+::: {.notes}
+U siječnju 2015. godišnja stopa inflacije iznosi −0,6 %, a saldo očekivanja −4,2 boda. U zadnjem mjesecu, prosincu 2024., vrijednosti su 4,5 % i 20,8 bodova.
+
+Zatražite prva i zadnja tri retka. Postoji li točno jedan redak za svaki od 120 mjeseci?
+
+Prije zadatka predvidite dio rezultata. Ako se rezultat razlikuje od očekivanja, tražite objašnjenje prije nastavka.
+:::
+
+## 2.2 · Izradite i objasnite prikaze
+
+::: {.tiho}
+28.–35. minuta · Razgovor
+:::
+
+> Kako nacrtati postotke i bodove tako da im se kretanje ipak može usporediti?
+
+Na papiru skicirajte kako biste smjestili dvije mjere s različitim jedinicama na zajedničku vremensku os.
+
+::: {.notes}
+Graf najprije pogledajte sami, a tek onda čitajte opis koji je napisao alat.
+:::
+
+## Dva prikaza, zajednička os mjeseci
+
+
+![](../../docs/workshop/slike/inflacija-ocekivanja.png){width=900 fig-alt="Mjesečne serije za Hrvatsku, 2015.–2024."}
 
 
 ::: {.file-links}
-[Projekt na GitHubu](https://github.com/lusiki/Ekonomski-susreti/tree/main/workshop/projekt/){target="_blank" rel="noopener noreferrer"}
+[Otvorite upit 2.2](https://lusiki.github.io/Ekonomski-susreti/workshop/upiti.html#korak-2-2) · Vodič, str. 8–9 · Hrvatska, 120 mjeseci · Izvori: Eurostat i DG ECFIN
 :::
 
+::: {.notes}
+Saldo doseže 56,7 bodova u lipnju 2022., a inflacija 12,9 % u studenom. U prosincu je saldo već pao na 34,3 boda dok je godišnja stopa inflacije još 12,7 %.
 
-::: {.divider background-color="#000000"}
-## 1 · Dug provjere
+Prikažite samo 2020.–2024. Što u užem razdoblju lakše uočavate? Što je nestalo iz prikaza?
 
-Što se stvarno promijenilo.
+Graf najprije pogledajte sami, a tek onda čitajte opis koji je napisao alat.
 :::
 
-## Cijena je pala samo s jedne strane
+## Što godišnji prosjek skriva?
 
-::: {.kartice}
-::: {}
-**Izvršiti**
-očistiti podatke, napisati kod, nacrtati sliku, procijeniti model
+| Godina | Inflacija, prosjek mjesečnih godišnjih stopa | Saldo, godišnji prosjek |
+|:---|---:|---:|
+| 2021. | 2,68 % | 28,26 bodova |
+| 2022. | 10,63 % | 46,62 boda |
 
-*jeftino, i sve jeftinije*
-:::
-::: {}
-**Provjeriti**
-je li to točno, je li uzorak onaj koji mislite, znači li koeficijent to što
-mislite
-
-*skupo, i ne postaje jeftinije samo od sebe*
-:::
-:::
-
-. . .
-
-::: {.krupno}
-Ta asimetrija je cijeli problem.
-:::
-
-## Ali problem nije samo u cijeni
-
-Dok ste kod pisali sami, provjeravali ste ga **usput**. Desetak redaka,
-pogled, dalje.
-
-. . .
-
-Agent vraća dvjesto redaka odjednom. Provjera se odgađa, pa se **nakuplja**.
-
-::: {.krupno}
-Dug provjere
-:::
-
-::: {.tiho}
-Razlika između koda koji daje rezultat i koda za koji znate zašto ga daje.
-Dug dospijeva kasnije, u recenziji, u pitanju koautora o podrijetlu broja i
-pri povratku na vlastiti projekt nakon dulje stanke.
-:::
-
-## Što prepustiti agentu
-
-| Kako se provjerava rezultat | Primjer | Što učiniti |
-|---|---|---|
-| **Možete ga odmah pregledati** | oblikovati sliku prema predlošku | prepustite agentu |
-| **Može se provjeriti automatski** | spojiti tablice uz provjeru broja redaka | prepustite agentu i pokrenite provjeru |
-| **Ne postoji jasan test** | odabrati uzorak ili specifikaciju modela | odluku donesite sami |
-
-. . .
-
-::: {.tiho}
-Agent može raditi samostalnije kada pogrešku možete odmah uočiti ili je
-automatska provjera može zaustaviti. Kada nema jasnog testa, agent može pomoći,
-ali ne treba odlučivati.
-:::
-
-## Četiri primjera iz projekta
-
-| Zadatak | Kako se provjerava | Tko odlučuje |
-|---|---|---|
-| nacrtati sliku prema predlošku | pogledati sliku | agent radi samostalno |
-| spojiti dvije Eurostatove tablice | provjeriti broj redaka | agent radi, provjera potvrđuje |
-| odabrati oznake zemalja | provjeriti cjelovitost uzorka | agent radi samo uz provjeru |
-| odabrati fiksne učinke | nema mehaničkog testa, izbor mijenja pitanje | istraživač odlučuje |
-
-. . .
-
-Prva tri zadatka imaju provjerljiv rezultat. Posljednji traži istraživačku
-prosudbu i ostaje odgovornost istraživača.
-
+Saldo doseže vrh u lipnju 2022., a inflacija u studenom. Godišnji prosjek sažima oba događaja u jedan redak.
 
 ::: {.file-links}
-[Slike](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/R/slike.R){target="_blank" rel="noopener noreferrer"} · [Spajanje podataka](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/R/podaci.R){target="_blank" rel="noopener noreferrer"} · [Oznake zemalja](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/R/zemlje.R){target="_blank" rel="noopener noreferrer"} · [Modeli](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/R/modeli.R){target="_blank" rel="noopener noreferrer"}
+[Cijela tablica godišnjih prosjeka](https://lusiki.github.io/Ekonomski-susreti/workshop/nalaz.html)
 :::
 
-
-::: {.divider background-color="#000000"}
-## 2 · Od čega se agent sastoji
-
-Model, alati, pravila pristupa i kontekst.
-:::
-
-## Četiri pojma, jednostavno objašnjena
-
-::: {.kartice}
-::: {}
-**Model**
-Na temelju dobivenih uputa predlaže tekst ili kod. Sam ne može otvoriti
-datoteku ni pokrenuti analizu.
-:::
-::: {}
-**Alati**
-To su radnje koje su modelu na raspolaganju, primjerice čitanje datoteke,
-pokretanje naredbe ili pretraživanje interneta.
-:::
-::: {}
-**Pravila pristupa**
-Određuju koje radnje agent smije izvršiti sam, za koje mora pitati i koje su
-mu zabranjene. Ta se pravila ponekad nazivaju ogradom.
-:::
-:::
-
-. . .
-
-::: {.krupno}
-Kontekst je radni materijal koji model trenutačno ima pred sobom.
-:::
+## 2.3 · Ponovite analizu od početka
 
 ::: {.tiho}
-Kontekst obuhvaća upute, poruke, sadržaj otvorenih datoteka i ispis naredbi.
-Ostatak projekta model ne vidi automatski.
+35.–41. minuta · Razgovor
 :::
 
-## Što vi određujete
+> Bi li naš opis odnosa bio isti da smo gledali neko drugo razdoblje?
 
-Istraživač određuje što će agent dobiti kao radni materijal i koje će mu radnje
-dopustiti.
+**Isti podaci, tri korelacije**
 
-::: {.kartice}
-::: {}
-**Kontekst pišete sami**
-Opis projekta zapisujete u datoteku koja putuje s projektom. Tako ga ne morate
-ponavljati u svakom razgovoru.
-:::
-::: {}
-**Pravila pristupa pišete sami**
-Popisujete što agent smije učiniti sam, za što vas mora pitati i što mu je
-zabranjeno.
-:::
+Za 2022. zbroj dvanaest mjesečnih godišnjih stopa iznosi 127,6. Podijelite ga s 12 i usporedite dobivenih 10,63 % s godišnjom tablicom.
+
+::: {.notes}
+Ponovljen račun provjerava aritmetiku, a ne tumačenje.
 :::
 
-. . .
+## Isprobajte · Ponovite analizu od početka
 
-Te dvije odluke zapisujete u prve dvije datoteke projektnog AI sloja.
 
-## Ne birajte alat, birajte način
+| Razdoblje | Mjeseci | Pearsonov r |
+|:---|---:|---:|
+| 2015.–2024. | 120 | 0,6985 |
+| 2015.–2019. | 60 | 0,8279 |
+| 2020.–2024. | 60 | 0,5342 |
 
-| Način | Vidite | Kada |
-|---|---|---|
-| **preglednik** | samo odgovor | pitanja, ideje, tekst |
-| **uređivač koda** | svaku promjenu dok nastaje | teško provjerljiv zadatak |
-| **terminal** | sažetak na kraju | jasan zadatak s provjerom u kodu |
+Što se gubi kada svih deset godina sažmemo jednom korelacijom?
 
-. . .
-
-::: {.krupno}
-Način biramo prema tome koliko je skupa provjera.
+::: {.file-links}
+[Otvorite upit 2.3](https://lusiki.github.io/Ekonomski-susreti/workshop/upiti.html#korak-2-3) · Vodič, str. 10
 :::
+
+::: {.notes}
+Za 2022. zbroj dvanaest mjesečnih godišnjih stopa iznosi 127,6. Podijelite ga s 12 i usporedite dobivenih 10,63 % s godišnjom tablicom.
+
+Što se gubi kada svih deset godina sažmemo jednom korelacijom?
+
+Ponovljen račun provjerava aritmetiku, a ne tumačenje.
+:::
+
+## 2.4 · Napišite i uredite zaključak
 
 ::: {.tiho}
-Nije važno je li posrijedi Claude ili neki drugi alat, jer se to mijenja
-svakih nekoliko mjeseci. Važno je koliko blizu stojite i po čemu ćete znati
-da je ishod ispravan.
+41.–46. minuta · Razgovor
 :::
 
+> Kako biste svoj nalaz objasnili kolegi koji nije vidio ni podatke ni razgovor s alatom?
 
-::: {.divider background-color="#000000"}
-## 3 · Projekt
+**Prva verzija zaključka**
 
-Prvo ono što nastaje, pa onda kako.
+Od 2021. do 2022. prosjek mjesečnih godišnjih stopa porastao je s 2,68 % na 10,63 %. Prosječni saldo u istom je razdoblju porastao s 28,26 na 46,62 boda.
+
+::: {.notes}
+Najprije napišite vlastito tumačenje, makar bilo nespretno. Alat komentira, a vi prerađujete.
 :::
 
-## Gotov rad {background-color="#000000"}
+## Isprobajte · Napišite i uredite zaključak
 
-::: {.krupno style="color:white"}
-[paper/nalaz.html](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/paper/nalaz.html){target="_blank" rel="noopener noreferrer"}
-:::
 
-::: {style="color:rgba(255,255,255,0.8)"}
-Dvije stranice. Pitanje, rezultati, dvije slike, ograničenja.
-:::
+Napišite dvije rečenice o grafu. Zatražite komentar na argument i sami preradite rečenicu koju je čitatelj pogrešno razumio.
 
 ::: {.file-links}
-[Otvori gotov rad](https://lusiki.github.io/Ekonomski-susreti/workshop/nalaz.html){target="_blank" rel="noopener noreferrer"} · [Izvor rada · nalaz.qmd](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/paper/nalaz.qmd){target="_blank" rel="noopener noreferrer"}
+[Otvorite upit 2.4](https://lusiki.github.io/Ekonomski-susreti/workshop/upiti.html#korak-2-4) · Vodič, str. 11
 :::
 
-## Ista rečenica, dva puta
+::: {.notes}
+Od 2021. do 2022. prosjek mjesečnih godišnjih stopa porastao je s 2,68 % na 10,63 %. Prosječni saldo u istom je razdoblju porastao s 28,26 na 46,62 boda.
 
-**Ovako stoji u gotovom radu**
+Napišite dvije rečenice o grafu. Zatražite komentar na argument i sami preradite rečenicu koju je čitatelj pogrešno razumio.
 
-> Rast stope nezaposlenosti za jedan postotni bod prati pad inflacije za
-> **0,61** postotna boda.
-
-**Ovako stoji u izvoru istoga rada**
-
-```markdown
-... prati pad inflacije za `r hr(abs(p$beta), 2)` postotna boda.
-```
-
-. . .
-
-::: {.krupno}
-U izvoru nema brojke. Ima uputa gdje je potražiti.
+Najprije napišite vlastito tumačenje, makar bilo nespretno. Alat komentira, a vi prerađujete.
 :::
 
-::: {.file-links}
-[Izvor rečenice · redak 41](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/paper/nalaz.qmd#L38-L42){target="_blank" rel="noopener noreferrer"} · [Vrijednost beta · redak 9](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/results/procjene.json#L9){target="_blank" rel="noopener noreferrer"} · [Oblikovanje broja · hr()](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/R/provenijencija.R#L55-L57){target="_blank" rel="noopener noreferrer"}
-:::
-
-## Gdje ti brojevi žive
-
-```json
-{
-  "n_opazanja": 220,
-  "n_zemalja": 20,
-  "beta": -0.61305394,
-  "se": 0.08477567,
-  "infl_vrh_god": 2022,
-  "infl_vrh": 10.24
-}
-```
+## 3.1 · Ponovite sve u Positronu
 
 ::: {.tiho}
-[`results/procjene.json`](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/results/procjene.json){target="_blank" rel="noopener noreferrer"}, dvadeset i osam brojeva. Analiza ovamo piše, a tekst
-odavde čita. Ta dva koraka nikad ne razgovaraju izravno.
+46.–52. minuta · Razgovor
 :::
+
+> Što od ovog sata ostaje kad zatvorite prozor razgovora?
+
+**Od tablice do dvije datoteke**
+
+U praznoj mapi u Positronu otvorite asistenta. U mapu data spremite CSV. U index.qmd zajedno zapišite izračune, graf i zaključak. Naredbom quarto render index.qmd izradite HTML i PDF.
+
+::: {.notes}
+Svaki broj u tekstu dolazi iz koda, a cijela se analiza pokreće jednom naredbom.
+:::
+
+## Isprobajte · Ponovite sve u Positronu
+
+
+`data/croatia_inflation.csv` → `index.qmd` → `index.html` i `index.pdf`
+
+Pronađite redak koji računa korelaciju i provjeru koja zaustavlja izradu kad nedostaje mjesec.
 
 ::: {.file-links}
-[Zapisivanje i čitanje rezultata](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/R/provenijencija.R){target="_blank" rel="noopener noreferrer"}
+[Otvorite upit 3.1](https://lusiki.github.io/Ekonomski-susreti/workshop/upiti.html#korak-3-1) · Vodič, str. 12
 :::
 
-## Cijeli put, od tablice do rečenice
+::: {.notes}
+U praznoj mapi u Positronu otvorite asistenta. U mapu data spremite CSV. U index.qmd zajedno zapišite izračune, graf i zaključak. Naredbom quarto render index.qmd izradite HTML i PDF.
 
-```
-data/raw/hicp.csv              Eurostat, 45 oznaka
-data/raw/nezaposlenost.csv     Eurostat, 38 oznaka
-    ↓  R/zemlje.R               odabir zemalja   ← mjerni sloj
-    ↓  R/podaci.R               spajanje u panel
-data/derived/panel.csv         220 opažanja, 20 zemalja
-    ↓  R/modeli.R               četiri regresije
-    ↓  R/slike.R                dvije slike
-results/procjene.json          svi brojevi na jednom mjestu
-    ↓  paper/nalaz.qmd          tekst koji samo čita procjene.json
-```
+Pronađite redak koji računa korelaciju i provjeru koja zaustavlja izradu kad nedostaje mjesec.
+
+Svaki broj u tekstu dolazi iz koda, a cijela se analiza pokreće jednom naredbom.
+:::
+
+## 3.2 · Objavite na GitHubu
 
 ::: {.tiho}
-Cijeli ovaj put prolazi jedna naredba, [`Rscript analysis/run.R`](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/analysis/run.R){target="_blank" rel="noopener noreferrer"}.
+52.–56. minuta · Razgovor
 :::
+
+> Može li kolega dobiti vaš rezultat bez vas?
+
+**Od lokalne mape do objave**
+
+Otvorite prazan repozitorij. Pregledajte datoteke koje šaljete, potvrdite slanje pa u postavkama Pages odaberite granu main i korijensku mapu.
+
+::: {.notes}
+Objava je vaša odluka. Prije slanja pogledajte što šaljete.
+:::
+
+## Isprobajte · Objavite na GitHubu
+
+
+[Gotov projekt za rad u Positronu](https://lusiki.github.io/Ekonomski-susreti/workshop/projekt.zip) · [Primjer objavljene analize](https://lusiki.github.io/Ekonomski-susreti/workshop/nalaz.html)
+
+Otvorite objavljeni HTML i PDF. Može li kolega iz README-a saznati odakle dolaze podaci i kako ponoviti analizu?
 
 ::: {.file-links}
-[Ulazni podaci](https://github.com/lusiki/Ekonomski-susreti/tree/main/workshop/projekt/data/raw/){target="_blank" rel="noopener noreferrer"} · [Zemlje](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/R/zemlje.R){target="_blank" rel="noopener noreferrer"} · [Panel](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/R/podaci.R){target="_blank" rel="noopener noreferrer"} · [Modeli](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/R/modeli.R){target="_blank" rel="noopener noreferrer"} · [Slike](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/R/slike.R){target="_blank" rel="noopener noreferrer"} · [Rezultati](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/results/procjene.json){target="_blank" rel="noopener noreferrer"} · [Tekst](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/paper/nalaz.qmd){target="_blank" rel="noopener noreferrer"}
+[Otvorite upit 3.2](https://lusiki.github.io/Ekonomski-susreti/workshop/upiti.html#korak-3-2) · Vodič, str. 13
 :::
 
-## Kako izgleda kad je sve u redu
+::: {.notes}
+Otvorite prazan repozitorij. Pregledajte datoteke koje šaljete, potvrdite slanje pa u postavkama Pages odaberite granu main i korijensku mapu.
 
-```
-== Gradnja =================================================
-  podaci: 220 opazanja, 20 zemalja, 2014 do 2024
-  procjene: nagib = -0.613 | uz fiksne ucinke godine = -0.0423
-  slike: 2 zapisane u results/slike
-  brojevi: results/procjene.json
-== Provjere ================================================
-  [ok]     ograda
-  [ok]     pokrivenost/zemlje
-  [ok]     pokrivenost/agregati
-  [ok]     pokrivenost/uravnotezen
-  [ok]     shema/varijable
-  [ok]     shema/raspon
-  [ok]     provenijencija
-== Rukopis =================================================
-  rukopis: paper/nalaz.html
-== OK: sve izgradeno i provjereno ==========================
-```
+Otvorite objavljeni HTML i PDF. Može li kolega iz README-a saznati odakle dolaze podaci i kako ponoviti analizu?
+
+Objava je vaša odluka. Prije slanja pogledajte što šaljete.
+:::
+
+## Završni razgovor
 
 ::: {.tiho}
-Zapamtite drugi redak. Vratit će nam se za deset minuta.
+56.–60. minuta
 :::
 
-::: {.file-links}
-[Pokretanje · run.R](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/analysis/run.R){target="_blank" rel="noopener noreferrer"} · [Provjere · checks.R](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/tests/checks.R){target="_blank" rel="noopener noreferrer"} · [Gotov izvještaj](https://lusiki.github.io/Ekonomski-susreti/workshop/nalaz.html){target="_blank" rel="noopener noreferrer"}
-:::
+> Biste li primijetili da je ovo pogrešno?
 
-## Četiri datoteke i kvar koji svaka sprječava
+Što vam je alat olakšao? Oko koje ste odluke najviše razmišljali? Odaberite jednu provjeru koju ćete prenijeti u svoje istraživanje.
 
-| Datoteka | Sprječava |
-|---|---|
-| [`CLAUDE.md`](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/CLAUDE.md){target="_blank" rel="noopener noreferrer"} | povratak na opće pretpostavke |
-| [`.claude/settings.json`](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/.claude/settings.json){target="_blank" rel="noopener noreferrer"} | da samostalan proces dira što god želi |
-| [`.claude/rules/provjera.md`](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/.claude/rules/provjera.md){target="_blank" rel="noopener noreferrer"} | da se posao proglasi gotovim bez gradnje |
-| [`tests/checks.R`](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/tests/checks.R){target="_blank" rel="noopener noreferrer"} | da uvjerljiva besmislica uđe u tekst |
-
-. . .
-
-Peta je git, ali git već imate.
-
-::: {.krupno}
-opiši → plan → **odobrim** → izvrši → **provjeri** → commitam
-:::
-
-## Dopuštenja su datoteka, a ne obećanje
-
-```json
-"allow": ["Bash(Rscript:*)", "Bash(quarto render:*)", "Bash(git diff:*)"],
-"ask":   ["Bash(git commit:*)", "Write(./R/zemlje.R)"],
-"deny":  ["Read(./data/restricted/**)", "Bash(git push:*)"]
-```
-
-. . .
-
-Agent orkestrira analizu čije osjetljive ulaze **nikada ne vidi**.
-
-::: {.tiho}
-Primijetite drugi redak. Mjerni sloj je u `ask`, ne u `allow`. Nije zabranjen,
-ali me mora pitati.
-:::
-
-::: {.file-links}
-[Dopuštenja · settings.json](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/.claude/settings.json){target="_blank" rel="noopener noreferrer"} · [Mjerni sloj · zemlje.R](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/R/zemlje.R){target="_blank" rel="noopener noreferrer"}
-:::
-
-
-::: {.divider background-color="#000000"}
-## 4 · Demonstracija
-
-Prvo korist, pa onda šteta.
-:::
-
-## Što gledati u sljedećih sedamnaest minuta
-
-::: {.kartice}
-::: {}
-**Prvi dio**
-Agent dobiva stvaran zadatak i radi ga dobro, od plana do gotove slike i
-osvježenog teksta.
-:::
-::: {}
-**Drugi dio**
-U projekt smo dodali tri namjerne greške. Analiza se nakon svake i dalje
-izvršava, pa ih moraju zaustaviti posebne provjere.
-:::
-:::
-
-. . .
-
-| Greška | Zaustavlja je |
-|---|---|
-| ograničen sadržaj završio je u javnom tekstu | provjera povjerljivog sadržaja |
-| ručno upisan koeficijent više ne odgovara analizi | provjera izvora rezultata |
-| Grčka je označena kao `GR` umjesto `EL` | provjera cjelovitosti uzorka |
-
-::: {.file-links}
-[Scenarij demonstracije](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/RUNBOOK.md){target="_blank" rel="noopener noreferrer"} · [Automatske provjere](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/tests/checks.R){target="_blank" rel="noopener noreferrer"}
-:::
-
-## Demonstracija {background-color="#000000"}
-
-::: {.krupno style="color:white"}
-Terminal
-:::
-
-::: {style="color:rgba(255,255,255,0.8)"}
-`Rscript demo/podmetni.R` → [`Rscript analysis/run.R`](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/analysis/run.R){target="_blank" rel="noopener noreferrer"}
-:::
-
-::: {.file-links}
-[Upute agentu](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/CLAUDE.md){target="_blank" rel="noopener noreferrer"} · [Podmetni greške](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/demo/podmetni.R){target="_blank" rel="noopener noreferrer"} · [Pokreni analizu](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/analysis/run.R){target="_blank" rel="noopener noreferrer"} · [Vrati datoteke](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/demo/vrati.R){target="_blank" rel="noopener noreferrer"} · [Scenarij](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/RUNBOOK.md){target="_blank" rel="noopener noreferrer"}
-:::
-
-## Treća greška, pobliže
-
-Eurostat Grčku označava kao `EL`. Mnogi drugi izvori koriste oznaku `GR`.
-
-```
-prije:   podaci: 220 opazanja, 20 zemalja, 2014 do 2024
-sada:    podaci: 209 opazanja, 19 zemalja, 2014 do 2024
-```
-
-::: {.kartice}
-::: {}
-**Što se dogodi**
-Panel padne s 220 na 209 opažanja. Nagib se pomakne s 0,61 na 0,69.
-:::
-::: {}
-**Što ne pukne**
-Ništa. Kod se izvrši, slike se nacrtaju, tekst se sastavi, gradnja prođe.
-:::
-:::
-
-. . .
-
-::: {.krupno}
-Jedna zemlja tiho nestane i nitko ne dobije poruku o grešci.
-:::
-
-::: {.file-links}
-[Oznake zemalja · zemlje.R](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/R/zemlje.R){target="_blank" rel="noopener noreferrer"} · [Provjera pokrivenosti](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/tests/checks.R){target="_blank" rel="noopener noreferrer"}
-:::
-
-## Što smo upravo vidjeli
-
-::: {.kartice}
-::: {}
-**Plan prije rada**
-Odobrenje plana je trenutak delegiranja.
-:::
-::: {}
-**Pravila pristupa djeluju**
-Zabrana je zapisana u datoteci i ne ovisi o tome hoće li je se agent sjetiti.
-:::
-::: {}
-**Provjera hvata**
-Tri greške u jednom prolazu, prije nego išta ode van.
-:::
-:::
-
-. . .
-
-::: {.krupno}
-Ovo je ono što promakne umornom čovjeku pred rok.
-:::
-
-
-::: {.divider background-color="#000000"}
-## 5 · Granice
-
-Povjerljivost, mjerenje, podjela rada.
-:::
-
-## Ako podaci ne smiju izaći
-
-::: {.kartice}
-::: {}
-**Pravila pristupa**
-Agent može pokrenuti analizu, ali ne smije otvoriti osjetljive ulazne datoteke.
-Posebna provjera zatim potvrđuje da njihov sadržaj nije završio u rezultatu.
-:::
-::: {}
-**Uvjeti**
-Pretplata i plaćanje po upotrebi nemaju iste uvjete o korištenju vaših
-podataka. Pročitajte ih prije institucionalne primjene.
-:::
-::: {}
-**Lokalno**
-Za podatke koji ne smiju napustiti zgradu postoje modeli s otvorenim
-težinama koji rade na vašem računalu.
-:::
-:::
-
-. . .
-
-::: {.tiho}
-Ovo je nabava, a ne alat. Riješite to prije projekta, ne usred njega.
-:::
-
-::: {.file-links}
-[Primjer dopuštenja](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/.claude/settings.json){target="_blank" rel="noopener noreferrer"} · [Provjera izlaza](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/tests/checks.R){target="_blank" rel="noopener noreferrer"}
-:::
-
-## Što ne delegirati
-
-::: {.kartice}
-::: {}
-**Delegirajte**
-čišćenje podataka, spajanje tablica, slike po predlošku, refaktoriranje,
-dokumentaciju, testove, ponovne procjene, robusnost
-:::
-::: {}
-**Ne delegirajte**
-istraživačko pitanje, izbor specifikacije, tumačenje nalaza, snagu tvrdnje,
-odluku o objavi
-:::
-:::
-
-. . .
-
-Poslove u desnom stupcu ne prepuštamo agentu jer traže istraživačku prosudbu
-i nemaju jednostavnu automatsku provjeru.
-
-::: {.tiho}
-Alat podiže pod, a ne strop. Iskusna prosudba time postaje rjeđi, a ne
-suvišniji ulaz u istraživanje.
-:::
-
-
-::: {.divider background-color="#000000"}
-## 6 · Zaključak
-:::
-
-## Pet redaka za ponijeti
-
-| | |
-|---|---|
-| **Jedan pojam** | dug provjere, i nakuplja se dok ga ne podmirite |
-| **Dvije odluke** | koji radni materijal agent vidi i koje radnje smije izvršiti |
-| **Četiri datoteke** | opis projekta, pravila pristupa, pravilo za rad i automatske provjere |
-| **Jedna petlja** | opiši → plan → odobri → izvrši → **provjeri** → commit |
-| **Jedno pitanje** | biste li primijetili da je ovo krivo? |
-
-## Zadatak za početak
-
-::: {.krupno}
-Klonirajte repozitorij, uzmite jedan svoj projekt i napišite mu [`CLAUDE.md`](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/projekt/CLAUDE.md){target="_blank" rel="noopener noreferrer"}.
-:::
-
-. . .
-
-Dvadeset redaka. Što je projekt, gdje što stoji, što se nikad ne dira.
-Bez ijednog retka novog istraživanja.
-
-::: {.tiho}
-Kada je opis projekta gotov, dodajte jednu automatsku provjeru za grešku koja
-vam se već dogodila.
-:::
-
-::: {.file-links}
-[Upute za vlastiti projekt · PRESADI.md](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/PRESADI.md){target="_blank" rel="noopener noreferrer"}
-:::
-
-## Materijali
-
-- **Radionica i slajdovi** na [stranici radionice](https://lusiki.github.io/Ekonomski-susreti/workshop/){target="_blank" rel="noopener noreferrer"}
-- **Repozitorij za kloniranje** u [`workshop/projekt/`](https://github.com/lusiki/Ekonomski-susreti/tree/main/workshop/projekt/){target="_blank" rel="noopener noreferrer"}
-- **Prijenos na vaš projekt** u [`PRESADI.md`](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/PRESADI.md){target="_blank" rel="noopener noreferrer"}
-- **Pojmovnik** u [`GLOSSARY.md`](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/GLOSSARY.md){target="_blank" rel="noopener noreferrer"}
-- **Literatura** u [`READING.md`](https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/READING.md){target="_blank" rel="noopener noreferrer"}
-
-::: {.tiho}
-Kod MIT, tekst CC BY 4.0. Podaci su stvarni i javni, iz Eurostatovih tablica
-`prc_hicp_aind` i `une_rt_a`.
-:::
+[Sažetak za sudionike](https://lusiki.github.io/Ekonomski-susreti/workshop/handout.html) · [Svi materijali radionice](https://lusiki.github.io/Ekonomski-susreti/workshop/)

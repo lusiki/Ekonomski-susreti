@@ -73,30 +73,10 @@ $code-block-bg: #fff;
 .reveal section.has-dark-background { color: #fff; }
 .reveal section.has-dark-background .tiho { color: #bdbdbd; }
 .reveal section.has-dark-background pre code { border-color: #fff; }
-.reveal #gotov-rad, .reveal #demonstracija-1 { padding-top: 160px; }
-.reveal #gotov-rad .krupno, .reveal #demonstracija-1 .krupno { font-size: 76px; margin: 56px 0 32px; }
-.reveal #gotov-rad > div:last-of-type, .reveal #demonstracija-1 > div:last-of-type { font-size: 25px; }
-
-// Only genuinely dense examples need compact type.
-.reveal #cijeli-put-od-tablice-do-rečenice pre { font-size: 22px; }
-.reveal #kako-izgleda-kad-je-sve-u-redu pre { font-size: 18px; line-height: 1.22; margin: 16px 0; }
-.reveal #kako-izgleda-kad-je-sve-u-redu pre code { padding-top: 12px; padding-bottom: 12px; }
-.reveal #kako-izgleda-kad-je-sve-u-redu .tiho { margin-top: 14px; }
-.reveal #četiri-datoteke-i-kvar-koji-svaka-sprječava table { font-size: 23px; }
-.reveal #četiri-datoteke-i-kvar-koji-svaka-sprječava td { padding-top: 12px; padding-bottom: 12px; }
-.reveal #četiri-datoteke-i-kvar-koji-svaka-sprječava .krupno { font-size: 32px; }
-.reveal #što-gledati-u-sljedećih-sedamnaest-minuta table { font-size: 23px; }
-.reveal #što-gledati-u-sljedećih-sedamnaest-minuta td { padding-top: 12px; padding-bottom: 12px; }
-.reveal #što-gledati-u-sljedećih-sedamnaest-minuta .kartice { margin: 24px 0; }
-.reveal #pet-redaka-za-ponijeti td:first-child { width: 28%; }
-.reveal #materijali { font-size: 25px; }
-.reveal #materijali code { font-size: 20px; }
-
 .reveal .workshop-footer { position: absolute; bottom: 26px; left: 72px; right: 72px; display: flex; justify-content: space-between; border-top: 1px solid #d9d9d9; padding-top: 12px; color: #555; font: 500 12px/1.2 Roboto, sans-serif; letter-spacing: 1.6px; }
 .reveal .file-links { position: absolute; bottom: 76px; left: 72px; right: 72px; font: 400 18px/1.5 Roboto, sans-serif; color: #555; }
 .reveal .file-links p { margin: 0; }
 .reveal .has-dark-background .file-links { color: #fff; }
-.reveal #gotov-rad > .file-links:last-of-type, .reveal #demonstracija-1 > .file-links:last-of-type { font-size: 18px; }
 .reveal .slides section.has-dark-background a { color: inherit; }
 .reveal .has-dark-background .workshop-footer { color: #bdbdbd; border-color: #555; }
 .reveal .footer, .reveal .slide-number { display: none !important; }

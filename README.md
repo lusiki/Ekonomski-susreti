@@ -24,10 +24,10 @@ navodi izvore podataka, definicije i postupak izrade.
 | Sadržaj | Pregled | Preuzimanje |
 |---|---|---|
 | Sažetak izlaganja | [Kada inflacija istisne glas središnje banke](https://lusiki.github.io/Ekonomski-susreti/abstracts/#izlaganje) | [tekst](materials/abstract-presentation.md) |
-| Sažetak radionice | [Umjetna inteligencija u ekonomskim istraživanjima](https://lusiki.github.io/Ekonomski-susreti/abstracts/#radionica) | [tekst](materials/abstract-workshop.md) |
+| Sažetak radionice | [Vodič kroz AI za ekonomiste](https://lusiki.github.io/Ekonomski-susreti/abstracts/#radionica) | [tekst](materials/abstract-workshop.md) |
 | Sažeti prikaz istraživanja | Pet stranica s glavnim nalazima i grafikonima | [PDF](https://lusiki.github.io/Ekonomski-susreti/downloads/Pregled-istrazivanja.pdf) · [izvor](materials/brief/pregled.qmd) |
 | Konferencijska prezentacija | [Otvori slajdove u pregledniku](https://lusiki.github.io/Ekonomski-susreti/slides/) | [PDF](https://lusiki.github.io/Ekonomski-susreti/downloads/Ekonomski-susreti.pdf) · [PowerPoint](https://lusiki.github.io/Ekonomski-susreti/downloads/Ekonomski-susreti.pptx) |
-| Materijali radionice | [Rad u repozitoriju i demonstracija](https://lusiki.github.io/Ekonomski-susreti/workshop/) | [slajdovi](https://lusiki.github.io/Ekonomski-susreti/workshop/slides/) · [jedna stranica](https://lusiki.github.io/Ekonomski-susreti/workshop/handout.html) |
+| Materijali radionice | [Vodič kroz AI za ekonomiste](https://lusiki.github.io/Ekonomski-susreti/workshop/) | [slajdovi](https://lusiki.github.io/Ekonomski-susreti/workshop/slides/) · [jedna stranica](https://lusiki.github.io/Ekonomski-susreti/workshop/handout.html) |
 
 ## Sadržaj
 
@@ -52,15 +52,9 @@ Projekt zato postavlja dva povezana pitanja.
 
 ## Radionica
 
-Uz izlaganje Luka Sikić vodi šezdesetominutnu radionicu **[Umjetna inteligencija u ekonomskim istraživanjima](workshop/)**. Radionica se može pratiti samostalno, bez prethodnog izlaganja.
+Kako su se inflacija i očekivanja potrošača kretali u Hrvatskoj od 2015. do 2024.? U deset koraka oblikujemo istraživačko pitanje, provjeravamo izvore, crtamo dvije mjesečne serije i uspoređujemo razdoblja. Na kraju iz istih podataka izrađujemo analizu u Positronu i pripremamo je za objavu na GitHubu.
 
-Istraživači se umjetnom inteligencijom najčešće služe u pregledniku, odvojeno od datoteka na kojima rade. Alat tada vidi samo dio koda koji mu pošalju. Ne poznaje ostatak projekta, ne može pokrenuti cijeli postupak ni koristiti provjere koje su već ugrađene u projekt. Na radionici s alatom radimo izravno u repozitoriju. Alat tada može pokrenuti analizu i druge dijelove projekta, a automatske provjere otkrivaju pogreške u njegovu radu.
-
-Umjetna inteligencija može vrlo brzo napisati mnogo koda. Provjera tog koda i dalje traži vrijeme. Odgođena provjera stvara **dug provjere**. Četiri datoteke u repozitoriju čuvaju kontekst, određuju dopuštenja, postavljaju pravilo za izmjene i pokreću automatske provjere. Sudionici dobivaju repozitorij koji mogu preuzeti i pokrenuti jednom naredbom te upute za primjenu istog načina rada u vlastitom projektu.
-
-U pokaznom primjeru procjenjujemo Phillipsovu krivulju za dvadeset zemalja europodručja s pomoću dviju javnih Eurostatovih tablica. U projekt namjerno unosimo tri greške koje automatske provjere pronalaze. U prvoj podaci s ograničenim pristupom završe u javnom tekstu. U drugoj ručno upisan koeficijent više ne odgovara procjeni. Treća izostavlja cijelu zemlju zbog pogrešne oznake. Eurostat za Grčku koristi EL, a većina drugih izvora GR.
-
-Materijali se nalaze u mapi [`workshop/`](workshop/) i obuhvaćaju [slajdove](workshop/slides/slides.qmd), [upute za primjenu](workshop/PRESADI.md), [jednu stranicu za tisak](workshop/handout.html), [pojmovnik](workshop/GLOSSARY.md), [literaturu](workshop/READING.md) i [sam repozitorij](workshop/projekt/).
+[Prezentacija i svi materijali](https://lusiki.github.io/Ekonomski-susreti/workshop/) · [Projekt u R-u i Quartu](workshop/projekt/) · [Priprema izlagača](workshop/TIJEK.md).
 
 ## Glavni nalazi
 
@@ -127,7 +121,7 @@ Svi materijali koriste isti vizualni sustav, zapisan u mapi [`design/`](design/)
 
 Predložak slijedi bauhausovski stil s mnogo praznog prostora, crnim tekstom na bijeloj podlozi, tankim linijama, oštrim kutovima i bez sjena. Veličina i debljina slova razlikuju naslove, međunaslove i tekući tekst. Sadržaj je smješten u stupac širine najviše 1120 piksela s rubom od 48 piksela. Odjeljke dijele linije od jednog piksela, a razmaci rastu u koracima od osam piksela. Pismo Roboto priloženo je u mapi [`fonts/`](fonts/) za izradu PDF-a i u [`docs/fonts/`](docs/fonts/) za stranicu, uz Apache licenciju. Grafikoni koriste sive tonove, a serije se razlikuju debljinom i vrstom linije.
 
-Pravila oblikovanja za svaki oblik materijala nalaze se u zasebnim datotekama. Stranica koristi [`docs/style.css`](docs/style.css), a prezentacije [`docs/slides/presentation-ekonomski-susreti.css`](docs/slides/presentation-ekonomski-susreti.css) i [`workshop/slides/theme.scss`](workshop/slides/theme.scss). Tiskani materijali koriste [`workshop/handout.html`](workshop/handout.html) i [`materials/brief/pregled.qmd`](materials/brief/pregled.qmd), a grafikoni [`workshop/projekt/R/slike.R`](workshop/projekt/R/slike.R).
+Pravila oblikovanja za svaki oblik materijala nalaze se u zasebnim datotekama. Stranica koristi [`docs/style.css`](docs/style.css), a prezentacije [`docs/slides/presentation-ekonomski-susreti.css`](docs/slides/presentation-ekonomski-susreti.css) i [`workshop/slides/theme.scss`](workshop/slides/theme.scss). Tiskani materijali koriste [`docs/workshop/handout.html`](docs/workshop/handout.html) i [`materials/brief/pregled.qmd`](materials/brief/pregled.qmd), a grafikoni [`workshop/projekt/analiza.R`](workshop/projekt/analiza.R).
 
 ## Autori i citiranje
 
@@ -149,6 +143,6 @@ Materijali su radna verzija istraživanja. Stavovi izneseni u radu isključivo s
 <details>
 <summary>Priprema</summary>
 
-[Izlaganje · PDF](materials/speaking-guide/Govorni-vodic-izlaganje.pdf) · [Radionica · PDF](materials/speaking-guide/Vodic-za-izlagaca-radionica.pdf)
+[Izlaganje · PDF](materials/speaking-guide/Govorni-vodic-izlaganje.pdf) · [Radionica · PDF](docs/workshop/vodic.pdf) · [Raspored izlagača](workshop/TIJEK.md)
 
 </details>

@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Radionica pokazuje kako umjetnu inteligenciju uključiti u istraživački repozitorij i provjeravati njezin rad unutar projekta.">
-  <title>Umjetna inteligencija u ekonomskim istraživanjima</title>
+  <meta name="description" content="Istraživanje uz umjetnu inteligenciju u jednom satu">
+  <title>Vodič kroz AI za ekonomiste · Ekonomski susreti</title>
   <link rel="stylesheet" href="../style.css">
+<style>.rows>div{grid-template-columns:5.5rem 1fr}.rows .n{font-variant-numeric:tabular-nums}</style>
 </head>
 <body>
   <header class="topbar">
@@ -20,152 +21,99 @@
   </header>
 
   <main>
-    <section class="wrap hero">
-      <p class="label">Radionica · 60 minuta s vremenom za pitanja · bez pripreme i instaliranja programa</p>
-      <h1>Umjetna inteligencija u ekonomskim istraživanjima</h1>
-      <p class="subtitle">Kako umjetnu inteligenciju uključiti u istraživački repozitorij</p>
-      <p class="intro">Umjetna inteligencija može brzo napisati mnogo koda. Provjera tog koda i dalje traži vrijeme. Kad se provjera odgodi, nastaje dug provjere. Radionica pokazuje kako četiri datoteke u repozitoriju pomažu otkriti pogreške prije nego što utječu na rezultate ili završe u rukopisu.</p>
-      <p class="byline">Luka Sikić · Hrvatsko katoličko sveučilište</p>
-    </section>
-
-    <section class="band">
-      <div class="wrap">
-        <p class="label">Glavni pojam radionice</p>
-        <p class="statement mt">Dug provjere</p>
-        <p class="intro narrow mt">Kad sami pišemo kod, obično ga provjeravamo u hodu, svakih nekoliko redaka. Agent može odjednom napisati dvjesto redaka, pa se provjera lako odgodi. Tako nastaje dug provjere. Kod daje rezultat prije nego što temeljito provjerimo kako je taj rezultat nastao. Posljedice se obično vide tek poslije, tijekom recenzije, u razgovoru s koautorom ili kada se nakon nekoliko mjeseci vratimo projektu.</p>
-      </div>
-    </section>
-
-    <section class="band">
-      <div class="wrap">
-        <p class="label">Kako podijeliti posao s agentom</p>
-        <p class="intro narrow">Pri podjeli posla najvažnije je koliko se lako može uočiti pogreška. Što je pogrešku teže uočiti, to više automatskih provjera treba unaprijed ugraditi u projekt.</p>
-        <div class="cols mt-lg">
-          <div class="pillar">
-            <h2 class="sm">Lako provjeriti</h2>
-            <p class="body-sm">Zadaci s unaprijed poznatim ishodom, poput izrade slike prema zadanom predlošku, lako se provjeravaju. Takve zadatke agent može obaviti, a istraživač brzo pregledati rezultat.</p>
-          </div>
-          <div class="pillar">
-            <h2 class="sm">Teško provjeriti</h2>
-            <p class="body-sm">Pogrešan odabir oznaka zemalja, uzorka ili načina mjerenja može dati uvjerljiv rezultat. Zato se provjera takvih zadataka unaprijed zapisuje u kod.</p>
-          </div>
-          <div class="pillar">
-            <h2 class="sm">Ostaje istraživaču</h2>
-            <p class="body-sm">Istraživač odlučuje o istraživačkom pitanju, izboru modela, tumačenju nalaza i tome koliko snažan zaključak podaci dopuštaju. Te odluke određuju smisao rada.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="band">
-      <div class="wrap">
-        <p class="label">Sloj za rad s umjetnom inteligencijom · četiri datoteke</p>
-        <p class="intro narrow">Za rad agenta potrebni su kontekst i jasno određena dopuštenja. Kontekst opisuje projekt i čuva se u datoteci, pa ga nije potrebno ponavljati u svakom razgovoru. Dopuštenja određuju što agent smije učiniti sam, kada mora tražiti odobrenje i što mu je zabranjeno. Još dvije datoteke sadrže pravilo za izmjene koda i automatske provjere.</p>
-        <div class="rows prose mt-lg">
-          <div><p class="n">1</p><p><strong>CLAUDE.md</strong> sadrži kontekst koji agent čita na početku svake sesije. U njemu su podaci o projektu, načinu rada i pravilima koja agent mora slijediti.</p></div>
-          <div><p class="n">2</p><p>Datoteka <strong>.claude/settings.json</strong> sadrži dopuštenja. U njoj piše što agent smije učiniti, kada mora zatražiti odobrenje i što mu je zabranjeno.</p></div>
-          <div><p class="n">3</p><p><strong>.claude/rules/provjera.md</strong> sadrži pravilo koje se učitava pri svakoj izmjeni koda. Pravilo traži da se prije završetka zadatka pokrenu svi koraci projekta.</p></div>
-          <div><p class="n">4</p><p>Datoteka <strong>tests/checks.R</strong> sadrži automatske provjere. One prekidaju postupak čim otkriju problem.</p></div>
-        </div>
-        <p class="note mt">Uz te četiri datoteke Git bilježi sve promjene. Istraživač opisuje zadatak i odobrava plan koji agent predlaže. Nakon što agent obavi zadatak, pokreću se automatske provjere, a istraživač bilježi promjenu.</p>
-      </div>
-    </section>
-
-    <section class="band">
-      <div class="wrap">
-        <p class="label">Pokazni primjer</p>
-        <p class="intro narrow">U pokaznom primjeru procjenjujemo Phillipsovu krivulju za dvadeset zemalja europodručja od 2014. do 2024. s pomoću dviju javnih Eurostatovih tablica. Primjer je poznat i jednostavan, pa se možemo usredotočiti na postupak. Put od podataka do završne rečenice možemo objasniti u dvije minute. Svi brojevi u tekstu preuzimaju se izravno iz rezultata.</p>
-        <div class="mt-lg">
-          <img src="slike/slika2-phillips.png" alt="Phillipsova krivulja za razdoblja prije i nakon inflacijskog vala" style="width:100%;height:auto">
-        </div>
-      </div>
-    </section>
-
-    <section class="band">
-      <div class="wrap">
-        <p class="label">Demonstracija uživo · ispravan postupak i tri greške</p>
-        <p class="intro narrow">U prvom dijelu agent sastavlja plan, provodi analizu i unosi nove rezultate u tekst. Svi se brojevi automatski preuzimaju iz rezultata analize. U drugom dijelu u projekt unosimo tri greške koje automatske provjere pronalaze.</p>
-        <div class="cols mt-lg">
-          <div class="pillar">
-            <p class="n">1</p>
-            <p class="head">Podaci s ograničenim pristupom u javnom tekstu</p>
-            <p class="body-sm">Podaci koji ne smiju biti javni završe u javnom tekstu. Automatska provjera prekida postupak čim ih pronađe.</p>
-          </div>
-          <div class="pillar">
-            <p class="n">2</p>
-            <p class="head">Koeficijent upisan rukom</p>
-            <p class="body-sm">Ručno upisan broj više se ne podudara s procjenom. Zato se svi brojevi u tekstu automatski preuzimaju iz rezultata analize.</p>
-          </div>
-          <div class="pillar">
-            <p class="n">3</p>
-            <p class="head">Pogrešna oznaka za Grčku</p>
-            <p class="body-sm">Eurostat za Grčku koristi oznaku EL, a većina drugih izvora oznaku GR. Zbog pogrešne oznake cijela zemlja nestane iz analize bez poruke o pogrešci. Broj opažanja padne s 220 na 209, a procijenjeni se nagib promijeni.</p>
-          </div>
-        </div>
-        <p class="subtitle mt-lg">Bez automatskih provjera program bi se unatoč tim greškama izvršio i dao naizgled uredan rezultat. Sve tri pogreške mogle bi ostati neopažene i tijekom recenzije. Provjere zaustavljaju postupak čim otkriju problem.</p>
-      </div>
-    </section>
-
-    <section class="band">
-      <div class="wrap">
-        <p class="label">Program radionice</p>
-        <div class="rows prose mt">
-          <div><p class="n">1</p><p>Kako nastaje dug provjere i zašto se s agentom brže gomila.</p></div>
-          <div><p class="n">2</p><p>Kako odlučiti koje zadatke prepustiti agentu.</p></div>
-          <div><p class="n">3</p><p>Model, alati, ograničenja pristupa i kontekst.</p></div>
-          <div><p class="n">4</p><p>Kontekst i dopuštenja koja istraživač određuje prije rada.</p></div>
-          <div><p class="n">5</p><p>Izbor načina rada prema razini nadzora koju zadatak traži.</p></div>
-          <div><p class="n">6</p><p>Prikaz ispravnog rada agenta i tri greške koje otkrivaju automatske provjere.</p></div>
-          <div><p class="n">7</p><p>Rad s povjerljivim podacima, uvjeti korištenja usluga i modeli koji se pokreću na vlastitom računalu.</p></div>
-          <div><p class="n">8</p><p>Podjela odgovornosti između istraživača i agenta.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="band">
-      <div class="wrap">
-        <p class="label">Materijali</p>
-        <div class="links">
-          <a href="slides/"><span class="what">Slajdovi radionice</span><span class="how">u pregledniku</span></a>
-          <a href="handout.html"><span class="what">Sažetak na jednoj stranici</span><span class="how">obostrani ispis, A4</span></a>
-          <a href="nalaz.html"><span class="what">Primjer teksta s rezultatima</span><span class="how">brojevi se preuzimaju iz analize</span></a>
-          <a href="https://github.com/lusiki/Ekonomski-susreti/tree/main/workshop/projekt"><span class="what">Repozitorij za preuzimanje i pokretanje</span><span class="how">workshop/projekt</span></a>
-          <a href="https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/PRESADI.md"><span class="what">Primjena u vlastitom projektu</span><span class="how">PRESADI.md</span></a>
-          <a href="https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/GLOSSARY.md"><span class="what">Pojmovnik hrvatskih i engleskih naziva</span><span class="how">GLOSSARY.md</span></a>
-          <a href="https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/READING.md"><span class="what">Popis literature, dvanaest naslova</span><span class="how">READING.md</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="band">
-      <div class="wrap">
-        <div class="cols">
-          <div>
-            <p class="label ruled">Što sudionici dobivaju</p>
-            <p class="body-sm">Sudionici dobivaju repozitorij koji mogu preuzeti i pokrenuti jednom naredbom na svom prijenosnom računalu. Dobivaju i upute koje u tri koraka pokazuju kako isti način rada primijeniti u vlastitom projektu, pravilo za podjelu posla s agentom te sažetak radionice na jednoj stranici.</p>
-          </div>
-          <div>
-            <p class="label ruled">Kome je namijenjena</p>
-            <p class="body-sm">Radionica je namijenjena istraživačima, doktorandima i analitičarima u institucijama. Sudionici se ne trebaju unaprijed pripremati ni instalirati programe. Programersko iskustvo nije potrebno. Za održavanje je potreban samo projektor.</p>
-          </div>
-          <div>
-            <p class="label ruled">Jezik</p>
-            <p class="body-sm">Izlaganje je na hrvatskom. Kod je pisan na engleskom, a za tehničke se pojmove rabe engleski nazivi. Uz materijale je priložen hrvatski pojmovnik.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="band">
-      <div class="wrap">
-        <p class="label ruled">Podaci u primjeru</p>
-        <p class="note">Pokazni projekt koristi stvarne i javno dostupne podatke. Podaci dolaze iz Eurostatovih tablica prc_hicp_aind za harmonizirani indeks potrošačkih cijena i une_rt_a za stopu nezaposlenosti, a preuzimaju se priloženom skriptom. Dobiveni rezultat služi samo za prikaz postupka. Opisuje vezu u tim podacima, bez tvrdnje o uzročnom učinku. Radionica ga ne predstavlja kao novi doprinos literaturi.</p>
-        <p class="note mt">Radionica se može pratiti samostalno, bez prethodnog izlaganja.</p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
+<section class="wrap hero">
+<p class="label">Radionica · Ekonomski susreti 2026 · 60 minuta</p>
+<h1>Vodič kroz AI za ekonomiste</h1>
+<p class="subtitle">Istraživanje uz umjetnu inteligenciju u jednom satu</p>
+<p class="intro">Kako su se inflacija i očekivanja potrošača kretali u Hrvatskoj od 2015. do 2024.? U deset koraka oblikujemo istraživačko pitanje, provjeravamo izvore, crtamo dvije mjesečne serije i uspoređujemo razdoblja. Na kraju iz istih podataka izrađujemo analizu u Positronu i pripremamo je za objavu na GitHubu.</p>
+<p class="byline">Luka Sikić · Hrvatsko katoličko sveučilište</p>
+<p class="mt"><a class="more" href="slides/">Pokrenite prezentaciju →</a> &nbsp; <a class="more" href="upiti.html">Otvorite upite</a></p>
+</section>
+<section class="band">
+<div class="wrap">
+<h2 class="label">Podaci za vježbu</h2>
+<p class="statement mt">Idu li očekivanja i inflacija uvijek zajedno?</p>
+<figure style="margin:36px 0 0"><img src="slike/inflacija-ocekivanja.png" style="width:100%;height:auto" width="1800" height="690" alt="Mjesečna stopa inflacije i saldo očekivanja. Obje mjere rastu tijekom 2021. i 2022., a saldo ranije doseže vrh.">
+<figcaption class="note">Hrvatska, siječanj 2015. – prosinac 2024. Izvori: Eurostat i DG ECFIN.</figcaption></figure>
+</div>
+</section>
+<section class="band">
+<div class="wrap">
+<h2 class="label">Program · minute</h2>
+<div class="rows prose">
+<div>
+<p class="n">0–3</p>
+<p>Uvod · Podaci i zajedničko pitanje</p>
+</div>
+<div>
+<p class="n">3–8</p>
+<p><a href="upiti.html#korak-1-1">1.1 · Postavite istraživačko pitanje</a></p>
+</div>
+<div>
+<p class="n">8–13</p>
+<p><a href="upiti.html#korak-1-2">1.2 · Pronađite i provjerite izvore</a></p>
+</div>
+<div>
+<p class="n">13–19</p>
+<p><a href="upiti.html#korak-1-3">1.3 · Provjerite i uredite sažetak</a></p>
+</div>
+<div>
+<p class="n">19–23</p>
+<p><a href="upiti.html#korak-1-4">1.4 · Pripremite plan analize</a></p>
+</div>
+<div>
+<p class="n">23–28</p>
+<p><a href="upiti.html#korak-2-1">2.1 · Upoznajte i provjerite podatke</a></p>
+</div>
+<div>
+<p class="n">28–35</p>
+<p><a href="upiti.html#korak-2-2">2.2 · Izradite i objasnite prikaze</a></p>
+</div>
+<div>
+<p class="n">35–41</p>
+<p><a href="upiti.html#korak-2-3">2.3 · Ponovite analizu od početka</a></p>
+</div>
+<div>
+<p class="n">41–46</p>
+<p><a href="upiti.html#korak-2-4">2.4 · Napišite i uredite zaključak</a></p>
+</div>
+<div>
+<p class="n">46–52</p>
+<p><a href="upiti.html#korak-3-1">3.1 · Ponovite sve u Positronu</a></p>
+</div>
+<div>
+<p class="n">52–56</p>
+<p><a href="upiti.html#korak-3-2">3.2 · Objavite na GitHubu</a></p>
+</div>
+<div>
+<p class="n">56–60</p>
+<p>Završni razgovor</p>
+</div>
+</div>
+</div>
+</section>
+<section class="band">
+<div class="wrap">
+<h2 class="label">Materijali</h2>
+<div class="links">
+<a href="slides/"><span class="what">Otvorite prezentaciju</span><span class="how">slajdovi</span></a>
+<a href="slides/index.html" download="Vodic-kroz-AI-za-ekonomiste.html"><span class="what">Preuzmite prezentaciju za izvanmrežno izlaganje</span><span class="how">HTML</span></a>
+<a href="vodic.pdf"><span class="what">Vodič za rad i izlaganje</span><span class="how">PDF · 14 stranica</span></a>
+<a href="upiti.html"><span class="what">Upiti za svih deset koraka</span><span class="how">za kopiranje</span></a>
+<a href="data/croatia_inflation.csv"><span class="what">Mjesečni podaci za Hrvatsku</span><span class="how">CSV · 120 mjeseci</span></a>
+<a href="handout.html"><span class="what">Sažetak za sudionike</span><span class="how">jedna stranica · A4</span></a>
+<a href="nalaz.html"><span class="what">Primjer analize s rezultatima</span><span class="how">HTML</span></a>
+<a href="nalaz.pdf"><span class="what">Primjer analize za ispis</span><span class="how">PDF</span></a>
+<a href="projekt.zip"><span class="what">Preuzmite projekt za Positron</span><span class="how">ZIP · R i Quarto</span></a>
+<a href="https://github.com/lusiki/Ekonomski-susreti/tree/main/workshop/projekt"><span class="what">Pregledajte izvorni kod projekta</span><span class="how">GitHub</span></a>
+<a href="https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/PRESADI.md"><span class="what">Primjena u vlastitom projektu</span><span class="how">upute</span></a>
+<a href="https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/GLOSSARY.md"><span class="what">Hrvatsko-engleski pojmovnik</span><span class="how">pojmovi</span></a>
+<a href="https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/READING.md"><span class="what">Literatura uz radionicu</span><span class="how">12 tekstova</span></a>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
     <div class="wrap">
       <div>
         <p class="label">Voditelj</p>

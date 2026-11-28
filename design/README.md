@@ -3,8 +3,7 @@
 Ovaj sustav oblikuje javne materijale istraživanja i radionice za konferenciju
 Ekonomski susreti, koja će se održati 27. i 28. studenoga 2026. u Hotelu Lav u
 Splitu. Istraživanje mjeri institucionalni jaz u medijskoj vidljivosti HNB-a.
-Radionica pokazuje kako s umjetnom inteligencijom raditi u istraživačkom
-repozitoriju. Autori su Petra Palić i Luka Sikić s Hrvatskoga katoličkog sveučilišta.
+Radionica prati inflaciju i očekivanja u Hrvatskoj od istraživačkog pitanja do ponovljive analize u Positronu i objave na GitHubu. Autori su Petra Palić i Luka Sikić s Hrvatskoga katoličkog sveučilišta.
 
 Sustav se oslanja na bauhausovski stil. Koristi bijelu podlogu, crni tekst i samo
 jednu crvenu boju. Tanke linije zamjenjuju okvire, a strogi raster kartice. Kutovi

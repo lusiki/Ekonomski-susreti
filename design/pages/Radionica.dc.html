@@ -8,6 +8,7 @@
 <body>
 <x-dc>
 <helmet>
+<link rel="stylesheet" href="../../docs/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
 <style>
 body{margin:0;background:#ffffff;color:#000000;font-family:'Roboto',sans-serif;-webkit-font-smoothing:antialiased}
@@ -27,101 +28,98 @@ a:hover{color:#555555}
       </div>
     </div>
   </div>
-  <section data-screen-label="Radionica naslov" style="max-width:1120px;margin:0 auto;padding:96px 48px 88px">
-    <p style="margin:0 0 40px;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Radionica · 60 minuta s vremenom za pitanja · bez pripreme i instaliranja programa</p>
-    <h1 style="margin:0;font-size:clamp(40px,6vw,80px);font-weight:200;line-height:1.06;letter-spacing:-0.01em;text-wrap:balance">Umjetna inteligencija u ekonomskim istraživanjima</h1>
-    <p style="margin:28px 0 0;font-size:clamp(20px,2.4vw,26px);font-weight:300;line-height:1.4;max-width:720px">Kako umjetnu inteligenciju uključiti u istraživački repozitorij</p>
-    <p style="margin:44px 0 0;font-size:17px;line-height:1.65;max-width:660px;text-wrap:pretty">Umjetna inteligencija može brzo napisati mnogo koda. Provjera tog koda i dalje traži vrijeme. Četiri datoteke u repozitoriju pomažu otkriti pogreške prije nego što utječu na rezultate ili završe u rukopisu.</p>
-    <p style="margin:24px 0 0;font-size:14px;font-weight:500;letter-spacing:0.06em">Luka Sikić · Hrvatsko katoličko sveučilište</p>
-  </section>
-  <section data-screen-label="Dug provjere" style="border-top:1px solid #000000">
-    <div style="max-width:1120px;margin:0 auto;padding:64px 48px 80px">
-      <p style="margin:0;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Glavni pojam radionice</p>
-      <p style="margin:28px 0 0;font-size:clamp(32px,4.4vw,56px);font-weight:200;line-height:1.15;max-width:900px;text-wrap:balance">Dug provjere</p>
-      <p style="margin:32px 0 0;font-size:17px;line-height:1.65;max-width:660px;text-wrap:pretty">Kad sami pišemo kod, obično ga provjeravamo u hodu, svakih nekoliko redaka. Agent može odjednom napisati dvjesto redaka, pa se provjera lako odgodi. Kod tada daje rezultat prije nego što temeljito provjerimo kako je taj rezultat nastao.</p>
-    </div>
-  </section>
-  <section data-screen-label="Podjela posla" style="border-top:1px solid #000000">
-    <div style="max-width:1120px;margin:0 auto;padding:64px 48px 80px">
-      <p style="margin:0;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Kako podijeliti posao s agentom</p>
-      <p style="margin:24px 0 0;font-size:17px;line-height:1.65;max-width:660px;text-wrap:pretty">Pri podjeli posla najvažnije je koliko se lako može uočiti pogreška. Što je pogrešku teže uočiti, to više automatskih provjera treba unaprijed ugraditi u projekt.</p>
-      <div style="margin-top:48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:48px">
-        <div style="border-top:1px solid #000000;padding-top:16px">
-          <p style="margin:0;font-size:22px;font-weight:300">Lako provjeriti</p>
-          <p style="margin:12px 0 0;font-size:15px;line-height:1.65">Zadaci s unaprijed poznatim ishodom mogu se prepustiti agentu i brzo pregledati.</p>
-        </div>
-        <div style="border-top:1px solid #000000;padding-top:16px">
-          <p style="margin:0;font-size:22px;font-weight:300">Teško provjeriti</p>
-          <p style="margin:12px 0 0;font-size:15px;line-height:1.65">Kada pogrešan rezultat izgleda uvjerljivo, provjera se unaprijed zapisuje u kod.</p>
-        </div>
-        <div style="border-top:1px solid #000000;padding-top:16px">
-          <p style="margin:0;font-size:22px;font-weight:300">Ostaje istraživaču</p>
-          <p style="margin:12px 0 0;font-size:15px;line-height:1.65">Istraživač određuje istraživačko pitanje i odlučuje o njegovim promjenama.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section data-screen-label="Demonstracija" style="border-top:1px solid #000000">
-    <div style="max-width:1120px;margin:0 auto;padding:64px 48px 80px">
-      <p style="margin:0;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Demonstracija uživo · ispravan postupak i tri greške</p>
-      <p style="margin:24px 0 0;font-size:17px;line-height:1.65;max-width:660px;text-wrap:pretty">U pokaznom primjeru procjenjujemo Phillipsovu krivulju za dvadeset zemalja europodručja od 2014. do 2024. s pomoću dviju javnih Eurostatovih tablica. Najprije agent sastavlja plan, provodi analizu i unosi nove rezultate u tekst. Svi se brojevi automatski preuzimaju iz rezultata analize. Zatim u projekt unosimo tri greške koje automatske provjere pronalaze.</p>
-      <div style="margin-top:48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:48px">
-        <div style="border-top:1px solid #000000;padding-top:16px">
-          <p style="margin:0;font-size:40px;font-weight:100;line-height:1">1</p>
-          <p style="margin:16px 0 0;font-size:18px;font-weight:500">Podaci s ograničenim pristupom u javnom tekstu</p>
-          <p style="margin:12px 0 0;font-size:15px;line-height:1.65;text-wrap:pretty">Podaci koji ne smiju biti javni završe u javnom tekstu. Automatska provjera prekida postupak čim ih pronađe.</p>
-        </div>
-        <div style="border-top:1px solid #000000;padding-top:16px">
-          <p style="margin:0;font-size:40px;font-weight:100;line-height:1">2</p>
-          <p style="margin:16px 0 0;font-size:18px;font-weight:500">Koeficijent upisan rukom</p>
-          <p style="margin:12px 0 0;font-size:15px;line-height:1.65;text-wrap:pretty">Ručno upisan broj više se ne podudara s procjenom. Zato se svi brojevi u tekstu automatski preuzimaju iz rezultata analize.</p>
-        </div>
-        <div style="border-top:1px solid #000000;padding-top:16px">
-          <p style="margin:0;font-size:40px;font-weight:100;line-height:1">3</p>
-          <p style="margin:16px 0 0;font-size:18px;font-weight:500">Pogrešna oznaka za Grčku</p>
-          <p style="margin:12px 0 0;font-size:15px;line-height:1.65;text-wrap:pretty">Eurostat za Grčku koristi oznaku EL, a većina drugih izvora oznaku GR. Zbog pogrešne oznake cijela zemlja nestane iz analize bez poruke o pogrešci, pa se procjena promijeni.</p>
-        </div>
-      </div>
-      <p style="margin:48px 0 0;font-size:17px;font-weight:300;line-height:1.5;max-width:660px;text-wrap:pretty">Bez automatskih provjera program bi se unatoč tim greškama izvršio i dao naizgled uredan rezultat. Sve tri pogreške mogle bi ostati neopažene i tijekom recenzije. Provjere zaustavljaju postupak čim otkriju problem.</p>
-    </div>
-  </section>
-  <sc-if value="{{ showSadrzaj }}" hint-placeholder-val="{{ true }}">
-    <section data-screen-label="Sadržaj radionice" style="border-top:1px solid #000000">
-      <div style="max-width:1120px;margin:0 auto;padding:64px 48px 80px">
-        <p style="margin:0;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Sadržaj radionice</p>
-        <div style="margin-top:32px;max-width:720px;display:flex;flex-direction:column">
-          <sc-for list="{{ sadrzaj }}" as="stavka" hint-placeholder-count="8">
-            <div style="display:grid;grid-template-columns:56px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid #d9d9d9;align-items:baseline">
-              <p style="margin:0;font-size:24px;font-weight:100;line-height:1">{{ stavka.broj }}</p>
-              <p style="margin:0;font-size:15px;line-height:1.6">{{ stavka.tekst }}</p>
-            </div>
-          </sc-for>
-        </div>
-      </div>
-    </section>
-  </sc-if>
-  <section data-screen-label="Praktično" style="border-top:1px solid #000000">
-    <div style="max-width:1120px;margin:0 auto;padding:64px 48px 88px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:48px">
-      <div>
-        <p style="margin:0;border-top:1px solid #000000;padding-top:14px;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Što sudionici dobivaju</p>
-        <p style="margin:16px 0 0;font-size:15px;line-height:1.7;text-wrap:pretty">Sudionici dobivaju repozitorij koji mogu preuzeti i pokrenuti jednom naredbom na svom prijenosnom računalu. Dobivaju i upute koje u tri koraka pokazuju kako isti način rada primijeniti u vlastitom projektu, pravilo za podjelu posla s agentom te sažetak radionice na jednoj stranici.</p>
-      </div>
-      <div>
-        <p style="margin:0;border-top:1px solid #000000;padding-top:14px;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Kome je namijenjena</p>
-        <p style="margin:16px 0 0;font-size:15px;line-height:1.7;text-wrap:pretty">Istraživačima, doktorandima i analitičarima u institucijama. Sudionici se ne trebaju unaprijed pripremati ni instalirati programe. Programersko iskustvo nije potrebno. Za održavanje je potreban samo projektor.</p>
-      </div>
-      <div>
-        <p style="margin:0;border-top:1px solid #000000;padding-top:14px;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Jezik</p>
-        <p style="margin:16px 0 0;font-size:15px;line-height:1.7;text-wrap:pretty">Izlaganje je na hrvatskom. Kod je pisan na engleskom, a za tehničke se pojmove rabe engleski nazivi. Uz materijale je priložen hrvatski pojmovnik.</p>
-      </div>
-    </div>
-  </section>
-  <section data-screen-label="Veza s izlaganjem" style="border-top:1px solid #000000">
-    <div style="max-width:1120px;margin:0 auto;padding:48px 48px 64px">
-      <p style="margin:0;font-size:15px;line-height:1.7;max-width:720px;text-wrap:pretty">Radionica se može pratiti samostalno, bez prethodnog izlaganja. Cijeli sažetak dostupan je na <a href="Sazeci.dc.html#radionica">stranici sažetaka</a>.</p>
-    </div>
-  </section>
-  <footer style="border-top:1px solid #000000">
+
+<section class="wrap hero">
+<p class="label">Radionica · Ekonomski susreti 2026 · 60 minuta</p>
+<h1>Vodič kroz AI za ekonomiste</h1>
+<p class="subtitle">Istraživanje uz umjetnu inteligenciju u jednom satu</p>
+<p class="intro">Kako su se inflacija i očekivanja potrošača kretali u Hrvatskoj od 2015. do 2024.? U deset koraka oblikujemo istraživačko pitanje, provjeravamo izvore, crtamo dvije mjesečne serije i uspoređujemo razdoblja. Na kraju iz istih podataka izrađujemo analizu u Positronu i pripremamo je za objavu na GitHubu.</p>
+<p class="byline">Luka Sikić · Hrvatsko katoličko sveučilište</p>
+<p class="mt"><a class="more" href="../../docs/workshop/slides/">Pokrenite prezentaciju →</a>   <a class="more" href="../../docs/workshop/upiti.html">Otvorite upite</a></p>
+</section>
+<section class="band">
+<div class="wrap">
+<h2 class="label">Podaci za vježbu</h2>
+<p class="statement mt">Idu li očekivanja i inflacija uvijek zajedno?</p>
+<figure style="margin:36px 0 0"><img alt="Mjesečna stopa inflacije i saldo očekivanja. Obje mjere rastu tijekom 2021. i 2022., a saldo ranije doseže vrh." height="690" src="../../docs/workshop/slike/inflacija-ocekivanja.png" style="width:100%;height:auto" width="1800"/>
+<figcaption class="note">Hrvatska, siječanj 2015. – prosinac 2024. Izvori: Eurostat i DG ECFIN.</figcaption></figure>
+</div>
+</section>
+<section class="band">
+<div class="wrap">
+<h2 class="label">Program · minute</h2>
+<div class="rows prose">
+<div>
+<p class="n">0–3</p>
+<p>Uvod · Podaci i zajedničko pitanje</p>
+</div>
+<div>
+<p class="n">3–8</p>
+<p><a href="../../docs/workshop/upiti.html#korak-1-1">1.1 · Postavite istraživačko pitanje</a></p>
+</div>
+<div>
+<p class="n">8–13</p>
+<p><a href="../../docs/workshop/upiti.html#korak-1-2">1.2 · Pronađite i provjerite izvore</a></p>
+</div>
+<div>
+<p class="n">13–19</p>
+<p><a href="../../docs/workshop/upiti.html#korak-1-3">1.3 · Provjerite i uredite sažetak</a></p>
+</div>
+<div>
+<p class="n">19–23</p>
+<p><a href="../../docs/workshop/upiti.html#korak-1-4">1.4 · Pripremite plan analize</a></p>
+</div>
+<div>
+<p class="n">23–28</p>
+<p><a href="../../docs/workshop/upiti.html#korak-2-1">2.1 · Upoznajte i provjerite podatke</a></p>
+</div>
+<div>
+<p class="n">28–35</p>
+<p><a href="../../docs/workshop/upiti.html#korak-2-2">2.2 · Izradite i objasnite prikaze</a></p>
+</div>
+<div>
+<p class="n">35–41</p>
+<p><a href="../../docs/workshop/upiti.html#korak-2-3">2.3 · Ponovite analizu od početka</a></p>
+</div>
+<div>
+<p class="n">41–46</p>
+<p><a href="../../docs/workshop/upiti.html#korak-2-4">2.4 · Napišite i uredite zaključak</a></p>
+</div>
+<div>
+<p class="n">46–52</p>
+<p><a href="../../docs/workshop/upiti.html#korak-3-1">3.1 · Ponovite sve u Positronu</a></p>
+</div>
+<div>
+<p class="n">52–56</p>
+<p><a href="../../docs/workshop/upiti.html#korak-3-2">3.2 · Objavite na GitHubu</a></p>
+</div>
+<div>
+<p class="n">56–60</p>
+<p>Završni razgovor</p>
+</div>
+</div>
+</div>
+</section>
+<section class="band">
+<div class="wrap">
+<h2 class="label">Materijali</h2>
+<div class="links">
+<a href="../../docs/workshop/slides/"><span class="what">Otvorite prezentaciju</span><span class="how">slajdovi</span></a>
+<a href="../../docs/workshop/vodic.pdf"><span class="what">Vodič za rad i izlaganje</span><span class="how">PDF · 14 stranica</span></a>
+<a href="../../docs/workshop/upiti.html"><span class="what">Upiti za svih deset koraka</span><span class="how">za kopiranje</span></a>
+<a href="../../docs/workshop/data/croatia_inflation.csv"><span class="what">Mjesečni podaci za Hrvatsku</span><span class="how">CSV · 120 mjeseci</span></a>
+<a href="../../docs/workshop/handout.html"><span class="what">Sažetak za sudionike</span><span class="how">jedna stranica · A4</span></a>
+<a href="../../docs/workshop/nalaz.html"><span class="what">Primjer analize s rezultatima</span><span class="how">HTML</span></a>
+<a href="../../docs/workshop/nalaz.pdf"><span class="what">Primjer analize za ispis</span><span class="how">PDF</span></a>
+<a href="../../docs/workshop/projekt.zip"><span class="what">Preuzmite projekt za Positron</span><span class="how">ZIP · R i Quarto</span></a>
+<a href="https://github.com/lusiki/Ekonomski-susreti/tree/main/workshop/projekt"><span class="what">Pregledajte izvorni kod projekta</span><span class="how">GitHub</span></a>
+<a href="https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/PRESADI.md"><span class="what">Primjena u vlastitom projektu</span><span class="how">upute</span></a>
+<a href="https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/GLOSSARY.md"><span class="what">Hrvatsko-engleski pojmovnik</span><span class="how">pojmovi</span></a>
+<a href="https://github.com/lusiki/Ekonomski-susreti/blob/main/workshop/READING.md"><span class="what">Literatura uz radionicu</span><span class="how">12 tekstova</span></a>
+</div>
+</div>
+</section>
+<footer style="border-top:1px solid #000000">
     <div style="max-width:1120px;margin:0 auto;padding:48px 48px 64px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:48px;font-size:14px;line-height:1.7">
       <div>
         <p style="margin:0;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;font-size:11px">Voditelj</p>
@@ -139,24 +137,6 @@ a:hover{color:#555555}
   </footer>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;showSadrzaj&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sadržaj&quot;}}">
-class Component extends DCLogic {
-  renderVals() {
-    return {
-      showSadrzaj: this.props.showSadrzaj ?? true,
-      sadrzaj: [
-        { broj: '1', tekst: 'Kako nastaje dug provjere i zašto se s agentom brže gomila.' },
-        { broj: '2', tekst: 'Kako odlučiti koje zadatke prepustiti agentu.' },
-        { broj: '3', tekst: 'Model, alati, ograničenja pristupa i kontekst.' },
-        { broj: '4', tekst: 'Kontekst i dopuštenja koja istraživač određuje prije rada.' },
-        { broj: '5', tekst: 'Izbor načina rada prema razini nadzora koju zadatak traži.' },
-        { broj: '6', tekst: 'Prikaz ispravnog rada agenta i tri greške koje otkrivaju automatske provjere.' },
-        { broj: '7', tekst: 'Rad s povjerljivim podacima, uvjeti korištenja usluga i modeli koji se pokreću na vlastitom računalu.' },
-        { broj: '8', tekst: 'Podjela odgovornosti između istraživača i agenta.' }
-      ]
-    };
-  }
-}
-</script>
+
 </body>
 </html>

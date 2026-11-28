@@ -1,6 +1,5 @@
-demo/.backup/
-*.Rproj.user
+index.html
+index.pdf
+index_files/
+.quarto/
 .Rhistory
-.RData
-paper/nalaz_files/
-/.quarto/

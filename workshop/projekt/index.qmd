@@ -1,0 +1,74 @@
+---
+title: "Inflacija i očekivanja potrošača u Hrvatskoj"
+subtitle: "Ekonomski susreti 2026 · primjer analize"
+lang: hr
+format:
+  html:
+    embed-resources: true
+    toc: false
+    theme: none
+    css: analiza.css
+  typst:
+    mainfont: Roboto
+    font-paths: [fonts]
+    margin:
+      x: 22mm
+      y: 20mm
+    papersize: a4
+    fontsize: 11pt
+knitr:
+  opts_chunk:
+    dev: ragg_png
+execute:
+  echo: false
+  warning: false
+---
+
+```{r}
+source("analiza.R")
+dvije <- subset(godisnji, godina %in% c(2021, 2022))
+stope <- subset(podaci, godina == 2022)$hicp_yoy_pct
+```
+
+Kako su se kretale godišnja stopa inflacije i očekivanja potrošača o promjenama cijena? Mijenja li se njihova povezanost ako desetljeće podijelimo na dva petogodišnja razdoblja?
+
+## Provjera podataka
+
+Tablica obuhvaća `r nrow(podaci)` uzastopnih mjeseci, od `r podaci$month[1]` do `r tail(podaci$month, 1)`. Svaki je mjesec zastupljen jednom, a obje su mjere dostupne za svaki mjesec. HICP uspoređuje cijene s istim mjesecom prethodne godine. Saldo iz ankete DG ECFIN sažima očekivanja o kretanju cijena u sljedećih dvanaest mjeseci u usporedbi s proteklih dvanaest. Izražen je u bodovima.
+
+```{r}
+#| fig-width: 8
+#| fig-height: 4.1
+#| fig-alt: "Dva mjesečna niza na zajedničkoj vremenskoj osi. Obje mjere rastu tijekom inflacijskog vala, a saldo prije doseže vrh."
+graf()
+```
+
+Izvori: Eurostat (HICP) i Europska komisija, DG ECFIN (anketa potrošača, sezonski neprilagođen saldo).
+
+```{=typst}
+#pagebreak()
+```
+
+## Godišnji prosjeci
+
+Za svaku godinu računamo aritmetičku sredinu mjesečnih godišnjih stopa i sredinu mjesečnih salda.
+
+```{r}
+knitr::kable(data.frame(godisnji$godina, hr(godisnji$hicp_yoy_pct),
+                        hr(godisnji$expectations_balance), godisnji$mjeseci),
+             col.names = c("Godina", "Inflacija (%)", "Saldo (bodovi)", "Mjeseci"),
+             align = c("l","r","r","r"))
+```
+
+Za provjeru računa, mjesečne stope tijekom 2022. redom iznose `r paste(hr(stope, 1), collapse = " · ")` %. Zbroj od `r hr(sum(stope), 1)` dijelimo brojem mjeseci i dobivamo `r hr(mean(stope))` %.
+
+## Povezanost unutar istog mjeseca
+
+```{r}
+knitr::kable(data.frame(names(korelacije), vapply(razdoblja, nrow, integer(1)), hr(korelacije, 4)),
+             col.names = c("Razdoblje", "Mjeseci", "Pearsonov r"), row.names = FALSE)
+```
+
+## Zaključak
+
+Od 2021. do 2022. prosjek mjesečnih godišnjih stopa porastao je s `r hr(dvije$hicp_yoy_pct[1])` % na `r hr(dvije$hicp_yoy_pct[2])` %, a prosječni saldo s `r hr(dvije$expectations_balance[1])` na `r hr(dvije$expectations_balance[2])` boda. Na mjesečnom grafu vidimo da saldo ranije doseže vrh. Povezanost je jača u prvoj polovini razdoblja (`r hr(korelacije[2], 4)`) nego u drugoj (`r hr(korelacije[3], 4)`). Ta usporedba ostavlja otvorenima pitanja uzroka i prediktivne vrijednosti očekivanja.

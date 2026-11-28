@@ -8,6 +8,7 @@
 <body>
 <x-dc>
 <helmet>
+<link rel="stylesheet" href="../../docs/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
 <style>
 body{margin:0;background:#ffffff;color:#000000;font-family:'Roboto',sans-serif;-webkit-font-smoothing:antialiased}
@@ -79,50 +80,20 @@ a:hover{color:#555555}
       </div>
     </sc-if>
   </section>
-  <section id="radionica" data-screen-label="Sažetak radionice" style="border-top:1px solid #000000">
-    <div style="max-width:1120px;margin:0 auto;padding:80px 48px 96px">
-      <p style="margin:0 0 32px;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">02 · Radionica</p>
-      <h1 style="margin:0;font-size:clamp(36px,4.6vw,60px);font-weight:200;line-height:1.1;text-wrap:balance">Umjetna inteligencija u ekonomskim istraživanjima</h1>
-      <p style="margin:20px 0 0;font-size:20px;font-weight:300;line-height:1.4;max-width:720px">Kako umjetnu inteligenciju uključiti u istraživački repozitorij</p>
-      <p style="margin:28px 0 0;font-size:14px;font-weight:500;letter-spacing:0.06em">Luka Sikić · Hrvatsko katoličko sveučilište</p>
-      <div style="margin-top:56px;max-width:720px;display:flex;flex-direction:column;gap:24px">
-        <p style="margin:0;border-top:1px solid #000000;padding-top:14px;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Sažetak</p>
-        <p style="margin:0;font-size:17px;line-height:1.7;text-wrap:pretty">Istraživači se umjetnom inteligencijom najčešće služe u pregledniku. Kopiraju dio koda u razgovor s alatom, a njegov odgovor zatim prenesu u projekt. Alat tada vidi samo ono što su mu poslali. Ne poznaje ostatak projekta, ne može pokrenuti analizu ni upotrijebiti provjere zapisane u projektu. Radionica pokazuje kako s alatom raditi izravno u repozitoriju. Alat tada može pokrenuti analizu i druge dijelove projekta, a automatske provjere otkrivaju pogreške u njegovu radu.</p>
-        <p style="margin:0;font-size:17px;line-height:1.7;text-wrap:pretty">Umjetna inteligencija može vrlo brzo napisati mnogo koda. Provjera tog koda i dalje traži vrijeme. Kad sami pišemo kod, obično ga provjeravamo u hodu, svakih nekoliko redaka. Agent može odjednom napisati dvjesto redaka, pa se provjera lako odgodi. Tako nastaje dug provjere. Rezultat se pojavi prije nego što smo temeljito provjerili kako je nastao. Posljedice se obično vide tijekom recenzije, u razgovoru s koautorom ili kada se nakon dulje stanke vratimo projektu.</p>
-        <p style="margin:0;font-size:17px;line-height:1.7;text-wrap:pretty">Posao između istraživača i agenta zato dijelimo prema tome koliko je lako prepoznati pogrešan rezultat. Zadaci s jasnim i lako provjerljivim ishodom mogu se prepustiti agentu i provjeriti kratkim pregledom. Kada pogrešan rezultat izgleda uvjerljivo, provjeru treba unaprijed zapisati u kod. Istraživač određuje istraživačko pitanje i odlučuje o njegovim promjenama.</p>
-        <p style="margin:0;font-size:17px;line-height:1.7;text-wrap:pretty">Radionica zatim pokazuje kako takav način rada organizirati. Agentu su potrebni model, alati, jasno određena pravila pristupa i kontekst. Istraživač određuje što agent mora znati o projektu te što smije učiniti sam. Kontekst se čuva u datoteci pa ga nije potrebno iznova objašnjavati u svakom razgovoru. U dopuštenjima piše što agent smije učiniti, kada mora tražiti odobrenje i što mu je zabranjeno. Još dvije datoteke sadrže pravilo za izmjene koda i automatske provjere koje prekidaju postupak čim otkriju problem. Te četiri datoteke čine sloj za rad s umjetnom inteligencijom.</p>
-        <p style="margin:0;font-size:17px;line-height:1.7;text-wrap:pretty">U pokaznom primjeru procjenjujemo Phillipsovu krivulju za dvadeset zemalja europodručja od 2014. do 2024. s pomoću dviju javnih Eurostatovih tablica. Primjer je poznat i jednostavan, pa se možemo usredotočiti na postupak. U prvom dijelu agent sastavlja plan, provodi analizu i unosi nove rezultate u tekst. Svi se brojevi automatski preuzimaju iz rezultata analize. U drugom dijelu u projekt unosimo tri greške koje automatske provjere pronalaze. U prvoj u javnom tekstu završe podaci s ograničenim pristupom. U drugoj se ručno upisani koeficijent više ne podudara s procjenom. Treća se odnosi na oznaku Grčke. Eurostat za Grčku koristi EL, a većina drugih izvora GR. Zbog pogrešne oznake cijela zemlja nestane iz analize bez poruke o pogrešci, pa se procjena promijeni. Bez automatskih provjera program bi se unatoč tim greškama izvršio i dao naizgled uredan rezultat. Sve tri pogreške mogle bi ostati neopažene i tijekom recenzije. Provjere zaustavljaju postupak čim otkriju problem.</p>
-      </div>
-      <div style="margin-top:64px;max-width:720px">
-        <p style="margin:0;border-top:1px solid #000000;padding-top:14px;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Program</p>
-        <div style="margin-top:24px;display:flex;flex-direction:column">
-          <sc-for list="{{ sadrzaj }}" as="stavka" hint-placeholder-count="8">
-            <div style="display:grid;grid-template-columns:56px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid #d9d9d9;align-items:baseline">
-              <p style="margin:0;font-size:24px;font-weight:100;line-height:1">{{ stavka.broj }}</p>
-              <p style="margin:0;font-size:15px;line-height:1.6">{{ stavka.tekst }}</p>
-            </div>
-          </sc-for>
-        </div>
-      </div>
-      <sc-if value="{{ showMeta }}" hint-placeholder-val="{{ true }}">
-        <div style="margin-top:64px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:48px">
-          <div>
-            <p style="margin:0;border-top:1px solid #000000;padding-top:14px;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Što sudionici dobivaju</p>
-            <p style="margin:16px 0 0;font-size:14px;line-height:1.7;text-wrap:pretty">Sudionici dobivaju repozitorij koji mogu preuzeti i pokrenuti jednom naredbom na svom prijenosnom računalu. Dobivaju i upute koje u tri koraka pokazuju kako isti način rada primijeniti u vlastitom projektu, pravilo za podjelu posla s agentom te sažetak radionice na jednoj stranici.</p>
-          </div>
-          <div>
-            <p style="margin:0;border-top:1px solid #000000;padding-top:14px;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Ključne riječi</p>
-            <p style="margin:16px 0 0;font-size:14px;line-height:1.7">umjetna inteligencija u istraživanju, rad s agentom, dug provjere, reproducibilnost, podaci s ograničenim pristupom, mjerni sloj, automatske provjere, sljedivost rezultata</p>
-          </div>
-          <div>
-            <p style="margin:0;border-top:1px solid #000000;padding-top:14px;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Praktične informacije</p>
-            <p style="margin:16px 0 0;font-size:14px;line-height:1.7;text-wrap:pretty">Radionica traje 60 minuta i uključuje vrijeme za pitanja. Sudionici se ne trebaju unaprijed pripremati ni instalirati programe. Programersko iskustvo nije potrebno. Radionica je namijenjena istraživačima, doktorandima i analitičarima u institucijama. Za održavanje je potreban samo projektor. Izlaganje je na hrvatskom. Kod je pisan na engleskom, a za tehničke se pojmove rabe engleski nazivi. Uz materijale je priložen hrvatski pojmovnik.</p>
-          </div>
-        </div>
-      </sc-if>
-      <p style="margin:56px 0 0;font-size:14px;line-height:1.7;max-width:720px;text-wrap:pretty">Radionica se može pratiti samostalno, bez prethodnog izlaganja. Više o programu nalazi se na <a href="Radionica.dc.html">stranici radionice</a>.</p>
-    </div>
-  </section>
+<article class="band" id="radionica">
+<div class="wrap">
+<p class="label">02 · Radionica</p>
+<h1 class="title-md">Vodič kroz AI za ekonomiste</h1>
+<p class="subtitle">Istraživanje uz umjetnu inteligenciju u jednom satu</p>
+<p class="byline">Luka Sikić · Hrvatsko katoličko sveučilište</p>
+<div class="prose stack mt-lg">
+<p class="label ruled">Sažetak</p>
+<p>Kako su se inflacija i očekivanja potrošača kretali u Hrvatskoj od 2015. do 2024.? U deset koraka oblikujemo istraživačko pitanje, provjeravamo izvore, crtamo dvije mjesečne serije i uspoređujemo razdoblja. Na kraju iz istih podataka izrađujemo analizu u Positronu i pripremamo je za objavu na GitHubu.</p>
+<p>Polazimo od jedne tablice sa 120 mjeseci. Eurostatova godišnja stopa inflacije mjeri promjenu cijena u odnosu na isti mjesec prethodne godine. Saldo iz ankete Europske komisije pokazuje kako potrošači očekuju da će se cijene kretati u sljedećih dvanaest mjeseci. Sudionici uspoređuju odgovor AI alata sa službenim definicijama i vlastitim izračunom te pišu zaključak koji mogu potkrijepiti podacima.</p>
+</div>
+<p class="mt"><a class="more" href="Radionica.dc.html">Program, prezentacija i materijali</a></p>
+</div>
+</article>
   <footer style="border-top:1px solid #000000">
     <div style="max-width:1120px;margin:0 auto;padding:48px 48px 64px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:48px;font-size:14px;line-height:1.7">
       <div>
@@ -145,17 +116,7 @@ a:hover{color:#555555}
 class Component extends DCLogic {
   renderVals() {
     return {
-      showMeta: this.props.showMeta ?? true,
-      sadrzaj: [
-        { broj: '1', tekst: 'Kako nastaje dug provjere i zašto se s agentom brže gomila.' },
-        { broj: '2', tekst: 'Kako odlučiti koje zadatke prepustiti agentu.' },
-        { broj: '3', tekst: 'Model, alati, ograničenja pristupa i kontekst.' },
-        { broj: '4', tekst: 'Kontekst i dopuštenja koja istraživač određuje prije rada.' },
-        { broj: '5', tekst: 'Izbor načina rada prema razini nadzora koju zadatak traži.' },
-        { broj: '6', tekst: 'Prikaz ispravnog rada agenta i tri greške koje otkrivaju automatske provjere.' },
-        { broj: '7', tekst: 'Rad s povjerljivim podacima, uvjeti korištenja usluga i modeli koji se pokreću na vlastitom računalu.' },
-        { broj: '8', tekst: 'Podjela odgovornosti između istraživača i agenta.' }
-      ]
+      showMeta: this.props.showMeta ?? true
     };
   }
 }

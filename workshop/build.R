@@ -1,38 +1,27 @@
-# Izgradi materijale radionice i objavi ih na stranicu projekta.
-#
-#   Rscript workshop/build.R      (pokrenuti iz korijena repozitorija)
-#
-# Jedna naredba, isto nacelo koje radionica zagovara.
-
-stopifnot(dir.exists("workshop"), dir.exists("docs"))
-
-cat("== Slajdovi ================================================\n")
-system2("quarto", c("render", "workshop/slides/slides.qmd"))
-
-cat("== Projekt =================================================\n")
-wd <- getwd()
-setwd("workshop/projekt")
-status <- system2("Rscript", "analysis/run.R")
-setwd(wd)
-if (status != 0) stop("Projekt se nije izgradio.", call. = FALSE)
-
-cat("== Objava ==================================================\n")
-dir.create("docs/workshop/slides", recursive = TRUE, showWarnings = FALSE)
-dir.create("docs/workshop/slike",  recursive = TRUE, showWarnings = FALSE)
-
-kopije <- list(
-  c("workshop/slides/slides.html",       "docs/workshop/slides/index.html"),
-  c("workshop/handout.html",             "docs/workshop/handout.html"),
-  c("workshop/projekt/paper/nalaz.html", "docs/workshop/nalaz.html"),
-  c("workshop/projekt/results/slike/slika1-vrijeme.png",
-    "docs/workshop/slike/slika1-vrijeme.png"),
-  c("workshop/projekt/results/slike/slika2-phillips.png",
-    "docs/workshop/slike/slika2-phillips.png")
-)
-for (k in kopije) {
-  if (!file.exists(k[1])) stop("Nedostaje: ", k[1], call. = FALSE)
-  file.copy(k[1], k[2], overwrite = TRUE)
-  cat("  ", k[1], "->", k[2], "\n")
+# Pokrenuti iz korijena repozitorija ili iz mape workshop.
+if (file.exists("workshop/projekt/index.qmd")) setwd("workshop")
+radionica <- normalizePath(".")
+objava <- normalizePath("../docs/workshop")
+setwd("projekt")
+pokreni <- function(program, argumenti) {
+  status <- system2(program, argumenti)
+  if (status != 0L) stop(program, " nije dovršen.")
 }
-
-cat("== OK ======================================================\n")
+kopiraj <- function(iz, u) stopifnot(file.copy(iz, u, overwrite = TRUE))
+pokreni("quarto", c("render", "index.qmd"))
+kopiraj("index.html", file.path(objava, "nalaz.html"))
+kopiraj("index.pdf", file.path(objava, "nalaz.pdf"))
+kopiraj("data/croatia_inflation.csv", file.path(objava, "data"))
+source("analiza.R")
+ragg::agg_png(file.path(objava, "slike/inflacija-ocekivanja.png"), width = 1800, height = 690, res = 145)
+graf()
+dev.off()
+setwd(radionica)
+# Izričit popis ulaznih datoteka čuva paket od lokalnih izlaza analize.
+ulazi <- file.path("projekt", c("README.md", "analiza.R", "analiza.css",
+                               "index.qmd", "data/croatia_inflation.csv",
+                               "fonts/LICENSE.txt", "fonts/Roboto-Regular.ttf", "fonts/Roboto-Bold.ttf"))
+arhiva <- tempfile(fileext = ".zip")
+stopifnot(utils::zip(arhiva, ulazi, flags = "-q") == 0L)
+kopiraj(arhiva, file.path(objava, "projekt.zip"))
+pokreni("python3", "../scripts/build-workshop-slides.py")

@@ -1,101 +1,111 @@
-# Tijek radionice na jednoj stranici
+# Vodič za izlagača
 
-Pojednostavljena karta izlaganja. Puni govorni tekst je u [`SCRIPT.md`](SCRIPT.md),
-a demonstracija u [`RUNBOOK.md`](RUNBOOK.md). Ova datoteka služi da u svakom
-trenutku znate gdje ste i zašto ste tu.
+Uz [prezentaciju](https://lusiki.github.io/Ekonomski-susreti/workshop/slides/) otvorite [upite](https://lusiki.github.io/Ekonomski-susreti/workshop/upiti.html) i [primjer rezultata](https://lusiki.github.io/Ekonomski-susreti/workshop/nalaz.html). Cjelovit vodič s pitanjima iz literature dostupan je [u PDF-u](https://lusiki.github.io/Ekonomski-susreti/workshop/vodic.pdf).
 
-## Cijela radionica u jednoj rečenici
+### 0.–3. minuta · Uvod
 
-Izvršavanje je pojeftinilo, provjera nije, pa tu razliku zapisujemo u
-repozitorij da se naplaćuje sama.
+Pokažite tablicu i postavite zajedničko pitanje. Sudionici najprije iznose vlastito očekivanje, a zatim uspoređuju odgovor alata s podacima.
 
-## Šest sekcija, šest pitanja
+### 3.–8. minuta · 1.1 Postavite istraživačko pitanje
 
-Svaka sekcija odgovara na jedno pitanje i postavlja sljedeće.
+Pitajte: Što sve možemo pitati kad imamo samo dvije mjesečne serije za Hrvatsku?
 
-| Minuta | Sekcija | Pitanje sekcije | Odgovor koji dajete |
-|---|---|---|---|
-| 00–04 | Otvaranje | Tko je u dvorani | Gotovo svi rade u pregledniku, a danas taj posao selimo u projekt |
-| 04–14 | Dug provjere | Zašto je to važno | Rezultat sada stiže brže nego provjera, pa se neprovjereno nakuplja |
-| 14–21 | Od čega se agent sastoji | O čemu uopće odlučujem | Samo o dvije stvari, kontekstu i dopuštenjima |
-| 21–28 | AI sloj | Kako to izgleda u repozitoriju | Četiri datoteke, kontekst, dopuštenja, pravilo i provjere |
-| 28–45 | Demonstracija | Radi li to stvarno | Prvo korist, pa tri tihe greške koje zaustave gradnju |
-| 45–53 | Granice | Gdje ovo ne pomaže | Osjetljivi podaci, nabava, i odluke koje ostaju vaše |
-| 53–59 | Zaključak | Od čega početi | Opisati projekt u `CLAUDE.md`, a zatim dodati jednu automatsku provjeru |
+Pokažite: Usporedba godišnjih prosjeka odgovara na pitanje koliko su se mjere promijenile. Mjesečni graf pokazuje kada se promjena dogodila.
 
-## Zašto baš tim redom
+Vježba: Odaberite jedno od tri pitanja koja vam predloži alat. Koji bi vam prikaz pomogao odgovoriti na njega? [Upit 1.1](https://lusiki.github.io/Ekonomski-susreti/workshop/upiti.html#korak-1-1).
 
-Otvaranje pokazuje gdje publika radi danas. Podignute ruke za preglednik nisu
-anketa nego postavljanje problema, jer sve poslije objašnjava zašto se isplati
-premjestiti se u projekt.
+Za raspravu: Uz prvi graf napišite jednu jasnu rečenicu. Ako vam to ide sporije od izrade grafa, zastanite i razjasnite što nije jasno.
 
-Prva sekcija daje razlog. Izvršavanje je pojeftinilo, provjera nije, i ta se
-razlika nakuplja kao dug. Tablica s tri konkretna slučaja pokazuje kada agent
-može raditi samostalno, kada ga mora pratiti automatska provjera i kada odluku
-mora donijeti istraživač.
+### 8.–13. minuta · 1.2 Pronađite i provjerite izvore
 
-Druga sekcija skida mistiku. Agent se sastoji od modela, alata, pravila pristupa
-i konteksta. Istraživač određuje koji radni materijal agent dobiva i koje radnje
-smije izvršiti. Te se dvije odluke zapisuju u prve dvije datoteke projektnog AI
-sloja.
+Pitajte: Mijenja li definicija mjere ono što smijemo zaključiti kad uspoređujemo inflaciju i očekivanja?
 
-Treća sekcija pokazuje kako te odluke izgledaju kao datoteke i imenuje tri
-provjere. Ovdje se pojavljuje `R/zemlje.R` kao mjerni sloj, i to je namjerno
-sijanje jer se isti taj korak vraća kao vrhunac demonstracije.
+Pokažite: Stopa inflacije za ožujak 2022. uspoređuje cijene s ožujkom 2021. Ispitanici u ožujku 2022. procjenjuju kretanje cijena tijekom sljedećih dvanaest mjeseci.
 
-Četvrta sekcija je dokaz. Sve dotad su tvrdnje, a ovdje se vide na ekranu.
+Vježba: Otvorite obje metodologije. Koje biste jedinice napisali uz osi grafikona? [Upit 1.2](https://lusiki.github.io/Ekonomski-susreti/workshop/upiti.html#korak-1-2).
 
-Peta sekcija je poštenje. Publika ionako sprema pitanje o osjetljivim podacima,
-pa im odgovarate prije nego stignu pitati. Popis onoga što se ne delegira nije
-stvar ukusa nego izravno slijedi iz tablice iz prve sekcije.
+Za raspravu: Saldo nije postotak. Prije svake usporedbe pročitajte službenu definiciju obiju mjera.
 
-Šesta sekcija traži jedan mali korak umjesto preuređenja načina rada, jer je
-tako izvediv.
+### 13.–19. minuta · 1.3 Provjerite i uredite sažetak
 
-## Demonstracija u dva poteza
+Pitajte: Gdje se u kraćenju teksta izgubi ili promijeni značenje nalaza?
 
-Redoslijed je namjeran. Prvo korist, pa onda šteta.
+Pokažite: „Anketa je obuhvatila 120 hrvatskih kućanstava, koja su 2022. u prosjeku očekivala inflaciju od 46,62 %. Korelacija od oko 0,70 dokazuje da su točno predvidjeli buduće cijene. Tako je bilo u svakom razdoblju.“
 
-**Prvi dio, minute 30 do 38.** Agent dobiva stvaran i malen zadatak, treću sliku
-i jednu rečenicu u tekstu. Publika vidi plan prije rada, vaše odobrenje kao
-trenutak delegiranja, i izvršavanje pod ogradama. Poanta je na kraju, kada
-otvorite `paper/nalaz.qmd` i pokažete da agent nije upisao brojku nego referencu
-na procjenu. Nije mogao drukčije jer bi gradnja pukla.
+Vježba: Provjerite četiri mjesta: jedinicu promatranja, mjernu jedinicu, vremenski odnos i izbor razdoblja. [Upit 1.3](https://lusiki.github.io/Ekonomski-susreti/workshop/upiti.html#korak-1-3).
 
-**Drugi dio, minute 38 do 43.** U projektu su tri tihe greške. Curenje
-ograničenog sadržaja, koeficijent upisan rukom, i Grčka označena kao `GR`
-umjesto `EL`. Jedna naredba ih prijavljuje sve tri i zaustavlja izradu nalaza.
+Za raspravu: Uz glavni nalaz uvijek napišite i ono što iz njega još ne znamo.
 
-Bez prvog dijela publika izlazi uvjerena u provjere, a ne u umjetnu
-inteligenciju. Bez drugog dijela izlazi uvjerena da je sve lako. Trebate oboje.
+### 19.–23. minuta · 1.4 Pripremite plan analize
 
-**Vrhunac je treća greška.** Panel padne s 220 na 209 opažanja, nagib se pomakne
-s 0,61 na 0,69, i ništa ne pukne. Kod se izvrši, slike se nacrtaju, tekst se
-sastavi. To je jedini trenutak u cijeloj radionici u kojem publika osjeti
-problem umjesto da ga čuje opisanog.
+Pitajte: Koji nam prikaz i koja usporedba trebaju da bismo odgovorili baš na svoje pitanje?
 
-## Jedna nit kroz sve
+Pokažite: Provjerite mjesece i jedinice. Nacrtajte dvije serije. Izračunajte godišnje prosjeke. Usporedite korelacije u dva razdoblja. Objasnite što iz njih možete zaključiti.
 
-Isto pitanje vraća se pet puta u pet oblika. Ako izgubite nit, vratite se na
-njega.
+Vježba: Jedan korak zadržite, a jedan promijenite. Objasnite kako izmjena pomaže odgovoriti na pitanje. [Upit 1.4](https://lusiki.github.io/Ekonomski-susreti/workshop/upiti.html#korak-1-4).
 
-| Minuta | Oblik u kojem se pojavljuje |
-|---|---|
-| 10 | Tri konkretna slučaja, od izravnog pregleda do odluke bez jasnog testa |
-| 25 | `R/zemlje.R` je u `ask` jer je to korak koji ne biste primijetili |
-| 43 | Grčka tiho nestane i nitko ne dobije poruku o grešci |
-| 49 | Ne delegira se ono što ne biste primijetili da je krivo |
-| 53 | Zadnji redak, biste li primijetili da je ovo krivo |
+Za raspravu: Prije izračuna morate moći reći čemu svaki korak služi.
 
-## Ako kasnite
+### 23.–28. minuta · 2.1 Upoznajte i provjerite podatke
 
-Režite iz sekcije 5. Demonstracija i zaključak se ne diraju. Ako u
-demonstraciji bilo što stoji dulje od šezdeset sekundi, prijeđite na snimku bez
-isprike i nastavite pripovijedati.
+Pitajte: Što je jedan redak u našoj tablici i što nam govore dva broja u njemu?
 
-## Šalabahter
+Pokažite: U siječnju 2015. godišnja stopa inflacije iznosi −0,6 %, a saldo očekivanja −4,2 boda. U zadnjem mjesecu, prosincu 2024., vrijednosti su 4,5 % i 20,8 bodova.
 
-```
-preglednik → dug provjere → dvije odluke → četiri datoteke
-   → korist uživo → tri tihe greške → EL umjesto GR → jedan CLAUDE.md
-```
+Vježba: Zatražite prva i zadnja tri retka. Postoji li točno jedan redak za svaki od 120 mjeseci? [Upit 2.1](https://lusiki.github.io/Ekonomski-susreti/workshop/upiti.html#korak-2-1).
+
+Za raspravu: Prije zadatka predvidite dio rezultata. Ako se rezultat razlikuje od očekivanja, tražite objašnjenje prije nastavka.
+
+### 28.–35. minuta · 2.2 Izradite i objasnite prikaze
+
+Pitajte: Kako nacrtati postotke i bodove tako da im se kretanje ipak može usporediti?
+
+Pokažite: Saldo doseže 56,7 bodova u lipnju 2022., a inflacija 12,9 % u studenom. U prosincu je saldo već pao na 34,3 boda dok je godišnja stopa inflacije još 12,7 %.
+
+Vježba: Prikažite samo 2020.–2024. Što u užem razdoblju lakše uočavate? Što je nestalo iz prikaza? [Upit 2.2](https://lusiki.github.io/Ekonomski-susreti/workshop/upiti.html#korak-2-2).
+
+Za raspravu: Graf najprije pogledajte sami, a tek onda čitajte opis koji je napisao alat.
+
+### 35.–41. minuta · 2.3 Ponovite analizu od početka
+
+Pitajte: Bi li naš opis odnosa bio isti da smo gledali neko drugo razdoblje?
+
+Pokažite: Za 2022. zbroj dvanaest mjesečnih godišnjih stopa iznosi 127,6. Podijelite ga s 12 i usporedite dobivenih 10,63 % s godišnjom tablicom.
+
+Vježba: Što se gubi kada svih deset godina sažmemo jednom korelacijom? [Upit 2.3](https://lusiki.github.io/Ekonomski-susreti/workshop/upiti.html#korak-2-3).
+
+Za raspravu: Ponovljen račun provjerava aritmetiku, a ne tumačenje.
+
+### 41.–46. minuta · 2.4 Napišite i uredite zaključak
+
+Pitajte: Kako biste svoj nalaz objasnili kolegi koji nije vidio ni podatke ni razgovor s alatom?
+
+Pokažite: Od 2021. do 2022. prosjek mjesečnih godišnjih stopa porastao je s 2,68 % na 10,63 %. Prosječni saldo u istom je razdoblju porastao s 28,26 na 46,62 boda.
+
+Vježba: Napišite dvije rečenice o grafu. Zatražite komentar na argument i sami preradite rečenicu koju je čitatelj pogrešno razumio. [Upit 2.4](https://lusiki.github.io/Ekonomski-susreti/workshop/upiti.html#korak-2-4).
+
+Za raspravu: Najprije napišite vlastito tumačenje, makar bilo nespretno. Alat komentira, a vi prerađujete.
+
+### 46.–52. minuta · 3.1 Ponovite sve u Positronu
+
+Pitajte: Što od ovog sata ostaje kad zatvorite prozor razgovora?
+
+Pokažite: U praznoj mapi u Positronu otvorite asistenta. U mapu data spremite CSV. U index.qmd zajedno zapišite izračune, graf i zaključak. Naredbom quarto render index.qmd izradite HTML i PDF.
+
+Vježba: Pronađite redak koji računa korelaciju i provjeru koja zaustavlja izradu kad nedostaje mjesec. [Upit 3.1](https://lusiki.github.io/Ekonomski-susreti/workshop/upiti.html#korak-3-1).
+
+Za raspravu: Svaki broj u tekstu dolazi iz koda, a cijela se analiza pokreće jednom naredbom.
+
+### 52.–56. minuta · 3.2 Objavite na GitHubu
+
+Pitajte: Može li kolega dobiti vaš rezultat bez vas?
+
+Pokažite: Otvorite prazan repozitorij. Pregledajte datoteke koje šaljete, potvrdite slanje pa u postavkama Pages odaberite granu main i korijensku mapu.
+
+Vježba: Otvorite objavljeni HTML i PDF. Može li kolega iz README-a saznati odakle dolaze podaci i kako ponoviti analizu? [Upit 3.2](https://lusiki.github.io/Ekonomski-susreti/workshop/upiti.html#korak-3-2).
+
+Za raspravu: Objava je vaša odluka. Prije slanja pogledajte što šaljete.
+
+### 56.–60. minuta · Završni razgovor
+
+Što vam je alat olakšao? Koja je odluka ostala vaša? Koju biste pogrešku sada znali otkriti?
